@@ -75,7 +75,7 @@ function getClient($redirect_on_oauth_failure = false, &$config = null, $client_
         $client->fetchAccessTokenWithRefreshToken($client->getRefreshToken());
         $access_token = $client->getAccessToken();
         if ($config == null) {
-            $config = \Drupal::config('event_gcal.settings');
+            $config = \Drupal::service('config.factory')->getEditable('event_gcal.settings'); //$config = \Drupal::config('event_gcal.settings');
         }
         // Write refreshed token to config
         $config->set('access_token', $access_token)->save();

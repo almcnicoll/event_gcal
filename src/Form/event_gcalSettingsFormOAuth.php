@@ -104,7 +104,7 @@ class event_gcalSettingsFormOAuth extends ConfigFormBase
     public function buildForm(array $form, FormStateInterface $form_state) 
     {
         global $debugInfo;
-        $config = $this->config('event_gcal.settings');
+        $config = \Drupal::service('config.factory')->getEditable('event_gcal.settings'); //$config = $this->config('event_gcal.settings');
     
         if (isset($_REQUEST['error'])) {
               // Error - they didn't approve it

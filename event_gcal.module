@@ -3,12 +3,14 @@
 /*function event_gcal_entity_preDelete($entity) {
 //function event_gcal_entity_delete($entity) {
 	
+// NB - for testing:	phpcs <script file>
+//		and fixing:		phpcbf <script file> --no-patch
 }*/
 function event_gcal_entity_presave($entity) 
 {
     //drupal_set_message('Pre-save firing');
     
-    $config = \Drupal::config('event_gcal.settings');
+    $config = \Drupal::service('config.factory')->getEditable('event_gcal.settings'); //$config = \Drupal::config('event_gcal.settings');
     $monitor_type = $config->get('active_content_type');
     
     if ($entity->bundle() == $monitor_type) {

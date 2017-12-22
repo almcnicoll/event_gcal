@@ -3,6 +3,12 @@
 /**
  * @file
  * Contains \Drupal\event_gcal\Form\event_gcalSettingsForm
+ *
+ * @category Config_Form
+ * @package  Event_Gcal
+ * @author   Al McNicoll <event_gcal@almcnicoll.co.uk>
+ * @license  MIT https://opensource.org/licenses/MIT
+ * @link     http://www.oxford.occ.org.uk
  */
 namespace Drupal\event_gcal\Form;
 
@@ -14,8 +20,14 @@ require_once __DIR__ . '/event_gcalShared.php';
 
 /**
  * Configure event_gcal settings for this site.
+ *
+ * @category Config_Form
+ * @package  Event_Gcal
+ * @author   Al McNicoll <event_gcal@almcnicoll.co.uk>
+ * @license  MIT https://opensource.org/licenses/MIT
+ * @link     http://www.oxford.occ.org.uk
  */
-class event_gcalSettingsForm extends ConfigFormBase
+class Event_GcalSettingsForm extends ConfigFormBase
 {
     /** 
    * {@inheritdoc}
@@ -56,7 +68,8 @@ class event_gcalSettingsForm extends ConfigFormBase
         $access_token = $config->get('access_token');
     
         if (!empty($access_token)) {
-              // As long as we have an access token, check if it's an object, and if not then try to json-decode it
+              // As long as we have an access token, check if it's an object, 
+            //  and if not then try to json-decode it
             if (is_object($access_token)) {
                 $access_token = json_decode(json_decode($access_token), true);
             
@@ -70,7 +83,8 @@ class event_gcalSettingsForm extends ConfigFormBase
         //die();
     
         if (isset($_REQUEST['clear_tokens'])) {
-              // Clear tokens, then redirect to self to lose the request string (otherwise the tokens continue to be cleared)
+              // Clear tokens, then redirect to self to lose the request string
+            //  (otherwise the tokens continue to be cleared)
               $config->clear('access_token')->clear('refresh_token')->save();
               $access_token = null;
               $refresh_token = null;
@@ -92,7 +106,10 @@ class event_gcalSettingsForm extends ConfigFormBase
         
               // Try to get list of Google Calendars	
               $scope = implode(' ', array(\Google_Service_Calendar::CALENDAR));
-              $client = getClient(true, $config, $client_id, $client_secret, $access_token);
+              $client = getClient(
+                  true, $config, $client_id, $client_secret,
+                  $access_token
+              );
                 
               $service = new \Google_Service_Calendar($client);
             try {
@@ -102,7 +119,10 @@ class event_gcalSettingsForm extends ConfigFormBase
                 if (is_object($exception_message->error)) {
                     switch($exception_message->error->code) {
                     case '401':
-                        drupal_set_message("The credentials passed to the Google API were invalid.: ".$gse->getMessage());
+                        drupal_set_message(
+                            "The credentials passed to the Google API were invalid.: "
+                            .$gse->getMessage()
+                        );
                         //$config->clear('access_token')->clear('refresh_token')->save();
                         break;
                        break;
@@ -112,12 +132,19 @@ class event_gcalSettingsForm extends ConfigFormBase
                 } else {
                     switch ($exception_message->error) {
                     case 'invalid_grant':
-                        drupal_set_message("Access to this Google Account has been revoked. You will need to re-authorise this application by re-saving the credentials: ".$gse->getMessage());
+                        drupal_set_message(
+                            "Access to this Google Account has been revoked."
+                            ."You will need to re-authorise this application by re-saving the credentials: "
+                            .$gse->getMessage()
+                        );
                         $config->clear('access_token')->save();
                         break;
                     case 'unauthorized_client':
-                        $rendered_message = \Drupal\Core\Render\Markup::create("It appears as though your token needs a refresh and this has failed. You may need to <a href='./settings?clear_tokens=true'>clear your tokens</a> and try again: ".$gse->getMessage());
-                        //drupal_set_message(t("It appears as though your token needs refreshing and this has failed. You may need to @link and try again: ",array('@link' => $clear_tokens_link)));
+                        $rendered_message = \Drupal\Core\Render\Markup::create(
+                            "It appears as though your token needs a refresh and this has failed."
+                            ."You may need to <a href='./settings?clear_tokens=true'>clear your tokens</a> and try again: "
+                            .$gse->getMessage()
+                        );
                         drupal_set_message($rendered_message);
                         //dpm($access_token);
                         $refreshResult = $client->fetchAccessTokenWithRefreshToken($access_token['refresh_token']);
@@ -175,7 +202,8 @@ class event_gcalSettingsForm extends ConfigFormBase
               //dpm($contentTypeFields[$ct_id]);
             foreach ($contentTypeFields[$ct_id] as $k=>$ctf) {
                 $label = $ctf->getLabel();
-                if (empty($label)) { $label = $k; 
+                if (empty($label)) { 
+                    $label = $k; 
                 }
                 //drupal_set_message($ct_id . '.' . $k . ': ' . $label);
                 $contentTypeFieldsList[$ct_id.'.'.$k] = "{$label} ({$ct_id}.{$k})";
