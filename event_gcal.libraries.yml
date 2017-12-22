@@ -1,0 +1,6 @@
+form-tweaks:
+  version: 1.x
+  js:
+    js/event_gcal_formTweaks.js: {}
+  dependencies:
+    - core/jquery

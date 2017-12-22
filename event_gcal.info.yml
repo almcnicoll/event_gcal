@@ -1,0 +1,11 @@
+name: Event Google Calendar Integration
+description: Allows synchronisation of events to Google Calendar
+package: Custom
+
+type: module
+core: 8.x
+
+dependencies:
+  - datetime:datetime
+
+configure: event_gcal.settings

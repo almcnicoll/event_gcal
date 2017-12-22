@@ -1,0 +1,4 @@
+event_gcal.settings:
+  title: 'Event-Calendar settings'
+  parent: system.admin_config_services
+  route_name: event_gcal.settings

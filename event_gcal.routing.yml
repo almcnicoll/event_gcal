@@ -1,0 +1,21 @@
+event_gcal.settings:
+  path: '/admin/config/event_gcal/settings'
+  defaults:
+    _form: '\Drupal\event_gcal\Form\event_gcalSettingsForm'
+    _title: 'Event-Calendar settings'
+  requirements:
+    _permission: 'administer site configuration'
+event_gcal.settings_oauth_receive:
+  path: '/admin/config/event_gcal/settings_oauth_receive'
+  defaults:
+    _form: '\Drupal\event_gcal\Form\event_gcalSettingsFormOAuth'
+    _title: 'Event-Calendar settings - Google Authorisation'
+  requirements:
+    _permission: 'administer site configuration'
+event_gcal.test:
+  path: '/admin/config/event_gcal/test'
+  defaults:
+    _form: '\Drupal\event_gcal\Form\event_gcalTestForm'
+    _title: 'TEST Event-Calendar OAuth testing page'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,17 @@
+{
+  "name": "drupal/event_gcal",
+  "description": "event_gcal allows synchronisation of events to Google Calendar.",
+  "type": "drupal-module",
+  "authors": [
+    {
+      "name": "Al McNicoll (almcnicoll)",
+      "homepage": "https://www.almcnicoll.co.uk",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+	"google/apiclient": "^2.0"
+  },
+  "license": "MIT",
+  "minimum-stability": "dev"
+}
