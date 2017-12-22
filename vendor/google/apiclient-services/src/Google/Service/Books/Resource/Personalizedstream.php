@@ -25,7 +25,7 @@
  */
 class Google_Service_Books_Resource_Personalizedstream extends Google_Service_Resource
 {
-  /**
+    /**
    * Returns a stream of personalized book clusters (personalizedstream.get)
    *
    * @param array $optParams Optional parameters.
@@ -36,12 +36,12 @@ class Google_Service_Books_Resource_Personalizedstream extends Google_Service_Re
    * rating of returned recommendations. Books with a higher maturity rating are
    * filtered out.
    * @opt_param string source String to identify the originator of this request.
-   * @return Google_Service_Books_Discoveryclusters
+   * @return    Google_Service_Books_Discoveryclusters
    */
-  public function get($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Books_Discoveryclusters");
-  }
+    public function get($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Books_Discoveryclusters");
+    }
 }

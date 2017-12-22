@@ -25,7 +25,7 @@
  */
 class Google_Service_Books_Resource_VolumesUseruploaded extends Google_Service_Resource
 {
-  /**
+    /**
    * Return a list of books uploaded by the current user.
    * (useruploaded.listVolumesUseruploaded)
    *
@@ -41,12 +41,12 @@ class Google_Service_Books_Resource_VolumesUseruploaded extends Google_Service_R
    * 0)
    * @opt_param string volumeId The ids of the volumes to be returned. If not
    * specified all that match the processingState are returned.
-   * @return Google_Service_Books_Volumes
+   * @return    Google_Service_Books_Volumes
    */
-  public function listVolumesUseruploaded($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Books_Volumes");
-  }
+    public function listVolumesUseruploaded($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Books_Volumes");
+    }
 }

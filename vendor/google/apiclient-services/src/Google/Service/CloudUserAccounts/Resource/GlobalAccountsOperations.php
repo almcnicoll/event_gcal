@@ -25,39 +25,39 @@
  */
 class Google_Service_CloudUserAccounts_Resource_GlobalAccountsOperations extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified operation resource. (globalAccountsOperations.delete)
    *
-   * @param string $project Project ID for this request.
+   * @param string $project   Project ID for this request.
    * @param string $operation Name of the Operations resource to delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams Optional parameters.
    */
-  public function delete($project, $operation, $optParams = array())
-  {
-    $params = array('project' => $project, 'operation' => $operation);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params));
-  }
-  /**
+    public function delete($project, $operation, $optParams = array())
+    {
+        $params = array('project' => $project, 'operation' => $operation);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params));
+    }
+    /**
    * Retrieves the specified operation resource. (globalAccountsOperations.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $operation Name of the Operations resource to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $operation Name of the Operations resource to return.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_CloudUserAccounts_Operation
    */
-  public function get($project, $operation, $optParams = array())
-  {
-    $params = array('project' => $project, 'operation' => $operation);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_CloudUserAccounts_Operation");
-  }
-  /**
+    public function get($project, $operation, $optParams = array())
+    {
+        $params = array('project' => $project, 'operation' => $operation);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_CloudUserAccounts_Operation");
+    }
+    /**
    * Retrieves the list of operation resources contained within the specified
    * project. (globalAccountsOperations.listGlobalAccountsOperations)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter expression for filtering listed
    * resources, in the form filter={expression}. Your {expression} must be in the
@@ -102,12 +102,12 @@ class Google_Service_CloudUserAccounts_Resource_GlobalAccountsOperations extends
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_CloudUserAccounts_OperationList
+   * @return    Google_Service_CloudUserAccounts_OperationList
    */
-  public function listGlobalAccountsOperations($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudUserAccounts_OperationList");
-  }
+    public function listGlobalAccountsOperations($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_CloudUserAccounts_OperationList");
+    }
 }

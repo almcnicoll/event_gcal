@@ -31,36 +31,40 @@
  */
 class Google_Service_Autoscaler extends Google_Service
 {
-  /** View and manage your Google Compute Engine resources. */
-  const COMPUTE =
+    /**
+ * View and manage your Google Compute Engine resources. 
+*/
+    const COMPUTE =
       "https://www.googleapis.com/auth/compute";
-  /** View your Google Compute Engine resources. */
-  const COMPUTE_READONLY =
+    /**
+ * View your Google Compute Engine resources. 
+*/
+    const COMPUTE_READONLY =
       "https://www.googleapis.com/auth/compute.readonly";
 
-  public $autoscalers;
-  public $zoneOperations;
-  public $zones;
+    public $autoscalers;
+    public $zoneOperations;
+    public $zones;
   
-  /**
+    /**
    * Constructs the internal representation of the Autoscaler service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'autoscaler/v1beta2/';
-    $this->version = 'v1beta2';
-    $this->serviceName = 'autoscaler';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'autoscaler/v1beta2/';
+        $this->version = 'v1beta2';
+        $this->serviceName = 'autoscaler';
 
-    $this->autoscalers = new Google_Service_Autoscaler_Resource_Autoscalers(
-        $this,
-        $this->serviceName,
-        'autoscalers',
-        array(
-          'methods' => array(
+        $this->autoscalers = new Google_Service_Autoscaler_Resource_Autoscalers(
+            $this,
+            $this->serviceName,
+            'autoscalers',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'projects/{project}/zones/{zone}/autoscalers/{autoscaler}',
               'httpMethod' => 'DELETE',
@@ -184,15 +188,15 @@ class Google_Service_Autoscaler extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->zoneOperations = new Google_Service_Autoscaler_Resource_ZoneOperations(
-        $this,
-        $this->serviceName,
-        'zoneOperations',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->zoneOperations = new Google_Service_Autoscaler_Resource_ZoneOperations(
+            $this,
+            $this->serviceName,
+            'zoneOperations',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => '{project}/zones/{zone}/operations/{operation}',
               'httpMethod' => 'DELETE',
@@ -261,15 +265,15 @@ class Google_Service_Autoscaler extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->zones = new Google_Service_Autoscaler_Resource_Zones(
-        $this,
-        $this->serviceName,
-        'zones',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->zones = new Google_Service_Autoscaler_Resource_Zones(
+            $this,
+            $this->serviceName,
+            'zones',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'zones',
               'httpMethod' => 'GET',
@@ -292,8 +296,8 @@ class Google_Service_Autoscaler extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

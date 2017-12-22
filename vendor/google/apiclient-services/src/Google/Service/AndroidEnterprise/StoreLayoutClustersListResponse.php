@@ -17,31 +17,31 @@
 
 class Google_Service_AndroidEnterprise_StoreLayoutClustersListResponse extends Google_Collection
 {
-  protected $collection_key = 'cluster';
-  protected $clusterType = 'Google_Service_AndroidEnterprise_StoreCluster';
-  protected $clusterDataType = 'array';
-  public $kind;
+    protected $collection_key = 'cluster';
+    protected $clusterType = 'Google_Service_AndroidEnterprise_StoreCluster';
+    protected $clusterDataType = 'array';
+    public $kind;
 
-  /**
+    /**
    * @param Google_Service_AndroidEnterprise_StoreCluster
    */
-  public function setCluster($cluster)
-  {
-    $this->cluster = $cluster;
-  }
-  /**
+    public function setCluster($cluster)
+    {
+        $this->cluster = $cluster;
+    }
+    /**
    * @return Google_Service_AndroidEnterprise_StoreCluster
    */
-  public function getCluster()
-  {
-    return $this->cluster;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
+    public function getCluster()
+    {
+        return $this->cluster;
+    }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
 }

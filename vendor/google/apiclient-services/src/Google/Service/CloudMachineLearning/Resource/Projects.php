@@ -25,25 +25,26 @@
  */
 class Google_Service_CloudMachineLearning_Resource_Projects extends Google_Service_Resource
 {
-  /**
+    /**
    * Get the service account information associated with your project. You need
    * this information in order to grant the service account persmissions for the
    * Google Cloud Storage location where you put your model training code for
    * training the model with Google Cloud Machine Learning. (projects.getConfig)
    *
-   * @param string $name Required. The project name.
-   *
-   * Authorization: requires `Viewer` role on the specified project.
-   * @param array $optParams Optional parameters.
+   * @param  string $name      Required. The project name.
+   *                          Authorization: requires
+   *                          `Viewer` role on the
+   *                          specified project.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1GetConfigResponse
    */
-  public function getConfig($name, $optParams = array())
-  {
-    $params = array('name' => $name);
-    $params = array_merge($params, $optParams);
-    return $this->call('getConfig', array($params), "Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1GetConfigResponse");
-  }
-  /**
+    public function getConfig($name, $optParams = array())
+    {
+        $params = array('name' => $name);
+        $params = array_merge($params, $optParams);
+        return $this->call('getConfig', array($params), "Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1GetConfigResponse");
+    }
+    /**
    * Performs prediction on the data in the request.
    *
    * Responses are very similar to requests. There are two top-level fields, each
@@ -87,17 +88,17 @@ class Google_Service_CloudMachineLearning_Resource_Projects extends Google_Servi
    *
    * {"error": "Divide by zero"}  (projects.predict)
    *
-   * @param string $name Required. The resource name of a model or a version.
-   *
-   * Authorization: requires `Viewer` role on the parent project.
-   * @param Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1PredictRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                                 $name      Required. The resource name of a model or a version.
+   *                                                                                           Authorization: requires `Viewer` role on the parent
+   *                                                                                           project.
+   * @param  Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1PredictRequest $postBody
+   * @param  array                                                                  $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearning_GoogleApiHttpBody
    */
-  public function predict($name, Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1PredictRequest $postBody, $optParams = array())
-  {
-    $params = array('name' => $name, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('predict', array($params), "Google_Service_CloudMachineLearning_GoogleApiHttpBody");
-  }
+    public function predict($name, Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1PredictRequest $postBody, $optParams = array())
+    {
+        $params = array('name' => $name, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('predict', array($params), "Google_Service_CloudMachineLearning_GoogleApiHttpBody");
+    }
 }

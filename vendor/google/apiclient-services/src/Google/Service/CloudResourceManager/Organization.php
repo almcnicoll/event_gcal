@@ -17,57 +17,57 @@
 
 class Google_Service_CloudResourceManager_Organization extends Google_Model
 {
-  public $creationTime;
-  public $displayName;
-  public $lifecycleState;
-  public $name;
-  protected $ownerType = 'Google_Service_CloudResourceManager_OrganizationOwner';
-  protected $ownerDataType = '';
+    public $creationTime;
+    public $displayName;
+    public $lifecycleState;
+    public $name;
+    protected $ownerType = 'Google_Service_CloudResourceManager_OrganizationOwner';
+    protected $ownerDataType = '';
 
-  public function setCreationTime($creationTime)
-  {
-    $this->creationTime = $creationTime;
-  }
-  public function getCreationTime()
-  {
-    return $this->creationTime;
-  }
-  public function setDisplayName($displayName)
-  {
-    $this->displayName = $displayName;
-  }
-  public function getDisplayName()
-  {
-    return $this->displayName;
-  }
-  public function setLifecycleState($lifecycleState)
-  {
-    $this->lifecycleState = $lifecycleState;
-  }
-  public function getLifecycleState()
-  {
-    return $this->lifecycleState;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  /**
+    public function setCreationTime($creationTime)
+    {
+        $this->creationTime = $creationTime;
+    }
+    public function getCreationTime()
+    {
+        return $this->creationTime;
+    }
+    public function setDisplayName($displayName)
+    {
+        $this->displayName = $displayName;
+    }
+    public function getDisplayName()
+    {
+        return $this->displayName;
+    }
+    public function setLifecycleState($lifecycleState)
+    {
+        $this->lifecycleState = $lifecycleState;
+    }
+    public function getLifecycleState()
+    {
+        return $this->lifecycleState;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    /**
    * @param Google_Service_CloudResourceManager_OrganizationOwner
    */
-  public function setOwner(Google_Service_CloudResourceManager_OrganizationOwner $owner)
-  {
-    $this->owner = $owner;
-  }
-  /**
+    public function setOwner(Google_Service_CloudResourceManager_OrganizationOwner $owner)
+    {
+        $this->owner = $owner;
+    }
+    /**
    * @return Google_Service_CloudResourceManager_OrganizationOwner
    */
-  public function getOwner()
-  {
-    return $this->owner;
-  }
+    public function getOwner()
+    {
+        return $this->owner;
+    }
 }

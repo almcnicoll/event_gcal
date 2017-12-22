@@ -33,30 +33,30 @@ class Google_Service_AndroidProvisioningPartner extends Google_Service
 {
 
 
-  public $operations;
-  public $partners_customers;
-  public $partners_devices;
+    public $operations;
+    public $partners_customers;
+    public $partners_devices;
   
-  /**
+    /**
    * Constructs the internal representation of the AndroidProvisioningPartner
    * service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://androiddeviceprovisioning.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'androiddeviceprovisioning';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://androiddeviceprovisioning.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'androiddeviceprovisioning';
 
-    $this->operations = new Google_Service_AndroidProvisioningPartner_Resource_Operations(
-        $this,
-        $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
+        $this->operations = new Google_Service_AndroidProvisioningPartner_Resource_Operations(
+            $this,
+            $this->serviceName,
+            'operations',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -68,15 +68,15 @@ class Google_Service_AndroidProvisioningPartner extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->partners_customers = new Google_Service_AndroidProvisioningPartner_Resource_PartnersCustomers(
-        $this,
-        $this->serviceName,
-        'customers',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->partners_customers = new Google_Service_AndroidProvisioningPartner_Resource_PartnersCustomers(
+            $this,
+            $this->serviceName,
+            'customers',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/{+parent}/customers',
               'httpMethod' => 'POST',
@@ -98,15 +98,15 @@ class Google_Service_AndroidProvisioningPartner extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->partners_devices = new Google_Service_AndroidProvisioningPartner_Resource_PartnersDevices(
-        $this,
-        $this->serviceName,
-        'devices',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->partners_devices = new Google_Service_AndroidProvisioningPartner_Resource_PartnersDevices(
+            $this,
+            $this->serviceName,
+            'devices',
+            array(
+            'methods' => array(
             'claim' => array(
               'path' => 'v1/partners/{+partnerId}/devices:claim',
               'httpMethod' => 'POST',
@@ -203,8 +203,8 @@ class Google_Service_AndroidProvisioningPartner extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

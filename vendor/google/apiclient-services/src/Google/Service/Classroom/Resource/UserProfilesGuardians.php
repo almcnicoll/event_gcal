@@ -25,7 +25,7 @@
  */
 class Google_Service_Classroom_Resource_UserProfilesGuardians extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes a guardian.
    *
    * The guardian will no longer receive guardian notifications and the guardian
@@ -43,22 +43,21 @@ class Google_Service_Classroom_Resource_UserProfilesGuardians extends Google_Ser
    * guardians for   the requested `student_id`, but no `Guardian` record exists
    * for that   student with the provided `guardian_id`. (guardians.delete)
    *
-   * @param string $studentId The student whose guardian is to be deleted. One of
-   * the following:
-   *
-   * * the numeric identifier for the user * the email address of the user * the
-   * string literal `"me"`, indicating the requesting user
-   * @param string $guardianId The `id` field from a `Guardian`.
-   * @param array $optParams Optional parameters.
+   * @param  string $studentId  The student whose guardian is to be deleted. One of
+   *                           the following: * the numeric identifier for the
+   *                           user * the email address of the user * the string
+   *                           literal `"me"`, indicating the requesting user
+   * @param  string $guardianId The `id` field from a `Guardian`.
+   * @param  array  $optParams  Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
-  public function delete($studentId, $guardianId, $optParams = array())
-  {
-    $params = array('studentId' => $studentId, 'guardianId' => $guardianId);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
-  }
-  /**
+    public function delete($studentId, $guardianId, $optParams = array())
+    {
+        $params = array('studentId' => $studentId, 'guardianId' => $guardianId);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
+    }
+    /**
    * Returns a specific guardian.
    *
    * This method returns the following error codes:
@@ -74,22 +73,21 @@ class Google_Service_Classroom_Resource_UserProfilesGuardians extends Google_Ser
    * `Guardian` record exists for that   student that matches the provided
    * `guardian_id`. (guardians.get)
    *
-   * @param string $studentId The student whose guardian is being requested. One
-   * of the following:
-   *
-   * * the numeric identifier for the user * the email address of the user * the
-   * string literal `"me"`, indicating the requesting user
-   * @param string $guardianId The `id` field from a `Guardian`.
-   * @param array $optParams Optional parameters.
+   * @param  string $studentId  The student whose guardian is being requested. One
+   *                           of the following: * the numeric identifier for the
+   *                           user * the email address of the user * the string
+   *                           literal `"me"`, indicating the requesting user
+   * @param  string $guardianId The `id` field from a `Guardian`.
+   * @param  array  $optParams  Optional parameters.
    * @return Google_Service_Classroom_Guardian
    */
-  public function get($studentId, $guardianId, $optParams = array())
-  {
-    $params = array('studentId' => $studentId, 'guardianId' => $guardianId);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Classroom_Guardian");
-  }
-  /**
+    public function get($studentId, $guardianId, $optParams = array())
+    {
+        $params = array('studentId' => $studentId, 'guardianId' => $guardianId);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Classroom_Guardian");
+    }
+    /**
    * Returns a list of guardians that the requesting user is permitted to view,
    * restricted to those that match the request.
    *
@@ -118,7 +116,7 @@ class Google_Service_Classroom_Resource_UserProfilesGuardians extends Google_Ser
    * string literal `"me"`, indicating the requesting user * the string literal
    * `"-"`, indicating that results should be returned for   all students that the
    * requesting user has access to view.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string pageToken nextPageToken value returned from a previous list
    * call, indicating that the subsequent page of results should be returned.
@@ -132,12 +130,12 @@ class Google_Service_Classroom_Resource_UserProfilesGuardians extends Google_Ser
    * unspecified indicates that the server may assign a maximum.
    *
    * The server may return fewer than the specified number of results.
-   * @return Google_Service_Classroom_ListGuardiansResponse
+   * @return    Google_Service_Classroom_ListGuardiansResponse
    */
-  public function listUserProfilesGuardians($studentId, $optParams = array())
-  {
-    $params = array('studentId' => $studentId);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Classroom_ListGuardiansResponse");
-  }
+    public function listUserProfilesGuardians($studentId, $optParams = array())
+    {
+        $params = array('studentId' => $studentId);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Classroom_ListGuardiansResponse");
+    }
 }

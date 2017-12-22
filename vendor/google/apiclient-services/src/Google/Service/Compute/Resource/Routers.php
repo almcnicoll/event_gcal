@@ -25,11 +25,11 @@
  */
 class Google_Service_Compute_Resource_Routers extends Google_Service_Resource
 {
-  /**
+    /**
    * Retrieves an aggregated list of routers. (routers.aggregatedList)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -73,21 +73,21 @@ class Google_Service_Compute_Resource_Routers extends Google_Service_Resource
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_RouterAggregatedList
+   * @return    Google_Service_Compute_RouterAggregatedList
    */
-  public function aggregatedList($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('aggregatedList', array($params), "Google_Service_Compute_RouterAggregatedList");
-  }
-  /**
+    public function aggregatedList($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('aggregatedList', array($params), "Google_Service_Compute_RouterAggregatedList");
+    }
+    /**
    * Deletes the specified Router resource. (routers.delete)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param string $router Name of the Router resource to delete.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $region    Name of the region for this request.
+   * @param string $router    Name of the Router resource to delete.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -101,54 +101,54 @@ class Google_Service_Compute_Resource_Routers extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $region, $router, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'router' => $router);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $region, $router, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'router' => $router);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified Router resource. Get a list of available routers by
    * making a list() request. (routers.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param string $router Name of the Router resource to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $region    Name of the region for this request.
+   * @param  string $router    Name of the Router resource to return.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Compute_Router
    */
-  public function get($project, $region, $router, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'router' => $router);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_Router");
-  }
-  /**
+    public function get($project, $region, $router, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'router' => $router);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_Router");
+    }
+    /**
    * Retrieves runtime information of the specified router.
    * (routers.getRouterStatus)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param string $router Name of the Router resource to query.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $region    Name of the region for this request.
+   * @param  string $router    Name of the Router resource to query.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Compute_RouterStatusResponse
    */
-  public function getRouterStatus($project, $region, $router, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'router' => $router);
-    $params = array_merge($params, $optParams);
-    return $this->call('getRouterStatus', array($params), "Google_Service_Compute_RouterStatusResponse");
-  }
-  /**
+    public function getRouterStatus($project, $region, $router, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'router' => $router);
+        $params = array_merge($params, $optParams);
+        return $this->call('getRouterStatus', array($params), "Google_Service_Compute_RouterStatusResponse");
+    }
+    /**
    * Creates a Router resource in the specified project and region using the data
    * included in the request. (routers.insert)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
+   * @param string                        $project   Project ID for this request.
+   * @param string                        $region    Name of the region for this request.
    * @param Google_Service_Compute_Router $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                         $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -162,21 +162,21 @@ class Google_Service_Compute_Resource_Routers extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, $region, Google_Service_Compute_Router $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, $region, Google_Service_Compute_Router $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves a list of Router resources available to the specified project.
    * (routers.listRouters)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $region    Name of the region for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -220,24 +220,24 @@ class Google_Service_Compute_Resource_Routers extends Google_Service_Resource
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_RouterList
+   * @return    Google_Service_Compute_RouterList
    */
-  public function listRouters($project, $region, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_RouterList");
-  }
-  /**
+    public function listRouters($project, $region, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_RouterList");
+    }
+    /**
    * Patches the specified Router resource with the data included in the request.
    * This method supports PATCH semantics and uses JSON merge patch format and
    * processing rules. (routers.patch)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param string $router Name of the Router resource to patch.
+   * @param string                        $project   Project ID for this request.
+   * @param string                        $region    Name of the region for this request.
+   * @param string                        $router    Name of the Router resource to patch.
    * @param Google_Service_Compute_Router $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                         $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -251,40 +251,40 @@ class Google_Service_Compute_Resource_Routers extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function patch($project, $region, $router, Google_Service_Compute_Router $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'router' => $router, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function patch($project, $region, $router, Google_Service_Compute_Router $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'router' => $router, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Preview fields auto-generated during router create and update operations.
    * Calling this method does NOT create or update the router. (routers.preview)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param string $router Name of the Router resource to query.
-   * @param Google_Service_Compute_Router $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                        $project   Project ID for this request.
+   * @param  string                        $region    Name of the region for this request.
+   * @param  string                        $router    Name of the Router resource to query.
+   * @param  Google_Service_Compute_Router $postBody
+   * @param  array                         $optParams Optional parameters.
    * @return Google_Service_Compute_RoutersPreviewResponse
    */
-  public function preview($project, $region, $router, Google_Service_Compute_Router $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'router' => $router, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('preview', array($params), "Google_Service_Compute_RoutersPreviewResponse");
-  }
-  /**
+    public function preview($project, $region, $router, Google_Service_Compute_Router $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'router' => $router, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('preview', array($params), "Google_Service_Compute_RoutersPreviewResponse");
+    }
+    /**
    * Updates the specified Router resource with the data included in the request.
    * (routers.update)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param string $router Name of the Router resource to update.
+   * @param string                        $project   Project ID for this request.
+   * @param string                        $region    Name of the region for this request.
+   * @param string                        $router    Name of the Router resource to update.
    * @param Google_Service_Compute_Router $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                         $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -298,12 +298,12 @@ class Google_Service_Compute_Resource_Routers extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function update($project, $region, $router, Google_Service_Compute_Router $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'router' => $router, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Compute_Operation");
-  }
+    public function update($project, $region, $router, Google_Service_Compute_Router $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'router' => $router, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('update', array($params), "Google_Service_Compute_Operation");
+    }
 }

@@ -17,121 +17,121 @@
 
 class Google_Service_Compute_Subnetwork extends Google_Collection
 {
-  protected $collection_key = 'secondaryIpRanges';
-  public $creationTimestamp;
-  public $description;
-  public $gatewayAddress;
-  public $id;
-  public $ipCidrRange;
-  public $kind;
-  public $name;
-  public $network;
-  public $privateIpGoogleAccess;
-  public $region;
-  protected $secondaryIpRangesType = 'Google_Service_Compute_SubnetworkSecondaryRange';
-  protected $secondaryIpRangesDataType = 'array';
-  public $selfLink;
+    protected $collection_key = 'secondaryIpRanges';
+    public $creationTimestamp;
+    public $description;
+    public $gatewayAddress;
+    public $id;
+    public $ipCidrRange;
+    public $kind;
+    public $name;
+    public $network;
+    public $privateIpGoogleAccess;
+    public $region;
+    protected $secondaryIpRangesType = 'Google_Service_Compute_SubnetworkSecondaryRange';
+    protected $secondaryIpRangesDataType = 'array';
+    public $selfLink;
 
-  public function setCreationTimestamp($creationTimestamp)
-  {
-    $this->creationTimestamp = $creationTimestamp;
-  }
-  public function getCreationTimestamp()
-  {
-    return $this->creationTimestamp;
-  }
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  public function setGatewayAddress($gatewayAddress)
-  {
-    $this->gatewayAddress = $gatewayAddress;
-  }
-  public function getGatewayAddress()
-  {
-    return $this->gatewayAddress;
-  }
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  public function getId()
-  {
-    return $this->id;
-  }
-  public function setIpCidrRange($ipCidrRange)
-  {
-    $this->ipCidrRange = $ipCidrRange;
-  }
-  public function getIpCidrRange()
-  {
-    return $this->ipCidrRange;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setNetwork($network)
-  {
-    $this->network = $network;
-  }
-  public function getNetwork()
-  {
-    return $this->network;
-  }
-  public function setPrivateIpGoogleAccess($privateIpGoogleAccess)
-  {
-    $this->privateIpGoogleAccess = $privateIpGoogleAccess;
-  }
-  public function getPrivateIpGoogleAccess()
-  {
-    return $this->privateIpGoogleAccess;
-  }
-  public function setRegion($region)
-  {
-    $this->region = $region;
-  }
-  public function getRegion()
-  {
-    return $this->region;
-  }
-  /**
+    public function setCreationTimestamp($creationTimestamp)
+    {
+        $this->creationTimestamp = $creationTimestamp;
+    }
+    public function getCreationTimestamp()
+    {
+        return $this->creationTimestamp;
+    }
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    public function setGatewayAddress($gatewayAddress)
+    {
+        $this->gatewayAddress = $gatewayAddress;
+    }
+    public function getGatewayAddress()
+    {
+        return $this->gatewayAddress;
+    }
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function setIpCidrRange($ipCidrRange)
+    {
+        $this->ipCidrRange = $ipCidrRange;
+    }
+    public function getIpCidrRange()
+    {
+        return $this->ipCidrRange;
+    }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setNetwork($network)
+    {
+        $this->network = $network;
+    }
+    public function getNetwork()
+    {
+        return $this->network;
+    }
+    public function setPrivateIpGoogleAccess($privateIpGoogleAccess)
+    {
+        $this->privateIpGoogleAccess = $privateIpGoogleAccess;
+    }
+    public function getPrivateIpGoogleAccess()
+    {
+        return $this->privateIpGoogleAccess;
+    }
+    public function setRegion($region)
+    {
+        $this->region = $region;
+    }
+    public function getRegion()
+    {
+        return $this->region;
+    }
+    /**
    * @param Google_Service_Compute_SubnetworkSecondaryRange
    */
-  public function setSecondaryIpRanges($secondaryIpRanges)
-  {
-    $this->secondaryIpRanges = $secondaryIpRanges;
-  }
-  /**
+    public function setSecondaryIpRanges($secondaryIpRanges)
+    {
+        $this->secondaryIpRanges = $secondaryIpRanges;
+    }
+    /**
    * @return Google_Service_Compute_SubnetworkSecondaryRange
    */
-  public function getSecondaryIpRanges()
-  {
-    return $this->secondaryIpRanges;
-  }
-  public function setSelfLink($selfLink)
-  {
-    $this->selfLink = $selfLink;
-  }
-  public function getSelfLink()
-  {
-    return $this->selfLink;
-  }
+    public function getSecondaryIpRanges()
+    {
+        return $this->secondaryIpRanges;
+    }
+    public function setSelfLink($selfLink)
+    {
+        $this->selfLink = $selfLink;
+    }
+    public function getSelfLink()
+    {
+        return $this->selfLink;
+    }
 }

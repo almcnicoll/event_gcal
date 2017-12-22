@@ -25,48 +25,51 @@
  */
 class Google_Service_Cih_Resource_UserInteractions extends Google_Service_Resource
 {
-  /**
+    /**
    * Gets an interaction. (userInteractions.get)
    *
-   * @param string $entityType Represents the Type of the entity whose interaction
-   * will be returned. Possible Values: COMPANY, ADWORDS_CID, EMAIL,
-   * ADDRESS_DIGEST, GAIA_ID.
-   * @param string $entityId Represents the Id of the Entity whose interaction
-   * will be returned.
-   * @param string $timestamp the timestamp of the interaction to be returned. It
-   * is measured as the number of microseconds since the Epoch.
-   * @param string $interactionType The type of the interaction to be returned.
-   * @param array $optParams Optional parameters.
+   * @param  string $entityType      Represents the Type of the entity whose interaction
+   *                                will be returned. Possible Values: COMPANY,
+   *                                ADWORDS_CID, EMAIL, ADDRESS_DIGEST, GAIA_ID.
+   * @param  string $entityId        Represents the Id of the Entity whose interaction
+   *                                will be returned.
+   * @param  string $timestamp       the timestamp of the interaction to be returned. It
+   *                                is measured as the number of microseconds since the
+   *                                Epoch.
+   * @param  string $interactionType The type of the interaction to be returned.
+   * @param  array  $optParams       Optional parameters.
    * @return Google_Service_Cih_UserInteraction
    */
-  public function get($entityType, $entityId, $timestamp, $interactionType, $optParams = array())
-  {
-    $params = array('entityType' => $entityType, 'entityId' => $entityId, 'timestamp' => $timestamp, 'interactionType' => $interactionType);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Cih_UserInteraction");
-  }
-  /**
+    public function get($entityType, $entityId, $timestamp, $interactionType, $optParams = array())
+    {
+        $params = array('entityType' => $entityType, 'entityId' => $entityId, 'timestamp' => $timestamp, 'interactionType' => $interactionType);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Cih_UserInteraction");
+    }
+    /**
    * Inserts a new interaction to CIH. (userInteractions.insert)
    *
-   * @param Google_Service_Cih_UserInteraction $postBody
-   * @param array $optParams Optional parameters.
+   * @param  Google_Service_Cih_UserInteraction $postBody
+   * @param  array                              $optParams Optional parameters.
    * @return Google_Service_Cih_UserInteraction
    */
-  public function insert(Google_Service_Cih_UserInteraction $postBody, $optParams = array())
-  {
-    $params = array('postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Cih_UserInteraction");
-  }
-  /**
+    public function insert(Google_Service_Cih_UserInteraction $postBody, $optParams = array())
+    {
+        $params = array('postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Cih_UserInteraction");
+    }
+    /**
    * Get a list of interactions for the given entity and its relatives if
    * requested. The returned list is sorted by timestamp in descending order.
    * (userInteractions.listUserInteractions)
    *
-   * @param string|array $entity List of entities to retrieve. At least one item
-   * must be present. Each item must be in 'ENTITY_TYPE:ENTITY_ID' format which
-   * ENTITY_TYPE is COMPANY, ADWORDS_CID, EMAIL, ADDRESS_DIGEST or GAIA_ID.
-   * @param array $optParams Optional parameters.
+   * @param string|array $entity    List of entities to retrieve. At least one item
+   *                                must be present. Each item must be in
+   *                                'ENTITY_TYPE:ENTITY_ID' format which
+   *                                ENTITY_TYPE is COMPANY, ADWORDS_CID, EMAIL,
+   *                                ADDRESS_DIGEST or GAIA_ID.
+   * @param array        $optParams Optional parameters.
    *
    * @opt_param string entityFilter Primary or secondary entities, if available
    * only interactions whose primary or secondary entities are given are returned.
@@ -121,12 +124,12 @@ class Google_Service_Cih_Resource_UserInteractions extends Google_Service_Resour
    * @opt_param string timestampStart Lower limit on the timestamp for the
    * returned interactions. It is measured as the number of microseconds since the
    * Epoch.
-   * @return Google_Service_Cih_UserInteractionsListResponse
+   * @return    Google_Service_Cih_UserInteractionsListResponse
    */
-  public function listUserInteractions($entity, $optParams = array())
-  {
-    $params = array('entity' => $entity);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Cih_UserInteractionsListResponse");
-  }
+    public function listUserInteractions($entity, $optParams = array())
+    {
+        $params = array('entity' => $entity);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Cih_UserInteractionsListResponse");
+    }
 }

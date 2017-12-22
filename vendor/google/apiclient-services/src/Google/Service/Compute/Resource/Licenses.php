@@ -25,18 +25,18 @@
  */
 class Google_Service_Compute_Resource_Licenses extends Google_Service_Resource
 {
-  /**
+    /**
    * Returns the specified License resource. (licenses.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $license Name of the License resource to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $license   Name of the License resource to return.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Compute_License
    */
-  public function get($project, $license, $optParams = array())
-  {
-    $params = array('project' => $project, 'license' => $license);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_License");
-  }
+    public function get($project, $license, $optParams = array())
+    {
+        $params = array('project' => $project, 'license' => $license);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_License");
+    }
 }

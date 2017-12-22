@@ -17,41 +17,41 @@
 
 class Google_Service_Compute_License extends Google_Model
 {
-  public $chargesUseFee;
-  public $kind;
-  public $name;
-  public $selfLink;
+    public $chargesUseFee;
+    public $kind;
+    public $name;
+    public $selfLink;
 
-  public function setChargesUseFee($chargesUseFee)
-  {
-    $this->chargesUseFee = $chargesUseFee;
-  }
-  public function getChargesUseFee()
-  {
-    return $this->chargesUseFee;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setSelfLink($selfLink)
-  {
-    $this->selfLink = $selfLink;
-  }
-  public function getSelfLink()
-  {
-    return $this->selfLink;
-  }
+    public function setChargesUseFee($chargesUseFee)
+    {
+        $this->chargesUseFee = $chargesUseFee;
+    }
+    public function getChargesUseFee()
+    {
+        return $this->chargesUseFee;
+    }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setSelfLink($selfLink)
+    {
+        $this->selfLink = $selfLink;
+    }
+    public function getSelfLink()
+    {
+        return $this->selfLink;
+    }
 }

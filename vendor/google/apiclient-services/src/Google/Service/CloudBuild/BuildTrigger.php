@@ -17,91 +17,91 @@
 
 class Google_Service_CloudBuild_BuildTrigger extends Google_Model
 {
-  protected $buildType = 'Google_Service_CloudBuild_Build';
-  protected $buildDataType = '';
-  public $createTime;
-  public $description;
-  public $disabled;
-  public $filename;
-  public $id;
-  public $substitutions;
-  protected $triggerTemplateType = 'Google_Service_CloudBuild_RepoSource';
-  protected $triggerTemplateDataType = '';
+    protected $buildType = 'Google_Service_CloudBuild_Build';
+    protected $buildDataType = '';
+    public $createTime;
+    public $description;
+    public $disabled;
+    public $filename;
+    public $id;
+    public $substitutions;
+    protected $triggerTemplateType = 'Google_Service_CloudBuild_RepoSource';
+    protected $triggerTemplateDataType = '';
 
-  /**
+    /**
    * @param Google_Service_CloudBuild_Build
    */
-  public function setBuild(Google_Service_CloudBuild_Build $build)
-  {
-    $this->build = $build;
-  }
-  /**
+    public function setBuild(Google_Service_CloudBuild_Build $build)
+    {
+        $this->build = $build;
+    }
+    /**
    * @return Google_Service_CloudBuild_Build
    */
-  public function getBuild()
-  {
-    return $this->build;
-  }
-  public function setCreateTime($createTime)
-  {
-    $this->createTime = $createTime;
-  }
-  public function getCreateTime()
-  {
-    return $this->createTime;
-  }
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  public function setDisabled($disabled)
-  {
-    $this->disabled = $disabled;
-  }
-  public function getDisabled()
-  {
-    return $this->disabled;
-  }
-  public function setFilename($filename)
-  {
-    $this->filename = $filename;
-  }
-  public function getFilename()
-  {
-    return $this->filename;
-  }
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  public function getId()
-  {
-    return $this->id;
-  }
-  public function setSubstitutions($substitutions)
-  {
-    $this->substitutions = $substitutions;
-  }
-  public function getSubstitutions()
-  {
-    return $this->substitutions;
-  }
-  /**
+    public function getBuild()
+    {
+        return $this->build;
+    }
+    public function setCreateTime($createTime)
+    {
+        $this->createTime = $createTime;
+    }
+    public function getCreateTime()
+    {
+        return $this->createTime;
+    }
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    public function setDisabled($disabled)
+    {
+        $this->disabled = $disabled;
+    }
+    public function getDisabled()
+    {
+        return $this->disabled;
+    }
+    public function setFilename($filename)
+    {
+        $this->filename = $filename;
+    }
+    public function getFilename()
+    {
+        return $this->filename;
+    }
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function setSubstitutions($substitutions)
+    {
+        $this->substitutions = $substitutions;
+    }
+    public function getSubstitutions()
+    {
+        return $this->substitutions;
+    }
+    /**
    * @param Google_Service_CloudBuild_RepoSource
    */
-  public function setTriggerTemplate(Google_Service_CloudBuild_RepoSource $triggerTemplate)
-  {
-    $this->triggerTemplate = $triggerTemplate;
-  }
-  /**
+    public function setTriggerTemplate(Google_Service_CloudBuild_RepoSource $triggerTemplate)
+    {
+        $this->triggerTemplate = $triggerTemplate;
+    }
+    /**
    * @return Google_Service_CloudBuild_RepoSource
    */
-  public function getTriggerTemplate()
-  {
-    return $this->triggerTemplate;
-  }
+    public function getTriggerTemplate()
+    {
+        return $this->triggerTemplate;
+    }
 }

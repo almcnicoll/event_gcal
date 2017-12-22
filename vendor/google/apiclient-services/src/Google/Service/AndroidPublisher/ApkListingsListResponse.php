@@ -17,31 +17,31 @@
 
 class Google_Service_AndroidPublisher_ApkListingsListResponse extends Google_Collection
 {
-  protected $collection_key = 'listings';
-  public $kind;
-  protected $listingsType = 'Google_Service_AndroidPublisher_ApkListing';
-  protected $listingsDataType = 'array';
+    protected $collection_key = 'listings';
+    public $kind;
+    protected $listingsType = 'Google_Service_AndroidPublisher_ApkListing';
+    protected $listingsDataType = 'array';
 
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  /**
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    /**
    * @param Google_Service_AndroidPublisher_ApkListing
    */
-  public function setListings($listings)
-  {
-    $this->listings = $listings;
-  }
-  /**
+    public function setListings($listings)
+    {
+        $this->listings = $listings;
+    }
+    /**
    * @return Google_Service_AndroidPublisher_ApkListing
    */
-  public function getListings()
-  {
-    return $this->listings;
-  }
+    public function getListings()
+    {
+        return $this->listings;
+    }
 }

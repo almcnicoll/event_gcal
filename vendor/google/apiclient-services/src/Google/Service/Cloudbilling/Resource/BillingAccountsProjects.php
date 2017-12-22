@@ -25,16 +25,16 @@
  */
 class Google_Service_Cloudbilling_Resource_BillingAccountsProjects extends Google_Service_Resource
 {
-  /**
+    /**
    * Lists the projects associated with a billing account. The current
    * authenticated user must be an [owner of the billing
    * account](https://support.google.com/cloud/answer/4430947).
    * (projects.listBillingAccountsProjects)
    *
-   * @param string $name The resource name of the billing account associated with
-   * the projects that you want to list. For example,
-   * `billingAccounts/012345-567890-ABCDEF`.
-   * @param array $optParams Optional parameters.
+   * @param string $name      The resource name of the billing account associated with
+   *                          the projects that you want to list. For example,
+   *                          `billingAccounts/012345-567890-ABCDEF`.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param int pageSize Requested page size. The maximum page size is 100;
    * this is also the default.
@@ -42,12 +42,12 @@ class Google_Service_Cloudbilling_Resource_BillingAccountsProjects extends Googl
    * returned. This should be a `next_page_token` value returned from a previous
    * `ListProjectBillingInfo` call. If unspecified, the first page of results is
    * returned.
-   * @return Google_Service_Cloudbilling_ListProjectBillingInfoResponse
+   * @return    Google_Service_Cloudbilling_ListProjectBillingInfoResponse
    */
-  public function listBillingAccountsProjects($name, $optParams = array())
-  {
-    $params = array('name' => $name);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Cloudbilling_ListProjectBillingInfoResponse");
-  }
+    public function listBillingAccountsProjects($name, $optParams = array())
+    {
+        $params = array('name' => $name);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Cloudbilling_ListProjectBillingInfoResponse");
+    }
 }

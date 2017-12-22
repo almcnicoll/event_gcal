@@ -25,17 +25,17 @@
  */
 class Google_Service_AbusiveExperienceReport_Resource_ViolatingSites extends Google_Service_Resource
 {
-  /**
+    /**
    * Lists sites with Abusive Experience Report statuses of "Failing".
    * (violatingSites.listViolatingSites)
    *
-   * @param array $optParams Optional parameters.
+   * @param  array $optParams Optional parameters.
    * @return Google_Service_AbusiveExperienceReport_ViolatingSitesResponse
    */
-  public function listViolatingSites($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AbusiveExperienceReport_ViolatingSitesResponse");
-  }
+    public function listViolatingSites($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_AbusiveExperienceReport_ViolatingSitesResponse");
+    }
 }

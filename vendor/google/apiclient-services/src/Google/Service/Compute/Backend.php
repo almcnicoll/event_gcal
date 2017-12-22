@@ -17,86 +17,86 @@
 
 class Google_Service_Compute_Backend extends Google_Model
 {
-  public $balancingMode;
-  public $capacityScaler;
-  public $description;
-  public $group;
-  public $maxConnections;
-  public $maxConnectionsPerInstance;
-  public $maxRate;
-  public $maxRatePerInstance;
-  public $maxUtilization;
+    public $balancingMode;
+    public $capacityScaler;
+    public $description;
+    public $group;
+    public $maxConnections;
+    public $maxConnectionsPerInstance;
+    public $maxRate;
+    public $maxRatePerInstance;
+    public $maxUtilization;
 
-  public function setBalancingMode($balancingMode)
-  {
-    $this->balancingMode = $balancingMode;
-  }
-  public function getBalancingMode()
-  {
-    return $this->balancingMode;
-  }
-  public function setCapacityScaler($capacityScaler)
-  {
-    $this->capacityScaler = $capacityScaler;
-  }
-  public function getCapacityScaler()
-  {
-    return $this->capacityScaler;
-  }
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  public function setGroup($group)
-  {
-    $this->group = $group;
-  }
-  public function getGroup()
-  {
-    return $this->group;
-  }
-  public function setMaxConnections($maxConnections)
-  {
-    $this->maxConnections = $maxConnections;
-  }
-  public function getMaxConnections()
-  {
-    return $this->maxConnections;
-  }
-  public function setMaxConnectionsPerInstance($maxConnectionsPerInstance)
-  {
-    $this->maxConnectionsPerInstance = $maxConnectionsPerInstance;
-  }
-  public function getMaxConnectionsPerInstance()
-  {
-    return $this->maxConnectionsPerInstance;
-  }
-  public function setMaxRate($maxRate)
-  {
-    $this->maxRate = $maxRate;
-  }
-  public function getMaxRate()
-  {
-    return $this->maxRate;
-  }
-  public function setMaxRatePerInstance($maxRatePerInstance)
-  {
-    $this->maxRatePerInstance = $maxRatePerInstance;
-  }
-  public function getMaxRatePerInstance()
-  {
-    return $this->maxRatePerInstance;
-  }
-  public function setMaxUtilization($maxUtilization)
-  {
-    $this->maxUtilization = $maxUtilization;
-  }
-  public function getMaxUtilization()
-  {
-    return $this->maxUtilization;
-  }
+    public function setBalancingMode($balancingMode)
+    {
+        $this->balancingMode = $balancingMode;
+    }
+    public function getBalancingMode()
+    {
+        return $this->balancingMode;
+    }
+    public function setCapacityScaler($capacityScaler)
+    {
+        $this->capacityScaler = $capacityScaler;
+    }
+    public function getCapacityScaler()
+    {
+        return $this->capacityScaler;
+    }
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    public function setGroup($group)
+    {
+        $this->group = $group;
+    }
+    public function getGroup()
+    {
+        return $this->group;
+    }
+    public function setMaxConnections($maxConnections)
+    {
+        $this->maxConnections = $maxConnections;
+    }
+    public function getMaxConnections()
+    {
+        return $this->maxConnections;
+    }
+    public function setMaxConnectionsPerInstance($maxConnectionsPerInstance)
+    {
+        $this->maxConnectionsPerInstance = $maxConnectionsPerInstance;
+    }
+    public function getMaxConnectionsPerInstance()
+    {
+        return $this->maxConnectionsPerInstance;
+    }
+    public function setMaxRate($maxRate)
+    {
+        $this->maxRate = $maxRate;
+    }
+    public function getMaxRate()
+    {
+        return $this->maxRate;
+    }
+    public function setMaxRatePerInstance($maxRatePerInstance)
+    {
+        $this->maxRatePerInstance = $maxRatePerInstance;
+    }
+    public function getMaxRatePerInstance()
+    {
+        return $this->maxRatePerInstance;
+    }
+    public function setMaxUtilization($maxUtilization)
+    {
+        $this->maxUtilization = $maxUtilization;
+    }
+    public function getMaxUtilization()
+    {
+        return $this->maxUtilization;
+    }
 }

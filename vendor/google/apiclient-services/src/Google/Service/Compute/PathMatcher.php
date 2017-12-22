@@ -17,49 +17,49 @@
 
 class Google_Service_Compute_PathMatcher extends Google_Collection
 {
-  protected $collection_key = 'pathRules';
-  public $defaultService;
-  public $description;
-  public $name;
-  protected $pathRulesType = 'Google_Service_Compute_PathRule';
-  protected $pathRulesDataType = 'array';
+    protected $collection_key = 'pathRules';
+    public $defaultService;
+    public $description;
+    public $name;
+    protected $pathRulesType = 'Google_Service_Compute_PathRule';
+    protected $pathRulesDataType = 'array';
 
-  public function setDefaultService($defaultService)
-  {
-    $this->defaultService = $defaultService;
-  }
-  public function getDefaultService()
-  {
-    return $this->defaultService;
-  }
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  /**
+    public function setDefaultService($defaultService)
+    {
+        $this->defaultService = $defaultService;
+    }
+    public function getDefaultService()
+    {
+        return $this->defaultService;
+    }
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    /**
    * @param Google_Service_Compute_PathRule
    */
-  public function setPathRules($pathRules)
-  {
-    $this->pathRules = $pathRules;
-  }
-  /**
+    public function setPathRules($pathRules)
+    {
+        $this->pathRules = $pathRules;
+    }
+    /**
    * @return Google_Service_Compute_PathRule
    */
-  public function getPathRules()
-  {
-    return $this->pathRules;
-  }
+    public function getPathRules()
+    {
+        return $this->pathRules;
+    }
 }

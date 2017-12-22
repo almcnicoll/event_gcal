@@ -25,32 +25,32 @@
  */
 class Google_Service_Calendar_Resource_Events extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes an event. (events.delete)
    *
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param string $eventId Event identifier.
-   * @param array $optParams Optional parameters.
+   * @param string $eventId    Event identifier.
+   * @param array  $optParams  Optional parameters.
    *
    * @opt_param bool sendNotifications Whether to send notifications about the
    * deletion of the event. Optional. The default is False.
    */
-  public function delete($calendarId, $eventId, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId, 'eventId' => $eventId);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params));
-  }
-  /**
+    public function delete($calendarId, $eventId, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId, 'eventId' => $eventId);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params));
+    }
+    /**
    * Returns an event. (events.get)
    *
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param string $eventId Event identifier.
-   * @param array $optParams Optional parameters.
+   * @param string $eventId    Event identifier.
+   * @param array  $optParams  Optional parameters.
    *
    * @opt_param bool alwaysIncludeEmail Whether to always include a value in the
    * email field for the organizer, creator and attendees, even if no real email
@@ -63,23 +63,24 @@ class Google_Service_Calendar_Resource_Events extends Google_Service_Resource
    * participant is returned. Optional.
    * @opt_param string timeZone Time zone used in the response. Optional. The
    * default is the time zone of the calendar.
-   * @return Google_Service_Calendar_Event
+   * @return    Google_Service_Calendar_Event
    */
-  public function get($calendarId, $eventId, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId, 'eventId' => $eventId);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Calendar_Event");
-  }
-  /**
+    public function get($calendarId, $eventId, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId, 'eventId' => $eventId);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Calendar_Event");
+    }
+    /**
    * Imports an event. This operation is used to add a private copy of an existing
    * event to a calendar. (events.import)
    *
-   * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
-   * the calendarList.list method. If you want to access the primary calendar of
-   * the currently logged in user, use the "primary" keyword.
+   * @param string                        $calendarId Calendar identifier. To retrieve calendar IDs call
+   *                                                  the calendarList.list method. If you want to
+   *                                                  access the primary calendar of the currently
+   *                                                  logged in user, use the "primary" keyword.
    * @param Google_Service_Calendar_Event $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                         $optParams  Optional parameters.
    *
    * @opt_param int conferenceDataVersion Version number of conference data
    * supported by the API client. Version 0 assumes no conference data support and
@@ -88,22 +89,23 @@ class Google_Service_Calendar_Resource_Events extends Google_Service_Resource
    * CreateConferenceRequest. The default is 0.
    * @opt_param bool supportsAttachments Whether API client performing operation
    * supports event attachments. Optional. The default is False.
-   * @return Google_Service_Calendar_Event
+   * @return    Google_Service_Calendar_Event
    */
-  public function import($calendarId, Google_Service_Calendar_Event $postBody, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('import', array($params), "Google_Service_Calendar_Event");
-  }
-  /**
+    public function import($calendarId, Google_Service_Calendar_Event $postBody, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('import', array($params), "Google_Service_Calendar_Event");
+    }
+    /**
    * Creates an event. (events.insert)
    *
-   * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
-   * the calendarList.list method. If you want to access the primary calendar of
-   * the currently logged in user, use the "primary" keyword.
+   * @param string                        $calendarId Calendar identifier. To retrieve calendar IDs call
+   *                                                  the calendarList.list method. If you want to
+   *                                                  access the primary calendar of the currently
+   *                                                  logged in user, use the "primary" keyword.
    * @param Google_Service_Calendar_Event $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                         $optParams  Optional parameters.
    *
    * @opt_param int conferenceDataVersion Version number of conference data
    * supported by the API client. Version 0 assumes no conference data support and
@@ -117,22 +119,22 @@ class Google_Service_Calendar_Resource_Events extends Google_Service_Resource
    * creation of the new event. Optional. The default is False.
    * @opt_param bool supportsAttachments Whether API client performing operation
    * supports event attachments. Optional. The default is False.
-   * @return Google_Service_Calendar_Event
+   * @return    Google_Service_Calendar_Event
    */
-  public function insert($calendarId, Google_Service_Calendar_Event $postBody, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Calendar_Event");
-  }
-  /**
+    public function insert($calendarId, Google_Service_Calendar_Event $postBody, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Calendar_Event");
+    }
+    /**
    * Returns instances of the specified recurring event. (events.instances)
    *
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param string $eventId Recurring event identifier.
-   * @param array $optParams Optional parameters.
+   * @param string $eventId    Recurring event identifier.
+   * @param array  $optParams  Optional parameters.
    *
    * @opt_param bool alwaysIncludeEmail Whether to always include a value in the
    * email field for the organizer, creator and attendees, even if no real email
@@ -162,21 +164,21 @@ class Google_Service_Calendar_Resource_Events extends Google_Service_Resource
    * RFC3339 timestamp with mandatory time zone offset.
    * @opt_param string timeZone Time zone used in the response. Optional. The
    * default is the time zone of the calendar.
-   * @return Google_Service_Calendar_Events
+   * @return    Google_Service_Calendar_Events
    */
-  public function instances($calendarId, $eventId, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId, 'eventId' => $eventId);
-    $params = array_merge($params, $optParams);
-    return $this->call('instances', array($params), "Google_Service_Calendar_Events");
-  }
-  /**
+    public function instances($calendarId, $eventId, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId, 'eventId' => $eventId);
+        $params = array_merge($params, $optParams);
+        return $this->call('instances', array($params), "Google_Service_Calendar_Events");
+    }
+    /**
    * Returns events on the specified calendar. (events.listEvents)
    *
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams  Optional parameters.
    *
    * @opt_param bool alwaysIncludeEmail Whether to always include a value in the
    * email field for the organizer, creator and attendees, even if no real email
@@ -251,44 +253,45 @@ class Google_Service_Calendar_Resource_Events extends Google_Service_Resource
    * time (as a RFC3339 timestamp) to filter by. When specified, entries deleted
    * since this time will always be included regardless of showDeleted. Optional.
    * The default is not to filter by last modification time.
-   * @return Google_Service_Calendar_Events
+   * @return    Google_Service_Calendar_Events
    */
-  public function listEvents($calendarId, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Calendar_Events");
-  }
-  /**
+    public function listEvents($calendarId, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Calendar_Events");
+    }
+    /**
    * Moves an event to another calendar, i.e. changes an event's organizer.
    * (events.move)
    *
-   * @param string $calendarId Calendar identifier of the source calendar where
-   * the event currently is on.
-   * @param string $eventId Event identifier.
+   * @param string $calendarId  Calendar identifier of the source calendar where
+   *                            the event currently is on.
+   * @param string $eventId     Event identifier.
    * @param string $destination Calendar identifier of the target calendar where
    * the event is to be moved to.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams   Optional parameters.
    *
    * @opt_param bool sendNotifications Whether to send notifications about the
    * change of the event's organizer. Optional. The default is False.
-   * @return Google_Service_Calendar_Event
+   * @return    Google_Service_Calendar_Event
    */
-  public function move($calendarId, $eventId, $destination, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId, 'eventId' => $eventId, 'destination' => $destination);
-    $params = array_merge($params, $optParams);
-    return $this->call('move', array($params), "Google_Service_Calendar_Event");
-  }
-  /**
+    public function move($calendarId, $eventId, $destination, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId, 'eventId' => $eventId, 'destination' => $destination);
+        $params = array_merge($params, $optParams);
+        return $this->call('move', array($params), "Google_Service_Calendar_Event");
+    }
+    /**
    * Updates an event. This method supports patch semantics. (events.patch)
    *
-   * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
-   * the calendarList.list method. If you want to access the primary calendar of
-   * the currently logged in user, use the "primary" keyword.
-   * @param string $eventId Event identifier.
+   * @param string                        $calendarId Calendar identifier. To retrieve calendar IDs call
+   *                                                  the calendarList.list method. If you want to
+   *                                                  access the primary calendar of the currently
+   *                                                  logged in user, use the "primary" keyword.
+   * @param string                        $eventId    Event identifier.
    * @param Google_Service_Calendar_Event $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                         $optParams  Optional parameters.
    *
    * @opt_param bool alwaysIncludeEmail Whether to always include a value in the
    * email field for the organizer, creator and attendees, even if no real email
@@ -309,42 +312,43 @@ class Google_Service_Calendar_Resource_Events extends Google_Service_Resource
    * default is False.
    * @opt_param bool supportsAttachments Whether API client performing operation
    * supports event attachments. Optional. The default is False.
-   * @return Google_Service_Calendar_Event
+   * @return    Google_Service_Calendar_Event
    */
-  public function patch($calendarId, $eventId, Google_Service_Calendar_Event $postBody, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId, 'eventId' => $eventId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Calendar_Event");
-  }
-  /**
+    public function patch($calendarId, $eventId, Google_Service_Calendar_Event $postBody, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId, 'eventId' => $eventId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Calendar_Event");
+    }
+    /**
    * Creates an event based on a simple text string. (events.quickAdd)
    *
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param string $text The text describing the event to be created.
-   * @param array $optParams Optional parameters.
+   * @param string $text       The text describing the event to be created.
+   * @param array  $optParams  Optional parameters.
    *
    * @opt_param bool sendNotifications Whether to send notifications about the
    * creation of the event. Optional. The default is False.
-   * @return Google_Service_Calendar_Event
+   * @return    Google_Service_Calendar_Event
    */
-  public function quickAdd($calendarId, $text, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId, 'text' => $text);
-    $params = array_merge($params, $optParams);
-    return $this->call('quickAdd', array($params), "Google_Service_Calendar_Event");
-  }
-  /**
+    public function quickAdd($calendarId, $text, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId, 'text' => $text);
+        $params = array_merge($params, $optParams);
+        return $this->call('quickAdd', array($params), "Google_Service_Calendar_Event");
+    }
+    /**
    * Updates an event. (events.update)
    *
-   * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
-   * the calendarList.list method. If you want to access the primary calendar of
-   * the currently logged in user, use the "primary" keyword.
-   * @param string $eventId Event identifier.
+   * @param string                        $calendarId Calendar identifier. To retrieve calendar IDs call
+   *                                                  the calendarList.list method. If you want to
+   *                                                  access the primary calendar of the currently
+   *                                                  logged in user, use the "primary" keyword.
+   * @param string                        $eventId    Event identifier.
    * @param Google_Service_Calendar_Event $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                         $optParams  Optional parameters.
    *
    * @opt_param bool alwaysIncludeEmail Whether to always include a value in the
    * email field for the organizer, creator and attendees, even if no real email
@@ -365,22 +369,23 @@ class Google_Service_Calendar_Resource_Events extends Google_Service_Resource
    * default is False.
    * @opt_param bool supportsAttachments Whether API client performing operation
    * supports event attachments. Optional. The default is False.
-   * @return Google_Service_Calendar_Event
+   * @return    Google_Service_Calendar_Event
    */
-  public function update($calendarId, $eventId, Google_Service_Calendar_Event $postBody, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId, 'eventId' => $eventId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Calendar_Event");
-  }
-  /**
+    public function update($calendarId, $eventId, Google_Service_Calendar_Event $postBody, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId, 'eventId' => $eventId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('update', array($params), "Google_Service_Calendar_Event");
+    }
+    /**
    * Watch for changes to Events resources. (events.watch)
    *
-   * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
-   * the calendarList.list method. If you want to access the primary calendar of
-   * the currently logged in user, use the "primary" keyword.
+   * @param string                          $calendarId Calendar identifier. To retrieve calendar IDs call
+   *                                                    the calendarList.list method. If you want to
+   *                                                    access the primary calendar of the currently
+   *                                                    logged in user, use the "primary" keyword.
    * @param Google_Service_Calendar_Channel $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                           $optParams  Optional parameters.
    *
    * @opt_param bool alwaysIncludeEmail Whether to always include a value in the
    * email field for the organizer, creator and attendees, even if no real email
@@ -455,12 +460,12 @@ class Google_Service_Calendar_Resource_Events extends Google_Service_Resource
    * time (as a RFC3339 timestamp) to filter by. When specified, entries deleted
    * since this time will always be included regardless of showDeleted. Optional.
    * The default is not to filter by last modification time.
-   * @return Google_Service_Calendar_Channel
+   * @return    Google_Service_Calendar_Channel
    */
-  public function watch($calendarId, Google_Service_Calendar_Channel $postBody, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('watch', array($params), "Google_Service_Calendar_Channel");
-  }
+    public function watch($calendarId, Google_Service_Calendar_Channel $postBody, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('watch', array($params), "Google_Service_Calendar_Channel");
+    }
 }

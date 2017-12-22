@@ -25,7 +25,7 @@
  */
 class Google_Service_Classroom_Resource_CoursesTeachers extends Google_Service_Resource
 {
-  /**
+    /**
    * Creates a teacher of a course.
    *
    * This method returns the following error codes:
@@ -39,19 +39,20 @@ class Google_Service_Classroom_Resource_CoursesTeachers extends Google_Service_R
    * `ALREADY_EXISTS` if the user is already a teacher or student in the course.
    * (teachers.create)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param Google_Service_Classroom_Teacher $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                           $courseId  Identifier of the course. This identifier can be
+   *                                                     either the Classroom-assigned identifier or an
+   *                                                     alias.
+   * @param  Google_Service_Classroom_Teacher $postBody
+   * @param  array                            $optParams Optional parameters.
    * @return Google_Service_Classroom_Teacher
    */
-  public function create($courseId, Google_Service_Classroom_Teacher $postBody, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Classroom_Teacher");
-  }
-  /**
+    public function create($courseId, Google_Service_Classroom_Teacher $postBody, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_Classroom_Teacher");
+    }
+    /**
    * Deletes a teacher of a course.
    *
    * This method returns the following error codes:
@@ -62,23 +63,23 @@ class Google_Service_Classroom_Resource_CoursesTeachers extends Google_Service_R
    * `FAILED_PRECONDITION` if the requested ID belongs to the primary teacher of
    * this course. (teachers.delete)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $userId Identifier of the teacher to delete. The identifier can
-   * be one of the following:
-   *
-   * * the numeric identifier for the user * the email address of the user * the
-   * string literal `"me"`, indicating the requesting user
-   * @param array $optParams Optional parameters.
+   * @param  string $courseId  Identifier of the course. This identifier can be
+   *                          either the Classroom-assigned identifier or an
+   *                          alias.
+   * @param  string $userId    Identifier of the teacher to delete. The identifier can
+   *                          be one of the following: * the numeric identifier for
+   *                          the user * the email address of the user * the string
+   *                          literal `"me"`, indicating the requesting user
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
-  public function delete($courseId, $userId, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'userId' => $userId);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
-  }
-  /**
+    public function delete($courseId, $userId, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'userId' => $userId);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
+    }
+    /**
    * Returns a teacher of a course.
    *
    * This method returns the following error codes:
@@ -88,23 +89,23 @@ class Google_Service_Classroom_Resource_CoursesTeachers extends Google_Service_R
    * this course has the requested ID or if the course does not exist.
    * (teachers.get)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $userId Identifier of the teacher to return. The identifier can
-   * be one of the following:
-   *
-   * * the numeric identifier for the user * the email address of the user * the
-   * string literal `"me"`, indicating the requesting user
-   * @param array $optParams Optional parameters.
+   * @param  string $courseId  Identifier of the course. This identifier can be
+   *                          either the Classroom-assigned identifier or an
+   *                          alias.
+   * @param  string $userId    Identifier of the teacher to return. The identifier can
+   *                          be one of the following: * the numeric identifier for
+   *                          the user * the email address of the user * the string
+   *                          literal `"me"`, indicating the requesting user
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Classroom_Teacher
    */
-  public function get($courseId, $userId, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'userId' => $userId);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Classroom_Teacher");
-  }
-  /**
+    public function get($courseId, $userId, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'userId' => $userId);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Classroom_Teacher");
+    }
+    /**
    * Returns a list of teachers of this course that the requester is permitted to
    * view.
    *
@@ -113,9 +114,10 @@ class Google_Service_Classroom_Resource_CoursesTeachers extends Google_Service_R
    * * `NOT_FOUND` if the course does not exist. * `PERMISSION_DENIED` for access
    * errors. (teachers.listCoursesTeachers)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param array $optParams Optional parameters.
+   * @param string $courseId  Identifier of the course. This identifier can be
+   *                          either the Classroom-assigned identifier or an
+   *                          alias.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string pageToken nextPageToken value returned from a previous list
    * call, indicating that the subsequent page of results should be returned.
@@ -126,12 +128,12 @@ class Google_Service_Classroom_Resource_CoursesTeachers extends Google_Service_R
    * maximum.
    *
    * The server may return fewer than the specified number of results.
-   * @return Google_Service_Classroom_ListTeachersResponse
+   * @return    Google_Service_Classroom_ListTeachersResponse
    */
-  public function listCoursesTeachers($courseId, $optParams = array())
-  {
-    $params = array('courseId' => $courseId);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Classroom_ListTeachersResponse");
-  }
+    public function listCoursesTeachers($courseId, $optParams = array())
+    {
+        $params = array('courseId' => $courseId);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Classroom_ListTeachersResponse");
+    }
 }

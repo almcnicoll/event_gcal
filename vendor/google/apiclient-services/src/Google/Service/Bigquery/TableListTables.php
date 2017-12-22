@@ -17,116 +17,116 @@
 
 class Google_Service_Bigquery_TableListTables extends Google_Model
 {
-  public $creationTime;
-  public $expirationTime;
-  public $friendlyName;
-  public $id;
-  public $kind;
-  public $labels;
-  protected $tableReferenceType = 'Google_Service_Bigquery_TableReference';
-  protected $tableReferenceDataType = '';
-  protected $timePartitioningType = 'Google_Service_Bigquery_TimePartitioning';
-  protected $timePartitioningDataType = '';
-  public $type;
-  protected $viewType = 'Google_Service_Bigquery_TableListTablesView';
-  protected $viewDataType = '';
+    public $creationTime;
+    public $expirationTime;
+    public $friendlyName;
+    public $id;
+    public $kind;
+    public $labels;
+    protected $tableReferenceType = 'Google_Service_Bigquery_TableReference';
+    protected $tableReferenceDataType = '';
+    protected $timePartitioningType = 'Google_Service_Bigquery_TimePartitioning';
+    protected $timePartitioningDataType = '';
+    public $type;
+    protected $viewType = 'Google_Service_Bigquery_TableListTablesView';
+    protected $viewDataType = '';
 
-  public function setCreationTime($creationTime)
-  {
-    $this->creationTime = $creationTime;
-  }
-  public function getCreationTime()
-  {
-    return $this->creationTime;
-  }
-  public function setExpirationTime($expirationTime)
-  {
-    $this->expirationTime = $expirationTime;
-  }
-  public function getExpirationTime()
-  {
-    return $this->expirationTime;
-  }
-  public function setFriendlyName($friendlyName)
-  {
-    $this->friendlyName = $friendlyName;
-  }
-  public function getFriendlyName()
-  {
-    return $this->friendlyName;
-  }
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  public function getId()
-  {
-    return $this->id;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  public function getLabels()
-  {
-    return $this->labels;
-  }
-  /**
+    public function setCreationTime($creationTime)
+    {
+        $this->creationTime = $creationTime;
+    }
+    public function getCreationTime()
+    {
+        return $this->creationTime;
+    }
+    public function setExpirationTime($expirationTime)
+    {
+        $this->expirationTime = $expirationTime;
+    }
+    public function getExpirationTime()
+    {
+        return $this->expirationTime;
+    }
+    public function setFriendlyName($friendlyName)
+    {
+        $this->friendlyName = $friendlyName;
+    }
+    public function getFriendlyName()
+    {
+        return $this->friendlyName;
+    }
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setLabels($labels)
+    {
+        $this->labels = $labels;
+    }
+    public function getLabels()
+    {
+        return $this->labels;
+    }
+    /**
    * @param Google_Service_Bigquery_TableReference
    */
-  public function setTableReference(Google_Service_Bigquery_TableReference $tableReference)
-  {
-    $this->tableReference = $tableReference;
-  }
-  /**
+    public function setTableReference(Google_Service_Bigquery_TableReference $tableReference)
+    {
+        $this->tableReference = $tableReference;
+    }
+    /**
    * @return Google_Service_Bigquery_TableReference
    */
-  public function getTableReference()
-  {
-    return $this->tableReference;
-  }
-  /**
+    public function getTableReference()
+    {
+        return $this->tableReference;
+    }
+    /**
    * @param Google_Service_Bigquery_TimePartitioning
    */
-  public function setTimePartitioning(Google_Service_Bigquery_TimePartitioning $timePartitioning)
-  {
-    $this->timePartitioning = $timePartitioning;
-  }
-  /**
+    public function setTimePartitioning(Google_Service_Bigquery_TimePartitioning $timePartitioning)
+    {
+        $this->timePartitioning = $timePartitioning;
+    }
+    /**
    * @return Google_Service_Bigquery_TimePartitioning
    */
-  public function getTimePartitioning()
-  {
-    return $this->timePartitioning;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
-  }
-  /**
+    public function getTimePartitioning()
+    {
+        return $this->timePartitioning;
+    }
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+    public function getType()
+    {
+        return $this->type;
+    }
+    /**
    * @param Google_Service_Bigquery_TableListTablesView
    */
-  public function setView(Google_Service_Bigquery_TableListTablesView $view)
-  {
-    $this->view = $view;
-  }
-  /**
+    public function setView(Google_Service_Bigquery_TableListTablesView $view)
+    {
+        $this->view = $view;
+    }
+    /**
    * @return Google_Service_Bigquery_TableListTablesView
    */
-  public function getView()
-  {
-    return $this->view;
-  }
+    public function getView()
+    {
+        return $this->view;
+    }
 }

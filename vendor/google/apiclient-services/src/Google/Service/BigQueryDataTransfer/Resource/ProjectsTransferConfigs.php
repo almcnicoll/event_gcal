@@ -25,16 +25,18 @@
  */
 class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs extends Google_Service_Resource
 {
-  /**
+    /**
    * Creates a new data transfer configuration. (transferConfigs.create)
    *
-   * @param string $parent The BigQuery project id where the transfer
-   * configuration should be created. Must be in the format
-   * /projects/{project_id}/locations/{location_id} If specified location and
-   * location of the destination bigquery dataset do not match - the request will
-   * fail.
+   * @param string                                             $parent    The BigQuery project id where the transfer
+   *                                                                      configuration should be created. Must be
+   *                                                                      in the format
+   *                                                                      /projects/{project_id}/locations/{location_id}
+   *                                                                      If specified location and location of the
+   *                                                                      destination bigquery dataset do not match
+   *                                                                      - the request will fail.
    * @param Google_Service_BigQueryDataTransfer_TransferConfig $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                              $optParams Optional parameters.
    *
    * @opt_param string authorizationCode Optional OAuth2 authorization code to use
    * with this transfer configuration. This is required if new credentials are
@@ -51,50 +53,52 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    * authorization code should be   returned in the title bar of the browser, with
    * the page text prompting   the user to copy the code and paste it in the
    * application.
-   * @return Google_Service_BigQueryDataTransfer_TransferConfig
+   * @return    Google_Service_BigQueryDataTransfer_TransferConfig
    */
-  public function create($parent, Google_Service_BigQueryDataTransfer_TransferConfig $postBody, $optParams = array())
-  {
-    $params = array('parent' => $parent, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_BigQueryDataTransfer_TransferConfig");
-  }
-  /**
+    public function create($parent, Google_Service_BigQueryDataTransfer_TransferConfig $postBody, $optParams = array())
+    {
+        $params = array('parent' => $parent, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_BigQueryDataTransfer_TransferConfig");
+    }
+    /**
    * Deletes a data transfer configuration, including any associated transfer runs
    * and logs. (transferConfigs.delete)
    *
-   * @param string $name The field will contain name of the resource requested,
-   * for example: `projects/{project_id}/transferConfigs/{config_id}`
-   * @param array $optParams Optional parameters.
+   * @param  string $name      The field will contain name of the resource requested,
+   *                          for example:
+   *                          `projects/{project_id}/transferConfigs/{config_id}`
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_BigQueryDataTransfer_BigquerydatatransferEmpty
    */
-  public function delete($name, $optParams = array())
-  {
-    $params = array('name' => $name);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_BigQueryDataTransfer_BigquerydatatransferEmpty");
-  }
-  /**
+    public function delete($name, $optParams = array())
+    {
+        $params = array('name' => $name);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_BigQueryDataTransfer_BigquerydatatransferEmpty");
+    }
+    /**
    * Returns information about a data transfer config. (transferConfigs.get)
    *
-   * @param string $name The field will contain name of the resource requested,
-   * for example: `projects/{project_id}/transferConfigs/{config_id}`
-   * @param array $optParams Optional parameters.
+   * @param  string $name      The field will contain name of the resource requested,
+   *                          for example:
+   *                          `projects/{project_id}/transferConfigs/{config_id}`
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_BigQueryDataTransfer_TransferConfig
    */
-  public function get($name, $optParams = array())
-  {
-    $params = array('name' => $name);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_BigQueryDataTransfer_TransferConfig");
-  }
-  /**
+    public function get($name, $optParams = array())
+    {
+        $params = array('name' => $name);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_BigQueryDataTransfer_TransferConfig");
+    }
+    /**
    * Returns information about all data transfers in the project.
    * (transferConfigs.listProjectsTransferConfigs)
    *
-   * @param string $parent The BigQuery project id for which data sources should
-   * be returned: `projects/{project_id}`.
-   * @param array $optParams Optional parameters.
+   * @param string $parent    The BigQuery project id for which data sources should
+   *                          be returned: `projects/{project_id}`.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string dataSourceIds When specified, only configurations of
    * requested data sources are returned.
@@ -104,24 +108,26 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    * used as the `page_token` value to request the next page of list results.
    * @opt_param int pageSize Page size. The default page size is the maximum value
    * of 1000 results.
-   * @return Google_Service_BigQueryDataTransfer_ListTransferConfigsResponse
+   * @return    Google_Service_BigQueryDataTransfer_ListTransferConfigsResponse
    */
-  public function listProjectsTransferConfigs($parent, $optParams = array())
-  {
-    $params = array('parent' => $parent);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_BigQueryDataTransfer_ListTransferConfigsResponse");
-  }
-  /**
+    public function listProjectsTransferConfigs($parent, $optParams = array())
+    {
+        $params = array('parent' => $parent);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_BigQueryDataTransfer_ListTransferConfigsResponse");
+    }
+    /**
    * Updates a data transfer configuration. All fields must be set, even if they
    * are not updated. (transferConfigs.patch)
    *
-   * @param string $name The resource name of the transfer config. Transfer config
-   * names have the form `projects/{project_id}/transferConfigs/{config_id}`.
-   * Where `config_id` is usually a uuid, even though it is not guaranteed or
-   * required. The name is ignored when creating a transfer config.
+   * @param string                                             $name      The resource name of the transfer config. Transfer config
+   *                                                                      names have the form
+   *                                                                      `projects/{project_id}/transferConfigs/{config_id}`.
+   *                                                                      Where `config_id` is usually a uuid, even though it is
+   *                                                                      not guaranteed or required. The name is ignored when
+   *                                                                      creating a transfer config.
    * @param Google_Service_BigQueryDataTransfer_TransferConfig $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                              $optParams Optional parameters.
    *
    * @opt_param string authorizationCode Optional OAuth2 authorization code to use
    * with this transfer configuration. If it is provided, the transfer
@@ -140,30 +146,30 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    * application.
    * @opt_param string updateMask Required list of fields to be updated in this
    * request.
-   * @return Google_Service_BigQueryDataTransfer_TransferConfig
+   * @return    Google_Service_BigQueryDataTransfer_TransferConfig
    */
-  public function patch($name, Google_Service_BigQueryDataTransfer_TransferConfig $postBody, $optParams = array())
-  {
-    $params = array('name' => $name, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_BigQueryDataTransfer_TransferConfig");
-  }
-  /**
+    public function patch($name, Google_Service_BigQueryDataTransfer_TransferConfig $postBody, $optParams = array())
+    {
+        $params = array('name' => $name, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_BigQueryDataTransfer_TransferConfig");
+    }
+    /**
    * Creates transfer runs for a time range [start_time, end_time]. For each date
    * - or whatever granularity the data source supports - in the range, one
    * transfer run is created. Note that runs are created per UTC time in the time
    * range. (transferConfigs.scheduleRuns)
    *
-   * @param string $parent Transfer configuration name in the form:
-   * `projects/{project_id}/transferConfigs/{config_id}`.
-   * @param Google_Service_BigQueryDataTransfer_ScheduleTransferRunsRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                          $parent    Transfer configuration name in the form:
+   *                                                                                    `projects/{project_id}/transferConfigs/{config_id}`.
+   * @param  Google_Service_BigQueryDataTransfer_ScheduleTransferRunsRequest $postBody
+   * @param  array                                                           $optParams Optional parameters.
    * @return Google_Service_BigQueryDataTransfer_ScheduleTransferRunsResponse
    */
-  public function scheduleRuns($parent, Google_Service_BigQueryDataTransfer_ScheduleTransferRunsRequest $postBody, $optParams = array())
-  {
-    $params = array('parent' => $parent, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('scheduleRuns', array($params), "Google_Service_BigQueryDataTransfer_ScheduleTransferRunsResponse");
-  }
+    public function scheduleRuns($parent, Google_Service_BigQueryDataTransfer_ScheduleTransferRunsRequest $postBody, $optParams = array())
+    {
+        $params = array('parent' => $parent, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('scheduleRuns', array($params), "Google_Service_BigQueryDataTransfer_ScheduleTransferRunsResponse");
+    }
 }

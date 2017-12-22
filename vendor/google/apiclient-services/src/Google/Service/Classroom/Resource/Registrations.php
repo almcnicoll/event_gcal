@@ -25,7 +25,7 @@
  */
 class Google_Service_Classroom_Resource_Registrations extends Google_Service_Resource
 {
-  /**
+    /**
    * Creates a `Registration`, causing Classroom to start sending notifications
    * from the provided `feed` to the provided `destination`.
    *
@@ -54,29 +54,29 @@ class Google_Service_Classroom_Resource_Registrations extends Google_Service_Res
    * cannot be located, or Classroom has not       been granted permission to
    * publish to it. (registrations.create)
    *
-   * @param Google_Service_Classroom_Registration $postBody
-   * @param array $optParams Optional parameters.
+   * @param  Google_Service_Classroom_Registration $postBody
+   * @param  array                                 $optParams Optional parameters.
    * @return Google_Service_Classroom_Registration
    */
-  public function create(Google_Service_Classroom_Registration $postBody, $optParams = array())
-  {
-    $params = array('postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Classroom_Registration");
-  }
-  /**
+    public function create(Google_Service_Classroom_Registration $postBody, $optParams = array())
+    {
+        $params = array('postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_Classroom_Registration");
+    }
+    /**
    * Deletes a `Registration`, causing Classroom to stop sending notifications for
    * that `Registration`. (registrations.delete)
    *
-   * @param string $registrationId The `registration_id` of the `Registration` to
+   * @param  string $registrationId The `registration_id` of the `Registration` to
    * be deleted.
-   * @param array $optParams Optional parameters.
+   * @param  array  $optParams      Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
-  public function delete($registrationId, $optParams = array())
-  {
-    $params = array('registrationId' => $registrationId);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
-  }
+    public function delete($registrationId, $optParams = array())
+    {
+        $params = array('registrationId' => $registrationId);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
+    }
 }

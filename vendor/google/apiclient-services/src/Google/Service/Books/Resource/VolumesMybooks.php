@@ -25,7 +25,7 @@
  */
 class Google_Service_Books_Resource_VolumesMybooks extends Google_Service_Resource
 {
-  /**
+    /**
    * Return a list of books in My Library. (mybooks.listVolumesMybooks)
    *
    * @param array $optParams Optional parameters.
@@ -41,12 +41,12 @@ class Google_Service_Books_Resource_VolumesMybooks extends Google_Service_Resour
    * @opt_param string source String to identify the originator of this request.
    * @opt_param string startIndex Index of the first result to return (starts at
    * 0)
-   * @return Google_Service_Books_Volumes
+   * @return    Google_Service_Books_Volumes
    */
-  public function listVolumesMybooks($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Books_Volumes");
-  }
+    public function listVolumesMybooks($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Books_Volumes");
+    }
 }

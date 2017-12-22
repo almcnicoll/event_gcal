@@ -31,43 +31,51 @@
  */
 class Google_Service_CloudUserAccounts extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** View your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM_READ_ONLY =
+    /**
+ * View your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM_READ_ONLY =
       "https://www.googleapis.com/auth/cloud-platform.read-only";
-  /** Manage your Google Cloud User Accounts. */
-  const CLOUD_USERACCOUNTS =
+    /**
+ * Manage your Google Cloud User Accounts. 
+*/
+    const CLOUD_USERACCOUNTS =
       "https://www.googleapis.com/auth/cloud.useraccounts";
-  /** View your Google Cloud User Accounts. */
-  const CLOUD_USERACCOUNTS_READONLY =
+    /**
+ * View your Google Cloud User Accounts. 
+*/
+    const CLOUD_USERACCOUNTS_READONLY =
       "https://www.googleapis.com/auth/cloud.useraccounts.readonly";
 
-  public $globalAccountsOperations;
-  public $groups;
-  public $linux;
-  public $users;
+    public $globalAccountsOperations;
+    public $groups;
+    public $linux;
+    public $users;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudUserAccounts service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'clouduseraccounts/vm_alpha/projects/';
-    $this->version = 'vm_alpha';
-    $this->serviceName = 'clouduseraccounts';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'clouduseraccounts/vm_alpha/projects/';
+        $this->version = 'vm_alpha';
+        $this->serviceName = 'clouduseraccounts';
 
-    $this->globalAccountsOperations = new Google_Service_CloudUserAccounts_Resource_GlobalAccountsOperations(
-        $this,
-        $this->serviceName,
-        'globalAccountsOperations',
-        array(
-          'methods' => array(
+        $this->globalAccountsOperations = new Google_Service_CloudUserAccounts_Resource_GlobalAccountsOperations(
+            $this,
+            $this->serviceName,
+            'globalAccountsOperations',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => '{project}/global/operations/{operation}',
               'httpMethod' => 'DELETE',
@@ -125,15 +133,15 @@ class Google_Service_CloudUserAccounts extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->groups = new Google_Service_CloudUserAccounts_Resource_Groups(
-        $this,
-        $this->serviceName,
-        'groups',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->groups = new Google_Service_CloudUserAccounts_Resource_Groups(
+            $this,
+            $this->serviceName,
+            'groups',
+            array(
+            'methods' => array(
             'addMember' => array(
               'path' => '{project}/global/groups/{groupName}/addMember',
               'httpMethod' => 'POST',
@@ -276,15 +284,15 @@ class Google_Service_CloudUserAccounts extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->linux = new Google_Service_CloudUserAccounts_Resource_Linux(
-        $this,
-        $this->serviceName,
-        'linux',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->linux = new Google_Service_CloudUserAccounts_Resource_Linux(
+            $this,
+            $this->serviceName,
+            'linux',
+            array(
+            'methods' => array(
             'getAuthorizedKeysView' => array(
               'path' => '{project}/zones/{zone}/authorizedKeysView/{user}',
               'httpMethod' => 'POST',
@@ -351,15 +359,15 @@ class Google_Service_CloudUserAccounts extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->users = new Google_Service_CloudUserAccounts_Resource_Users(
-        $this,
-        $this->serviceName,
-        'users',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->users = new Google_Service_CloudUserAccounts_Resource_Users(
+            $this,
+            $this->serviceName,
+            'users',
+            array(
+            'methods' => array(
             'addPublicKey' => array(
               'path' => '{project}/global/users/{user}/addPublicKey',
               'httpMethod' => 'POST',
@@ -507,8 +515,8 @@ class Google_Service_CloudUserAccounts extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

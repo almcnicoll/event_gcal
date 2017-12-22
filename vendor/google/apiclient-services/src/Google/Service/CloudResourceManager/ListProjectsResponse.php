@@ -17,31 +17,31 @@
 
 class Google_Service_CloudResourceManager_ListProjectsResponse extends Google_Collection
 {
-  protected $collection_key = 'projects';
-  public $nextPageToken;
-  protected $projectsType = 'Google_Service_CloudResourceManager_Project';
-  protected $projectsDataType = 'array';
+    protected $collection_key = 'projects';
+    public $nextPageToken;
+    protected $projectsType = 'Google_Service_CloudResourceManager_Project';
+    protected $projectsDataType = 'array';
 
-  public function setNextPageToken($nextPageToken)
-  {
-    $this->nextPageToken = $nextPageToken;
-  }
-  public function getNextPageToken()
-  {
-    return $this->nextPageToken;
-  }
-  /**
+    public function setNextPageToken($nextPageToken)
+    {
+        $this->nextPageToken = $nextPageToken;
+    }
+    public function getNextPageToken()
+    {
+        return $this->nextPageToken;
+    }
+    /**
    * @param Google_Service_CloudResourceManager_Project
    */
-  public function setProjects($projects)
-  {
-    $this->projects = $projects;
-  }
-  /**
+    public function setProjects($projects)
+    {
+        $this->projects = $projects;
+    }
+    /**
    * @return Google_Service_CloudResourceManager_Project
    */
-  public function getProjects()
-  {
-    return $this->projects;
-  }
+    public function getProjects()
+    {
+        return $this->projects;
+    }
 }

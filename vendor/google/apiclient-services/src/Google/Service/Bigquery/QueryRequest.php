@@ -17,119 +17,119 @@
 
 class Google_Service_Bigquery_QueryRequest extends Google_Collection
 {
-  protected $collection_key = 'queryParameters';
-  protected $defaultDatasetType = 'Google_Service_Bigquery_DatasetReference';
-  protected $defaultDatasetDataType = '';
-  public $dryRun;
-  public $kind;
-  public $maxResults;
-  public $parameterMode;
-  public $preserveNulls;
-  public $query;
-  protected $queryParametersType = 'Google_Service_Bigquery_QueryParameter';
-  protected $queryParametersDataType = 'array';
-  public $timeoutMs;
-  public $useLegacySql;
-  public $useQueryCache;
+    protected $collection_key = 'queryParameters';
+    protected $defaultDatasetType = 'Google_Service_Bigquery_DatasetReference';
+    protected $defaultDatasetDataType = '';
+    public $dryRun;
+    public $kind;
+    public $maxResults;
+    public $parameterMode;
+    public $preserveNulls;
+    public $query;
+    protected $queryParametersType = 'Google_Service_Bigquery_QueryParameter';
+    protected $queryParametersDataType = 'array';
+    public $timeoutMs;
+    public $useLegacySql;
+    public $useQueryCache;
 
-  /**
+    /**
    * @param Google_Service_Bigquery_DatasetReference
    */
-  public function setDefaultDataset(Google_Service_Bigquery_DatasetReference $defaultDataset)
-  {
-    $this->defaultDataset = $defaultDataset;
-  }
-  /**
+    public function setDefaultDataset(Google_Service_Bigquery_DatasetReference $defaultDataset)
+    {
+        $this->defaultDataset = $defaultDataset;
+    }
+    /**
    * @return Google_Service_Bigquery_DatasetReference
    */
-  public function getDefaultDataset()
-  {
-    return $this->defaultDataset;
-  }
-  public function setDryRun($dryRun)
-  {
-    $this->dryRun = $dryRun;
-  }
-  public function getDryRun()
-  {
-    return $this->dryRun;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setMaxResults($maxResults)
-  {
-    $this->maxResults = $maxResults;
-  }
-  public function getMaxResults()
-  {
-    return $this->maxResults;
-  }
-  public function setParameterMode($parameterMode)
-  {
-    $this->parameterMode = $parameterMode;
-  }
-  public function getParameterMode()
-  {
-    return $this->parameterMode;
-  }
-  public function setPreserveNulls($preserveNulls)
-  {
-    $this->preserveNulls = $preserveNulls;
-  }
-  public function getPreserveNulls()
-  {
-    return $this->preserveNulls;
-  }
-  public function setQuery($query)
-  {
-    $this->query = $query;
-  }
-  public function getQuery()
-  {
-    return $this->query;
-  }
-  /**
+    public function getDefaultDataset()
+    {
+        return $this->defaultDataset;
+    }
+    public function setDryRun($dryRun)
+    {
+        $this->dryRun = $dryRun;
+    }
+    public function getDryRun()
+    {
+        return $this->dryRun;
+    }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setMaxResults($maxResults)
+    {
+        $this->maxResults = $maxResults;
+    }
+    public function getMaxResults()
+    {
+        return $this->maxResults;
+    }
+    public function setParameterMode($parameterMode)
+    {
+        $this->parameterMode = $parameterMode;
+    }
+    public function getParameterMode()
+    {
+        return $this->parameterMode;
+    }
+    public function setPreserveNulls($preserveNulls)
+    {
+        $this->preserveNulls = $preserveNulls;
+    }
+    public function getPreserveNulls()
+    {
+        return $this->preserveNulls;
+    }
+    public function setQuery($query)
+    {
+        $this->query = $query;
+    }
+    public function getQuery()
+    {
+        return $this->query;
+    }
+    /**
    * @param Google_Service_Bigquery_QueryParameter
    */
-  public function setQueryParameters($queryParameters)
-  {
-    $this->queryParameters = $queryParameters;
-  }
-  /**
+    public function setQueryParameters($queryParameters)
+    {
+        $this->queryParameters = $queryParameters;
+    }
+    /**
    * @return Google_Service_Bigquery_QueryParameter
    */
-  public function getQueryParameters()
-  {
-    return $this->queryParameters;
-  }
-  public function setTimeoutMs($timeoutMs)
-  {
-    $this->timeoutMs = $timeoutMs;
-  }
-  public function getTimeoutMs()
-  {
-    return $this->timeoutMs;
-  }
-  public function setUseLegacySql($useLegacySql)
-  {
-    $this->useLegacySql = $useLegacySql;
-  }
-  public function getUseLegacySql()
-  {
-    return $this->useLegacySql;
-  }
-  public function setUseQueryCache($useQueryCache)
-  {
-    $this->useQueryCache = $useQueryCache;
-  }
-  public function getUseQueryCache()
-  {
-    return $this->useQueryCache;
-  }
+    public function getQueryParameters()
+    {
+        return $this->queryParameters;
+    }
+    public function setTimeoutMs($timeoutMs)
+    {
+        $this->timeoutMs = $timeoutMs;
+    }
+    public function getTimeoutMs()
+    {
+        return $this->timeoutMs;
+    }
+    public function setUseLegacySql($useLegacySql)
+    {
+        $this->useLegacySql = $useLegacySql;
+    }
+    public function getUseLegacySql()
+    {
+        return $this->useLegacySql;
+    }
+    public function setUseQueryCache($useQueryCache)
+    {
+        $this->useQueryCache = $useQueryCache;
+    }
+    public function getUseQueryCache()
+    {
+        return $this->useQueryCache;
+    }
 }

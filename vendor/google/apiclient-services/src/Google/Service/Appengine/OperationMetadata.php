@@ -17,59 +17,59 @@
 
 class Google_Service_Appengine_OperationMetadata extends Google_Model
 {
-  public $endTime;
-  public $insertTime;
-  public $method;
-  public $operationType;
-  public $target;
-  public $user;
+    public $endTime;
+    public $insertTime;
+    public $method;
+    public $operationType;
+    public $target;
+    public $user;
 
-  public function setEndTime($endTime)
-  {
-    $this->endTime = $endTime;
-  }
-  public function getEndTime()
-  {
-    return $this->endTime;
-  }
-  public function setInsertTime($insertTime)
-  {
-    $this->insertTime = $insertTime;
-  }
-  public function getInsertTime()
-  {
-    return $this->insertTime;
-  }
-  public function setMethod($method)
-  {
-    $this->method = $method;
-  }
-  public function getMethod()
-  {
-    return $this->method;
-  }
-  public function setOperationType($operationType)
-  {
-    $this->operationType = $operationType;
-  }
-  public function getOperationType()
-  {
-    return $this->operationType;
-  }
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  public function getTarget()
-  {
-    return $this->target;
-  }
-  public function setUser($user)
-  {
-    $this->user = $user;
-  }
-  public function getUser()
-  {
-    return $this->user;
-  }
+    public function setEndTime($endTime)
+    {
+        $this->endTime = $endTime;
+    }
+    public function getEndTime()
+    {
+        return $this->endTime;
+    }
+    public function setInsertTime($insertTime)
+    {
+        $this->insertTime = $insertTime;
+    }
+    public function getInsertTime()
+    {
+        return $this->insertTime;
+    }
+    public function setMethod($method)
+    {
+        $this->method = $method;
+    }
+    public function getMethod()
+    {
+        return $this->method;
+    }
+    public function setOperationType($operationType)
+    {
+        $this->operationType = $operationType;
+    }
+    public function getOperationType()
+    {
+        return $this->operationType;
+    }
+    public function setTarget($target)
+    {
+        $this->target = $target;
+    }
+    public function getTarget()
+    {
+        return $this->target;
+    }
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
+    public function getUser()
+    {
+        return $this->user;
+    }
 }

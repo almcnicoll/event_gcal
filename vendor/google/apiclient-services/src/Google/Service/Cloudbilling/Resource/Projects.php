@@ -25,23 +25,24 @@
  */
 class Google_Service_Cloudbilling_Resource_Projects extends Google_Service_Resource
 {
-  /**
+    /**
    * Gets the billing information for a project. The current authenticated user
    * must have [permission to view the project](https://cloud.google.com/docs
    * /permissions-overview#h.bgs0oxofvnoo ). (projects.getBillingInfo)
    *
-   * @param string $name The resource name of the project for which billing
-   * information is retrieved. For example, `projects/tokyo-rain-123`.
-   * @param array $optParams Optional parameters.
+   * @param  string $name      The resource name of the project for which billing
+   *                          information is retrieved. For example,
+   *                          `projects/tokyo-rain-123`.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Cloudbilling_ProjectBillingInfo
    */
-  public function getBillingInfo($name, $optParams = array())
-  {
-    $params = array('name' => $name);
-    $params = array_merge($params, $optParams);
-    return $this->call('getBillingInfo', array($params), "Google_Service_Cloudbilling_ProjectBillingInfo");
-  }
-  /**
+    public function getBillingInfo($name, $optParams = array())
+    {
+        $params = array('name' => $name);
+        $params = array_merge($params, $optParams);
+        return $this->call('getBillingInfo', array($params), "Google_Service_Cloudbilling_ProjectBillingInfo");
+    }
+    /**
    * Sets or updates the billing account associated with a project. You specify
    * the new billing account by setting the `billing_account_name` in the
    * `ProjectBillingInfo` resource to the resource name of a billing account.
@@ -73,17 +74,17 @@ class Google_Service_Cloudbilling_Resource_Projects extends Google_Service_Resou
    * billing, you should always call this method with the name of an *open*
    * billing account. (projects.updateBillingInfo)
    *
-   * @param string $name The resource name of the project associated with the
-   * billing information that you want to update. For example, `projects/tokyo-
-   * rain-123`.
-   * @param Google_Service_Cloudbilling_ProjectBillingInfo $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                         $name      The resource name of the project associated with the
+   *                                                                   billing information that you want to update. For
+   *                                                                   example, `projects/tokyo- rain-123`.
+   * @param  Google_Service_Cloudbilling_ProjectBillingInfo $postBody
+   * @param  array                                          $optParams Optional parameters.
    * @return Google_Service_Cloudbilling_ProjectBillingInfo
    */
-  public function updateBillingInfo($name, Google_Service_Cloudbilling_ProjectBillingInfo $postBody, $optParams = array())
-  {
-    $params = array('name' => $name, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('updateBillingInfo', array($params), "Google_Service_Cloudbilling_ProjectBillingInfo");
-  }
+    public function updateBillingInfo($name, Google_Service_Cloudbilling_ProjectBillingInfo $postBody, $optParams = array())
+    {
+        $params = array('name' => $name, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('updateBillingInfo', array($params), "Google_Service_Cloudbilling_ProjectBillingInfo");
+    }
 }

@@ -31,33 +31,35 @@
  */
 class Google_Service_CloudTasks extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $projects_locations;
-  public $projects_locations_queues;
-  public $projects_locations_queues_tasks;
+    public $projects_locations;
+    public $projects_locations_queues;
+    public $projects_locations_queues_tasks;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudTasks service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://cloudtasks.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v2beta2';
-    $this->serviceName = 'cloudtasks';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://cloudtasks.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v2beta2';
+        $this->serviceName = 'cloudtasks';
 
-    $this->projects_locations = new Google_Service_CloudTasks_Resource_ProjectsLocations(
-        $this,
-        $this->serviceName,
-        'locations',
-        array(
-          'methods' => array(
+        $this->projects_locations = new Google_Service_CloudTasks_Resource_ProjectsLocations(
+            $this,
+            $this->serviceName,
+            'locations',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'v2beta2/{+name}',
               'httpMethod' => 'GET',
@@ -91,15 +93,15 @@ class Google_Service_CloudTasks extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_locations_queues = new Google_Service_CloudTasks_Resource_ProjectsLocationsQueues(
-        $this,
-        $this->serviceName,
-        'queues',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_locations_queues = new Google_Service_CloudTasks_Resource_ProjectsLocationsQueues(
+            $this,
+            $this->serviceName,
+            'queues',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v2beta2/{+parent}/queues',
               'httpMethod' => 'POST',
@@ -227,15 +229,15 @@ class Google_Service_CloudTasks extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_locations_queues_tasks = new Google_Service_CloudTasks_Resource_ProjectsLocationsQueuesTasks(
-        $this,
-        $this->serviceName,
-        'tasks',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_locations_queues_tasks = new Google_Service_CloudTasks_Resource_ProjectsLocationsQueuesTasks(
+            $this,
+            $this->serviceName,
+            'tasks',
+            array(
+            'methods' => array(
             'acknowledge' => array(
               'path' => 'v2beta2/{+name}:acknowledge',
               'httpMethod' => 'POST',
@@ -357,8 +359,8 @@ class Google_Service_CloudTasks extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

@@ -25,7 +25,7 @@
  */
 class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service_Resource
 {
-  /**
+    /**
    * Creates course work.
    *
    * The resulting course work (and corresponding student submissions) are
@@ -44,19 +44,20 @@ class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service
    * `FAILED_PRECONDITION` for the following request error:     *
    * AttachmentNotVisible (courseWork.create)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param Google_Service_Classroom_CourseWork $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                              $courseId  Identifier of the course. This identifier can be
+   *                                                        either the Classroom-assigned identifier or an
+   *                                                        alias.
+   * @param  Google_Service_Classroom_CourseWork $postBody
+   * @param  array                               $optParams Optional parameters.
    * @return Google_Service_Classroom_CourseWork
    */
-  public function create($courseId, Google_Service_Classroom_CourseWork $postBody, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Classroom_CourseWork");
-  }
-  /**
+    public function create($courseId, Google_Service_Classroom_CourseWork $postBody, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_Classroom_CourseWork");
+    }
+    /**
    * Deletes a course work.
    *
    * This request must be made by the Developer Console project of the [OAuth
@@ -71,20 +72,21 @@ class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service
    * requested course work has already been deleted. * `NOT_FOUND` if no course
    * exists with the requested ID. (courseWork.delete)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $id Identifier of the course work to delete. This identifier is
-   * a Classroom-assigned identifier.
-   * @param array $optParams Optional parameters.
+   * @param  string $courseId  Identifier of the course. This identifier can be
+   *                          either the Classroom-assigned identifier or an
+   *                          alias.
+   * @param  string $id        Identifier of the course work to delete. This identifier is
+   *                          a Classroom-assigned identifier.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
-  public function delete($courseId, $id, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'id' => $id);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
-  }
-  /**
+    public function delete($courseId, $id, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'id' => $id);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
+    }
+    /**
    * Returns course work.
    *
    * This method returns the following error codes:
@@ -94,19 +96,20 @@ class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service
    * if the request is malformed. * `NOT_FOUND` if the requested course or course
    * work does not exist. (courseWork.get)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $id Identifier of the course work.
-   * @param array $optParams Optional parameters.
+   * @param  string $courseId  Identifier of the course. This identifier can be
+   *                          either the Classroom-assigned identifier or an
+   *                          alias.
+   * @param  string $id        Identifier of the course work.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Classroom_CourseWork
    */
-  public function get($courseId, $id, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'id' => $id);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Classroom_CourseWork");
-  }
-  /**
+    public function get($courseId, $id, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'id' => $id);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Classroom_CourseWork");
+    }
+    /**
    * Returns a list of course work that the requester is permitted to view.
    *
    * Course students may only view `PUBLISHED` course work. Course teachers and
@@ -119,9 +122,10 @@ class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service
    * malformed. * `NOT_FOUND` if the requested course does not exist.
    * (courseWork.listCoursesCourseWork)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param array $optParams Optional parameters.
+   * @param string $courseId  Identifier of the course. This identifier can be
+   *                          either the Classroom-assigned identifier or an
+   *                          alias.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string orderBy Optional sort ordering for results. A comma-
    * separated list of fields with an optional sort direction keyword. Supported
@@ -140,15 +144,15 @@ class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service
    * @opt_param string courseWorkStates Restriction on the work status to return.
    * Only courseWork that matches is returned. If unspecified, items with a work
    * status of `PUBLISHED` is returned.
-   * @return Google_Service_Classroom_ListCourseWorkResponse
+   * @return    Google_Service_Classroom_ListCourseWorkResponse
    */
-  public function listCoursesCourseWork($courseId, $optParams = array())
-  {
-    $params = array('courseId' => $courseId);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Classroom_ListCourseWorkResponse");
-  }
-  /**
+    public function listCoursesCourseWork($courseId, $optParams = array())
+    {
+        $params = array('courseId' => $courseId);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Classroom_ListCourseWorkResponse");
+    }
+    /**
    * Modifies assignee mode and options of a coursework.
    *
    * Only a teacher of the course that contains the coursework may call this
@@ -161,20 +165,21 @@ class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service
    * the request is malformed. * `NOT_FOUND` if the requested course or course
    * work does not exist. (courseWork.modifyAssignees)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $id Identifier of the coursework.
-   * @param Google_Service_Classroom_ModifyCourseWorkAssigneesRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                    $courseId  Identifier of the course. This identifier can be
+   *                                                                              either the Classroom-assigned identifier or an
+   *                                                                              alias.
+   * @param  string                                                    $id        Identifier of the coursework.
+   * @param  Google_Service_Classroom_ModifyCourseWorkAssigneesRequest $postBody
+   * @param  array                                                     $optParams Optional parameters.
    * @return Google_Service_Classroom_CourseWork
    */
-  public function modifyAssignees($courseId, $id, Google_Service_Classroom_ModifyCourseWorkAssigneesRequest $postBody, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'id' => $id, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('modifyAssignees', array($params), "Google_Service_Classroom_CourseWork");
-  }
-  /**
+    public function modifyAssignees($courseId, $id, Google_Service_Classroom_ModifyCourseWorkAssigneesRequest $postBody, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'id' => $id, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('modifyAssignees', array($params), "Google_Service_Classroom_CourseWork");
+    }
+    /**
    * Updates one or more fields of a course work.
    *
    * See google.classroom.v1.CourseWork for details of which fields may be updated
@@ -194,11 +199,12 @@ class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service
    * requested course, course work, or student submission does not exist.
    * (courseWork.patch)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $id Identifier of the course work.
+   * @param string                              $courseId  Identifier of the course. This identifier can be
+   *                                                       either the Classroom-assigned identifier or an
+   *                                                       alias.
+   * @param string                              $id        Identifier of the course work.
    * @param Google_Service_Classroom_CourseWork $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                               $optParams Optional parameters.
    *
    * @opt_param string updateMask Mask that identifies which fields on the course
    * work to update. This field is required to do an update. The update fails if
@@ -212,12 +218,12 @@ class Google_Service_Classroom_Resource_CoursesCourseWork extends Google_Service
    *
    * * `title` * `description` * `state` * `due_date` * `due_time` * `max_points`
    * * `scheduled_time` * `submission_modification_mode`
-   * @return Google_Service_Classroom_CourseWork
+   * @return    Google_Service_Classroom_CourseWork
    */
-  public function patch($courseId, $id, Google_Service_Classroom_CourseWork $postBody, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'id' => $id, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Classroom_CourseWork");
-  }
+    public function patch($courseId, $id, Google_Service_Classroom_CourseWork $postBody, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'id' => $id, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Classroom_CourseWork");
+    }
 }

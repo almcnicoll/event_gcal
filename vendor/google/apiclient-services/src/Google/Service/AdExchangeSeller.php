@@ -30,43 +30,47 @@
  */
 class Google_Service_AdExchangeSeller extends Google_Service
 {
-  /** View and manage your Ad Exchange data. */
-  const ADEXCHANGE_SELLER =
+    /**
+ * View and manage your Ad Exchange data. 
+*/
+    const ADEXCHANGE_SELLER =
       "https://www.googleapis.com/auth/adexchange.seller";
-  /** View your Ad Exchange data. */
-  const ADEXCHANGE_SELLER_READONLY =
+    /**
+ * View your Ad Exchange data. 
+*/
+    const ADEXCHANGE_SELLER_READONLY =
       "https://www.googleapis.com/auth/adexchange.seller.readonly";
 
-  public $accounts;
-  public $accounts_adclients;
-  public $accounts_alerts;
-  public $accounts_customchannels;
-  public $accounts_metadata_dimensions;
-  public $accounts_metadata_metrics;
-  public $accounts_preferreddeals;
-  public $accounts_reports;
-  public $accounts_reports_saved;
-  public $accounts_urlchannels;
+    public $accounts;
+    public $accounts_adclients;
+    public $accounts_alerts;
+    public $accounts_customchannels;
+    public $accounts_metadata_dimensions;
+    public $accounts_metadata_metrics;
+    public $accounts_preferreddeals;
+    public $accounts_reports;
+    public $accounts_reports_saved;
+    public $accounts_urlchannels;
   
-  /**
+    /**
    * Constructs the internal representation of the AdExchangeSeller service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'adexchangeseller/v2.0/';
-    $this->version = 'v2.0';
-    $this->serviceName = 'adexchangeseller';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'adexchangeseller/v2.0/';
+        $this->version = 'v2.0';
+        $this->serviceName = 'adexchangeseller';
 
-    $this->accounts = new Google_Service_AdExchangeSeller_Resource_Accounts(
-        $this,
-        $this->serviceName,
-        'accounts',
-        array(
-          'methods' => array(
+        $this->accounts = new Google_Service_AdExchangeSeller_Resource_Accounts(
+            $this,
+            $this->serviceName,
+            'accounts',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'accounts/{accountId}',
               'httpMethod' => 'GET',
@@ -91,15 +95,15 @@ class Google_Service_AdExchangeSeller extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_adclients = new Google_Service_AdExchangeSeller_Resource_AccountsAdclients(
-        $this,
-        $this->serviceName,
-        'adclients',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_adclients = new Google_Service_AdExchangeSeller_Resource_AccountsAdclients(
+            $this,
+            $this->serviceName,
+            'adclients',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'accounts/{accountId}/adclients',
               'httpMethod' => 'GET',
@@ -119,15 +123,15 @@ class Google_Service_AdExchangeSeller extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_alerts = new Google_Service_AdExchangeSeller_Resource_AccountsAlerts(
-        $this,
-        $this->serviceName,
-        'alerts',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_alerts = new Google_Service_AdExchangeSeller_Resource_AccountsAlerts(
+            $this,
+            $this->serviceName,
+            'alerts',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'accounts/{accountId}/alerts',
               'httpMethod' => 'GET',
@@ -143,15 +147,15 @@ class Google_Service_AdExchangeSeller extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_customchannels = new Google_Service_AdExchangeSeller_Resource_AccountsCustomchannels(
-        $this,
-        $this->serviceName,
-        'customchannels',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_customchannels = new Google_Service_AdExchangeSeller_Resource_AccountsCustomchannels(
+            $this,
+            $this->serviceName,
+            'customchannels',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}',
               'httpMethod' => 'GET',
@@ -196,15 +200,15 @@ class Google_Service_AdExchangeSeller extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_metadata_dimensions = new Google_Service_AdExchangeSeller_Resource_AccountsMetadataDimensions(
-        $this,
-        $this->serviceName,
-        'dimensions',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_metadata_dimensions = new Google_Service_AdExchangeSeller_Resource_AccountsMetadataDimensions(
+            $this,
+            $this->serviceName,
+            'dimensions',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'accounts/{accountId}/metadata/dimensions',
               'httpMethod' => 'GET',
@@ -216,15 +220,15 @@ class Google_Service_AdExchangeSeller extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_metadata_metrics = new Google_Service_AdExchangeSeller_Resource_AccountsMetadataMetrics(
-        $this,
-        $this->serviceName,
-        'metrics',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_metadata_metrics = new Google_Service_AdExchangeSeller_Resource_AccountsMetadataMetrics(
+            $this,
+            $this->serviceName,
+            'metrics',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'accounts/{accountId}/metadata/metrics',
               'httpMethod' => 'GET',
@@ -236,15 +240,15 @@ class Google_Service_AdExchangeSeller extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_preferreddeals = new Google_Service_AdExchangeSeller_Resource_AccountsPreferreddeals(
-        $this,
-        $this->serviceName,
-        'preferreddeals',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_preferreddeals = new Google_Service_AdExchangeSeller_Resource_AccountsPreferreddeals(
+            $this,
+            $this->serviceName,
+            'preferreddeals',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'accounts/{accountId}/preferreddeals/{dealId}',
               'httpMethod' => 'GET',
@@ -271,15 +275,15 @@ class Google_Service_AdExchangeSeller extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_reports = new Google_Service_AdExchangeSeller_Resource_AccountsReports(
-        $this,
-        $this->serviceName,
-        'reports',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_reports = new Google_Service_AdExchangeSeller_Resource_AccountsReports(
+            $this,
+            $this->serviceName,
+            'reports',
+            array(
+            'methods' => array(
             'generate' => array(
               'path' => 'accounts/{accountId}/reports',
               'httpMethod' => 'GET',
@@ -333,15 +337,15 @@ class Google_Service_AdExchangeSeller extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_reports_saved = new Google_Service_AdExchangeSeller_Resource_AccountsReportsSaved(
-        $this,
-        $this->serviceName,
-        'saved',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_reports_saved = new Google_Service_AdExchangeSeller_Resource_AccountsReportsSaved(
+            $this,
+            $this->serviceName,
+            'saved',
+            array(
+            'methods' => array(
             'generate' => array(
               'path' => 'accounts/{accountId}/reports/{savedReportId}',
               'httpMethod' => 'GET',
@@ -388,15 +392,15 @@ class Google_Service_AdExchangeSeller extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_urlchannels = new Google_Service_AdExchangeSeller_Resource_AccountsUrlchannels(
-        $this,
-        $this->serviceName,
-        'urlchannels',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_urlchannels = new Google_Service_AdExchangeSeller_Resource_AccountsUrlchannels(
+            $this,
+            $this->serviceName,
+            'urlchannels',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'accounts/{accountId}/adclients/{adClientId}/urlchannels',
               'httpMethod' => 'GET',
@@ -421,8 +425,8 @@ class Google_Service_AdExchangeSeller extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

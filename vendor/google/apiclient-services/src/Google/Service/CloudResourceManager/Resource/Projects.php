@@ -25,21 +25,21 @@
  */
 class Google_Service_CloudResourceManager_Resource_Projects extends Google_Service_Resource
 {
-  /**
+    /**
    * Clears a `Policy` from a resource. (projects.clearOrgPolicy)
    *
-   * @param string $resource Name of the resource for the `Policy` to clear.
-   * @param Google_Service_CloudResourceManager_ClearOrgPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                    $resource  Name of the resource for the `Policy` to clear.
+   * @param  Google_Service_CloudResourceManager_ClearOrgPolicyRequest $postBody
+   * @param  array                                                     $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_CloudresourcemanagerEmpty
    */
-  public function clearOrgPolicy($resource, Google_Service_CloudResourceManager_ClearOrgPolicyRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('clearOrgPolicy', array($params), "Google_Service_CloudResourceManager_CloudresourcemanagerEmpty");
-  }
-  /**
+    public function clearOrgPolicy($resource, Google_Service_CloudResourceManager_ClearOrgPolicyRequest $postBody, $optParams = array())
+    {
+        $params = array('resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('clearOrgPolicy', array($params), "Google_Service_CloudResourceManager_CloudresourcemanagerEmpty");
+    }
+    /**
    * Request that a new Project be created. The result is an Operation which can
    * be used to track the creation process. It is automatically deleted after a
    * few hours, so there is no need to call DeleteOperation.
@@ -53,17 +53,17 @@ class Google_Service_CloudResourceManager_Resource_Projects extends Google_Servi
    * `resourcemanager.projects.create` on the specified parent for the new
    * project. (projects.create)
    *
-   * @param Google_Service_CloudResourceManager_Project $postBody
-   * @param array $optParams Optional parameters.
+   * @param  Google_Service_CloudResourceManager_Project $postBody
+   * @param  array                                       $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_Operation
    */
-  public function create(Google_Service_CloudResourceManager_Project $postBody, $optParams = array())
-  {
-    $params = array('postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_CloudResourceManager_Operation");
-  }
-  /**
+    public function create(Google_Service_CloudResourceManager_Project $postBody, $optParams = array())
+    {
+        $params = array('postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_CloudResourceManager_Operation");
+    }
+    /**
    * Marks the Project identified by the specified `project_id` (for example, `my-
    * project-123`) for deletion. This method will only affect the Project if the
    * following criteria are met:
@@ -84,75 +84,74 @@ class Google_Service_CloudResourceManager_Resource_Projects extends Google_Servi
    *
    * The caller must have modify permissions for this Project. (projects.delete)
    *
-   * @param string $projectId The Project ID (for example, `foo-bar-123`).
+   * @param  string $projectId The Project ID (for example, `foo-bar-123`).
    *
    * Required.
-   * @param array $optParams Optional parameters.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_CloudresourcemanagerEmpty
    */
-  public function delete($projectId, $optParams = array())
-  {
-    $params = array('projectId' => $projectId);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_CloudResourceManager_CloudresourcemanagerEmpty");
-  }
-  /**
+    public function delete($projectId, $optParams = array())
+    {
+        $params = array('projectId' => $projectId);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_CloudResourceManager_CloudresourcemanagerEmpty");
+    }
+    /**
    * Retrieves the Project identified by the specified `project_id` (for example,
    * `my-project-123`).
    *
    * The caller must have read permissions for this Project. (projects.get)
    *
-   * @param string $projectId The Project ID (for example, `my-project-123`).
+   * @param  string $projectId The Project ID (for example, `my-project-123`).
    *
    * Required.
-   * @param array $optParams Optional parameters.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_Project
    */
-  public function get($projectId, $optParams = array())
-  {
-    $params = array('projectId' => $projectId);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_CloudResourceManager_Project");
-  }
-  /**
+    public function get($projectId, $optParams = array())
+    {
+        $params = array('projectId' => $projectId);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_CloudResourceManager_Project");
+    }
+    /**
    * Gets a list of ancestors in the resource hierarchy for the Project identified
    * by the specified `project_id` (for example, `my-project-123`).
    *
    * The caller must have read permissions for this Project.
    * (projects.getAncestry)
    *
-   * @param string $projectId The Project ID (for example, `my-project-123`).
-   *
-   * Required.
-   * @param Google_Service_CloudResourceManager_GetAncestryRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                 $projectId The Project ID (for example, `my-project-123`).
+   *                                                                          Required.
+   * @param  Google_Service_CloudResourceManager_GetAncestryRequest $postBody
+   * @param  array                                                  $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_GetAncestryResponse
    */
-  public function getAncestry($projectId, Google_Service_CloudResourceManager_GetAncestryRequest $postBody, $optParams = array())
-  {
-    $params = array('projectId' => $projectId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('getAncestry', array($params), "Google_Service_CloudResourceManager_GetAncestryResponse");
-  }
-  /**
+    public function getAncestry($projectId, Google_Service_CloudResourceManager_GetAncestryRequest $postBody, $optParams = array())
+    {
+        $params = array('projectId' => $projectId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('getAncestry', array($params), "Google_Service_CloudResourceManager_GetAncestryResponse");
+    }
+    /**
    * Gets the effective `Policy` on a resource. This is the result of merging
    * `Policies` in the resource hierarchy. The returned `Policy` will not have an
    * `etag`set because it is a computed `Policy` across multiple resources.
    * (projects.getEffectiveOrgPolicy)
    *
-   * @param string $resource The name of the resource to start computing the
-   * effective `Policy`.
-   * @param Google_Service_CloudResourceManager_GetEffectiveOrgPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                           $resource  The name of the resource to start computing the
+   *                                                                                     effective `Policy`.
+   * @param  Google_Service_CloudResourceManager_GetEffectiveOrgPolicyRequest $postBody
+   * @param  array                                                            $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_OrgPolicy
    */
-  public function getEffectiveOrgPolicy($resource, Google_Service_CloudResourceManager_GetEffectiveOrgPolicyRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('getEffectiveOrgPolicy', array($params), "Google_Service_CloudResourceManager_OrgPolicy");
-  }
-  /**
+    public function getEffectiveOrgPolicy($resource, Google_Service_CloudResourceManager_GetEffectiveOrgPolicyRequest $postBody, $optParams = array())
+    {
+        $params = array('resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('getEffectiveOrgPolicy', array($params), "Google_Service_CloudResourceManager_OrgPolicy");
+    }
+    /**
    * Returns the IAM access control policy for the specified Project. Permission
    * is denied if the policy or the resource does not exist.
    *
@@ -160,20 +159,20 @@ class Google_Service_CloudResourceManager_Resource_Projects extends Google_Servi
    * `resourcemanager.projects.getIamPolicy` on the project
    * (projects.getIamPolicy)
    *
-   * @param string $resource REQUIRED: The resource for which the policy is being
-   * requested. See the operation documentation for the appropriate value for this
-   * field.
-   * @param Google_Service_CloudResourceManager_GetIamPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                  $resource  REQUIRED: The resource for which the policy is being
+   *                                                                            requested. See the operation documentation for the
+   *                                                                            appropriate value for this field.
+   * @param  Google_Service_CloudResourceManager_GetIamPolicyRequest $postBody
+   * @param  array                                                   $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_Policy
    */
-  public function getIamPolicy($resource, Google_Service_CloudResourceManager_GetIamPolicyRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('getIamPolicy', array($params), "Google_Service_CloudResourceManager_Policy");
-  }
-  /**
+    public function getIamPolicy($resource, Google_Service_CloudResourceManager_GetIamPolicyRequest $postBody, $optParams = array())
+    {
+        $params = array('resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('getIamPolicy', array($params), "Google_Service_CloudResourceManager_Policy");
+    }
+    /**
    * Gets a `Policy` on a resource.
    *
    * If no `Policy` is set on the resource, a `Policy` is returned with default
@@ -181,18 +180,18 @@ class Google_Service_CloudResourceManager_Resource_Projects extends Google_Servi
    * `etag` value can be used with `SetOrgPolicy()` to create or update a `Policy`
    * during read-modify-write. (projects.getOrgPolicy)
    *
-   * @param string $resource Name of the resource the `Policy` is set on.
-   * @param Google_Service_CloudResourceManager_GetOrgPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                  $resource  Name of the resource the `Policy` is set on.
+   * @param  Google_Service_CloudResourceManager_GetOrgPolicyRequest $postBody
+   * @param  array                                                   $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_OrgPolicy
    */
-  public function getOrgPolicy($resource, Google_Service_CloudResourceManager_GetOrgPolicyRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('getOrgPolicy', array($params), "Google_Service_CloudResourceManager_OrgPolicy");
-  }
-  /**
+    public function getOrgPolicy($resource, Google_Service_CloudResourceManager_GetOrgPolicyRequest $postBody, $optParams = array())
+    {
+        $params = array('resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('getOrgPolicy', array($params), "Google_Service_CloudResourceManager_OrgPolicy");
+    }
+    /**
    * Lists Projects that are visible to the user and satisfy the specified filter.
    * This method returns Projects in an unspecified order. This method is
    * eventually consistent with project mutations; this means that a newly created
@@ -237,45 +236,45 @@ class Google_Service_CloudResourceManager_Resource_Projects extends Google_Servi
    * unspecified, server picks an appropriate default.
    *
    * Optional.
-   * @return Google_Service_CloudResourceManager_ListProjectsResponse
+   * @return    Google_Service_CloudResourceManager_ListProjectsResponse
    */
-  public function listProjects($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudResourceManager_ListProjectsResponse");
-  }
-  /**
+    public function listProjects($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_CloudResourceManager_ListProjectsResponse");
+    }
+    /**
    * Lists `Constraints` that could be applied on the specified resource.
    * (projects.listAvailableOrgPolicyConstraints)
    *
-   * @param string $resource Name of the resource to list `Constraints` for.
-   * @param Google_Service_CloudResourceManager_ListAvailableOrgPolicyConstraintsRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                                       $resource  Name of the resource to list `Constraints` for.
+   * @param  Google_Service_CloudResourceManager_ListAvailableOrgPolicyConstraintsRequest $postBody
+   * @param  array                                                                        $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_ListAvailableOrgPolicyConstraintsResponse
    */
-  public function listAvailableOrgPolicyConstraints($resource, Google_Service_CloudResourceManager_ListAvailableOrgPolicyConstraintsRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('listAvailableOrgPolicyConstraints', array($params), "Google_Service_CloudResourceManager_ListAvailableOrgPolicyConstraintsResponse");
-  }
-  /**
+    public function listAvailableOrgPolicyConstraints($resource, Google_Service_CloudResourceManager_ListAvailableOrgPolicyConstraintsRequest $postBody, $optParams = array())
+    {
+        $params = array('resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('listAvailableOrgPolicyConstraints', array($params), "Google_Service_CloudResourceManager_ListAvailableOrgPolicyConstraintsResponse");
+    }
+    /**
    * Lists all the `Policies` set for a particular resource.
    * (projects.listOrgPolicies)
    *
-   * @param string $resource Name of the resource to list Policies for.
-   * @param Google_Service_CloudResourceManager_ListOrgPoliciesRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                     $resource  Name of the resource to list Policies for.
+   * @param  Google_Service_CloudResourceManager_ListOrgPoliciesRequest $postBody
+   * @param  array                                                      $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_ListOrgPoliciesResponse
    */
-  public function listOrgPolicies($resource, Google_Service_CloudResourceManager_ListOrgPoliciesRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('listOrgPolicies', array($params), "Google_Service_CloudResourceManager_ListOrgPoliciesResponse");
-  }
-  /**
+    public function listOrgPolicies($resource, Google_Service_CloudResourceManager_ListOrgPoliciesRequest $postBody, $optParams = array())
+    {
+        $params = array('resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('listOrgPolicies', array($params), "Google_Service_CloudResourceManager_ListOrgPoliciesResponse");
+    }
+    /**
    * Sets the IAM access control policy for the specified Project. Overwrites any
    * existing policy.
    *
@@ -318,57 +317,57 @@ class Google_Service_CloudResourceManager_Resource_Projects extends Google_Servi
    * `resourcemanager.projects.setIamPolicy` on the project
    * (projects.setIamPolicy)
    *
-   * @param string $resource REQUIRED: The resource for which the policy is being
-   * specified. See the operation documentation for the appropriate value for this
-   * field.
-   * @param Google_Service_CloudResourceManager_SetIamPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                  $resource  REQUIRED: The resource for which the policy is being
+   *                                                                            specified. See the operation documentation for the
+   *                                                                            appropriate value for this field.
+   * @param  Google_Service_CloudResourceManager_SetIamPolicyRequest $postBody
+   * @param  array                                                   $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_Policy
    */
-  public function setIamPolicy($resource, Google_Service_CloudResourceManager_SetIamPolicyRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setIamPolicy', array($params), "Google_Service_CloudResourceManager_Policy");
-  }
-  /**
+    public function setIamPolicy($resource, Google_Service_CloudResourceManager_SetIamPolicyRequest $postBody, $optParams = array())
+    {
+        $params = array('resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('setIamPolicy', array($params), "Google_Service_CloudResourceManager_Policy");
+    }
+    /**
    * Updates the specified `Policy` on the resource. Creates a new `Policy` for
    * that `Constraint` on the resource if one does not exist.
    *
    * Not supplying an `etag` on the request `Policy` results in an unconditional
    * write of the `Policy`. (projects.setOrgPolicy)
    *
-   * @param string $resource Resource name of the resource to attach the `Policy`.
-   * @param Google_Service_CloudResourceManager_SetOrgPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                  $resource  Resource name of the resource to attach the `Policy`.
+   * @param  Google_Service_CloudResourceManager_SetOrgPolicyRequest $postBody
+   * @param  array                                                   $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_OrgPolicy
    */
-  public function setOrgPolicy($resource, Google_Service_CloudResourceManager_SetOrgPolicyRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setOrgPolicy', array($params), "Google_Service_CloudResourceManager_OrgPolicy");
-  }
-  /**
+    public function setOrgPolicy($resource, Google_Service_CloudResourceManager_SetOrgPolicyRequest $postBody, $optParams = array())
+    {
+        $params = array('resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('setOrgPolicy', array($params), "Google_Service_CloudResourceManager_OrgPolicy");
+    }
+    /**
    * Returns permissions that a caller has on the specified Project.
    *
    * There are no permissions required for making this API call.
    * (projects.testIamPermissions)
    *
-   * @param string $resource REQUIRED: The resource for which the policy detail is
-   * being requested. See the operation documentation for the appropriate value
-   * for this field.
-   * @param Google_Service_CloudResourceManager_TestIamPermissionsRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                        $resource  REQUIRED: The resource for which the policy detail is
+   *                                                                                  being requested. See the operation documentation for
+   *                                                                                  the appropriate value for this field.
+   * @param  Google_Service_CloudResourceManager_TestIamPermissionsRequest $postBody
+   * @param  array                                                         $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_TestIamPermissionsResponse
    */
-  public function testIamPermissions($resource, Google_Service_CloudResourceManager_TestIamPermissionsRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('testIamPermissions', array($params), "Google_Service_CloudResourceManager_TestIamPermissionsResponse");
-  }
-  /**
+    public function testIamPermissions($resource, Google_Service_CloudResourceManager_TestIamPermissionsRequest $postBody, $optParams = array())
+    {
+        $params = array('resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('testIamPermissions', array($params), "Google_Service_CloudResourceManager_TestIamPermissionsResponse");
+    }
+    /**
    * Restores the Project identified by the specified `project_id` (for example,
    * `my-project-123`). You can only use this method for a Project that has a
    * lifecycle state of DELETE_REQUESTED. After deletion starts, the Project
@@ -376,36 +375,34 @@ class Google_Service_CloudResourceManager_Resource_Projects extends Google_Servi
    *
    * The caller must have modify permissions for this Project. (projects.undelete)
    *
-   * @param string $projectId The project ID (for example, `foo-bar-123`).
-   *
-   * Required.
-   * @param Google_Service_CloudResourceManager_UndeleteProjectRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                     $projectId The project ID (for example, `foo-bar-123`).
+   *                                                                              Required.
+   * @param  Google_Service_CloudResourceManager_UndeleteProjectRequest $postBody
+   * @param  array                                                      $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_CloudresourcemanagerEmpty
    */
-  public function undelete($projectId, Google_Service_CloudResourceManager_UndeleteProjectRequest $postBody, $optParams = array())
-  {
-    $params = array('projectId' => $projectId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('undelete', array($params), "Google_Service_CloudResourceManager_CloudresourcemanagerEmpty");
-  }
-  /**
+    public function undelete($projectId, Google_Service_CloudResourceManager_UndeleteProjectRequest $postBody, $optParams = array())
+    {
+        $params = array('projectId' => $projectId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('undelete', array($params), "Google_Service_CloudResourceManager_CloudresourcemanagerEmpty");
+    }
+    /**
    * Updates the attributes of the Project identified by the specified
    * `project_id` (for example, `my-project-123`).
    *
    * The caller must have modify permissions for this Project. (projects.update)
    *
-   * @param string $projectId The project ID (for example, `my-project-123`).
-   *
-   * Required.
-   * @param Google_Service_CloudResourceManager_Project $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                      $projectId The project ID (for example, `my-project-123`).
+   *                                                               Required.
+   * @param  Google_Service_CloudResourceManager_Project $postBody
+   * @param  array                                       $optParams Optional parameters.
    * @return Google_Service_CloudResourceManager_Project
    */
-  public function update($projectId, Google_Service_CloudResourceManager_Project $postBody, $optParams = array())
-  {
-    $params = array('projectId' => $projectId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_CloudResourceManager_Project");
-  }
+    public function update($projectId, Google_Service_CloudResourceManager_Project $postBody, $optParams = array())
+    {
+        $params = array('projectId' => $projectId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('update', array($params), "Google_Service_CloudResourceManager_Project");
+    }
 }

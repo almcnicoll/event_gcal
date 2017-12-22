@@ -17,63 +17,63 @@
 
 class Google_Service_Compute_RouterStatus extends Google_Collection
 {
-  protected $collection_key = 'bgpPeerStatus';
-  protected $bestRoutesType = 'Google_Service_Compute_Route';
-  protected $bestRoutesDataType = 'array';
-  protected $bestRoutesForRouterType = 'Google_Service_Compute_Route';
-  protected $bestRoutesForRouterDataType = 'array';
-  protected $bgpPeerStatusType = 'Google_Service_Compute_RouterStatusBgpPeerStatus';
-  protected $bgpPeerStatusDataType = 'array';
-  public $network;
+    protected $collection_key = 'bgpPeerStatus';
+    protected $bestRoutesType = 'Google_Service_Compute_Route';
+    protected $bestRoutesDataType = 'array';
+    protected $bestRoutesForRouterType = 'Google_Service_Compute_Route';
+    protected $bestRoutesForRouterDataType = 'array';
+    protected $bgpPeerStatusType = 'Google_Service_Compute_RouterStatusBgpPeerStatus';
+    protected $bgpPeerStatusDataType = 'array';
+    public $network;
 
-  /**
+    /**
    * @param Google_Service_Compute_Route
    */
-  public function setBestRoutes($bestRoutes)
-  {
-    $this->bestRoutes = $bestRoutes;
-  }
-  /**
+    public function setBestRoutes($bestRoutes)
+    {
+        $this->bestRoutes = $bestRoutes;
+    }
+    /**
    * @return Google_Service_Compute_Route
    */
-  public function getBestRoutes()
-  {
-    return $this->bestRoutes;
-  }
-  /**
+    public function getBestRoutes()
+    {
+        return $this->bestRoutes;
+    }
+    /**
    * @param Google_Service_Compute_Route
    */
-  public function setBestRoutesForRouter($bestRoutesForRouter)
-  {
-    $this->bestRoutesForRouter = $bestRoutesForRouter;
-  }
-  /**
+    public function setBestRoutesForRouter($bestRoutesForRouter)
+    {
+        $this->bestRoutesForRouter = $bestRoutesForRouter;
+    }
+    /**
    * @return Google_Service_Compute_Route
    */
-  public function getBestRoutesForRouter()
-  {
-    return $this->bestRoutesForRouter;
-  }
-  /**
+    public function getBestRoutesForRouter()
+    {
+        return $this->bestRoutesForRouter;
+    }
+    /**
    * @param Google_Service_Compute_RouterStatusBgpPeerStatus
    */
-  public function setBgpPeerStatus($bgpPeerStatus)
-  {
-    $this->bgpPeerStatus = $bgpPeerStatus;
-  }
-  /**
+    public function setBgpPeerStatus($bgpPeerStatus)
+    {
+        $this->bgpPeerStatus = $bgpPeerStatus;
+    }
+    /**
    * @return Google_Service_Compute_RouterStatusBgpPeerStatus
    */
-  public function getBgpPeerStatus()
-  {
-    return $this->bgpPeerStatus;
-  }
-  public function setNetwork($network)
-  {
-    $this->network = $network;
-  }
-  public function getNetwork()
-  {
-    return $this->network;
-  }
+    public function getBgpPeerStatus()
+    {
+        return $this->bgpPeerStatus;
+    }
+    public function setNetwork($network)
+    {
+        $this->network = $network;
+    }
+    public function getNetwork()
+    {
+        return $this->network;
+    }
 }

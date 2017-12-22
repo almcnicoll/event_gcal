@@ -25,13 +25,13 @@
  */
 class Google_Service_Cloudbilling_Resource_ServicesSkus extends Google_Service_Resource
 {
-  /**
+    /**
    * Lists all publicly available SKUs for a given cloud service.
    * (skus.listServicesSkus)
    *
-   * @param string $parent The name of the service. Example:
-   * "services/DA34-426B-A397"
-   * @param array $optParams Optional parameters.
+   * @param string $parent    The name of the service. Example:
+   *                          "services/DA34-426B-A397"
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string currencyCode The ISO 4217 currency code for the pricing
    * info in the response proto. Will use the conversion rate as of start_time.
@@ -50,12 +50,12 @@ class Google_Service_Cloudbilling_Resource_ServicesSkus extends Google_Service_R
    * @opt_param string pageToken A token identifying a page of results to return.
    * This should be a `next_page_token` value returned from a previous `ListSkus`
    * call. If unspecified, the first page of results is returned.
-   * @return Google_Service_Cloudbilling_ListSkusResponse
+   * @return    Google_Service_Cloudbilling_ListSkusResponse
    */
-  public function listServicesSkus($parent, $optParams = array())
-  {
-    $params = array('parent' => $parent);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Cloudbilling_ListSkusResponse");
-  }
+    public function listServicesSkus($parent, $optParams = array())
+    {
+        $params = array('parent' => $parent);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Cloudbilling_ListSkusResponse");
+    }
 }

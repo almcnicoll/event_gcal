@@ -25,11 +25,11 @@
  */
 class Google_Service_Compute_Resource_DiskTypes extends Google_Service_Resource
 {
-  /**
+    /**
    * Retrieves an aggregated list of disk types. (diskTypes.aggregatedList)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -73,37 +73,37 @@ class Google_Service_Compute_Resource_DiskTypes extends Google_Service_Resource
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_DiskTypeAggregatedList
+   * @return    Google_Service_Compute_DiskTypeAggregatedList
    */
-  public function aggregatedList($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('aggregatedList', array($params), "Google_Service_Compute_DiskTypeAggregatedList");
-  }
-  /**
+    public function aggregatedList($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('aggregatedList', array($params), "Google_Service_Compute_DiskTypeAggregatedList");
+    }
+    /**
    * Returns the specified disk type. Get a list of available disk types by making
    * a list() request. (diskTypes.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone for this request.
-   * @param string $diskType Name of the disk type to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $zone      The name of the zone for this request.
+   * @param  string $diskType  Name of the disk type to return.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Compute_DiskType
    */
-  public function get($project, $zone, $diskType, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'diskType' => $diskType);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_DiskType");
-  }
-  /**
+    public function get($project, $zone, $diskType, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'diskType' => $diskType);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_DiskType");
+    }
+    /**
    * Retrieves a list of disk types available to the specified project.
    * (diskTypes.listDiskTypes)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $zone      The name of the zone for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -147,12 +147,12 @@ class Google_Service_Compute_Resource_DiskTypes extends Google_Service_Resource
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_DiskTypeList
+   * @return    Google_Service_Compute_DiskTypeList
    */
-  public function listDiskTypes($project, $zone, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_DiskTypeList");
-  }
+    public function listDiskTypes($project, $zone, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_DiskTypeList");
+    }
 }

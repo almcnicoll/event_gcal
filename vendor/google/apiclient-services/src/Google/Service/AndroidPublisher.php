@@ -30,46 +30,48 @@
  */
 class Google_Service_AndroidPublisher extends Google_Service
 {
-  /** View and manage your Google Play Developer account. */
-  const ANDROIDPUBLISHER =
+    /**
+ * View and manage your Google Play Developer account. 
+*/
+    const ANDROIDPUBLISHER =
       "https://www.googleapis.com/auth/androidpublisher";
 
-  public $edits;
-  public $edits_apklistings;
-  public $edits_apks;
-  public $edits_deobfuscationfiles;
-  public $edits_details;
-  public $edits_expansionfiles;
-  public $edits_images;
-  public $edits_listings;
-  public $edits_testers;
-  public $edits_tracks;
-  public $entitlements;
-  public $inappproducts;
-  public $purchases_products;
-  public $purchases_subscriptions;
-  public $purchases_voidedpurchases;
-  public $reviews;
+    public $edits;
+    public $edits_apklistings;
+    public $edits_apks;
+    public $edits_deobfuscationfiles;
+    public $edits_details;
+    public $edits_expansionfiles;
+    public $edits_images;
+    public $edits_listings;
+    public $edits_testers;
+    public $edits_tracks;
+    public $entitlements;
+    public $inappproducts;
+    public $purchases_products;
+    public $purchases_subscriptions;
+    public $purchases_voidedpurchases;
+    public $reviews;
   
-  /**
+    /**
    * Constructs the internal representation of the AndroidPublisher service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'androidpublisher/v2/applications/';
-    $this->version = 'v2';
-    $this->serviceName = 'androidpublisher';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'androidpublisher/v2/applications/';
+        $this->version = 'v2';
+        $this->serviceName = 'androidpublisher';
 
-    $this->edits = new Google_Service_AndroidPublisher_Resource_Edits(
-        $this,
-        $this->serviceName,
-        'edits',
-        array(
-          'methods' => array(
+        $this->edits = new Google_Service_AndroidPublisher_Resource_Edits(
+            $this,
+            $this->serviceName,
+            'edits',
+            array(
+            'methods' => array(
             'commit' => array(
               'path' => '{packageName}/edits/{editId}:commit',
               'httpMethod' => 'POST',
@@ -141,15 +143,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->edits_apklistings = new Google_Service_AndroidPublisher_Resource_EditsApklistings(
-        $this,
-        $this->serviceName,
-        'apklistings',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->edits_apklistings = new Google_Service_AndroidPublisher_Resource_EditsApklistings(
+            $this,
+            $this->serviceName,
+            'apklistings',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => '{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}',
               'httpMethod' => 'DELETE',
@@ -291,15 +293,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->edits_apks = new Google_Service_AndroidPublisher_Resource_EditsApks(
-        $this,
-        $this->serviceName,
-        'apks',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->edits_apks = new Google_Service_AndroidPublisher_Resource_EditsApks(
+            $this,
+            $this->serviceName,
+            'apks',
+            array(
+            'methods' => array(
             'addexternallyhosted' => array(
               'path' => '{packageName}/edits/{editId}/apks/externallyHosted',
               'httpMethod' => 'POST',
@@ -346,15 +348,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->edits_deobfuscationfiles = new Google_Service_AndroidPublisher_Resource_EditsDeobfuscationfiles(
-        $this,
-        $this->serviceName,
-        'deobfuscationfiles',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->edits_deobfuscationfiles = new Google_Service_AndroidPublisher_Resource_EditsDeobfuscationfiles(
+            $this,
+            $this->serviceName,
+            'deobfuscationfiles',
+            array(
+            'methods' => array(
             'upload' => array(
               'path' => '{packageName}/edits/{editId}/apks/{apkVersionCode}/deobfuscationFiles/{deobfuscationFileType}',
               'httpMethod' => 'POST',
@@ -381,15 +383,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->edits_details = new Google_Service_AndroidPublisher_Resource_EditsDetails(
-        $this,
-        $this->serviceName,
-        'details',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->edits_details = new Google_Service_AndroidPublisher_Resource_EditsDetails(
+            $this,
+            $this->serviceName,
+            'details',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => '{packageName}/edits/{editId}/details',
               'httpMethod' => 'GET',
@@ -436,15 +438,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->edits_expansionfiles = new Google_Service_AndroidPublisher_Resource_EditsExpansionfiles(
-        $this,
-        $this->serviceName,
-        'expansionfiles',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->edits_expansionfiles = new Google_Service_AndroidPublisher_Resource_EditsExpansionfiles(
+            $this,
+            $this->serviceName,
+            'expansionfiles',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => '{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}',
               'httpMethod' => 'GET',
@@ -546,15 +548,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->edits_images = new Google_Service_AndroidPublisher_Resource_EditsImages(
-        $this,
-        $this->serviceName,
-        'images',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->edits_images = new Google_Service_AndroidPublisher_Resource_EditsImages(
+            $this,
+            $this->serviceName,
+            'images',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => '{packageName}/edits/{editId}/listings/{language}/{imageType}/{imageId}',
               'httpMethod' => 'DELETE',
@@ -661,15 +663,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->edits_listings = new Google_Service_AndroidPublisher_Resource_EditsListings(
-        $this,
-        $this->serviceName,
-        'listings',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->edits_listings = new Google_Service_AndroidPublisher_Resource_EditsListings(
+            $this,
+            $this->serviceName,
+            'listings',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => '{packageName}/edits/{editId}/listings/{language}',
               'httpMethod' => 'DELETE',
@@ -781,15 +783,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->edits_testers = new Google_Service_AndroidPublisher_Resource_EditsTesters(
-        $this,
-        $this->serviceName,
-        'testers',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->edits_testers = new Google_Service_AndroidPublisher_Resource_EditsTesters(
+            $this,
+            $this->serviceName,
+            'testers',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => '{packageName}/edits/{editId}/testers/{track}',
               'httpMethod' => 'GET',
@@ -851,15 +853,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->edits_tracks = new Google_Service_AndroidPublisher_Resource_EditsTracks(
-        $this,
-        $this->serviceName,
-        'tracks',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->edits_tracks = new Google_Service_AndroidPublisher_Resource_EditsTracks(
+            $this,
+            $this->serviceName,
+            'tracks',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => '{packageName}/edits/{editId}/tracks/{track}',
               'httpMethod' => 'GET',
@@ -936,15 +938,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->entitlements = new Google_Service_AndroidPublisher_Resource_Entitlements(
-        $this,
-        $this->serviceName,
-        'entitlements',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->entitlements = new Google_Service_AndroidPublisher_Resource_Entitlements(
+            $this,
+            $this->serviceName,
+            'entitlements',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => '{packageName}/entitlements',
               'httpMethod' => 'GET',
@@ -972,15 +974,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->inappproducts = new Google_Service_AndroidPublisher_Resource_Inappproducts(
-        $this,
-        $this->serviceName,
-        'inappproducts',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->inappproducts = new Google_Service_AndroidPublisher_Resource_Inappproducts(
+            $this,
+            $this->serviceName,
+            'inappproducts',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => '{packageName}/inappproducts/{sku}',
               'httpMethod' => 'DELETE',
@@ -1086,15 +1088,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->purchases_products = new Google_Service_AndroidPublisher_Resource_PurchasesProducts(
-        $this,
-        $this->serviceName,
-        'products',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->purchases_products = new Google_Service_AndroidPublisher_Resource_PurchasesProducts(
+            $this,
+            $this->serviceName,
+            'products',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => '{packageName}/purchases/products/{productId}/tokens/{token}',
               'httpMethod' => 'GET',
@@ -1116,15 +1118,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->purchases_subscriptions = new Google_Service_AndroidPublisher_Resource_PurchasesSubscriptions(
-        $this,
-        $this->serviceName,
-        'subscriptions',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->purchases_subscriptions = new Google_Service_AndroidPublisher_Resource_PurchasesSubscriptions(
+            $this,
+            $this->serviceName,
+            'subscriptions',
+            array(
+            'methods' => array(
             'cancel' => array(
               'path' => '{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:cancel',
               'httpMethod' => 'POST',
@@ -1226,15 +1228,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->purchases_voidedpurchases = new Google_Service_AndroidPublisher_Resource_PurchasesVoidedpurchases(
-        $this,
-        $this->serviceName,
-        'voidedpurchases',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->purchases_voidedpurchases = new Google_Service_AndroidPublisher_Resource_PurchasesVoidedpurchases(
+            $this,
+            $this->serviceName,
+            'voidedpurchases',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => '{packageName}/purchases/voidedpurchases',
               'httpMethod' => 'GET',
@@ -1266,15 +1268,15 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->reviews = new Google_Service_AndroidPublisher_Resource_Reviews(
-        $this,
-        $this->serviceName,
-        'reviews',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->reviews = new Google_Service_AndroidPublisher_Resource_Reviews(
+            $this,
+            $this->serviceName,
+            'reviews',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => '{packageName}/reviews/{reviewId}',
               'httpMethod' => 'GET',
@@ -1336,8 +1338,8 @@ class Google_Service_AndroidPublisher extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

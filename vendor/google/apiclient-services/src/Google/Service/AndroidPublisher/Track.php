@@ -17,33 +17,33 @@
 
 class Google_Service_AndroidPublisher_Track extends Google_Collection
 {
-  protected $collection_key = 'versionCodes';
-  public $track;
-  public $userFraction;
-  public $versionCodes;
+    protected $collection_key = 'versionCodes';
+    public $track;
+    public $userFraction;
+    public $versionCodes;
 
-  public function setTrack($track)
-  {
-    $this->track = $track;
-  }
-  public function getTrack()
-  {
-    return $this->track;
-  }
-  public function setUserFraction($userFraction)
-  {
-    $this->userFraction = $userFraction;
-  }
-  public function getUserFraction()
-  {
-    return $this->userFraction;
-  }
-  public function setVersionCodes($versionCodes)
-  {
-    $this->versionCodes = $versionCodes;
-  }
-  public function getVersionCodes()
-  {
-    return $this->versionCodes;
-  }
+    public function setTrack($track)
+    {
+        $this->track = $track;
+    }
+    public function getTrack()
+    {
+        return $this->track;
+    }
+    public function setUserFraction($userFraction)
+    {
+        $this->userFraction = $userFraction;
+    }
+    public function getUserFraction()
+    {
+        return $this->userFraction;
+    }
+    public function setVersionCodes($versionCodes)
+    {
+        $this->versionCodes = $versionCodes;
+    }
+    public function getVersionCodes()
+    {
+        return $this->versionCodes;
+    }
 }

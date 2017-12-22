@@ -25,7 +25,7 @@
  */
 class Google_Service_CivicInfo_Resource_Representatives extends Google_Service_Resource
 {
-  /**
+    /**
    * Looks up political geography and representative information for a single
    * address. (representatives.representativeInfoByAddress)
    *
@@ -42,21 +42,21 @@ class Google_Service_CivicInfo_Resource_Representatives extends Google_Service_R
    * @opt_param string roles A list of office roles to filter by. Only offices
    * fulfilling one of these roles will be returned. Divisions that don't contain
    * a matching office will not be returned.
-   * @return Google_Service_CivicInfo_RepresentativeInfoResponse
+   * @return    Google_Service_CivicInfo_RepresentativeInfoResponse
    */
-  public function representativeInfoByAddress($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('representativeInfoByAddress', array($params), "Google_Service_CivicInfo_RepresentativeInfoResponse");
-  }
-  /**
+    public function representativeInfoByAddress($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('representativeInfoByAddress', array($params), "Google_Service_CivicInfo_RepresentativeInfoResponse");
+    }
+    /**
    * Looks up representative information for a single geographic division.
    * (representatives.representativeInfoByDivision)
    *
-   * @param string $ocdId The Open Civic Data division identifier of the division
-   * to look up.
-   * @param array $optParams Optional parameters.
+   * @param string $ocdId     The Open Civic Data division identifier of the division
+   *                          to look up.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string levels A list of office levels to filter by. Only offices
    * that serve at least one of these levels will be returned. Divisions that
@@ -68,12 +68,12 @@ class Google_Service_CivicInfo_Resource_Representatives extends Google_Service_R
    * @opt_param string roles A list of office roles to filter by. Only offices
    * fulfilling one of these roles will be returned. Divisions that don't contain
    * a matching office will not be returned.
-   * @return Google_Service_CivicInfo_RepresentativeInfoData
+   * @return    Google_Service_CivicInfo_RepresentativeInfoData
    */
-  public function representativeInfoByDivision($ocdId, $optParams = array())
-  {
-    $params = array('ocdId' => $ocdId);
-    $params = array_merge($params, $optParams);
-    return $this->call('representativeInfoByDivision', array($params), "Google_Service_CivicInfo_RepresentativeInfoData");
-  }
+    public function representativeInfoByDivision($ocdId, $optParams = array())
+    {
+        $params = array('ocdId' => $ocdId);
+        $params = array_merge($params, $optParams);
+        return $this->call('representativeInfoByDivision', array($params), "Google_Service_CivicInfo_RepresentativeInfoData");
+    }
 }

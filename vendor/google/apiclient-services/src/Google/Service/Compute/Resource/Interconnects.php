@@ -25,12 +25,12 @@
  */
 class Google_Service_Compute_Resource_Interconnects extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified interconnect. (interconnects.delete)
    *
-   * @param string $project Project ID for this request.
+   * @param string $project      Project ID for this request.
    * @param string $interconnect Name of the interconnect to delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams    Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -44,36 +44,36 @@ class Google_Service_Compute_Resource_Interconnects extends Google_Service_Resou
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $interconnect, $optParams = array())
-  {
-    $params = array('project' => $project, 'interconnect' => $interconnect);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $interconnect, $optParams = array())
+    {
+        $params = array('project' => $project, 'interconnect' => $interconnect);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified interconnect. Get a list of available interconnects by
    * making a list() request. (interconnects.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $interconnect Name of the interconnect to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project      Project ID for this request.
+   * @param  string $interconnect Name of the interconnect to return.
+   * @param  array  $optParams    Optional parameters.
    * @return Google_Service_Compute_Interconnect
    */
-  public function get($project, $interconnect, $optParams = array())
-  {
-    $params = array('project' => $project, 'interconnect' => $interconnect);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_Interconnect");
-  }
-  /**
+    public function get($project, $interconnect, $optParams = array())
+    {
+        $params = array('project' => $project, 'interconnect' => $interconnect);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_Interconnect");
+    }
+    /**
    * Creates a Interconnect in the specified project using the data included in
    * the request. (interconnects.insert)
    *
-   * @param string $project Project ID for this request.
+   * @param string                              $project   Project ID for this request.
    * @param Google_Service_Compute_Interconnect $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                               $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -87,20 +87,20 @@ class Google_Service_Compute_Resource_Interconnects extends Google_Service_Resou
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, Google_Service_Compute_Interconnect $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, Google_Service_Compute_Interconnect $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves the list of interconnect available to the specified project.
    * (interconnects.listInterconnects)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -144,23 +144,23 @@ class Google_Service_Compute_Resource_Interconnects extends Google_Service_Resou
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_InterconnectList
+   * @return    Google_Service_Compute_InterconnectList
    */
-  public function listInterconnects($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_InterconnectList");
-  }
-  /**
+    public function listInterconnects($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_InterconnectList");
+    }
+    /**
    * Updates the specified interconnect with the data included in the request.
    * This method supports PATCH semantics and uses the JSON merge patch format and
    * processing rules. (interconnects.patch)
    *
-   * @param string $project Project ID for this request.
-   * @param string $interconnect Name of the interconnect to update.
+   * @param string                              $project      Project ID for this request.
+   * @param string                              $interconnect Name of the interconnect to update.
    * @param Google_Service_Compute_Interconnect $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                               $optParams    Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -174,12 +174,12 @@ class Google_Service_Compute_Resource_Interconnects extends Google_Service_Resou
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function patch($project, $interconnect, Google_Service_Compute_Interconnect $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'interconnect' => $interconnect, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Compute_Operation");
-  }
+    public function patch($project, $interconnect, Google_Service_Compute_Interconnect $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'interconnect' => $interconnect, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Compute_Operation");
+    }
 }

@@ -17,67 +17,67 @@
 
 class Google_Service_AndroidManagement_ApplicationPolicy extends Google_Collection
 {
-  protected $collection_key = 'permissionGrants';
-  public $defaultPermissionPolicy;
-  public $installType;
-  public $lockTaskAllowed;
-  public $managedConfiguration;
-  public $packageName;
-  protected $permissionGrantsType = 'Google_Service_AndroidManagement_PermissionGrant';
-  protected $permissionGrantsDataType = 'array';
+    protected $collection_key = 'permissionGrants';
+    public $defaultPermissionPolicy;
+    public $installType;
+    public $lockTaskAllowed;
+    public $managedConfiguration;
+    public $packageName;
+    protected $permissionGrantsType = 'Google_Service_AndroidManagement_PermissionGrant';
+    protected $permissionGrantsDataType = 'array';
 
-  public function setDefaultPermissionPolicy($defaultPermissionPolicy)
-  {
-    $this->defaultPermissionPolicy = $defaultPermissionPolicy;
-  }
-  public function getDefaultPermissionPolicy()
-  {
-    return $this->defaultPermissionPolicy;
-  }
-  public function setInstallType($installType)
-  {
-    $this->installType = $installType;
-  }
-  public function getInstallType()
-  {
-    return $this->installType;
-  }
-  public function setLockTaskAllowed($lockTaskAllowed)
-  {
-    $this->lockTaskAllowed = $lockTaskAllowed;
-  }
-  public function getLockTaskAllowed()
-  {
-    return $this->lockTaskAllowed;
-  }
-  public function setManagedConfiguration($managedConfiguration)
-  {
-    $this->managedConfiguration = $managedConfiguration;
-  }
-  public function getManagedConfiguration()
-  {
-    return $this->managedConfiguration;
-  }
-  public function setPackageName($packageName)
-  {
-    $this->packageName = $packageName;
-  }
-  public function getPackageName()
-  {
-    return $this->packageName;
-  }
-  /**
+    public function setDefaultPermissionPolicy($defaultPermissionPolicy)
+    {
+        $this->defaultPermissionPolicy = $defaultPermissionPolicy;
+    }
+    public function getDefaultPermissionPolicy()
+    {
+        return $this->defaultPermissionPolicy;
+    }
+    public function setInstallType($installType)
+    {
+        $this->installType = $installType;
+    }
+    public function getInstallType()
+    {
+        return $this->installType;
+    }
+    public function setLockTaskAllowed($lockTaskAllowed)
+    {
+        $this->lockTaskAllowed = $lockTaskAllowed;
+    }
+    public function getLockTaskAllowed()
+    {
+        return $this->lockTaskAllowed;
+    }
+    public function setManagedConfiguration($managedConfiguration)
+    {
+        $this->managedConfiguration = $managedConfiguration;
+    }
+    public function getManagedConfiguration()
+    {
+        return $this->managedConfiguration;
+    }
+    public function setPackageName($packageName)
+    {
+        $this->packageName = $packageName;
+    }
+    public function getPackageName()
+    {
+        return $this->packageName;
+    }
+    /**
    * @param Google_Service_AndroidManagement_PermissionGrant
    */
-  public function setPermissionGrants($permissionGrants)
-  {
-    $this->permissionGrants = $permissionGrants;
-  }
-  /**
+    public function setPermissionGrants($permissionGrants)
+    {
+        $this->permissionGrants = $permissionGrants;
+    }
+    /**
    * @return Google_Service_AndroidManagement_PermissionGrant
    */
-  public function getPermissionGrants()
-  {
-    return $this->permissionGrants;
-  }
+    public function getPermissionGrants()
+    {
+        return $this->permissionGrants;
+    }
 }

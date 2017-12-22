@@ -17,41 +17,41 @@
 
 class Google_Service_Compute_AccessConfig extends Google_Model
 {
-  public $kind;
-  public $name;
-  public $natIP;
-  public $type;
+    public $kind;
+    public $name;
+    public $natIP;
+    public $type;
 
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setNatIP($natIP)
-  {
-    $this->natIP = $natIP;
-  }
-  public function getNatIP()
-  {
-    return $this->natIP;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
-  }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setNatIP($natIP)
+    {
+        $this->natIP = $natIP;
+    }
+    public function getNatIP()
+    {
+        return $this->natIP;
+    }
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+    public function getType()
+    {
+        return $this->type;
+    }
 }

@@ -25,13 +25,13 @@
  */
 class Google_Service_AndroidPublisher_Resource_PurchasesVoidedpurchases extends Google_Service_Resource
 {
-  /**
+    /**
    * Lists the purchases that were cancelled, refunded or charged-back.
    * (voidedpurchases.listPurchasesVoidedpurchases)
    *
    * @param string $packageName The package name of the application for which
    * voided purchases need to be returned (for example, 'com.some.thing').
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams   Optional parameters.
    *
    * @opt_param string endTime The time, in milliseconds since the Epoch, of the
    * newest voided in-app product purchase that you want to see in the response.
@@ -48,12 +48,12 @@ class Google_Service_AndroidPublisher_Resource_PurchasesVoidedpurchases extends 
    * This filter is applied on the time at which the record is seen as voided by
    * our systems and not the actual voided time returned in the response.
    * @opt_param string token
-   * @return Google_Service_AndroidPublisher_VoidedPurchasesListResponse
+   * @return    Google_Service_AndroidPublisher_VoidedPurchasesListResponse
    */
-  public function listPurchasesVoidedpurchases($packageName, $optParams = array())
-  {
-    $params = array('packageName' => $packageName);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AndroidPublisher_VoidedPurchasesListResponse");
-  }
+    public function listPurchasesVoidedpurchases($packageName, $optParams = array())
+    {
+        $params = array('packageName' => $packageName);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_AndroidPublisher_VoidedPurchasesListResponse");
+    }
 }

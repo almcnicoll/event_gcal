@@ -25,13 +25,13 @@
  */
 class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigsRunsTransferLogs extends Google_Service_Resource
 {
-  /**
+    /**
    * Returns user facing log messages for the data transfer run.
    * (transferLogs.listProjectsTransferConfigsRunsTransferLogs)
    *
-   * @param string $parent Transfer run name in the form:
-   * `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
-   * @param array $optParams Optional parameters.
+   * @param string $parent    Transfer run name in the form:
+   *                          `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param int pageSize Page size. The default page size is the maximum value
    * of 1000 results.
@@ -41,12 +41,12 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigsRunsTr
    * specific page of `ListTransferLogsRequest` list results. For multiple-page
    * results, `ListTransferLogsResponse` outputs a `next_page` token, which can be
    * used as the `page_token` value to request the next page of list results.
-   * @return Google_Service_BigQueryDataTransfer_ListTransferLogsResponse
+   * @return    Google_Service_BigQueryDataTransfer_ListTransferLogsResponse
    */
-  public function listProjectsTransferConfigsRunsTransferLogs($parent, $optParams = array())
-  {
-    $params = array('parent' => $parent);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_BigQueryDataTransfer_ListTransferLogsResponse");
-  }
+    public function listProjectsTransferConfigsRunsTransferLogs($parent, $optParams = array())
+    {
+        $params = array('parent' => $parent);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_BigQueryDataTransfer_ListTransferLogsResponse");
+    }
 }

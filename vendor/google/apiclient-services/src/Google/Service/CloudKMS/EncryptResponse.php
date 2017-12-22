@@ -17,23 +17,23 @@
 
 class Google_Service_CloudKMS_EncryptResponse extends Google_Model
 {
-  public $ciphertext;
-  public $name;
+    public $ciphertext;
+    public $name;
 
-  public function setCiphertext($ciphertext)
-  {
-    $this->ciphertext = $ciphertext;
-  }
-  public function getCiphertext()
-  {
-    return $this->ciphertext;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
+    public function setCiphertext($ciphertext)
+    {
+        $this->ciphertext = $ciphertext;
+    }
+    public function getCiphertext()
+    {
+        return $this->ciphertext;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
 }

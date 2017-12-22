@@ -25,11 +25,11 @@
  */
 class Google_Service_Compute_Resource_Subnetworks extends Google_Service_Resource
 {
-  /**
+    /**
    * Retrieves an aggregated list of subnetworks. (subnetworks.aggregatedList)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -73,21 +73,21 @@ class Google_Service_Compute_Resource_Subnetworks extends Google_Service_Resourc
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_SubnetworkAggregatedList
+   * @return    Google_Service_Compute_SubnetworkAggregatedList
    */
-  public function aggregatedList($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('aggregatedList', array($params), "Google_Service_Compute_SubnetworkAggregatedList");
-  }
-  /**
+    public function aggregatedList($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('aggregatedList', array($params), "Google_Service_Compute_SubnetworkAggregatedList");
+    }
+    /**
    * Deletes the specified subnetwork. (subnetworks.delete)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
+   * @param string $project    Project ID for this request.
+   * @param string $region     Name of the region scoping this request.
    * @param string $subnetwork Name of the Subnetwork resource to delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams  Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -101,23 +101,23 @@ class Google_Service_Compute_Resource_Subnetworks extends Google_Service_Resourc
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $region, $subnetwork, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'subnetwork' => $subnetwork);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $region, $subnetwork, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'subnetwork' => $subnetwork);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Expands the IP CIDR range of the subnetwork to a specified value.
    * (subnetworks.expandIpCidrRange)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
-   * @param string $subnetwork Name of the Subnetwork resource to update.
+   * @param string                                                     $project    Project ID for this request.
+   * @param string                                                     $region     Name of the region scoping this request.
+   * @param string                                                     $subnetwork Name of the Subnetwork resource to update.
    * @param Google_Service_Compute_SubnetworksExpandIpCidrRangeRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                                      $optParams  Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -131,38 +131,38 @@ class Google_Service_Compute_Resource_Subnetworks extends Google_Service_Resourc
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function expandIpCidrRange($project, $region, $subnetwork, Google_Service_Compute_SubnetworksExpandIpCidrRangeRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'subnetwork' => $subnetwork, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('expandIpCidrRange', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function expandIpCidrRange($project, $region, $subnetwork, Google_Service_Compute_SubnetworksExpandIpCidrRangeRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'subnetwork' => $subnetwork, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('expandIpCidrRange', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified subnetwork. Get a list of available subnetworks list()
    * request. (subnetworks.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
-   * @param string $subnetwork Name of the Subnetwork resource to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project    Project ID for this request.
+   * @param  string $region     Name of the region scoping this request.
+   * @param  string $subnetwork Name of the Subnetwork resource to return.
+   * @param  array  $optParams  Optional parameters.
    * @return Google_Service_Compute_Subnetwork
    */
-  public function get($project, $region, $subnetwork, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'subnetwork' => $subnetwork);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_Subnetwork");
-  }
-  /**
+    public function get($project, $region, $subnetwork, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'subnetwork' => $subnetwork);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_Subnetwork");
+    }
+    /**
    * Creates a subnetwork in the specified project using the data included in the
    * request. (subnetworks.insert)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
+   * @param string                            $project   Project ID for this request.
+   * @param string                            $region    Name of the region scoping this request.
    * @param Google_Service_Compute_Subnetwork $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                             $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -176,21 +176,21 @@ class Google_Service_Compute_Resource_Subnetworks extends Google_Service_Resourc
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, $region, Google_Service_Compute_Subnetwork $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, $region, Google_Service_Compute_Subnetwork $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves a list of subnetworks available to the specified project.
    * (subnetworks.listSubnetworks)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $region    Name of the region scoping this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -234,24 +234,24 @@ class Google_Service_Compute_Resource_Subnetworks extends Google_Service_Resourc
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_SubnetworkList
+   * @return    Google_Service_Compute_SubnetworkList
    */
-  public function listSubnetworks($project, $region, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_SubnetworkList");
-  }
-  /**
+    public function listSubnetworks($project, $region, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_SubnetworkList");
+    }
+    /**
    * Set whether VMs in this subnet can access Google services without assigning
    * external IP addresses through Private Google Access.
    * (subnetworks.setPrivateIpGoogleAccess)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
-   * @param string $subnetwork Name of the Subnetwork resource.
+   * @param string                                                            $project    Project ID for this request.
+   * @param string                                                            $region     Name of the region scoping this request.
+   * @param string                                                            $subnetwork Name of the Subnetwork resource.
    * @param Google_Service_Compute_SubnetworksSetPrivateIpGoogleAccessRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                                             $optParams  Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -265,12 +265,12 @@ class Google_Service_Compute_Resource_Subnetworks extends Google_Service_Resourc
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function setPrivateIpGoogleAccess($project, $region, $subnetwork, Google_Service_Compute_SubnetworksSetPrivateIpGoogleAccessRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'subnetwork' => $subnetwork, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setPrivateIpGoogleAccess', array($params), "Google_Service_Compute_Operation");
-  }
+    public function setPrivateIpGoogleAccess($project, $region, $subnetwork, Google_Service_Compute_SubnetworksSetPrivateIpGoogleAccessRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'subnetwork' => $subnetwork, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('setPrivateIpGoogleAccess', array($params), "Google_Service_Compute_Operation");
+    }
 }

@@ -25,16 +25,16 @@
  */
 class Google_Service_Compute_Resource_InstanceTemplates extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified instance template. If you delete an instance template
    * that is being referenced from another instance group, the instance group will
    * not be able to create or recreate virtual machine instances. Deleting an
    * instance template is permanent and cannot be undone.
    * (instanceTemplates.delete)
    *
-   * @param string $project Project ID for this request.
+   * @param string $project          Project ID for this request.
    * @param string $instanceTemplate The name of the instance template to delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams        Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -48,39 +48,39 @@ class Google_Service_Compute_Resource_InstanceTemplates extends Google_Service_R
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $instanceTemplate, $optParams = array())
-  {
-    $params = array('project' => $project, 'instanceTemplate' => $instanceTemplate);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $instanceTemplate, $optParams = array())
+    {
+        $params = array('project' => $project, 'instanceTemplate' => $instanceTemplate);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified instance template. Get a list of available instance
    * templates by making a list() request. (instanceTemplates.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $instanceTemplate The name of the instance template.
-   * @param array $optParams Optional parameters.
+   * @param  string $project          Project ID for this request.
+   * @param  string $instanceTemplate The name of the instance template.
+   * @param  array  $optParams        Optional parameters.
    * @return Google_Service_Compute_InstanceTemplate
    */
-  public function get($project, $instanceTemplate, $optParams = array())
-  {
-    $params = array('project' => $project, 'instanceTemplate' => $instanceTemplate);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_InstanceTemplate");
-  }
-  /**
+    public function get($project, $instanceTemplate, $optParams = array())
+    {
+        $params = array('project' => $project, 'instanceTemplate' => $instanceTemplate);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_InstanceTemplate");
+    }
+    /**
    * Creates an instance template in the specified project using the data that is
    * included in the request. If you are creating a new template to update an
    * existing instance group, your new instance template must use the same network
    * or, if applicable, the same subnetwork as the original template.
    * (instanceTemplates.insert)
    *
-   * @param string $project Project ID for this request.
+   * @param string                                  $project   Project ID for this request.
    * @param Google_Service_Compute_InstanceTemplate $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                   $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -94,20 +94,20 @@ class Google_Service_Compute_Resource_InstanceTemplates extends Google_Service_R
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, Google_Service_Compute_InstanceTemplate $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, Google_Service_Compute_InstanceTemplate $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves a list of instance templates that are contained within the
    * specified project and zone. (instanceTemplates.listInstanceTemplates)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -151,12 +151,12 @@ class Google_Service_Compute_Resource_InstanceTemplates extends Google_Service_R
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_InstanceTemplateList
+   * @return    Google_Service_Compute_InstanceTemplateList
    */
-  public function listInstanceTemplates($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_InstanceTemplateList");
-  }
+    public function listInstanceTemplates($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_InstanceTemplateList");
+    }
 }

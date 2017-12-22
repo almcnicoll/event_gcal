@@ -25,7 +25,7 @@
  */
 class Google_Service_AdExchangeBuyerII_Resource_BiddersAccountsFilterSetsFilteredBidRequests extends Google_Service_Resource
 {
-  /**
+    /**
    * List all reasons that caused a bid request not to be sent for an impression,
    * with the number of bid requests not sent for each reason.
    * (filteredBidRequests.listBiddersAccountsFilterSetsFilteredBidRequests)
@@ -41,7 +41,7 @@ class Google_Service_AdExchangeBuyerII_Resource_BiddersAccountsFilterSetsFiltere
    *
    * - For an account-level filter set for the child seat buyer account 456
    * whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams     Optional parameters.
    *
    * @opt_param int pageSize Requested page size. The server may return fewer
    * results than requested. If unspecified, the server will pick an appropriate
@@ -50,12 +50,12 @@ class Google_Service_AdExchangeBuyerII_Resource_BiddersAccountsFilterSetsFiltere
    * should return. Typically, this is the value of
    * ListFilteredBidRequestsResponse.nextPageToken returned from the previous call
    * to the filteredBidRequests.list method.
-   * @return Google_Service_AdExchangeBuyerII_ListFilteredBidRequestsResponse
+   * @return    Google_Service_AdExchangeBuyerII_ListFilteredBidRequestsResponse
    */
-  public function listBiddersAccountsFilterSetsFilteredBidRequests($filterSetName, $optParams = array())
-  {
-    $params = array('filterSetName' => $filterSetName);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeBuyerII_ListFilteredBidRequestsResponse");
-  }
+    public function listBiddersAccountsFilterSetsFilteredBidRequests($filterSetName, $optParams = array())
+    {
+        $params = array('filterSetName' => $filterSetName);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_AdExchangeBuyerII_ListFilteredBidRequestsResponse");
+    }
 }

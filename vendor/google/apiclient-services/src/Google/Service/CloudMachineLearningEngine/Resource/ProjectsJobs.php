@@ -25,69 +25,69 @@
  */
 class Google_Service_CloudMachineLearningEngine_Resource_ProjectsJobs extends Google_Service_Resource
 {
-  /**
+    /**
    * Cancels a running job. (jobs.cancel)
    *
-   * @param string $name Required. The name of the job to cancel.
-   * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1CancelJobRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                                    $name      Required. The name of the job to cancel.
+   * @param  Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1CancelJobRequest $postBody
+   * @param  array                                                                     $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearningEngine_GoogleProtobufEmpty
    */
-  public function cancel($name, Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1CancelJobRequest $postBody, $optParams = array())
-  {
-    $params = array('name' => $name, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('cancel', array($params), "Google_Service_CloudMachineLearningEngine_GoogleProtobufEmpty");
-  }
-  /**
+    public function cancel($name, Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1CancelJobRequest $postBody, $optParams = array())
+    {
+        $params = array('name' => $name, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('cancel', array($params), "Google_Service_CloudMachineLearningEngine_GoogleProtobufEmpty");
+    }
+    /**
    * Creates a training or a batch prediction job. (jobs.create)
    *
-   * @param string $parent Required. The project name.
-   * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                       $parent    Required. The project name.
+   * @param  Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job $postBody
+   * @param  array                                                        $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job
    */
-  public function create($parent, Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job $postBody, $optParams = array())
-  {
-    $params = array('parent' => $parent, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job");
-  }
-  /**
+    public function create($parent, Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job $postBody, $optParams = array())
+    {
+        $params = array('parent' => $parent, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job");
+    }
+    /**
    * Describes a job. (jobs.get)
    *
-   * @param string $name Required. The name of the job to get the description of.
-   * @param array $optParams Optional parameters.
+   * @param  string $name      Required. The name of the job to get the description of.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job
    */
-  public function get($name, $optParams = array())
-  {
-    $params = array('name' => $name);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job");
-  }
-  /**
+    public function get($name, $optParams = array())
+    {
+        $params = array('name' => $name);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job");
+    }
+    /**
    * Gets the access control policy for a resource. Returns an empty policy if the
    * resource exists and does not have a policy set. (jobs.getIamPolicy)
    *
-   * @param string $resource REQUIRED: The resource for which the policy is being
-   * requested. See the operation documentation for the appropriate value for this
-   * field.
-   * @param array $optParams Optional parameters.
+   * @param  string $resource  REQUIRED: The resource for which the policy is being
+   *                          requested. See the operation documentation for the
+   *                          appropriate value for this field.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearningEngine_GoogleIamV1Policy
    */
-  public function getIamPolicy($resource, $optParams = array())
-  {
-    $params = array('resource' => $resource);
-    $params = array_merge($params, $optParams);
-    return $this->call('getIamPolicy', array($params), "Google_Service_CloudMachineLearningEngine_GoogleIamV1Policy");
-  }
-  /**
+    public function getIamPolicy($resource, $optParams = array())
+    {
+        $params = array('resource' => $resource);
+        $params = array_merge($params, $optParams);
+        return $this->call('getIamPolicy', array($params), "Google_Service_CloudMachineLearningEngine_GoogleIamV1Policy");
+    }
+    /**
    * Lists the jobs in the project. (jobs.listProjectsJobs)
    *
-   * @param string $parent Required. The name of the project for which to list
-   * jobs.
-   * @param array $optParams Optional parameters.
+   * @param string $parent    Required. The name of the project for which to list
+   *                          jobs.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string pageToken Optional. A page token to request the next page
    * of results.
@@ -100,22 +100,22 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsJobs extends Go
    *
    * The default value is 20, and the maximum page size is 100.
    * @opt_param string filter Optional. Specifies the subset of jobs to retrieve.
-   * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ListJobsResponse
+   * @return    Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ListJobsResponse
    */
-  public function listProjectsJobs($parent, $optParams = array())
-  {
-    $params = array('parent' => $parent);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ListJobsResponse");
-  }
-  /**
+    public function listProjectsJobs($parent, $optParams = array())
+    {
+        $params = array('parent' => $parent);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ListJobsResponse");
+    }
+    /**
    * Updates a specific job resource.
    *
    * Currently the only supported fields to update are `labels`. (jobs.patch)
    *
-   * @param string $name Required. The job name.
+   * @param string                                                       $name      Required. The job name.
    * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                                        $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. Specifies the path, relative to `Job`,
    * of the field to update. To adopt etag mechanism, include `etag` field in the
@@ -130,32 +130,32 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsJobs extends Go
    * the server end `etag` will be recalculated.
    *
    * Currently the only supported update masks are `labels` and `etag`.
-   * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job
+   * @return    Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job
    */
-  public function patch($name, Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job $postBody, $optParams = array())
-  {
-    $params = array('name' => $name, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job");
-  }
-  /**
+    public function patch($name, Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job $postBody, $optParams = array())
+    {
+        $params = array('name' => $name, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Job");
+    }
+    /**
    * Sets the access control policy on the specified resource. Replaces any
    * existing policy. (jobs.setIamPolicy)
    *
-   * @param string $resource REQUIRED: The resource for which the policy is being
-   * specified. See the operation documentation for the appropriate value for this
-   * field.
-   * @param Google_Service_CloudMachineLearningEngine_GoogleIamV1SetIamPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                                   $resource  REQUIRED: The resource for which the policy is being
+   *                                                                                             specified. See the operation documentation for the
+   *                                                                                             appropriate value for this field.
+   * @param  Google_Service_CloudMachineLearningEngine_GoogleIamV1SetIamPolicyRequest $postBody
+   * @param  array                                                                    $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearningEngine_GoogleIamV1Policy
    */
-  public function setIamPolicy($resource, Google_Service_CloudMachineLearningEngine_GoogleIamV1SetIamPolicyRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setIamPolicy', array($params), "Google_Service_CloudMachineLearningEngine_GoogleIamV1Policy");
-  }
-  /**
+    public function setIamPolicy($resource, Google_Service_CloudMachineLearningEngine_GoogleIamV1SetIamPolicyRequest $postBody, $optParams = array())
+    {
+        $params = array('resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('setIamPolicy', array($params), "Google_Service_CloudMachineLearningEngine_GoogleIamV1Policy");
+    }
+    /**
    * Returns permissions that a caller has on the specified resource. If the
    * resource does not exist, this will return an empty set of permissions, not a
    * NOT_FOUND error.
@@ -164,17 +164,17 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsJobs extends Go
    * and command-line tools, not for authorization checking. This operation may
    * "fail open" without warning. (jobs.testIamPermissions)
    *
-   * @param string $resource REQUIRED: The resource for which the policy detail is
-   * being requested. See the operation documentation for the appropriate value
-   * for this field.
-   * @param Google_Service_CloudMachineLearningEngine_GoogleIamV1TestIamPermissionsRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                                         $resource  REQUIRED: The resource for which the policy detail is
+   *                                                                                                   being requested. See the operation documentation for
+   *                                                                                                   the appropriate value for this field.
+   * @param  Google_Service_CloudMachineLearningEngine_GoogleIamV1TestIamPermissionsRequest $postBody
+   * @param  array                                                                          $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearningEngine_GoogleIamV1TestIamPermissionsResponse
    */
-  public function testIamPermissions($resource, Google_Service_CloudMachineLearningEngine_GoogleIamV1TestIamPermissionsRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('testIamPermissions', array($params), "Google_Service_CloudMachineLearningEngine_GoogleIamV1TestIamPermissionsResponse");
-  }
+    public function testIamPermissions($resource, Google_Service_CloudMachineLearningEngine_GoogleIamV1TestIamPermissionsRequest $postBody, $optParams = array())
+    {
+        $params = array('resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('testIamPermissions', array($params), "Google_Service_CloudMachineLearningEngine_GoogleIamV1TestIamPermissionsResponse");
+    }
 }

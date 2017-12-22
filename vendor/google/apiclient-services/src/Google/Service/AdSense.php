@@ -30,58 +30,62 @@
  */
 class Google_Service_AdSense extends Google_Service
 {
-  /** View and manage your AdSense data. */
-  const ADSENSE =
+    /**
+ * View and manage your AdSense data. 
+*/
+    const ADSENSE =
       "https://www.googleapis.com/auth/adsense";
-  /** View your AdSense data. */
-  const ADSENSE_READONLY =
+    /**
+ * View your AdSense data. 
+*/
+    const ADSENSE_READONLY =
       "https://www.googleapis.com/auth/adsense.readonly";
 
-  public $accounts;
-  public $accounts_adclients;
-  public $accounts_adunits;
-  public $accounts_adunits_customchannels;
-  public $accounts_alerts;
-  public $accounts_customchannels;
-  public $accounts_customchannels_adunits;
-  public $accounts_payments;
-  public $accounts_reports;
-  public $accounts_reports_saved;
-  public $accounts_savedadstyles;
-  public $accounts_urlchannels;
-  public $adclients;
-  public $adunits;
-  public $adunits_customchannels;
-  public $alerts;
-  public $customchannels;
-  public $customchannels_adunits;
-  public $metadata_dimensions;
-  public $metadata_metrics;
-  public $payments;
-  public $reports;
-  public $reports_saved;
-  public $savedadstyles;
-  public $urlchannels;
+    public $accounts;
+    public $accounts_adclients;
+    public $accounts_adunits;
+    public $accounts_adunits_customchannels;
+    public $accounts_alerts;
+    public $accounts_customchannels;
+    public $accounts_customchannels_adunits;
+    public $accounts_payments;
+    public $accounts_reports;
+    public $accounts_reports_saved;
+    public $accounts_savedadstyles;
+    public $accounts_urlchannels;
+    public $adclients;
+    public $adunits;
+    public $adunits_customchannels;
+    public $alerts;
+    public $customchannels;
+    public $customchannels_adunits;
+    public $metadata_dimensions;
+    public $metadata_metrics;
+    public $payments;
+    public $reports;
+    public $reports_saved;
+    public $savedadstyles;
+    public $urlchannels;
   
-  /**
+    /**
    * Constructs the internal representation of the AdSense service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'adsense/v1.4/';
-    $this->version = 'v1.4';
-    $this->serviceName = 'adsense';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'adsense/v1.4/';
+        $this->version = 'v1.4';
+        $this->serviceName = 'adsense';
 
-    $this->accounts = new Google_Service_AdSense_Resource_Accounts(
-        $this,
-        $this->serviceName,
-        'accounts',
-        array(
-          'methods' => array(
+        $this->accounts = new Google_Service_AdSense_Resource_Accounts(
+            $this,
+            $this->serviceName,
+            'accounts',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'accounts/{accountId}',
               'httpMethod' => 'GET',
@@ -110,15 +114,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_adclients = new Google_Service_AdSense_Resource_AccountsAdclients(
-        $this,
-        $this->serviceName,
-        'adclients',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_adclients = new Google_Service_AdSense_Resource_AccountsAdclients(
+            $this,
+            $this->serviceName,
+            'adclients',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'accounts/{accountId}/adclients',
               'httpMethod' => 'GET',
@@ -138,15 +142,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_adunits = new Google_Service_AdSense_Resource_AccountsAdunits(
-        $this,
-        $this->serviceName,
-        'adunits',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_adunits = new Google_Service_AdSense_Resource_AccountsAdunits(
+            $this,
+            $this->serviceName,
+            'adunits',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}',
               'httpMethod' => 'GET',
@@ -215,15 +219,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_adunits_customchannels = new Google_Service_AdSense_Resource_AccountsAdunitsCustomchannels(
-        $this,
-        $this->serviceName,
-        'customchannels',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_adunits_customchannels = new Google_Service_AdSense_Resource_AccountsAdunitsCustomchannels(
+            $this,
+            $this->serviceName,
+            'customchannels',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/customchannels',
               'httpMethod' => 'GET',
@@ -253,15 +257,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_alerts = new Google_Service_AdSense_Resource_AccountsAlerts(
-        $this,
-        $this->serviceName,
-        'alerts',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_alerts = new Google_Service_AdSense_Resource_AccountsAlerts(
+            $this,
+            $this->serviceName,
+            'alerts',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'accounts/{accountId}/alerts/{alertId}',
               'httpMethod' => 'DELETE',
@@ -292,15 +296,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_customchannels = new Google_Service_AdSense_Resource_AccountsCustomchannels(
-        $this,
-        $this->serviceName,
-        'customchannels',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_customchannels = new Google_Service_AdSense_Resource_AccountsCustomchannels(
+            $this,
+            $this->serviceName,
+            'customchannels',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}',
               'httpMethod' => 'GET',
@@ -345,15 +349,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_customchannels_adunits = new Google_Service_AdSense_Resource_AccountsCustomchannelsAdunits(
-        $this,
-        $this->serviceName,
-        'adunits',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_customchannels_adunits = new Google_Service_AdSense_Resource_AccountsCustomchannelsAdunits(
+            $this,
+            $this->serviceName,
+            'adunits',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}/adunits',
               'httpMethod' => 'GET',
@@ -387,15 +391,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_payments = new Google_Service_AdSense_Resource_AccountsPayments(
-        $this,
-        $this->serviceName,
-        'payments',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_payments = new Google_Service_AdSense_Resource_AccountsPayments(
+            $this,
+            $this->serviceName,
+            'payments',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'accounts/{accountId}/payments',
               'httpMethod' => 'GET',
@@ -407,15 +411,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_reports = new Google_Service_AdSense_Resource_AccountsReports(
-        $this,
-        $this->serviceName,
-        'reports',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_reports = new Google_Service_AdSense_Resource_AccountsReports(
+            $this,
+            $this->serviceName,
+            'reports',
+            array(
+            'methods' => array(
             'generate' => array(
               'path' => 'accounts/{accountId}/reports',
               'httpMethod' => 'GET',
@@ -477,15 +481,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_reports_saved = new Google_Service_AdSense_Resource_AccountsReportsSaved(
-        $this,
-        $this->serviceName,
-        'saved',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_reports_saved = new Google_Service_AdSense_Resource_AccountsReportsSaved(
+            $this,
+            $this->serviceName,
+            'saved',
+            array(
+            'methods' => array(
             'generate' => array(
               'path' => 'accounts/{accountId}/reports/{savedReportId}',
               'httpMethod' => 'GET',
@@ -532,15 +536,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_savedadstyles = new Google_Service_AdSense_Resource_AccountsSavedadstyles(
-        $this,
-        $this->serviceName,
-        'savedadstyles',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_savedadstyles = new Google_Service_AdSense_Resource_AccountsSavedadstyles(
+            $this,
+            $this->serviceName,
+            'savedadstyles',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'accounts/{accountId}/savedadstyles/{savedAdStyleId}',
               'httpMethod' => 'GET',
@@ -575,15 +579,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_urlchannels = new Google_Service_AdSense_Resource_AccountsUrlchannels(
-        $this,
-        $this->serviceName,
-        'urlchannels',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_urlchannels = new Google_Service_AdSense_Resource_AccountsUrlchannels(
+            $this,
+            $this->serviceName,
+            'urlchannels',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'accounts/{accountId}/adclients/{adClientId}/urlchannels',
               'httpMethod' => 'GET',
@@ -608,15 +612,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->adclients = new Google_Service_AdSense_Resource_Adclients(
-        $this,
-        $this->serviceName,
-        'adclients',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->adclients = new Google_Service_AdSense_Resource_Adclients(
+            $this,
+            $this->serviceName,
+            'adclients',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'adclients',
               'httpMethod' => 'GET',
@@ -631,15 +635,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->adunits = new Google_Service_AdSense_Resource_Adunits(
-        $this,
-        $this->serviceName,
-        'adunits',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->adunits = new Google_Service_AdSense_Resource_Adunits(
+            $this,
+            $this->serviceName,
+            'adunits',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'adclients/{adClientId}/adunits/{adUnitId}',
               'httpMethod' => 'GET',
@@ -693,15 +697,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->adunits_customchannels = new Google_Service_AdSense_Resource_AdunitsCustomchannels(
-        $this,
-        $this->serviceName,
-        'customchannels',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->adunits_customchannels = new Google_Service_AdSense_Resource_AdunitsCustomchannels(
+            $this,
+            $this->serviceName,
+            'customchannels',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'adclients/{adClientId}/adunits/{adUnitId}/customchannels',
               'httpMethod' => 'GET',
@@ -726,15 +730,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->alerts = new Google_Service_AdSense_Resource_Alerts(
-        $this,
-        $this->serviceName,
-        'alerts',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->alerts = new Google_Service_AdSense_Resource_Alerts(
+            $this,
+            $this->serviceName,
+            'alerts',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'alerts/{alertId}',
               'httpMethod' => 'DELETE',
@@ -755,15 +759,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->customchannels = new Google_Service_AdSense_Resource_Customchannels(
-        $this,
-        $this->serviceName,
-        'customchannels',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->customchannels = new Google_Service_AdSense_Resource_Customchannels(
+            $this,
+            $this->serviceName,
+            'customchannels',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'adclients/{adClientId}/customchannels/{customChannelId}',
               'httpMethod' => 'GET',
@@ -798,15 +802,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->customchannels_adunits = new Google_Service_AdSense_Resource_CustomchannelsAdunits(
-        $this,
-        $this->serviceName,
-        'adunits',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->customchannels_adunits = new Google_Service_AdSense_Resource_CustomchannelsAdunits(
+            $this,
+            $this->serviceName,
+            'adunits',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'adclients/{adClientId}/customchannels/{customChannelId}/adunits',
               'httpMethod' => 'GET',
@@ -835,57 +839,57 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->metadata_dimensions = new Google_Service_AdSense_Resource_MetadataDimensions(
-        $this,
-        $this->serviceName,
-        'dimensions',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->metadata_dimensions = new Google_Service_AdSense_Resource_MetadataDimensions(
+            $this,
+            $this->serviceName,
+            'dimensions',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'metadata/dimensions',
               'httpMethod' => 'GET',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-    $this->metadata_metrics = new Google_Service_AdSense_Resource_MetadataMetrics(
-        $this,
-        $this->serviceName,
-        'metrics',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->metadata_metrics = new Google_Service_AdSense_Resource_MetadataMetrics(
+            $this,
+            $this->serviceName,
+            'metrics',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'metadata/metrics',
               'httpMethod' => 'GET',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-    $this->payments = new Google_Service_AdSense_Resource_Payments(
-        $this,
-        $this->serviceName,
-        'payments',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->payments = new Google_Service_AdSense_Resource_Payments(
+            $this,
+            $this->serviceName,
+            'payments',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'payments',
               'httpMethod' => 'GET',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-    $this->reports = new Google_Service_AdSense_Resource_Reports(
-        $this,
-        $this->serviceName,
-        'reports',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->reports = new Google_Service_AdSense_Resource_Reports(
+            $this,
+            $this->serviceName,
+            'reports',
+            array(
+            'methods' => array(
             'generate' => array(
               'path' => 'reports',
               'httpMethod' => 'GET',
@@ -947,15 +951,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->reports_saved = new Google_Service_AdSense_Resource_ReportsSaved(
-        $this,
-        $this->serviceName,
-        'saved',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->reports_saved = new Google_Service_AdSense_Resource_ReportsSaved(
+            $this,
+            $this->serviceName,
+            'saved',
+            array(
+            'methods' => array(
             'generate' => array(
               'path' => 'reports/{savedReportId}',
               'httpMethod' => 'GET',
@@ -992,15 +996,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->savedadstyles = new Google_Service_AdSense_Resource_Savedadstyles(
-        $this,
-        $this->serviceName,
-        'savedadstyles',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->savedadstyles = new Google_Service_AdSense_Resource_Savedadstyles(
+            $this,
+            $this->serviceName,
+            'savedadstyles',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'savedadstyles/{savedAdStyleId}',
               'httpMethod' => 'GET',
@@ -1025,15 +1029,15 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->urlchannels = new Google_Service_AdSense_Resource_Urlchannels(
-        $this,
-        $this->serviceName,
-        'urlchannels',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->urlchannels = new Google_Service_AdSense_Resource_Urlchannels(
+            $this,
+            $this->serviceName,
+            'urlchannels',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'adclients/{adClientId}/urlchannels',
               'httpMethod' => 'GET',
@@ -1053,8 +1057,8 @@ class Google_Service_AdSense extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

@@ -25,13 +25,13 @@
  */
 class Google_Service_Compute_Resource_Networks extends Google_Service_Resource
 {
-  /**
+    /**
    * Adds a peering to the specified network. (networks.addPeering)
    *
-   * @param string $project Project ID for this request.
-   * @param string $network Name of the network resource to add peering to.
+   * @param string                                           $project   Project ID for this request.
+   * @param string                                           $network   Name of the network resource to add peering to.
    * @param Google_Service_Compute_NetworksAddPeeringRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                            $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -45,20 +45,20 @@ class Google_Service_Compute_Resource_Networks extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function addPeering($project, $network, Google_Service_Compute_NetworksAddPeeringRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'network' => $network, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('addPeering', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function addPeering($project, $network, Google_Service_Compute_NetworksAddPeeringRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'network' => $network, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('addPeering', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Deletes the specified network. (networks.delete)
    *
-   * @param string $project Project ID for this request.
-   * @param string $network Name of the network to delete.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $network   Name of the network to delete.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -72,36 +72,36 @@ class Google_Service_Compute_Resource_Networks extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $network, $optParams = array())
-  {
-    $params = array('project' => $project, 'network' => $network);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $network, $optParams = array())
+    {
+        $params = array('project' => $project, 'network' => $network);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified network. Get a list of available networks by making a
    * list() request. (networks.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $network Name of the network to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $network   Name of the network to return.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Compute_Network
    */
-  public function get($project, $network, $optParams = array())
-  {
-    $params = array('project' => $project, 'network' => $network);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_Network");
-  }
-  /**
+    public function get($project, $network, $optParams = array())
+    {
+        $params = array('project' => $project, 'network' => $network);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_Network");
+    }
+    /**
    * Creates a network in the specified project using the data included in the
    * request. (networks.insert)
    *
-   * @param string $project Project ID for this request.
+   * @param string                         $project   Project ID for this request.
    * @param Google_Service_Compute_Network $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                          $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -115,20 +115,20 @@ class Google_Service_Compute_Resource_Networks extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, Google_Service_Compute_Network $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, Google_Service_Compute_Network $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves the list of networks available to the specified project.
    * (networks.listNetworks)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -172,22 +172,22 @@ class Google_Service_Compute_Resource_Networks extends Google_Service_Resource
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_NetworkList
+   * @return    Google_Service_Compute_NetworkList
    */
-  public function listNetworks($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_NetworkList");
-  }
-  /**
+    public function listNetworks($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_NetworkList");
+    }
+    /**
    * Patches the specified network with the data included in the request.
    * (networks.patch)
    *
-   * @param string $project Project ID for this request.
-   * @param string $network Name of the network to update.
+   * @param string                         $project   Project ID for this request.
+   * @param string                         $network   Name of the network to update.
    * @param Google_Service_Compute_Network $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                          $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -201,21 +201,21 @@ class Google_Service_Compute_Resource_Networks extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function patch($project, $network, Google_Service_Compute_Network $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'network' => $network, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function patch($project, $network, Google_Service_Compute_Network $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'network' => $network, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Removes a peering from the specified network. (networks.removePeering)
    *
-   * @param string $project Project ID for this request.
-   * @param string $network Name of the network resource to remove peering from.
+   * @param string                                              $project   Project ID for this request.
+   * @param string                                              $network   Name of the network resource to remove peering from.
    * @param Google_Service_Compute_NetworksRemovePeeringRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                               $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -229,21 +229,21 @@ class Google_Service_Compute_Resource_Networks extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function removePeering($project, $network, Google_Service_Compute_NetworksRemovePeeringRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'network' => $network, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('removePeering', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function removePeering($project, $network, Google_Service_Compute_NetworksRemovePeeringRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'network' => $network, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('removePeering', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Switches the network mode from auto subnet mode to custom subnet mode.
    * (networks.switchToCustomMode)
    *
-   * @param string $project Project ID for this request.
-   * @param string $network Name of the network to be updated.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $network   Name of the network to be updated.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -257,12 +257,12 @@ class Google_Service_Compute_Resource_Networks extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function switchToCustomMode($project, $network, $optParams = array())
-  {
-    $params = array('project' => $project, 'network' => $network);
-    $params = array_merge($params, $optParams);
-    return $this->call('switchToCustomMode', array($params), "Google_Service_Compute_Operation");
-  }
+    public function switchToCustomMode($project, $network, $optParams = array())
+    {
+        $params = array('project' => $project, 'network' => $network);
+        $params = array_merge($params, $optParams);
+        return $this->call('switchToCustomMode', array($params), "Google_Service_Compute_Operation");
+    }
 }

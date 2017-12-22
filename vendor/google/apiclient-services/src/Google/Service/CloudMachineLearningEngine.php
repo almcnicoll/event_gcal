@@ -30,37 +30,39 @@
  */
 class Google_Service_CloudMachineLearningEngine extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $projects;
-  public $projects_jobs;
-  public $projects_locations;
-  public $projects_models;
-  public $projects_models_versions;
-  public $projects_operations;
+    public $projects;
+    public $projects_jobs;
+    public $projects_locations;
+    public $projects_models;
+    public $projects_models_versions;
+    public $projects_operations;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudMachineLearningEngine
    * service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://ml.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'ml';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://ml.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'ml';
 
-    $this->projects = new Google_Service_CloudMachineLearningEngine_Resource_Projects(
-        $this,
-        $this->serviceName,
-        'projects',
-        array(
-          'methods' => array(
+        $this->projects = new Google_Service_CloudMachineLearningEngine_Resource_Projects(
+            $this,
+            $this->serviceName,
+            'projects',
+            array(
+            'methods' => array(
             'getConfig' => array(
               'path' => 'v1/{+name}:getConfig',
               'httpMethod' => 'GET',
@@ -82,15 +84,15 @@ class Google_Service_CloudMachineLearningEngine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_jobs = new Google_Service_CloudMachineLearningEngine_Resource_ProjectsJobs(
-        $this,
-        $this->serviceName,
-        'jobs',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_jobs = new Google_Service_CloudMachineLearningEngine_Resource_ProjectsJobs(
+            $this,
+            $this->serviceName,
+            'jobs',
+            array(
+            'methods' => array(
             'cancel' => array(
               'path' => 'v1/{+name}:cancel',
               'httpMethod' => 'POST',
@@ -188,15 +190,15 @@ class Google_Service_CloudMachineLearningEngine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_locations = new Google_Service_CloudMachineLearningEngine_Resource_ProjectsLocations(
-        $this,
-        $this->serviceName,
-        'locations',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_locations = new Google_Service_CloudMachineLearningEngine_Resource_ProjectsLocations(
+            $this,
+            $this->serviceName,
+            'locations',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -226,15 +228,15 @@ class Google_Service_CloudMachineLearningEngine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_models = new Google_Service_CloudMachineLearningEngine_Resource_ProjectsModels(
-        $this,
-        $this->serviceName,
-        'models',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_models = new Google_Service_CloudMachineLearningEngine_Resource_ProjectsModels(
+            $this,
+            $this->serviceName,
+            'models',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/{+parent}/models',
               'httpMethod' => 'POST',
@@ -332,15 +334,15 @@ class Google_Service_CloudMachineLearningEngine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_models_versions = new Google_Service_CloudMachineLearningEngine_Resource_ProjectsModelsVersions(
-        $this,
-        $this->serviceName,
-        'versions',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_models_versions = new Google_Service_CloudMachineLearningEngine_Resource_ProjectsModelsVersions(
+            $this,
+            $this->serviceName,
+            'versions',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/{+parent}/versions',
               'httpMethod' => 'POST',
@@ -418,15 +420,15 @@ class Google_Service_CloudMachineLearningEngine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_operations = new Google_Service_CloudMachineLearningEngine_Resource_ProjectsOperations(
-        $this,
-        $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_operations = new Google_Service_CloudMachineLearningEngine_Resource_ProjectsOperations(
+            $this,
+            $this->serviceName,
+            'operations',
+            array(
+            'methods' => array(
             'cancel' => array(
               'path' => 'v1/{+name}:cancel',
               'httpMethod' => 'POST',
@@ -480,8 +482,8 @@ class Google_Service_CloudMachineLearningEngine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

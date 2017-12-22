@@ -25,29 +25,29 @@
  */
 class Google_Service_Compute_Resource_InterconnectLocations extends Google_Service_Resource
 {
-  /**
+    /**
    * Returns the details for the specified interconnect location. Get a list of
    * available interconnect locations by making a list() request.
    * (interconnectLocations.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $interconnectLocation Name of the interconnect location to
+   * @param  string $project              Project ID for this request.
+   * @param  string $interconnectLocation Name of the interconnect location to
    * return.
-   * @param array $optParams Optional parameters.
+   * @param  array  $optParams            Optional parameters.
    * @return Google_Service_Compute_InterconnectLocation
    */
-  public function get($project, $interconnectLocation, $optParams = array())
-  {
-    $params = array('project' => $project, 'interconnectLocation' => $interconnectLocation);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_InterconnectLocation");
-  }
-  /**
+    public function get($project, $interconnectLocation, $optParams = array())
+    {
+        $params = array('project' => $project, 'interconnectLocation' => $interconnectLocation);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_InterconnectLocation");
+    }
+    /**
    * Retrieves the list of interconnect locations available to the specified
    * project. (interconnectLocations.listInterconnectLocations)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -91,12 +91,12 @@ class Google_Service_Compute_Resource_InterconnectLocations extends Google_Servi
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_InterconnectLocationList
+   * @return    Google_Service_Compute_InterconnectLocationList
    */
-  public function listInterconnectLocations($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_InterconnectLocationList");
-  }
+    public function listInterconnectLocations($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_InterconnectLocationList");
+    }
 }

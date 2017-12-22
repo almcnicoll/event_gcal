@@ -17,79 +17,79 @@
 
 class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoAnnotationResults extends Google_Collection
 {
-  protected $collection_key = 'shotAnnotations';
-  protected $errorType = 'Google_Service_CloudVideoIntelligence_GoogleRpcStatus';
-  protected $errorDataType = '';
-  public $inputUri;
-  protected $labelAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1LabelAnnotation';
-  protected $labelAnnotationsDataType = 'array';
-  protected $safeSearchAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1SafeSearchAnnotation';
-  protected $safeSearchAnnotationsDataType = 'array';
-  protected $shotAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment';
-  protected $shotAnnotationsDataType = 'array';
+    protected $collection_key = 'shotAnnotations';
+    protected $errorType = 'Google_Service_CloudVideoIntelligence_GoogleRpcStatus';
+    protected $errorDataType = '';
+    public $inputUri;
+    protected $labelAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1LabelAnnotation';
+    protected $labelAnnotationsDataType = 'array';
+    protected $safeSearchAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1SafeSearchAnnotation';
+    protected $safeSearchAnnotationsDataType = 'array';
+    protected $shotAnnotationsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment';
+    protected $shotAnnotationsDataType = 'array';
 
-  /**
+    /**
    * @param Google_Service_CloudVideoIntelligence_GoogleRpcStatus
    */
-  public function setError(Google_Service_CloudVideoIntelligence_GoogleRpcStatus $error)
-  {
-    $this->error = $error;
-  }
-  /**
+    public function setError(Google_Service_CloudVideoIntelligence_GoogleRpcStatus $error)
+    {
+        $this->error = $error;
+    }
+    /**
    * @return Google_Service_CloudVideoIntelligence_GoogleRpcStatus
    */
-  public function getError()
-  {
-    return $this->error;
-  }
-  public function setInputUri($inputUri)
-  {
-    $this->inputUri = $inputUri;
-  }
-  public function getInputUri()
-  {
-    return $this->inputUri;
-  }
-  /**
+    public function getError()
+    {
+        return $this->error;
+    }
+    public function setInputUri($inputUri)
+    {
+        $this->inputUri = $inputUri;
+    }
+    public function getInputUri()
+    {
+        return $this->inputUri;
+    }
+    /**
    * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1LabelAnnotation
    */
-  public function setLabelAnnotations($labelAnnotations)
-  {
-    $this->labelAnnotations = $labelAnnotations;
-  }
-  /**
+    public function setLabelAnnotations($labelAnnotations)
+    {
+        $this->labelAnnotations = $labelAnnotations;
+    }
+    /**
    * @return Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1LabelAnnotation
    */
-  public function getLabelAnnotations()
-  {
-    return $this->labelAnnotations;
-  }
-  /**
+    public function getLabelAnnotations()
+    {
+        return $this->labelAnnotations;
+    }
+    /**
    * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1SafeSearchAnnotation
    */
-  public function setSafeSearchAnnotations($safeSearchAnnotations)
-  {
-    $this->safeSearchAnnotations = $safeSearchAnnotations;
-  }
-  /**
+    public function setSafeSearchAnnotations($safeSearchAnnotations)
+    {
+        $this->safeSearchAnnotations = $safeSearchAnnotations;
+    }
+    /**
    * @return Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1SafeSearchAnnotation
    */
-  public function getSafeSearchAnnotations()
-  {
-    return $this->safeSearchAnnotations;
-  }
-  /**
+    public function getSafeSearchAnnotations()
+    {
+        return $this->safeSearchAnnotations;
+    }
+    /**
    * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment
    */
-  public function setShotAnnotations($shotAnnotations)
-  {
-    $this->shotAnnotations = $shotAnnotations;
-  }
-  /**
+    public function setShotAnnotations($shotAnnotations)
+    {
+        $this->shotAnnotations = $shotAnnotations;
+    }
+    /**
    * @return Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment
    */
-  public function getShotAnnotations()
-  {
-    return $this->shotAnnotations;
-  }
+    public function getShotAnnotations()
+    {
+        return $this->shotAnnotations;
+    }
 }

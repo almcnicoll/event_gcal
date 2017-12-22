@@ -25,23 +25,23 @@
  */
 class Google_Service_Appengine_Resource_AppsOperations extends Google_Service_Resource
 {
-  /**
+    /**
    * Gets the latest state of a long-running operation. Clients can use this
    * method to poll the operation result at intervals as recommended by the API
    * service. (operations.get)
    *
-   * @param string $appsId Part of `name`. The name of the operation resource.
-   * @param string $operationsId Part of `name`. See documentation of `appsId`.
-   * @param array $optParams Optional parameters.
+   * @param  string $appsId       Part of `name`. The name of the operation resource.
+   * @param  string $operationsId Part of `name`. See documentation of `appsId`.
+   * @param  array  $optParams    Optional parameters.
    * @return Google_Service_Appengine_Operation
    */
-  public function get($appsId, $operationsId, $optParams = array())
-  {
-    $params = array('appsId' => $appsId, 'operationsId' => $operationsId);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Appengine_Operation");
-  }
-  /**
+    public function get($appsId, $operationsId, $optParams = array())
+    {
+        $params = array('appsId' => $appsId, 'operationsId' => $operationsId);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Appengine_Operation");
+    }
+    /**
    * Lists operations that match the specified filter in the request. If the
    * server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name
    * binding allows API services to override the binding to use different resource
@@ -52,19 +52,19 @@ class Google_Service_Appengine_Resource_AppsOperations extends Google_Service_Re
    * binding is the parent resource, without the operations collection id.
    * (operations.listAppsOperations)
    *
-   * @param string $appsId Part of `name`. The name of the operation's parent
-   * resource.
-   * @param array $optParams Optional parameters.
+   * @param string $appsId    Part of `name`. The name of the operation's parent
+   *                          resource.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter The standard list filter.
    * @opt_param string pageToken The standard list page token.
    * @opt_param int pageSize The standard list page size.
-   * @return Google_Service_Appengine_ListOperationsResponse
+   * @return    Google_Service_Appengine_ListOperationsResponse
    */
-  public function listAppsOperations($appsId, $optParams = array())
-  {
-    $params = array('appsId' => $appsId);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Appengine_ListOperationsResponse");
-  }
+    public function listAppsOperations($appsId, $optParams = array())
+    {
+        $params = array('appsId' => $appsId);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Appengine_ListOperationsResponse");
+    }
 }

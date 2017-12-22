@@ -25,12 +25,12 @@
  */
 class Google_Service_Compute_Resource_RegionCommitments extends Google_Service_Resource
 {
-  /**
+    /**
    * Retrieves an aggregated list of commitments.
    * (regionCommitments.aggregatedList)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -74,38 +74,38 @@ class Google_Service_Compute_Resource_RegionCommitments extends Google_Service_R
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_CommitmentAggregatedList
+   * @return    Google_Service_Compute_CommitmentAggregatedList
    */
-  public function aggregatedList($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('aggregatedList', array($params), "Google_Service_Compute_CommitmentAggregatedList");
-  }
-  /**
+    public function aggregatedList($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('aggregatedList', array($params), "Google_Service_Compute_CommitmentAggregatedList");
+    }
+    /**
    * Returns the specified commitment resource. Get a list of available
    * commitments by making a list() request. (regionCommitments.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param string $commitment Name of the commitment to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project    Project ID for this request.
+   * @param  string $region     Name of the region for this request.
+   * @param  string $commitment Name of the commitment to return.
+   * @param  array  $optParams  Optional parameters.
    * @return Google_Service_Compute_Commitment
    */
-  public function get($project, $region, $commitment, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'commitment' => $commitment);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_Commitment");
-  }
-  /**
+    public function get($project, $region, $commitment, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'commitment' => $commitment);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_Commitment");
+    }
+    /**
    * Creates a commitment in the specified project using the data included in the
    * request. (regionCommitments.insert)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
+   * @param string                            $project   Project ID for this request.
+   * @param string                            $region    Name of the region for this request.
    * @param Google_Service_Compute_Commitment $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                             $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -119,21 +119,21 @@ class Google_Service_Compute_Resource_RegionCommitments extends Google_Service_R
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, $region, Google_Service_Compute_Commitment $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, $region, Google_Service_Compute_Commitment $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves a list of commitments contained within the specified region.
    * (regionCommitments.listRegionCommitments)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $region    Name of the region for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -177,12 +177,12 @@ class Google_Service_Compute_Resource_RegionCommitments extends Google_Service_R
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_CommitmentList
+   * @return    Google_Service_Compute_CommitmentList
    */
-  public function listRegionCommitments($project, $region, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_CommitmentList");
-  }
+    public function listRegionCommitments($project, $region, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_CommitmentList");
+    }
 }

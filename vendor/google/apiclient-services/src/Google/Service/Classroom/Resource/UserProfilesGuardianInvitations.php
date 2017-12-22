@@ -25,7 +25,7 @@
  */
 class Google_Service_Classroom_Resource_UserProfilesGuardianInvitations extends Google_Service_Resource
 {
-  /**
+    /**
    * Creates a guardian invitation, and sends an email to the guardian asking them
    * to confirm that they are the student's guardian.
    *
@@ -55,18 +55,18 @@ class Google_Service_Classroom_Resource_UserProfilesGuardianInvitations extends 
    * `invited_email_address` matches the Google account of an existing
    * `Guardian` for this user. (guardianInvitations.create)
    *
-   * @param string $studentId ID of the student (in standard format)
-   * @param Google_Service_Classroom_GuardianInvitation $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                      $studentId ID of the student (in standard format)
+   * @param  Google_Service_Classroom_GuardianInvitation $postBody
+   * @param  array                                       $optParams Optional parameters.
    * @return Google_Service_Classroom_GuardianInvitation
    */
-  public function create($studentId, Google_Service_Classroom_GuardianInvitation $postBody, $optParams = array())
-  {
-    $params = array('studentId' => $studentId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Classroom_GuardianInvitation");
-  }
-  /**
+    public function create($studentId, Google_Service_Classroom_GuardianInvitation $postBody, $optParams = array())
+    {
+        $params = array('studentId' => $studentId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_Classroom_GuardianInvitation");
+    }
+    /**
    * Returns a specific guardian invitation.
    *
    * This method returns the following error codes:
@@ -81,20 +81,20 @@ class Google_Service_Classroom_Resource_UserProfilesGuardianInvitations extends 
    * returned if the student exists, but the   requesting user does not have
    * access to see that student. (guardianInvitations.get)
    *
-   * @param string $studentId The ID of the student whose guardian invitation is
-   * being requested.
-   * @param string $invitationId The `id` field of the `GuardianInvitation` being
+   * @param  string $studentId    The ID of the student whose guardian invitation is
+   *                             being requested.
+   * @param  string $invitationId The `id` field of the `GuardianInvitation` being
    * requested.
-   * @param array $optParams Optional parameters.
+   * @param  array  $optParams    Optional parameters.
    * @return Google_Service_Classroom_GuardianInvitation
    */
-  public function get($studentId, $invitationId, $optParams = array())
-  {
-    $params = array('studentId' => $studentId, 'invitationId' => $invitationId);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Classroom_GuardianInvitation");
-  }
-  /**
+    public function get($studentId, $invitationId, $optParams = array())
+    {
+        $params = array('studentId' => $studentId, 'invitationId' => $invitationId);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Classroom_GuardianInvitation");
+    }
+    /**
    * Returns a list of guardian invitations that the requesting user is permitted
    * to view, filtered by the parameters provided.
    *
@@ -119,7 +119,7 @@ class Google_Service_Classroom_Resource_UserProfilesGuardianInvitations extends 
    * string literal `"me"`, indicating the requesting user * the string literal
    * `"-"`, indicating that results should be returned for   all students that the
    * requesting user is permitted to view guardian   invitations.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string invitedEmailAddress If specified, only results with the
    * specified `invited_email_address` will be returned.
@@ -135,15 +135,15 @@ class Google_Service_Classroom_Resource_UserProfilesGuardianInvitations extends 
    *
    * The list request must be otherwise identical to the one that resulted in this
    * token.
-   * @return Google_Service_Classroom_ListGuardianInvitationsResponse
+   * @return    Google_Service_Classroom_ListGuardianInvitationsResponse
    */
-  public function listUserProfilesGuardianInvitations($studentId, $optParams = array())
-  {
-    $params = array('studentId' => $studentId);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Classroom_ListGuardianInvitationsResponse");
-  }
-  /**
+    public function listUserProfilesGuardianInvitations($studentId, $optParams = array())
+    {
+        $params = array('studentId' => $studentId);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Classroom_ListGuardianInvitationsResponse");
+    }
+    /**
    * Modifies a guardian invitation.
    *
    * Currently, the only valid modification is to change the `state` from
@@ -163,12 +163,12 @@ class Google_Service_Classroom_Resource_UserProfilesGuardianInvitations extends 
    * refer to a guardian invitation known to Classroom.
    * (guardianInvitations.patch)
    *
-   * @param string $studentId The ID of the student whose guardian invitation is
-   * to be modified.
-   * @param string $invitationId The `id` field of the `GuardianInvitation` to be
-   * modified.
+   * @param string                                      $studentId    The ID of the student whose guardian invitation is
+   *                                                                  to be modified.
+   * @param string                                      $invitationId The `id` field of the `GuardianInvitation` to be
+   *                                                                  modified.
    * @param Google_Service_Classroom_GuardianInvitation $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                       $optParams    Optional parameters.
    *
    * @opt_param string updateMask Mask that identifies which fields on the course
    * to update. This field is required to do an update. The update will fail if
@@ -179,12 +179,12 @@ class Google_Service_Classroom_Resource_UserProfilesGuardianInvitations extends 
    * When set in a query parameter, this field should be specified as
    *
    * `updateMask=,,...`
-   * @return Google_Service_Classroom_GuardianInvitation
+   * @return    Google_Service_Classroom_GuardianInvitation
    */
-  public function patch($studentId, $invitationId, Google_Service_Classroom_GuardianInvitation $postBody, $optParams = array())
-  {
-    $params = array('studentId' => $studentId, 'invitationId' => $invitationId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Classroom_GuardianInvitation");
-  }
+    public function patch($studentId, $invitationId, Google_Service_Classroom_GuardianInvitation $postBody, $optParams = array())
+    {
+        $params = array('studentId' => $studentId, 'invitationId' => $invitationId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Classroom_GuardianInvitation");
+    }
 }

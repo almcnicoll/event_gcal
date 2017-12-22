@@ -25,12 +25,12 @@
  */
 class Google_Service_Compute_Resource_Firewalls extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified firewall. (firewalls.delete)
    *
-   * @param string $project Project ID for this request.
-   * @param string $firewall Name of the firewall rule to delete.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $firewall  Name of the firewall rule to delete.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -44,35 +44,35 @@ class Google_Service_Compute_Resource_Firewalls extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $firewall, $optParams = array())
-  {
-    $params = array('project' => $project, 'firewall' => $firewall);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $firewall, $optParams = array())
+    {
+        $params = array('project' => $project, 'firewall' => $firewall);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified firewall. (firewalls.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $firewall Name of the firewall rule to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $firewall  Name of the firewall rule to return.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Compute_Firewall
    */
-  public function get($project, $firewall, $optParams = array())
-  {
-    $params = array('project' => $project, 'firewall' => $firewall);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_Firewall");
-  }
-  /**
+    public function get($project, $firewall, $optParams = array())
+    {
+        $params = array('project' => $project, 'firewall' => $firewall);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_Firewall");
+    }
+    /**
    * Creates a firewall rule in the specified project using the data included in
    * the request. (firewalls.insert)
    *
-   * @param string $project Project ID for this request.
+   * @param string                          $project   Project ID for this request.
    * @param Google_Service_Compute_Firewall $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                           $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -86,20 +86,20 @@ class Google_Service_Compute_Resource_Firewalls extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, Google_Service_Compute_Firewall $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, Google_Service_Compute_Firewall $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves the list of firewall rules available to the specified project.
    * (firewalls.listFirewalls)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -143,23 +143,23 @@ class Google_Service_Compute_Resource_Firewalls extends Google_Service_Resource
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_FirewallList
+   * @return    Google_Service_Compute_FirewallList
    */
-  public function listFirewalls($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_FirewallList");
-  }
-  /**
+    public function listFirewalls($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_FirewallList");
+    }
+    /**
    * Updates the specified firewall rule with the data included in the request.
    * This method supports PATCH semantics and uses the JSON merge patch format and
    * processing rules. (firewalls.patch)
    *
-   * @param string $project Project ID for this request.
-   * @param string $firewall Name of the firewall rule to patch.
+   * @param string                          $project   Project ID for this request.
+   * @param string                          $firewall  Name of the firewall rule to patch.
    * @param Google_Service_Compute_Firewall $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                           $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -173,23 +173,23 @@ class Google_Service_Compute_Resource_Firewalls extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function patch($project, $firewall, Google_Service_Compute_Firewall $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'firewall' => $firewall, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function patch($project, $firewall, Google_Service_Compute_Firewall $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'firewall' => $firewall, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Updates the specified firewall rule with the data included in the request.
    * Using PUT method, can only update following fields of firewall rule: allowed,
    * description, sourceRanges, sourceTags, targetTags. (firewalls.update)
    *
-   * @param string $project Project ID for this request.
-   * @param string $firewall Name of the firewall rule to update.
+   * @param string                          $project   Project ID for this request.
+   * @param string                          $firewall  Name of the firewall rule to update.
    * @param Google_Service_Compute_Firewall $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                           $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -203,12 +203,12 @@ class Google_Service_Compute_Resource_Firewalls extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function update($project, $firewall, Google_Service_Compute_Firewall $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'firewall' => $firewall, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Compute_Operation");
-  }
+    public function update($project, $firewall, Google_Service_Compute_Firewall $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'firewall' => $firewall, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('update', array($params), "Google_Service_Compute_Operation");
+    }
 }

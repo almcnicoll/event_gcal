@@ -33,29 +33,29 @@ class Google_Service_CivicInfo extends Google_Service
 {
 
 
-  public $divisions;
-  public $elections;
-  public $representatives;
+    public $divisions;
+    public $elections;
+    public $representatives;
   
-  /**
+    /**
    * Constructs the internal representation of the CivicInfo service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'civicinfo/v2/';
-    $this->version = 'v2';
-    $this->serviceName = 'civicinfo';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'civicinfo/v2/';
+        $this->version = 'v2';
+        $this->serviceName = 'civicinfo';
 
-    $this->divisions = new Google_Service_CivicInfo_Resource_Divisions(
-        $this,
-        $this->serviceName,
-        'divisions',
-        array(
-          'methods' => array(
+        $this->divisions = new Google_Service_CivicInfo_Resource_Divisions(
+            $this,
+            $this->serviceName,
+            'divisions',
+            array(
+            'methods' => array(
             'search' => array(
               'path' => 'divisions',
               'httpMethod' => 'GET',
@@ -66,15 +66,15 @@ class Google_Service_CivicInfo extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->elections = new Google_Service_CivicInfo_Resource_Elections(
-        $this,
-        $this->serviceName,
-        'elections',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->elections = new Google_Service_CivicInfo_Resource_Elections(
+            $this,
+            $this->serviceName,
+            'elections',
+            array(
+            'methods' => array(
             'electionQuery' => array(
               'path' => 'elections',
               'httpMethod' => 'GET',
@@ -102,15 +102,15 @@ class Google_Service_CivicInfo extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->representatives = new Google_Service_CivicInfo_Resource_Representatives(
-        $this,
-        $this->serviceName,
-        'representatives',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->representatives = new Google_Service_CivicInfo_Resource_Representatives(
+            $this,
+            $this->serviceName,
+            'representatives',
+            array(
+            'methods' => array(
             'representativeInfoByAddress' => array(
               'path' => 'representatives',
               'httpMethod' => 'GET',
@@ -159,8 +159,8 @@ class Google_Service_CivicInfo extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

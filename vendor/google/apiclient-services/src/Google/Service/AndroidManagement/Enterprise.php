@@ -17,76 +17,76 @@
 
 class Google_Service_AndroidManagement_Enterprise extends Google_Collection
 {
-  protected $collection_key = 'enabledNotificationTypes';
-  public $appAutoApprovalEnabled;
-  public $enabledNotificationTypes;
-  public $enterpriseDisplayName;
-  protected $logoType = 'Google_Service_AndroidManagement_ExternalData';
-  protected $logoDataType = '';
-  public $name;
-  public $primaryColor;
-  public $pubsubTopic;
+    protected $collection_key = 'enabledNotificationTypes';
+    public $appAutoApprovalEnabled;
+    public $enabledNotificationTypes;
+    public $enterpriseDisplayName;
+    protected $logoType = 'Google_Service_AndroidManagement_ExternalData';
+    protected $logoDataType = '';
+    public $name;
+    public $primaryColor;
+    public $pubsubTopic;
 
-  public function setAppAutoApprovalEnabled($appAutoApprovalEnabled)
-  {
-    $this->appAutoApprovalEnabled = $appAutoApprovalEnabled;
-  }
-  public function getAppAutoApprovalEnabled()
-  {
-    return $this->appAutoApprovalEnabled;
-  }
-  public function setEnabledNotificationTypes($enabledNotificationTypes)
-  {
-    $this->enabledNotificationTypes = $enabledNotificationTypes;
-  }
-  public function getEnabledNotificationTypes()
-  {
-    return $this->enabledNotificationTypes;
-  }
-  public function setEnterpriseDisplayName($enterpriseDisplayName)
-  {
-    $this->enterpriseDisplayName = $enterpriseDisplayName;
-  }
-  public function getEnterpriseDisplayName()
-  {
-    return $this->enterpriseDisplayName;
-  }
-  /**
+    public function setAppAutoApprovalEnabled($appAutoApprovalEnabled)
+    {
+        $this->appAutoApprovalEnabled = $appAutoApprovalEnabled;
+    }
+    public function getAppAutoApprovalEnabled()
+    {
+        return $this->appAutoApprovalEnabled;
+    }
+    public function setEnabledNotificationTypes($enabledNotificationTypes)
+    {
+        $this->enabledNotificationTypes = $enabledNotificationTypes;
+    }
+    public function getEnabledNotificationTypes()
+    {
+        return $this->enabledNotificationTypes;
+    }
+    public function setEnterpriseDisplayName($enterpriseDisplayName)
+    {
+        $this->enterpriseDisplayName = $enterpriseDisplayName;
+    }
+    public function getEnterpriseDisplayName()
+    {
+        return $this->enterpriseDisplayName;
+    }
+    /**
    * @param Google_Service_AndroidManagement_ExternalData
    */
-  public function setLogo(Google_Service_AndroidManagement_ExternalData $logo)
-  {
-    $this->logo = $logo;
-  }
-  /**
+    public function setLogo(Google_Service_AndroidManagement_ExternalData $logo)
+    {
+        $this->logo = $logo;
+    }
+    /**
    * @return Google_Service_AndroidManagement_ExternalData
    */
-  public function getLogo()
-  {
-    return $this->logo;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setPrimaryColor($primaryColor)
-  {
-    $this->primaryColor = $primaryColor;
-  }
-  public function getPrimaryColor()
-  {
-    return $this->primaryColor;
-  }
-  public function setPubsubTopic($pubsubTopic)
-  {
-    $this->pubsubTopic = $pubsubTopic;
-  }
-  public function getPubsubTopic()
-  {
-    return $this->pubsubTopic;
-  }
+    public function getLogo()
+    {
+        return $this->logo;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setPrimaryColor($primaryColor)
+    {
+        $this->primaryColor = $primaryColor;
+    }
+    public function getPrimaryColor()
+    {
+        return $this->primaryColor;
+    }
+    public function setPubsubTopic($pubsubTopic)
+    {
+        $this->pubsubTopic = $pubsubTopic;
+    }
+    public function getPubsubTopic()
+    {
+        return $this->pubsubTopic;
+    }
 }

@@ -17,22 +17,22 @@
 
 class Google_Service_CloudResourceManager_GetAncestryResponse extends Google_Collection
 {
-  protected $collection_key = 'ancestor';
-  protected $ancestorType = 'Google_Service_CloudResourceManager_Ancestor';
-  protected $ancestorDataType = 'array';
+    protected $collection_key = 'ancestor';
+    protected $ancestorType = 'Google_Service_CloudResourceManager_Ancestor';
+    protected $ancestorDataType = 'array';
 
-  /**
+    /**
    * @param Google_Service_CloudResourceManager_Ancestor
    */
-  public function setAncestor($ancestor)
-  {
-    $this->ancestor = $ancestor;
-  }
-  /**
+    public function setAncestor($ancestor)
+    {
+        $this->ancestor = $ancestor;
+    }
+    /**
    * @return Google_Service_CloudResourceManager_Ancestor
    */
-  public function getAncestor()
-  {
-    return $this->ancestor;
-  }
+    public function getAncestor()
+    {
+        return $this->ancestor;
+    }
 }

@@ -17,23 +17,23 @@
 
 class Google_Service_CloudKMS_DecryptRequest extends Google_Model
 {
-  public $additionalAuthenticatedData;
-  public $ciphertext;
+    public $additionalAuthenticatedData;
+    public $ciphertext;
 
-  public function setAdditionalAuthenticatedData($additionalAuthenticatedData)
-  {
-    $this->additionalAuthenticatedData = $additionalAuthenticatedData;
-  }
-  public function getAdditionalAuthenticatedData()
-  {
-    return $this->additionalAuthenticatedData;
-  }
-  public function setCiphertext($ciphertext)
-  {
-    $this->ciphertext = $ciphertext;
-  }
-  public function getCiphertext()
-  {
-    return $this->ciphertext;
-  }
+    public function setAdditionalAuthenticatedData($additionalAuthenticatedData)
+    {
+        $this->additionalAuthenticatedData = $additionalAuthenticatedData;
+    }
+    public function getAdditionalAuthenticatedData()
+    {
+        return $this->additionalAuthenticatedData;
+    }
+    public function setCiphertext($ciphertext)
+    {
+        $this->ciphertext = $ciphertext;
+    }
+    public function getCiphertext()
+    {
+        return $this->ciphertext;
+    }
 }

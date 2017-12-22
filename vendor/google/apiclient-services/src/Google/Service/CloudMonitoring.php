@@ -30,36 +30,40 @@
  */
 class Google_Service_CloudMonitoring extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** View and write monitoring data for all of your Google and third-party Cloud and API projects. */
-  const MONITORING =
+    /**
+ * View and write monitoring data for all of your Google and third-party Cloud and API projects. 
+*/
+    const MONITORING =
       "https://www.googleapis.com/auth/monitoring";
 
-  public $metricDescriptors;
-  public $timeseries;
-  public $timeseriesDescriptors;
+    public $metricDescriptors;
+    public $timeseries;
+    public $timeseriesDescriptors;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudMonitoring service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'cloudmonitoring/v2beta2/projects/';
-    $this->version = 'v2beta2';
-    $this->serviceName = 'cloudmonitoring';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'cloudmonitoring/v2beta2/projects/';
+        $this->version = 'v2beta2';
+        $this->serviceName = 'cloudmonitoring';
 
-    $this->metricDescriptors = new Google_Service_CloudMonitoring_Resource_MetricDescriptors(
-        $this,
-        $this->serviceName,
-        'metricDescriptors',
-        array(
-          'methods' => array(
+        $this->metricDescriptors = new Google_Service_CloudMonitoring_Resource_MetricDescriptors(
+            $this,
+            $this->serviceName,
+            'metricDescriptors',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => '{project}/metricDescriptors',
               'httpMethod' => 'POST',
@@ -108,15 +112,15 @@ class Google_Service_CloudMonitoring extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->timeseries = new Google_Service_CloudMonitoring_Resource_Timeseries(
-        $this,
-        $this->serviceName,
-        'timeseries',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->timeseries = new Google_Service_CloudMonitoring_Resource_Timeseries(
+            $this,
+            $this->serviceName,
+            'timeseries',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => '{project}/timeseries/{metric}',
               'httpMethod' => 'GET',
@@ -177,15 +181,15 @@ class Google_Service_CloudMonitoring extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->timeseriesDescriptors = new Google_Service_CloudMonitoring_Resource_TimeseriesDescriptors(
-        $this,
-        $this->serviceName,
-        'timeseriesDescriptors',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->timeseriesDescriptors = new Google_Service_CloudMonitoring_Resource_TimeseriesDescriptors(
+            $this,
+            $this->serviceName,
+            'timeseriesDescriptors',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => '{project}/timeseriesDescriptors/{metric}',
               'httpMethod' => 'GET',
@@ -236,8 +240,8 @@ class Google_Service_CloudMonitoring extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

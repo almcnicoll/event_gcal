@@ -31,33 +31,35 @@
  */
 class Google_Service_CloudFunctions extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $operations;
-  public $projects_locations;
-  public $projects_locations_functions;
+    public $operations;
+    public $projects_locations;
+    public $projects_locations_functions;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudFunctions service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://cloudfunctions.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'cloudfunctions';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://cloudfunctions.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'cloudfunctions';
 
-    $this->operations = new Google_Service_CloudFunctions_Resource_Operations(
-        $this,
-        $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
+        $this->operations = new Google_Service_CloudFunctions_Resource_Operations(
+            $this,
+            $this->serviceName,
+            'operations',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -90,15 +92,15 @@ class Google_Service_CloudFunctions extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_locations = new Google_Service_CloudFunctions_Resource_ProjectsLocations(
-        $this,
-        $this->serviceName,
-        'locations',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_locations = new Google_Service_CloudFunctions_Resource_ProjectsLocations(
+            $this,
+            $this->serviceName,
+            'locations',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'v1/{+name}/locations',
               'httpMethod' => 'GET',
@@ -122,15 +124,15 @@ class Google_Service_CloudFunctions extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_locations_functions = new Google_Service_CloudFunctions_Resource_ProjectsLocationsFunctions(
-        $this,
-        $this->serviceName,
-        'functions',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_locations_functions = new Google_Service_CloudFunctions_Resource_ProjectsLocationsFunctions(
+            $this,
+            $this->serviceName,
+            'functions',
+            array(
+            'methods' => array(
             'call' => array(
               'path' => 'v1/{+name}:call',
               'httpMethod' => 'POST',
@@ -224,8 +226,8 @@ class Google_Service_CloudFunctions extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

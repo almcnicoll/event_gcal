@@ -17,51 +17,51 @@
 
 class Google_Service_AndroidManagement_Command extends Google_Collection
 {
-  protected $collection_key = 'resetPasswordFlags';
-  public $createTime;
-  public $duration;
-  public $newPassword;
-  public $resetPasswordFlags;
-  public $type;
+    protected $collection_key = 'resetPasswordFlags';
+    public $createTime;
+    public $duration;
+    public $newPassword;
+    public $resetPasswordFlags;
+    public $type;
 
-  public function setCreateTime($createTime)
-  {
-    $this->createTime = $createTime;
-  }
-  public function getCreateTime()
-  {
-    return $this->createTime;
-  }
-  public function setDuration($duration)
-  {
-    $this->duration = $duration;
-  }
-  public function getDuration()
-  {
-    return $this->duration;
-  }
-  public function setNewPassword($newPassword)
-  {
-    $this->newPassword = $newPassword;
-  }
-  public function getNewPassword()
-  {
-    return $this->newPassword;
-  }
-  public function setResetPasswordFlags($resetPasswordFlags)
-  {
-    $this->resetPasswordFlags = $resetPasswordFlags;
-  }
-  public function getResetPasswordFlags()
-  {
-    return $this->resetPasswordFlags;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
-  }
+    public function setCreateTime($createTime)
+    {
+        $this->createTime = $createTime;
+    }
+    public function getCreateTime()
+    {
+        return $this->createTime;
+    }
+    public function setDuration($duration)
+    {
+        $this->duration = $duration;
+    }
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+    public function setNewPassword($newPassword)
+    {
+        $this->newPassword = $newPassword;
+    }
+    public function getNewPassword()
+    {
+        return $this->newPassword;
+    }
+    public function setResetPasswordFlags($resetPasswordFlags)
+    {
+        $this->resetPasswordFlags = $resetPasswordFlags;
+    }
+    public function getResetPasswordFlags()
+    {
+        return $this->resetPasswordFlags;
+    }
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+    public function getType()
+    {
+        return $this->type;
+    }
 }

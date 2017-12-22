@@ -17,23 +17,23 @@
 
 class Google_Service_CloudDebugger_SourceLocation extends Google_Model
 {
-  public $line;
-  public $path;
+    public $line;
+    public $path;
 
-  public function setLine($line)
-  {
-    $this->line = $line;
-  }
-  public function getLine()
-  {
-    return $this->line;
-  }
-  public function setPath($path)
-  {
-    $this->path = $path;
-  }
-  public function getPath()
-  {
-    return $this->path;
-  }
+    public function setLine($line)
+    {
+        $this->line = $line;
+    }
+    public function getLine()
+    {
+        return $this->line;
+    }
+    public function setPath($path)
+    {
+        $this->path = $path;
+    }
+    public function getPath()
+    {
+        return $this->path;
+    }
 }

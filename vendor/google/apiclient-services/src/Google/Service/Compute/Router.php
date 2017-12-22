@@ -17,126 +17,126 @@
 
 class Google_Service_Compute_Router extends Google_Collection
 {
-  protected $collection_key = 'interfaces';
-  protected $bgpType = 'Google_Service_Compute_RouterBgp';
-  protected $bgpDataType = '';
-  protected $bgpPeersType = 'Google_Service_Compute_RouterBgpPeer';
-  protected $bgpPeersDataType = 'array';
-  public $creationTimestamp;
-  public $description;
-  public $id;
-  protected $interfacesType = 'Google_Service_Compute_RouterInterface';
-  protected $interfacesDataType = 'array';
-  public $kind;
-  public $name;
-  public $network;
-  public $region;
-  public $selfLink;
+    protected $collection_key = 'interfaces';
+    protected $bgpType = 'Google_Service_Compute_RouterBgp';
+    protected $bgpDataType = '';
+    protected $bgpPeersType = 'Google_Service_Compute_RouterBgpPeer';
+    protected $bgpPeersDataType = 'array';
+    public $creationTimestamp;
+    public $description;
+    public $id;
+    protected $interfacesType = 'Google_Service_Compute_RouterInterface';
+    protected $interfacesDataType = 'array';
+    public $kind;
+    public $name;
+    public $network;
+    public $region;
+    public $selfLink;
 
-  /**
+    /**
    * @param Google_Service_Compute_RouterBgp
    */
-  public function setBgp(Google_Service_Compute_RouterBgp $bgp)
-  {
-    $this->bgp = $bgp;
-  }
-  /**
+    public function setBgp(Google_Service_Compute_RouterBgp $bgp)
+    {
+        $this->bgp = $bgp;
+    }
+    /**
    * @return Google_Service_Compute_RouterBgp
    */
-  public function getBgp()
-  {
-    return $this->bgp;
-  }
-  /**
+    public function getBgp()
+    {
+        return $this->bgp;
+    }
+    /**
    * @param Google_Service_Compute_RouterBgpPeer
    */
-  public function setBgpPeers($bgpPeers)
-  {
-    $this->bgpPeers = $bgpPeers;
-  }
-  /**
+    public function setBgpPeers($bgpPeers)
+    {
+        $this->bgpPeers = $bgpPeers;
+    }
+    /**
    * @return Google_Service_Compute_RouterBgpPeer
    */
-  public function getBgpPeers()
-  {
-    return $this->bgpPeers;
-  }
-  public function setCreationTimestamp($creationTimestamp)
-  {
-    $this->creationTimestamp = $creationTimestamp;
-  }
-  public function getCreationTimestamp()
-  {
-    return $this->creationTimestamp;
-  }
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  public function getId()
-  {
-    return $this->id;
-  }
-  /**
+    public function getBgpPeers()
+    {
+        return $this->bgpPeers;
+    }
+    public function setCreationTimestamp($creationTimestamp)
+    {
+        $this->creationTimestamp = $creationTimestamp;
+    }
+    public function getCreationTimestamp()
+    {
+        return $this->creationTimestamp;
+    }
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    public function getId()
+    {
+        return $this->id;
+    }
+    /**
    * @param Google_Service_Compute_RouterInterface
    */
-  public function setInterfaces($interfaces)
-  {
-    $this->interfaces = $interfaces;
-  }
-  /**
+    public function setInterfaces($interfaces)
+    {
+        $this->interfaces = $interfaces;
+    }
+    /**
    * @return Google_Service_Compute_RouterInterface
    */
-  public function getInterfaces()
-  {
-    return $this->interfaces;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setNetwork($network)
-  {
-    $this->network = $network;
-  }
-  public function getNetwork()
-  {
-    return $this->network;
-  }
-  public function setRegion($region)
-  {
-    $this->region = $region;
-  }
-  public function getRegion()
-  {
-    return $this->region;
-  }
-  public function setSelfLink($selfLink)
-  {
-    $this->selfLink = $selfLink;
-  }
-  public function getSelfLink()
-  {
-    return $this->selfLink;
-  }
+    public function getInterfaces()
+    {
+        return $this->interfaces;
+    }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setNetwork($network)
+    {
+        $this->network = $network;
+    }
+    public function getNetwork()
+    {
+        return $this->network;
+    }
+    public function setRegion($region)
+    {
+        $this->region = $region;
+    }
+    public function getRegion()
+    {
+        return $this->region;
+    }
+    public function setSelfLink($selfLink)
+    {
+        $this->selfLink = $selfLink;
+    }
+    public function getSelfLink()
+    {
+        return $this->selfLink;
+    }
 }

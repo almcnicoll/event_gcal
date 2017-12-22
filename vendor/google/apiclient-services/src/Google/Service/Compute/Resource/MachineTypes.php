@@ -25,11 +25,11 @@
  */
 class Google_Service_Compute_Resource_MachineTypes extends Google_Service_Resource
 {
-  /**
+    /**
    * Retrieves an aggregated list of machine types. (machineTypes.aggregatedList)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -73,37 +73,37 @@ class Google_Service_Compute_Resource_MachineTypes extends Google_Service_Resour
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_MachineTypeAggregatedList
+   * @return    Google_Service_Compute_MachineTypeAggregatedList
    */
-  public function aggregatedList($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('aggregatedList', array($params), "Google_Service_Compute_MachineTypeAggregatedList");
-  }
-  /**
+    public function aggregatedList($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('aggregatedList', array($params), "Google_Service_Compute_MachineTypeAggregatedList");
+    }
+    /**
    * Returns the specified machine type. Get a list of available machine types by
    * making a list() request. (machineTypes.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone for this request.
-   * @param string $machineType Name of the machine type to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project     Project ID for this request.
+   * @param  string $zone        The name of the zone for this request.
+   * @param  string $machineType Name of the machine type to return.
+   * @param  array  $optParams   Optional parameters.
    * @return Google_Service_Compute_MachineType
    */
-  public function get($project, $zone, $machineType, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'machineType' => $machineType);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_MachineType");
-  }
-  /**
+    public function get($project, $zone, $machineType, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'machineType' => $machineType);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_MachineType");
+    }
+    /**
    * Retrieves a list of machine types available to the specified project.
    * (machineTypes.listMachineTypes)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $zone      The name of the zone for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -147,12 +147,12 @@ class Google_Service_Compute_Resource_MachineTypes extends Google_Service_Resour
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_MachineTypeList
+   * @return    Google_Service_Compute_MachineTypeList
    */
-  public function listMachineTypes($project, $zone, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_MachineTypeList");
-  }
+    public function listMachineTypes($project, $zone, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_MachineTypeList");
+    }
 }

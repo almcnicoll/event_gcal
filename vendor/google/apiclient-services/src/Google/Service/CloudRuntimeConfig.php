@@ -33,34 +33,38 @@
  */
 class Google_Service_CloudRuntimeConfig extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** Manage your Google Cloud Platform services' runtime configuration. */
-  const CLOUDRUNTIMECONFIG =
+    /**
+ * Manage your Google Cloud Platform services' runtime configuration. 
+*/
+    const CLOUDRUNTIMECONFIG =
       "https://www.googleapis.com/auth/cloudruntimeconfig";
 
-  public $operations;
+    public $operations;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudRuntimeConfig service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://runtimeconfig.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'runtimeconfig';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://runtimeconfig.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'runtimeconfig';
 
-    $this->operations = new Google_Service_CloudRuntimeConfig_Resource_Operations(
-        $this,
-        $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
+        $this->operations = new Google_Service_CloudRuntimeConfig_Resource_Operations(
+            $this,
+            $this->serviceName,
+            'operations',
+            array(
+            'methods' => array(
             'cancel' => array(
               'path' => 'v1/{+name}:cancel',
               'httpMethod' => 'POST',
@@ -104,8 +108,8 @@ class Google_Service_CloudRuntimeConfig extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

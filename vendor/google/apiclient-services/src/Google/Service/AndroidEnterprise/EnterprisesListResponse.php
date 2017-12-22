@@ -17,31 +17,31 @@
 
 class Google_Service_AndroidEnterprise_EnterprisesListResponse extends Google_Collection
 {
-  protected $collection_key = 'enterprise';
-  protected $enterpriseType = 'Google_Service_AndroidEnterprise_Enterprise';
-  protected $enterpriseDataType = 'array';
-  public $kind;
+    protected $collection_key = 'enterprise';
+    protected $enterpriseType = 'Google_Service_AndroidEnterprise_Enterprise';
+    protected $enterpriseDataType = 'array';
+    public $kind;
 
-  /**
+    /**
    * @param Google_Service_AndroidEnterprise_Enterprise
    */
-  public function setEnterprise($enterprise)
-  {
-    $this->enterprise = $enterprise;
-  }
-  /**
+    public function setEnterprise($enterprise)
+    {
+        $this->enterprise = $enterprise;
+    }
+    /**
    * @return Google_Service_AndroidEnterprise_Enterprise
    */
-  public function getEnterprise()
-  {
-    return $this->enterprise;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
+    public function getEnterprise()
+    {
+        return $this->enterprise;
+    }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
 }

@@ -30,33 +30,35 @@
  */
 class Google_Service_CloudBuild extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $operations;
-  public $projects_builds;
-  public $projects_triggers;
+    public $operations;
+    public $projects_builds;
+    public $projects_triggers;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudBuild service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://cloudbuild.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'cloudbuild';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://cloudbuild.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'cloudbuild';
 
-    $this->operations = new Google_Service_CloudBuild_Resource_Operations(
-        $this,
-        $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
+        $this->operations = new Google_Service_CloudBuild_Resource_Operations(
+            $this,
+            $this->serviceName,
+            'operations',
+            array(
+            'methods' => array(
             'cancel' => array(
               'path' => 'v1/{+name}:cancel',
               'httpMethod' => 'POST',
@@ -100,15 +102,15 @@ class Google_Service_CloudBuild extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_builds = new Google_Service_CloudBuild_Resource_ProjectsBuilds(
-        $this,
-        $this->serviceName,
-        'builds',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_builds = new Google_Service_CloudBuild_Resource_ProjectsBuilds(
+            $this,
+            $this->serviceName,
+            'builds',
+            array(
+            'methods' => array(
             'cancel' => array(
               'path' => 'v1/projects/{projectId}/builds/{id}:cancel',
               'httpMethod' => 'POST',
@@ -187,15 +189,15 @@ class Google_Service_CloudBuild extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_triggers = new Google_Service_CloudBuild_Resource_ProjectsTriggers(
-        $this,
-        $this->serviceName,
-        'triggers',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_triggers = new Google_Service_CloudBuild_Resource_ProjectsTriggers(
+            $this,
+            $this->serviceName,
+            'triggers',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/projects/{projectId}/triggers',
               'httpMethod' => 'POST',
@@ -277,8 +279,8 @@ class Google_Service_CloudBuild extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

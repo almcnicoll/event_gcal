@@ -30,31 +30,33 @@
  */
 class Google_Service_Cloudlatencytest extends Google_Service
 {
-  /** View monitoring data for all of your Google Cloud and API projects. */
-  const MONITORING_READONLY =
+    /**
+ * View monitoring data for all of your Google Cloud and API projects. 
+*/
+    const MONITORING_READONLY =
       "https://www.googleapis.com/auth/monitoring.readonly";
 
-  public $statscollection;
+    public $statscollection;
   
-  /**
+    /**
    * Constructs the internal representation of the Cloudlatencytest service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://cloudlatencytest-pa.googleapis.com/';
-    $this->servicePath = 'v2/statscollection/';
-    $this->version = 'v2';
-    $this->serviceName = 'cloudlatencytest';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://cloudlatencytest-pa.googleapis.com/';
+        $this->servicePath = 'v2/statscollection/';
+        $this->version = 'v2';
+        $this->serviceName = 'cloudlatencytest';
 
-    $this->statscollection = new Google_Service_Cloudlatencytest_StatscollectionResource(
-        $this,
-        $this->serviceName,
-        'statscollection',
-        array(
-          'methods' => array(
+        $this->statscollection = new Google_Service_Cloudlatencytest_StatscollectionResource(
+            $this,
+            $this->serviceName,
+            'statscollection',
+            array(
+            'methods' => array(
             'updateaggregatedstats' => array(
               'path' => 'updateaggregatedstats',
               'httpMethod' => 'POST',
@@ -64,8 +66,8 @@ class Google_Service_Cloudlatencytest extends Google_Service
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

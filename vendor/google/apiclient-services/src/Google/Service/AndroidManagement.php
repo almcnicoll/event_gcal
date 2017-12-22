@@ -31,38 +31,40 @@
  */
 class Google_Service_AndroidManagement extends Google_Service
 {
-  /** Manage Android devices and apps for your customers. */
-  const ANDROIDMANAGEMENT =
+    /**
+ * Manage Android devices and apps for your customers. 
+*/
+    const ANDROIDMANAGEMENT =
       "https://www.googleapis.com/auth/androidmanagement";
 
-  public $enterprises;
-  public $enterprises_applications;
-  public $enterprises_devices;
-  public $enterprises_devices_operations;
-  public $enterprises_enrollmentTokens;
-  public $enterprises_policies;
-  public $enterprises_webTokens;
-  public $signupUrls;
+    public $enterprises;
+    public $enterprises_applications;
+    public $enterprises_devices;
+    public $enterprises_devices_operations;
+    public $enterprises_enrollmentTokens;
+    public $enterprises_policies;
+    public $enterprises_webTokens;
+    public $signupUrls;
   
-  /**
+    /**
    * Constructs the internal representation of the AndroidManagement service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://androidmanagement.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'androidmanagement';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://androidmanagement.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'androidmanagement';
 
-    $this->enterprises = new Google_Service_AndroidManagement_Resource_Enterprises(
-        $this,
-        $this->serviceName,
-        'enterprises',
-        array(
-          'methods' => array(
+        $this->enterprises = new Google_Service_AndroidManagement_Resource_Enterprises(
+            $this,
+            $this->serviceName,
+            'enterprises',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/enterprises',
               'httpMethod' => 'POST',
@@ -105,15 +107,15 @@ class Google_Service_AndroidManagement extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->enterprises_applications = new Google_Service_AndroidManagement_Resource_EnterprisesApplications(
-        $this,
-        $this->serviceName,
-        'applications',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->enterprises_applications = new Google_Service_AndroidManagement_Resource_EnterprisesApplications(
+            $this,
+            $this->serviceName,
+            'applications',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -129,15 +131,15 @@ class Google_Service_AndroidManagement extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->enterprises_devices = new Google_Service_AndroidManagement_Resource_EnterprisesDevices(
-        $this,
-        $this->serviceName,
-        'devices',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->enterprises_devices = new Google_Service_AndroidManagement_Resource_EnterprisesDevices(
+            $this,
+            $this->serviceName,
+            'devices',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
@@ -201,15 +203,15 @@ class Google_Service_AndroidManagement extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->enterprises_devices_operations = new Google_Service_AndroidManagement_Resource_EnterprisesDevicesOperations(
-        $this,
-        $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->enterprises_devices_operations = new Google_Service_AndroidManagement_Resource_EnterprisesDevicesOperations(
+            $this,
+            $this->serviceName,
+            'operations',
+            array(
+            'methods' => array(
             'cancel' => array(
               'path' => 'v1/{+name}:cancel',
               'httpMethod' => 'POST',
@@ -263,15 +265,15 @@ class Google_Service_AndroidManagement extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->enterprises_enrollmentTokens = new Google_Service_AndroidManagement_Resource_EnterprisesEnrollmentTokens(
-        $this,
-        $this->serviceName,
-        'enrollmentTokens',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->enterprises_enrollmentTokens = new Google_Service_AndroidManagement_Resource_EnterprisesEnrollmentTokens(
+            $this,
+            $this->serviceName,
+            'enrollmentTokens',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/{+parent}/enrollmentTokens',
               'httpMethod' => 'POST',
@@ -293,15 +295,15 @@ class Google_Service_AndroidManagement extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->enterprises_policies = new Google_Service_AndroidManagement_Resource_EnterprisesPolicies(
-        $this,
-        $this->serviceName,
-        'policies',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->enterprises_policies = new Google_Service_AndroidManagement_Resource_EnterprisesPolicies(
+            $this,
+            $this->serviceName,
+            'policies',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
@@ -355,15 +357,15 @@ class Google_Service_AndroidManagement extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->enterprises_webTokens = new Google_Service_AndroidManagement_Resource_EnterprisesWebTokens(
-        $this,
-        $this->serviceName,
-        'webTokens',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->enterprises_webTokens = new Google_Service_AndroidManagement_Resource_EnterprisesWebTokens(
+            $this,
+            $this->serviceName,
+            'webTokens',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/{+parent}/webTokens',
               'httpMethod' => 'POST',
@@ -375,15 +377,15 @@ class Google_Service_AndroidManagement extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->signupUrls = new Google_Service_AndroidManagement_Resource_SignupUrls(
-        $this,
-        $this->serviceName,
-        'signupUrls',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->signupUrls = new Google_Service_AndroidManagement_Resource_SignupUrls(
+            $this,
+            $this->serviceName,
+            'signupUrls',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/signupUrls',
               'httpMethod' => 'POST',
@@ -398,8 +400,8 @@ class Google_Service_AndroidManagement extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

@@ -17,62 +17,62 @@
 
 class Google_Service_CivicInfo_VoterInfoSegmentResult extends Google_Model
 {
-  public $generatedMillis;
-  protected $postalAddressType = 'Google_Service_CivicInfo_PostalAddress';
-  protected $postalAddressDataType = '';
-  protected $requestType = 'Google_Service_CivicInfo_VoterInfoRequest';
-  protected $requestDataType = '';
-  protected $responseType = 'Google_Service_CivicInfo_VoterInfoResponse';
-  protected $responseDataType = '';
+    public $generatedMillis;
+    protected $postalAddressType = 'Google_Service_CivicInfo_PostalAddress';
+    protected $postalAddressDataType = '';
+    protected $requestType = 'Google_Service_CivicInfo_VoterInfoRequest';
+    protected $requestDataType = '';
+    protected $responseType = 'Google_Service_CivicInfo_VoterInfoResponse';
+    protected $responseDataType = '';
 
-  public function setGeneratedMillis($generatedMillis)
-  {
-    $this->generatedMillis = $generatedMillis;
-  }
-  public function getGeneratedMillis()
-  {
-    return $this->generatedMillis;
-  }
-  /**
+    public function setGeneratedMillis($generatedMillis)
+    {
+        $this->generatedMillis = $generatedMillis;
+    }
+    public function getGeneratedMillis()
+    {
+        return $this->generatedMillis;
+    }
+    /**
    * @param Google_Service_CivicInfo_PostalAddress
    */
-  public function setPostalAddress(Google_Service_CivicInfo_PostalAddress $postalAddress)
-  {
-    $this->postalAddress = $postalAddress;
-  }
-  /**
+    public function setPostalAddress(Google_Service_CivicInfo_PostalAddress $postalAddress)
+    {
+        $this->postalAddress = $postalAddress;
+    }
+    /**
    * @return Google_Service_CivicInfo_PostalAddress
    */
-  public function getPostalAddress()
-  {
-    return $this->postalAddress;
-  }
-  /**
+    public function getPostalAddress()
+    {
+        return $this->postalAddress;
+    }
+    /**
    * @param Google_Service_CivicInfo_VoterInfoRequest
    */
-  public function setRequest(Google_Service_CivicInfo_VoterInfoRequest $request)
-  {
-    $this->request = $request;
-  }
-  /**
+    public function setRequest(Google_Service_CivicInfo_VoterInfoRequest $request)
+    {
+        $this->request = $request;
+    }
+    /**
    * @return Google_Service_CivicInfo_VoterInfoRequest
    */
-  public function getRequest()
-  {
-    return $this->request;
-  }
-  /**
+    public function getRequest()
+    {
+        return $this->request;
+    }
+    /**
    * @param Google_Service_CivicInfo_VoterInfoResponse
    */
-  public function setResponse(Google_Service_CivicInfo_VoterInfoResponse $response)
-  {
-    $this->response = $response;
-  }
-  /**
+    public function setResponse(Google_Service_CivicInfo_VoterInfoResponse $response)
+    {
+        $this->response = $response;
+    }
+    /**
    * @return Google_Service_CivicInfo_VoterInfoResponse
    */
-  public function getResponse()
-  {
-    return $this->response;
-  }
+    public function getResponse()
+    {
+        return $this->response;
+    }
 }

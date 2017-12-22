@@ -25,23 +25,24 @@
  */
 class Google_Service_AndroidPublisher_Resource_EditsDeobfuscationfiles extends Google_Service_Resource
 {
-  /**
+    /**
    * Uploads the deobfuscation file of the specified APK. If a deobfuscation file
    * already exists, it will be replaced. (deobfuscationfiles.upload)
    *
-   * @param string $packageName Unique identifier of the Android app for which the
-   * deobfuscatiuon files are being uploaded; for example, "com.spiffygame".
-   * @param string $editId Unique identifier for this edit.
-   * @param int $apkVersionCode The version code of the APK whose deobfuscation
-   * file is being uploaded.
-   * @param string $deobfuscationFileType
-   * @param array $optParams Optional parameters.
+   * @param  string $packageName           Unique identifier of the Android app for which the
+   *                                      deobfuscatiuon files are being uploaded; for
+   *                                      example, "com.spiffygame".
+   * @param  string $editId                Unique identifier for this edit.
+   * @param  int    $apkVersionCode        The version code of the APK whose deobfuscation
+   *                                       file is being uploaded.
+   * @param  string $deobfuscationFileType
+   * @param  array  $optParams             Optional parameters.
    * @return Google_Service_AndroidPublisher_DeobfuscationFilesUploadResponse
    */
-  public function upload($packageName, $editId, $apkVersionCode, $deobfuscationFileType, $optParams = array())
-  {
-    $params = array('packageName' => $packageName, 'editId' => $editId, 'apkVersionCode' => $apkVersionCode, 'deobfuscationFileType' => $deobfuscationFileType);
-    $params = array_merge($params, $optParams);
-    return $this->call('upload', array($params), "Google_Service_AndroidPublisher_DeobfuscationFilesUploadResponse");
-  }
+    public function upload($packageName, $editId, $apkVersionCode, $deobfuscationFileType, $optParams = array())
+    {
+        $params = array('packageName' => $packageName, 'editId' => $editId, 'apkVersionCode' => $apkVersionCode, 'deobfuscationFileType' => $deobfuscationFileType);
+        $params = array_merge($params, $optParams);
+        return $this->call('upload', array($params), "Google_Service_AndroidPublisher_DeobfuscationFilesUploadResponse");
+    }
 }

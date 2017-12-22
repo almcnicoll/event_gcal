@@ -17,77 +17,77 @@
 
 class Google_Service_Compute_SslCertificate extends Google_Model
 {
-  public $certificate;
-  public $creationTimestamp;
-  public $description;
-  public $id;
-  public $kind;
-  public $name;
-  public $privateKey;
-  public $selfLink;
+    public $certificate;
+    public $creationTimestamp;
+    public $description;
+    public $id;
+    public $kind;
+    public $name;
+    public $privateKey;
+    public $selfLink;
 
-  public function setCertificate($certificate)
-  {
-    $this->certificate = $certificate;
-  }
-  public function getCertificate()
-  {
-    return $this->certificate;
-  }
-  public function setCreationTimestamp($creationTimestamp)
-  {
-    $this->creationTimestamp = $creationTimestamp;
-  }
-  public function getCreationTimestamp()
-  {
-    return $this->creationTimestamp;
-  }
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  public function getId()
-  {
-    return $this->id;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setPrivateKey($privateKey)
-  {
-    $this->privateKey = $privateKey;
-  }
-  public function getPrivateKey()
-  {
-    return $this->privateKey;
-  }
-  public function setSelfLink($selfLink)
-  {
-    $this->selfLink = $selfLink;
-  }
-  public function getSelfLink()
-  {
-    return $this->selfLink;
-  }
+    public function setCertificate($certificate)
+    {
+        $this->certificate = $certificate;
+    }
+    public function getCertificate()
+    {
+        return $this->certificate;
+    }
+    public function setCreationTimestamp($creationTimestamp)
+    {
+        $this->creationTimestamp = $creationTimestamp;
+    }
+    public function getCreationTimestamp()
+    {
+        return $this->creationTimestamp;
+    }
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setPrivateKey($privateKey)
+    {
+        $this->privateKey = $privateKey;
+    }
+    public function getPrivateKey()
+    {
+        return $this->privateKey;
+    }
+    public function setSelfLink($selfLink)
+    {
+        $this->selfLink = $selfLink;
+    }
+    public function getSelfLink()
+    {
+        return $this->selfLink;
+    }
 }

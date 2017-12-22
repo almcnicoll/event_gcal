@@ -17,65 +17,65 @@
 
 class Google_Service_CloudMachineLearningEngine_GoogleIamV1Policy extends Google_Collection
 {
-  protected $collection_key = 'bindings';
-  protected $auditConfigsType = 'Google_Service_CloudMachineLearningEngine_GoogleIamV1AuditConfig';
-  protected $auditConfigsDataType = 'array';
-  protected $bindingsType = 'Google_Service_CloudMachineLearningEngine_GoogleIamV1Binding';
-  protected $bindingsDataType = 'array';
-  public $etag;
-  public $iamOwned;
-  public $version;
+    protected $collection_key = 'bindings';
+    protected $auditConfigsType = 'Google_Service_CloudMachineLearningEngine_GoogleIamV1AuditConfig';
+    protected $auditConfigsDataType = 'array';
+    protected $bindingsType = 'Google_Service_CloudMachineLearningEngine_GoogleIamV1Binding';
+    protected $bindingsDataType = 'array';
+    public $etag;
+    public $iamOwned;
+    public $version;
 
-  /**
+    /**
    * @param Google_Service_CloudMachineLearningEngine_GoogleIamV1AuditConfig
    */
-  public function setAuditConfigs($auditConfigs)
-  {
-    $this->auditConfigs = $auditConfigs;
-  }
-  /**
+    public function setAuditConfigs($auditConfigs)
+    {
+        $this->auditConfigs = $auditConfigs;
+    }
+    /**
    * @return Google_Service_CloudMachineLearningEngine_GoogleIamV1AuditConfig
    */
-  public function getAuditConfigs()
-  {
-    return $this->auditConfigs;
-  }
-  /**
+    public function getAuditConfigs()
+    {
+        return $this->auditConfigs;
+    }
+    /**
    * @param Google_Service_CloudMachineLearningEngine_GoogleIamV1Binding
    */
-  public function setBindings($bindings)
-  {
-    $this->bindings = $bindings;
-  }
-  /**
+    public function setBindings($bindings)
+    {
+        $this->bindings = $bindings;
+    }
+    /**
    * @return Google_Service_CloudMachineLearningEngine_GoogleIamV1Binding
    */
-  public function getBindings()
-  {
-    return $this->bindings;
-  }
-  public function setEtag($etag)
-  {
-    $this->etag = $etag;
-  }
-  public function getEtag()
-  {
-    return $this->etag;
-  }
-  public function setIamOwned($iamOwned)
-  {
-    $this->iamOwned = $iamOwned;
-  }
-  public function getIamOwned()
-  {
-    return $this->iamOwned;
-  }
-  public function setVersion($version)
-  {
-    $this->version = $version;
-  }
-  public function getVersion()
-  {
-    return $this->version;
-  }
+    public function getBindings()
+    {
+        return $this->bindings;
+    }
+    public function setEtag($etag)
+    {
+        $this->etag = $etag;
+    }
+    public function getEtag()
+    {
+        return $this->etag;
+    }
+    public function setIamOwned($iamOwned)
+    {
+        $this->iamOwned = $iamOwned;
+    }
+    public function getIamOwned()
+    {
+        return $this->iamOwned;
+    }
+    public function setVersion($version)
+    {
+        $this->version = $version;
+    }
+    public function getVersion()
+    {
+        return $this->version;
+    }
 }

@@ -17,23 +17,23 @@
 
 class Google_Service_AndroidProvisioningPartner_DeviceClaim extends Google_Model
 {
-  public $ownerCompanyId;
-  public $sectionType;
+    public $ownerCompanyId;
+    public $sectionType;
 
-  public function setOwnerCompanyId($ownerCompanyId)
-  {
-    $this->ownerCompanyId = $ownerCompanyId;
-  }
-  public function getOwnerCompanyId()
-  {
-    return $this->ownerCompanyId;
-  }
-  public function setSectionType($sectionType)
-  {
-    $this->sectionType = $sectionType;
-  }
-  public function getSectionType()
-  {
-    return $this->sectionType;
-  }
+    public function setOwnerCompanyId($ownerCompanyId)
+    {
+        $this->ownerCompanyId = $ownerCompanyId;
+    }
+    public function getOwnerCompanyId()
+    {
+        return $this->ownerCompanyId;
+    }
+    public function setSectionType($sectionType)
+    {
+        $this->sectionType = $sectionType;
+    }
+    public function getSectionType()
+    {
+        return $this->sectionType;
+    }
 }

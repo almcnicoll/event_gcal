@@ -17,67 +17,67 @@
 
 class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoContext extends Google_Collection
 {
-  protected $collection_key = 'segments';
-  public $labelDetectionMode;
-  public $labelDetectionModel;
-  public $safeSearchDetectionModel;
-  protected $segmentsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment';
-  protected $segmentsDataType = 'array';
-  public $shotChangeDetectionModel;
-  public $stationaryCamera;
+    protected $collection_key = 'segments';
+    public $labelDetectionMode;
+    public $labelDetectionModel;
+    public $safeSearchDetectionModel;
+    protected $segmentsType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment';
+    protected $segmentsDataType = 'array';
+    public $shotChangeDetectionModel;
+    public $stationaryCamera;
 
-  public function setLabelDetectionMode($labelDetectionMode)
-  {
-    $this->labelDetectionMode = $labelDetectionMode;
-  }
-  public function getLabelDetectionMode()
-  {
-    return $this->labelDetectionMode;
-  }
-  public function setLabelDetectionModel($labelDetectionModel)
-  {
-    $this->labelDetectionModel = $labelDetectionModel;
-  }
-  public function getLabelDetectionModel()
-  {
-    return $this->labelDetectionModel;
-  }
-  public function setSafeSearchDetectionModel($safeSearchDetectionModel)
-  {
-    $this->safeSearchDetectionModel = $safeSearchDetectionModel;
-  }
-  public function getSafeSearchDetectionModel()
-  {
-    return $this->safeSearchDetectionModel;
-  }
-  /**
+    public function setLabelDetectionMode($labelDetectionMode)
+    {
+        $this->labelDetectionMode = $labelDetectionMode;
+    }
+    public function getLabelDetectionMode()
+    {
+        return $this->labelDetectionMode;
+    }
+    public function setLabelDetectionModel($labelDetectionModel)
+    {
+        $this->labelDetectionModel = $labelDetectionModel;
+    }
+    public function getLabelDetectionModel()
+    {
+        return $this->labelDetectionModel;
+    }
+    public function setSafeSearchDetectionModel($safeSearchDetectionModel)
+    {
+        $this->safeSearchDetectionModel = $safeSearchDetectionModel;
+    }
+    public function getSafeSearchDetectionModel()
+    {
+        return $this->safeSearchDetectionModel;
+    }
+    /**
    * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment
    */
-  public function setSegments($segments)
-  {
-    $this->segments = $segments;
-  }
-  /**
+    public function setSegments($segments)
+    {
+        $this->segments = $segments;
+    }
+    /**
    * @return Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment
    */
-  public function getSegments()
-  {
-    return $this->segments;
-  }
-  public function setShotChangeDetectionModel($shotChangeDetectionModel)
-  {
-    $this->shotChangeDetectionModel = $shotChangeDetectionModel;
-  }
-  public function getShotChangeDetectionModel()
-  {
-    return $this->shotChangeDetectionModel;
-  }
-  public function setStationaryCamera($stationaryCamera)
-  {
-    $this->stationaryCamera = $stationaryCamera;
-  }
-  public function getStationaryCamera()
-  {
-    return $this->stationaryCamera;
-  }
+    public function getSegments()
+    {
+        return $this->segments;
+    }
+    public function setShotChangeDetectionModel($shotChangeDetectionModel)
+    {
+        $this->shotChangeDetectionModel = $shotChangeDetectionModel;
+    }
+    public function getShotChangeDetectionModel()
+    {
+        return $this->shotChangeDetectionModel;
+    }
+    public function setStationaryCamera($stationaryCamera)
+    {
+        $this->stationaryCamera = $stationaryCamera;
+    }
+    public function getStationaryCamera()
+    {
+        return $this->stationaryCamera;
+    }
 }

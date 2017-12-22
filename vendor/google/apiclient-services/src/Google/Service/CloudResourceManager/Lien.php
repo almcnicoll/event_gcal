@@ -17,60 +17,60 @@
 
 class Google_Service_CloudResourceManager_Lien extends Google_Collection
 {
-  protected $collection_key = 'restrictions';
-  public $createTime;
-  public $name;
-  public $origin;
-  public $parent;
-  public $reason;
-  public $restrictions;
+    protected $collection_key = 'restrictions';
+    public $createTime;
+    public $name;
+    public $origin;
+    public $parent;
+    public $reason;
+    public $restrictions;
 
-  public function setCreateTime($createTime)
-  {
-    $this->createTime = $createTime;
-  }
-  public function getCreateTime()
-  {
-    return $this->createTime;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setOrigin($origin)
-  {
-    $this->origin = $origin;
-  }
-  public function getOrigin()
-  {
-    return $this->origin;
-  }
-  public function setParent($parent)
-  {
-    $this->parent = $parent;
-  }
-  public function getParent()
-  {
-    return $this->parent;
-  }
-  public function setReason($reason)
-  {
-    $this->reason = $reason;
-  }
-  public function getReason()
-  {
-    return $this->reason;
-  }
-  public function setRestrictions($restrictions)
-  {
-    $this->restrictions = $restrictions;
-  }
-  public function getRestrictions()
-  {
-    return $this->restrictions;
-  }
+    public function setCreateTime($createTime)
+    {
+        $this->createTime = $createTime;
+    }
+    public function getCreateTime()
+    {
+        return $this->createTime;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setOrigin($origin)
+    {
+        $this->origin = $origin;
+    }
+    public function getOrigin()
+    {
+        return $this->origin;
+    }
+    public function setParent($parent)
+    {
+        $this->parent = $parent;
+    }
+    public function getParent()
+    {
+        return $this->parent;
+    }
+    public function setReason($reason)
+    {
+        $this->reason = $reason;
+    }
+    public function getReason()
+    {
+        return $this->reason;
+    }
+    public function setRestrictions($restrictions)
+    {
+        $this->restrictions = $restrictions;
+    }
+    public function getRestrictions()
+    {
+        return $this->restrictions;
+    }
 }

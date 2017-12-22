@@ -30,45 +30,47 @@
  */
 class Google_Service_AndroidEnterprise extends Google_Service
 {
-  /** Manage corporate Android devices. */
-  const ANDROIDENTERPRISE =
+    /**
+ * Manage corporate Android devices. 
+*/
+    const ANDROIDENTERPRISE =
       "https://www.googleapis.com/auth/androidenterprise";
 
-  public $devices;
-  public $enterprises;
-  public $entitlements;
-  public $grouplicenses;
-  public $grouplicenseusers;
-  public $installs;
-  public $managedconfigurationsfordevice;
-  public $managedconfigurationsforuser;
-  public $managedconfigurationssettings;
-  public $permissions;
-  public $products;
-  public $serviceaccountkeys;
-  public $storelayoutclusters;
-  public $storelayoutpages;
-  public $users;
+    public $devices;
+    public $enterprises;
+    public $entitlements;
+    public $grouplicenses;
+    public $grouplicenseusers;
+    public $installs;
+    public $managedconfigurationsfordevice;
+    public $managedconfigurationsforuser;
+    public $managedconfigurationssettings;
+    public $permissions;
+    public $products;
+    public $serviceaccountkeys;
+    public $storelayoutclusters;
+    public $storelayoutpages;
+    public $users;
   
-  /**
+    /**
    * Constructs the internal representation of the AndroidEnterprise service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'androidenterprise/v1/';
-    $this->version = 'v1';
-    $this->serviceName = 'androidenterprise';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'androidenterprise/v1/';
+        $this->version = 'v1';
+        $this->serviceName = 'androidenterprise';
 
-    $this->devices = new Google_Service_AndroidEnterprise_Resource_Devices(
-        $this,
-        $this->serviceName,
-        'devices',
-        array(
-          'methods' => array(
+        $this->devices = new Google_Service_AndroidEnterprise_Resource_Devices(
+            $this,
+            $this->serviceName,
+            'devices',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}',
               'httpMethod' => 'GET',
@@ -193,15 +195,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->enterprises = new Google_Service_AndroidEnterprise_Resource_Enterprises(
-        $this,
-        $this->serviceName,
-        'enterprises',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->enterprises = new Google_Service_AndroidEnterprise_Resource_Enterprises(
+            $this,
+            $this->serviceName,
+            'enterprises',
+            array(
+            'methods' => array(
             'acknowledgeNotificationSet' => array(
               'path' => 'enterprises/acknowledgeNotificationSet',
               'httpMethod' => 'POST',
@@ -387,15 +389,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->entitlements = new Google_Service_AndroidEnterprise_Resource_Entitlements(
-        $this,
-        $this->serviceName,
-        'entitlements',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->entitlements = new Google_Service_AndroidEnterprise_Resource_Entitlements(
+            $this,
+            $this->serviceName,
+            'entitlements',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}',
               'httpMethod' => 'DELETE',
@@ -500,15 +502,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->grouplicenses = new Google_Service_AndroidEnterprise_Resource_Grouplicenses(
-        $this,
-        $this->serviceName,
-        'grouplicenses',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->grouplicenses = new Google_Service_AndroidEnterprise_Resource_Grouplicenses(
+            $this,
+            $this->serviceName,
+            'grouplicenses',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}',
               'httpMethod' => 'GET',
@@ -535,15 +537,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->grouplicenseusers = new Google_Service_AndroidEnterprise_Resource_Grouplicenseusers(
-        $this,
-        $this->serviceName,
-        'grouplicenseusers',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->grouplicenseusers = new Google_Service_AndroidEnterprise_Resource_Grouplicenseusers(
+            $this,
+            $this->serviceName,
+            'grouplicenseusers',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}/users',
               'httpMethod' => 'GET',
@@ -560,15 +562,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->installs = new Google_Service_AndroidEnterprise_Resource_Installs(
-        $this,
-        $this->serviceName,
-        'installs',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->installs = new Google_Service_AndroidEnterprise_Resource_Installs(
+            $this,
+            $this->serviceName,
+            'installs',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}',
               'httpMethod' => 'DELETE',
@@ -690,15 +692,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->managedconfigurationsfordevice = new Google_Service_AndroidEnterprise_Resource_Managedconfigurationsfordevice(
-        $this,
-        $this->serviceName,
-        'managedconfigurationsfordevice',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->managedconfigurationsfordevice = new Google_Service_AndroidEnterprise_Resource_Managedconfigurationsfordevice(
+            $this,
+            $this->serviceName,
+            'managedconfigurationsfordevice',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/managedConfigurationsForDevice/{managedConfigurationForDeviceId}',
               'httpMethod' => 'DELETE',
@@ -820,15 +822,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->managedconfigurationsforuser = new Google_Service_AndroidEnterprise_Resource_Managedconfigurationsforuser(
-        $this,
-        $this->serviceName,
-        'managedconfigurationsforuser',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->managedconfigurationsforuser = new Google_Service_AndroidEnterprise_Resource_Managedconfigurationsforuser(
+            $this,
+            $this->serviceName,
+            'managedconfigurationsforuser',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}',
               'httpMethod' => 'DELETE',
@@ -925,15 +927,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->managedconfigurationssettings = new Google_Service_AndroidEnterprise_Resource_Managedconfigurationssettings(
-        $this,
-        $this->serviceName,
-        'managedconfigurationssettings',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->managedconfigurationssettings = new Google_Service_AndroidEnterprise_Resource_Managedconfigurationssettings(
+            $this,
+            $this->serviceName,
+            'managedconfigurationssettings',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'enterprises/{enterpriseId}/products/{productId}/managedConfigurationsSettings',
               'httpMethod' => 'GET',
@@ -950,15 +952,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->permissions = new Google_Service_AndroidEnterprise_Resource_Permissions(
-        $this,
-        $this->serviceName,
-        'permissions',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->permissions = new Google_Service_AndroidEnterprise_Resource_Permissions(
+            $this,
+            $this->serviceName,
+            'permissions',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'permissions/{permissionId}',
               'httpMethod' => 'GET',
@@ -974,15 +976,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->products = new Google_Service_AndroidEnterprise_Resource_Products(
-        $this,
-        $this->serviceName,
-        'products',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->products = new Google_Service_AndroidEnterprise_Resource_Products(
+            $this,
+            $this->serviceName,
+            'products',
+            array(
+            'methods' => array(
             'approve' => array(
               'path' => 'enterprises/{enterpriseId}/products/{productId}/approve',
               'httpMethod' => 'POST',
@@ -1116,15 +1118,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->serviceaccountkeys = new Google_Service_AndroidEnterprise_Resource_Serviceaccountkeys(
-        $this,
-        $this->serviceName,
-        'serviceaccountkeys',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->serviceaccountkeys = new Google_Service_AndroidEnterprise_Resource_Serviceaccountkeys(
+            $this,
+            $this->serviceName,
+            'serviceaccountkeys',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'enterprises/{enterpriseId}/serviceAccountKeys/{keyId}',
               'httpMethod' => 'DELETE',
@@ -1161,15 +1163,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->storelayoutclusters = new Google_Service_AndroidEnterprise_Resource_Storelayoutclusters(
-        $this,
-        $this->serviceName,
-        'storelayoutclusters',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->storelayoutclusters = new Google_Service_AndroidEnterprise_Resource_Storelayoutclusters(
+            $this,
+            $this->serviceName,
+            'storelayoutclusters',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'enterprises/{enterpriseId}/storeLayout/pages/{pageId}/clusters/{clusterId}',
               'httpMethod' => 'DELETE',
@@ -1281,15 +1283,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->storelayoutpages = new Google_Service_AndroidEnterprise_Resource_Storelayoutpages(
-        $this,
-        $this->serviceName,
-        'storelayoutpages',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->storelayoutpages = new Google_Service_AndroidEnterprise_Resource_Storelayoutpages(
+            $this,
+            $this->serviceName,
+            'storelayoutpages',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'enterprises/{enterpriseId}/storeLayout/pages/{pageId}',
               'httpMethod' => 'DELETE',
@@ -1371,15 +1373,15 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->users = new Google_Service_AndroidEnterprise_Resource_Users(
-        $this,
-        $this->serviceName,
-        'users',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->users = new Google_Service_AndroidEnterprise_Resource_Users(
+            $this,
+            $this->serviceName,
+            'users',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'enterprises/{enterpriseId}/users/{userId}',
               'httpMethod' => 'DELETE',
@@ -1556,8 +1558,8 @@ class Google_Service_AndroidEnterprise extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

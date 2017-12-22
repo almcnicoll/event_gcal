@@ -17,32 +17,32 @@
 
 class Google_Service_AndroidEnterprise_NewDeviceEvent extends Google_Model
 {
-  public $deviceId;
-  public $managementType;
-  public $userId;
+    public $deviceId;
+    public $managementType;
+    public $userId;
 
-  public function setDeviceId($deviceId)
-  {
-    $this->deviceId = $deviceId;
-  }
-  public function getDeviceId()
-  {
-    return $this->deviceId;
-  }
-  public function setManagementType($managementType)
-  {
-    $this->managementType = $managementType;
-  }
-  public function getManagementType()
-  {
-    return $this->managementType;
-  }
-  public function setUserId($userId)
-  {
-    $this->userId = $userId;
-  }
-  public function getUserId()
-  {
-    return $this->userId;
-  }
+    public function setDeviceId($deviceId)
+    {
+        $this->deviceId = $deviceId;
+    }
+    public function getDeviceId()
+    {
+        return $this->deviceId;
+    }
+    public function setManagementType($managementType)
+    {
+        $this->managementType = $managementType;
+    }
+    public function getManagementType()
+    {
+        return $this->managementType;
+    }
+    public function setUserId($userId)
+    {
+        $this->userId = $userId;
+    }
+    public function getUserId()
+    {
+        return $this->userId;
+    }
 }

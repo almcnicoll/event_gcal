@@ -25,15 +25,15 @@
  */
 class Google_Service_Books_Resource_LayersAnnotationData extends Google_Service_Resource
 {
-  /**
+    /**
    * Gets the annotation data. (annotationData.get)
    *
-   * @param string $volumeId The volume to retrieve annotations for.
-   * @param string $layerId The ID for the layer to get the annotations.
+   * @param string $volumeId         The volume to retrieve annotations for.
+   * @param string $layerId          The ID for the layer to get the annotations.
    * @param string $annotationDataId The ID of the annotation data to retrieve.
-   * @param string $contentVersion The content version for the volume you are
-   * trying to retrieve.
-   * @param array $optParams Optional parameters.
+   * @param string $contentVersion   The content version for the volume you are
+   *                                 trying to retrieve.
+   * @param array  $optParams        Optional parameters.
    *
    * @opt_param bool allowWebDefinitions For the dictionary layer. Whether or not
    * to allow web definitions.
@@ -45,22 +45,22 @@ class Google_Service_Books_Resource_LayersAnnotationData extends Google_Service_
    * @opt_param string source String to identify the originator of this request.
    * @opt_param int w The requested pixel width for any images. If width is
    * provided height must also be provided.
-   * @return Google_Service_Books_Annotationdata
+   * @return    Google_Service_Books_Annotationdata
    */
-  public function get($volumeId, $layerId, $annotationDataId, $contentVersion, $optParams = array())
-  {
-    $params = array('volumeId' => $volumeId, 'layerId' => $layerId, 'annotationDataId' => $annotationDataId, 'contentVersion' => $contentVersion);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Books_Annotationdata");
-  }
-  /**
+    public function get($volumeId, $layerId, $annotationDataId, $contentVersion, $optParams = array())
+    {
+        $params = array('volumeId' => $volumeId, 'layerId' => $layerId, 'annotationDataId' => $annotationDataId, 'contentVersion' => $contentVersion);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Books_Annotationdata");
+    }
+    /**
    * Gets the annotation data for a volume and layer.
    * (annotationData.listLayersAnnotationData)
    *
-   * @param string $volumeId The volume to retrieve annotation data for.
-   * @param string $layerId The ID for the layer to get the annotation data.
+   * @param string $volumeId       The volume to retrieve annotation data for.
+   * @param string $layerId        The ID for the layer to get the annotation data.
    * @param string $contentVersion The content version for the requested volume.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams      Optional parameters.
    *
    * @opt_param string annotationDataId The list of Annotation Data Ids to
    * retrieve. Pagination is ignored if this is set.
@@ -79,12 +79,12 @@ class Google_Service_Books_Resource_LayersAnnotationData extends Google_Service_
    * since this timestamp (inclusive).
    * @opt_param int w The requested pixel width for any images. If width is
    * provided height must also be provided.
-   * @return Google_Service_Books_Annotationsdata
+   * @return    Google_Service_Books_Annotationsdata
    */
-  public function listLayersAnnotationData($volumeId, $layerId, $contentVersion, $optParams = array())
-  {
-    $params = array('volumeId' => $volumeId, 'layerId' => $layerId, 'contentVersion' => $contentVersion);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Books_Annotationsdata");
-  }
+    public function listLayersAnnotationData($volumeId, $layerId, $contentVersion, $optParams = array())
+    {
+        $params = array('volumeId' => $volumeId, 'layerId' => $layerId, 'contentVersion' => $contentVersion);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Books_Annotationsdata");
+    }
 }

@@ -17,87 +17,87 @@
 
 class Google_Service_Bigquery_JobConfiguration extends Google_Model
 {
-  protected $copyType = 'Google_Service_Bigquery_JobConfigurationTableCopy';
-  protected $copyDataType = '';
-  public $dryRun;
-  protected $extractType = 'Google_Service_Bigquery_JobConfigurationExtract';
-  protected $extractDataType = '';
-  public $labels;
-  protected $loadType = 'Google_Service_Bigquery_JobConfigurationLoad';
-  protected $loadDataType = '';
-  protected $queryType = 'Google_Service_Bigquery_JobConfigurationQuery';
-  protected $queryDataType = '';
+    protected $copyType = 'Google_Service_Bigquery_JobConfigurationTableCopy';
+    protected $copyDataType = '';
+    public $dryRun;
+    protected $extractType = 'Google_Service_Bigquery_JobConfigurationExtract';
+    protected $extractDataType = '';
+    public $labels;
+    protected $loadType = 'Google_Service_Bigquery_JobConfigurationLoad';
+    protected $loadDataType = '';
+    protected $queryType = 'Google_Service_Bigquery_JobConfigurationQuery';
+    protected $queryDataType = '';
 
-  /**
+    /**
    * @param Google_Service_Bigquery_JobConfigurationTableCopy
    */
-  public function setCopy(Google_Service_Bigquery_JobConfigurationTableCopy $copy)
-  {
-    $this->copy = $copy;
-  }
-  /**
+    public function setCopy(Google_Service_Bigquery_JobConfigurationTableCopy $copy)
+    {
+        $this->copy = $copy;
+    }
+    /**
    * @return Google_Service_Bigquery_JobConfigurationTableCopy
    */
-  public function getCopy()
-  {
-    return $this->copy;
-  }
-  public function setDryRun($dryRun)
-  {
-    $this->dryRun = $dryRun;
-  }
-  public function getDryRun()
-  {
-    return $this->dryRun;
-  }
-  /**
+    public function getCopy()
+    {
+        return $this->copy;
+    }
+    public function setDryRun($dryRun)
+    {
+        $this->dryRun = $dryRun;
+    }
+    public function getDryRun()
+    {
+        return $this->dryRun;
+    }
+    /**
    * @param Google_Service_Bigquery_JobConfigurationExtract
    */
-  public function setExtract(Google_Service_Bigquery_JobConfigurationExtract $extract)
-  {
-    $this->extract = $extract;
-  }
-  /**
+    public function setExtract(Google_Service_Bigquery_JobConfigurationExtract $extract)
+    {
+        $this->extract = $extract;
+    }
+    /**
    * @return Google_Service_Bigquery_JobConfigurationExtract
    */
-  public function getExtract()
-  {
-    return $this->extract;
-  }
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  public function getLabels()
-  {
-    return $this->labels;
-  }
-  /**
+    public function getExtract()
+    {
+        return $this->extract;
+    }
+    public function setLabels($labels)
+    {
+        $this->labels = $labels;
+    }
+    public function getLabels()
+    {
+        return $this->labels;
+    }
+    /**
    * @param Google_Service_Bigquery_JobConfigurationLoad
    */
-  public function setLoad(Google_Service_Bigquery_JobConfigurationLoad $load)
-  {
-    $this->load = $load;
-  }
-  /**
+    public function setLoad(Google_Service_Bigquery_JobConfigurationLoad $load)
+    {
+        $this->load = $load;
+    }
+    /**
    * @return Google_Service_Bigquery_JobConfigurationLoad
    */
-  public function getLoad()
-  {
-    return $this->load;
-  }
-  /**
+    public function getLoad()
+    {
+        return $this->load;
+    }
+    /**
    * @param Google_Service_Bigquery_JobConfigurationQuery
    */
-  public function setQuery(Google_Service_Bigquery_JobConfigurationQuery $query)
-  {
-    $this->query = $query;
-  }
-  /**
+    public function setQuery(Google_Service_Bigquery_JobConfigurationQuery $query)
+    {
+        $this->query = $query;
+    }
+    /**
    * @return Google_Service_Bigquery_JobConfigurationQuery
    */
-  public function getQuery()
-  {
-    return $this->query;
-  }
+    public function getQuery()
+    {
+        return $this->query;
+    }
 }

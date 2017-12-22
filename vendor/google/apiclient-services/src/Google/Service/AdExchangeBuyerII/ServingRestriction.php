@@ -17,47 +17,47 @@
 
 class Google_Service_AdExchangeBuyerII_ServingRestriction extends Google_Collection
 {
-  protected $collection_key = 'disapprovalReasons';
-  protected $contextsType = 'Google_Service_AdExchangeBuyerII_ServingContext';
-  protected $contextsDataType = 'array';
-  protected $disapprovalReasonsType = 'Google_Service_AdExchangeBuyerII_Disapproval';
-  protected $disapprovalReasonsDataType = 'array';
-  public $status;
+    protected $collection_key = 'disapprovalReasons';
+    protected $contextsType = 'Google_Service_AdExchangeBuyerII_ServingContext';
+    protected $contextsDataType = 'array';
+    protected $disapprovalReasonsType = 'Google_Service_AdExchangeBuyerII_Disapproval';
+    protected $disapprovalReasonsDataType = 'array';
+    public $status;
 
-  /**
+    /**
    * @param Google_Service_AdExchangeBuyerII_ServingContext
    */
-  public function setContexts($contexts)
-  {
-    $this->contexts = $contexts;
-  }
-  /**
+    public function setContexts($contexts)
+    {
+        $this->contexts = $contexts;
+    }
+    /**
    * @return Google_Service_AdExchangeBuyerII_ServingContext
    */
-  public function getContexts()
-  {
-    return $this->contexts;
-  }
-  /**
+    public function getContexts()
+    {
+        return $this->contexts;
+    }
+    /**
    * @param Google_Service_AdExchangeBuyerII_Disapproval
    */
-  public function setDisapprovalReasons($disapprovalReasons)
-  {
-    $this->disapprovalReasons = $disapprovalReasons;
-  }
-  /**
+    public function setDisapprovalReasons($disapprovalReasons)
+    {
+        $this->disapprovalReasons = $disapprovalReasons;
+    }
+    /**
    * @return Google_Service_AdExchangeBuyerII_Disapproval
    */
-  public function getDisapprovalReasons()
-  {
-    return $this->disapprovalReasons;
-  }
-  public function setStatus($status)
-  {
-    $this->status = $status;
-  }
-  public function getStatus()
-  {
-    return $this->status;
-  }
+    public function getDisapprovalReasons()
+    {
+        return $this->disapprovalReasons;
+    }
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+    public function getStatus()
+    {
+        return $this->status;
+    }
 }

@@ -31,46 +31,52 @@
  */
 class Google_Service_Appengine extends Google_Service
 {
-  /** View and manage your applications deployed on Google App Engine. */
-  const APPENGINE_ADMIN =
+    /**
+ * View and manage your applications deployed on Google App Engine. 
+*/
+    const APPENGINE_ADMIN =
       "https://www.googleapis.com/auth/appengine.admin";
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** View your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM_READ_ONLY =
+    /**
+ * View your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM_READ_ONLY =
       "https://www.googleapis.com/auth/cloud-platform.read-only";
 
-  public $apps;
-  public $apps_authorizedCertificates;
-  public $apps_authorizedDomains;
-  public $apps_domainMappings;
-  public $apps_firewall_ingressRules;
-  public $apps_locations;
-  public $apps_operations;
-  public $apps_services;
-  public $apps_services_versions;
-  public $apps_services_versions_instances;
+    public $apps;
+    public $apps_authorizedCertificates;
+    public $apps_authorizedDomains;
+    public $apps_domainMappings;
+    public $apps_firewall_ingressRules;
+    public $apps_locations;
+    public $apps_operations;
+    public $apps_services;
+    public $apps_services_versions;
+    public $apps_services_versions_instances;
   
-  /**
+    /**
    * Constructs the internal representation of the Appengine service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://appengine.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'appengine';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://appengine.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'appengine';
 
-    $this->apps = new Google_Service_Appengine_Resource_Apps(
-        $this,
-        $this->serviceName,
-        'apps',
-        array(
-          'methods' => array(
+        $this->apps = new Google_Service_Appengine_Resource_Apps(
+            $this,
+            $this->serviceName,
+            'apps',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/apps',
               'httpMethod' => 'POST',
@@ -110,15 +116,15 @@ class Google_Service_Appengine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->apps_authorizedCertificates = new Google_Service_Appengine_Resource_AppsAuthorizedCertificates(
-        $this,
-        $this->serviceName,
-        'authorizedCertificates',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->apps_authorizedCertificates = new Google_Service_Appengine_Resource_AppsAuthorizedCertificates(
+            $this,
+            $this->serviceName,
+            'authorizedCertificates',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/apps/{appsId}/authorizedCertificates',
               'httpMethod' => 'POST',
@@ -205,15 +211,15 @@ class Google_Service_Appengine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->apps_authorizedDomains = new Google_Service_Appengine_Resource_AppsAuthorizedDomains(
-        $this,
-        $this->serviceName,
-        'authorizedDomains',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->apps_authorizedDomains = new Google_Service_Appengine_Resource_AppsAuthorizedDomains(
+            $this,
+            $this->serviceName,
+            'authorizedDomains',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'v1/apps/{appsId}/authorizedDomains',
               'httpMethod' => 'GET',
@@ -233,15 +239,15 @@ class Google_Service_Appengine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->apps_domainMappings = new Google_Service_Appengine_Resource_AppsDomainMappings(
-        $this,
-        $this->serviceName,
-        'domainMappings',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->apps_domainMappings = new Google_Service_Appengine_Resource_AppsDomainMappings(
+            $this,
+            $this->serviceName,
+            'domainMappings',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/apps/{appsId}/domainMappings',
               'httpMethod' => 'POST',
@@ -324,15 +330,15 @@ class Google_Service_Appengine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->apps_firewall_ingressRules = new Google_Service_Appengine_Resource_AppsFirewallIngressRules(
-        $this,
-        $this->serviceName,
-        'ingressRules',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->apps_firewall_ingressRules = new Google_Service_Appengine_Resource_AppsFirewallIngressRules(
+            $this,
+            $this->serviceName,
+            'ingressRules',
+            array(
+            'methods' => array(
             'batchUpdate' => array(
               'path' => 'v1/apps/{appsId}/firewall/ingressRules:batchUpdate',
               'httpMethod' => 'POST',
@@ -425,15 +431,15 @@ class Google_Service_Appengine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->apps_locations = new Google_Service_Appengine_Resource_AppsLocations(
-        $this,
-        $this->serviceName,
-        'locations',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->apps_locations = new Google_Service_Appengine_Resource_AppsLocations(
+            $this,
+            $this->serviceName,
+            'locations',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'v1/apps/{appsId}/locations/{locationsId}',
               'httpMethod' => 'GET',
@@ -472,15 +478,15 @@ class Google_Service_Appengine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->apps_operations = new Google_Service_Appengine_Resource_AppsOperations(
-        $this,
-        $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->apps_operations = new Google_Service_Appengine_Resource_AppsOperations(
+            $this,
+            $this->serviceName,
+            'operations',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'v1/apps/{appsId}/operations/{operationsId}',
               'httpMethod' => 'GET',
@@ -519,15 +525,15 @@ class Google_Service_Appengine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->apps_services = new Google_Service_Appengine_Resource_AppsServices(
-        $this,
-        $this->serviceName,
-        'services',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->apps_services = new Google_Service_Appengine_Resource_AppsServices(
+            $this,
+            $this->serviceName,
+            'services',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'v1/apps/{appsId}/services/{servicesId}',
               'httpMethod' => 'DELETE',
@@ -600,15 +606,15 @@ class Google_Service_Appengine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->apps_services_versions = new Google_Service_Appengine_Resource_AppsServicesVersions(
-        $this,
-        $this->serviceName,
-        'versions',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->apps_services_versions = new Google_Service_Appengine_Resource_AppsServicesVersions(
+            $this,
+            $this->serviceName,
+            'versions',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/apps/{appsId}/services/{servicesId}/versions',
               'httpMethod' => 'POST',
@@ -720,15 +726,15 @@ class Google_Service_Appengine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->apps_services_versions_instances = new Google_Service_Appengine_Resource_AppsServicesVersionsInstances(
-        $this,
-        $this->serviceName,
-        'instances',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->apps_services_versions_instances = new Google_Service_Appengine_Resource_AppsServicesVersionsInstances(
+            $this,
+            $this->serviceName,
+            'instances',
+            array(
+            'methods' => array(
             'debug' => array(
               'path' => 'v1/apps/{appsId}/services/{servicesId}/versions/{versionsId}/instances/{instancesId}:debug',
               'httpMethod' => 'POST',
@@ -833,8 +839,8 @@ class Google_Service_Appengine extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

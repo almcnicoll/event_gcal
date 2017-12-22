@@ -17,78 +17,78 @@
 
 class Google_Service_Compute_TargetHttpsProxy extends Google_Collection
 {
-  protected $collection_key = 'sslCertificates';
-  public $creationTimestamp;
-  public $description;
-  public $id;
-  public $kind;
-  public $name;
-  public $selfLink;
-  public $sslCertificates;
-  public $urlMap;
+    protected $collection_key = 'sslCertificates';
+    public $creationTimestamp;
+    public $description;
+    public $id;
+    public $kind;
+    public $name;
+    public $selfLink;
+    public $sslCertificates;
+    public $urlMap;
 
-  public function setCreationTimestamp($creationTimestamp)
-  {
-    $this->creationTimestamp = $creationTimestamp;
-  }
-  public function getCreationTimestamp()
-  {
-    return $this->creationTimestamp;
-  }
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  public function getId()
-  {
-    return $this->id;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setSelfLink($selfLink)
-  {
-    $this->selfLink = $selfLink;
-  }
-  public function getSelfLink()
-  {
-    return $this->selfLink;
-  }
-  public function setSslCertificates($sslCertificates)
-  {
-    $this->sslCertificates = $sslCertificates;
-  }
-  public function getSslCertificates()
-  {
-    return $this->sslCertificates;
-  }
-  public function setUrlMap($urlMap)
-  {
-    $this->urlMap = $urlMap;
-  }
-  public function getUrlMap()
-  {
-    return $this->urlMap;
-  }
+    public function setCreationTimestamp($creationTimestamp)
+    {
+        $this->creationTimestamp = $creationTimestamp;
+    }
+    public function getCreationTimestamp()
+    {
+        return $this->creationTimestamp;
+    }
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setSelfLink($selfLink)
+    {
+        $this->selfLink = $selfLink;
+    }
+    public function getSelfLink()
+    {
+        return $this->selfLink;
+    }
+    public function setSslCertificates($sslCertificates)
+    {
+        $this->sslCertificates = $sslCertificates;
+    }
+    public function getSslCertificates()
+    {
+        return $this->sslCertificates;
+    }
+    public function setUrlMap($urlMap)
+    {
+        $this->urlMap = $urlMap;
+    }
+    public function getUrlMap()
+    {
+        return $this->urlMap;
+    }
 }

@@ -25,47 +25,47 @@
  */
 class Google_Service_CloudNaturalLanguageAPI_Resource_Documents extends Google_Service_Resource
 {
-  /**
+    /**
    * Finds named entities (currently finds proper names) in the text, entity
    * types, salience, mentions for each entity, and other properties.
    * (documents.analyzeEntities)
    *
-   * @param Google_Service_CloudNaturalLanguageAPI_AnalyzeEntitiesRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  Google_Service_CloudNaturalLanguageAPI_AnalyzeEntitiesRequest $postBody
+   * @param  array                                                         $optParams Optional parameters.
    * @return Google_Service_CloudNaturalLanguageAPI_AnalyzeEntitiesResponse
    */
-  public function analyzeEntities(Google_Service_CloudNaturalLanguageAPI_AnalyzeEntitiesRequest $postBody, $optParams = array())
-  {
-    $params = array('postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('analyzeEntities', array($params), "Google_Service_CloudNaturalLanguageAPI_AnalyzeEntitiesResponse");
-  }
-  /**
+    public function analyzeEntities(Google_Service_CloudNaturalLanguageAPI_AnalyzeEntitiesRequest $postBody, $optParams = array())
+    {
+        $params = array('postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('analyzeEntities', array($params), "Google_Service_CloudNaturalLanguageAPI_AnalyzeEntitiesResponse");
+    }
+    /**
    * Analyzes the sentiment of the provided text. (documents.analyzeSentiment)
    *
-   * @param Google_Service_CloudNaturalLanguageAPI_AnalyzeSentimentRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  Google_Service_CloudNaturalLanguageAPI_AnalyzeSentimentRequest $postBody
+   * @param  array                                                          $optParams Optional parameters.
    * @return Google_Service_CloudNaturalLanguageAPI_AnalyzeSentimentResponse
    */
-  public function analyzeSentiment(Google_Service_CloudNaturalLanguageAPI_AnalyzeSentimentRequest $postBody, $optParams = array())
-  {
-    $params = array('postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('analyzeSentiment', array($params), "Google_Service_CloudNaturalLanguageAPI_AnalyzeSentimentResponse");
-  }
-  /**
+    public function analyzeSentiment(Google_Service_CloudNaturalLanguageAPI_AnalyzeSentimentRequest $postBody, $optParams = array())
+    {
+        $params = array('postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('analyzeSentiment', array($params), "Google_Service_CloudNaturalLanguageAPI_AnalyzeSentimentResponse");
+    }
+    /**
    * A convenience method that provides all the features that analyzeSentiment,
    * analyzeEntities, and analyzeSyntax provide in one call.
    * (documents.annotateText)
    *
-   * @param Google_Service_CloudNaturalLanguageAPI_AnnotateTextRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  Google_Service_CloudNaturalLanguageAPI_AnnotateTextRequest $postBody
+   * @param  array                                                      $optParams Optional parameters.
    * @return Google_Service_CloudNaturalLanguageAPI_AnnotateTextResponse
    */
-  public function annotateText(Google_Service_CloudNaturalLanguageAPI_AnnotateTextRequest $postBody, $optParams = array())
-  {
-    $params = array('postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('annotateText', array($params), "Google_Service_CloudNaturalLanguageAPI_AnnotateTextResponse");
-  }
+    public function annotateText(Google_Service_CloudNaturalLanguageAPI_AnnotateTextRequest $postBody, $optParams = array())
+    {
+        $params = array('postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('annotateText', array($params), "Google_Service_CloudNaturalLanguageAPI_AnnotateTextResponse");
+    }
 }

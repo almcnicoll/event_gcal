@@ -17,14 +17,14 @@
 
 class Google_Service_Appengine_SslSettings extends Google_Model
 {
-  public $certificateId;
+    public $certificateId;
 
-  public function setCertificateId($certificateId)
-  {
-    $this->certificateId = $certificateId;
-  }
-  public function getCertificateId()
-  {
-    return $this->certificateId;
-  }
+    public function setCertificateId($certificateId)
+    {
+        $this->certificateId = $certificateId;
+    }
+    public function getCertificateId()
+    {
+        return $this->certificateId;
+    }
 }

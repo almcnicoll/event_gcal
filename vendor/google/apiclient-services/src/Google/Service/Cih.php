@@ -32,28 +32,28 @@ class Google_Service_Cih extends Google_Service
 {
 
 
-  public $associatedEmails;
-  public $userInteractions;
+    public $associatedEmails;
+    public $userInteractions;
   
-  /**
+    /**
    * Constructs the internal representation of the Cih service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'cih/v3/';
-    $this->version = 'v3';
-    $this->serviceName = 'cih';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'cih/v3/';
+        $this->version = 'v3';
+        $this->serviceName = 'cih';
 
-    $this->associatedEmails = new Google_Service_Cih_Resource_AssociatedEmails(
-        $this,
-        $this->serviceName,
-        'associatedEmails',
-        array(
-          'methods' => array(
+        $this->associatedEmails = new Google_Service_Cih_Resource_AssociatedEmails(
+            $this,
+            $this->serviceName,
+            'associatedEmails',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'associatedEmails/insert/{customerId}',
               'httpMethod' => 'PUT',
@@ -85,15 +85,15 @@ class Google_Service_Cih extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->userInteractions = new Google_Service_Cih_Resource_UserInteractions(
-        $this,
-        $this->serviceName,
-        'userInteractions',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->userInteractions = new Google_Service_Cih_Resource_UserInteractions(
+            $this,
+            $this->serviceName,
+            'userInteractions',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'userInteractions/{entityType}/{entityId}/{timestamp}/{interactionType}',
               'httpMethod' => 'GET',
@@ -200,8 +200,8 @@ class Google_Service_Cih extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

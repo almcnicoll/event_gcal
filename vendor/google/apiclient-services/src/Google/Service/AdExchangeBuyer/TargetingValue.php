@@ -17,55 +17,55 @@
 
 class Google_Service_AdExchangeBuyer_TargetingValue extends Google_Model
 {
-  protected $creativeSizeValueType = 'Google_Service_AdExchangeBuyer_TargetingValueCreativeSize';
-  protected $creativeSizeValueDataType = '';
-  protected $dayPartTargetingValueType = 'Google_Service_AdExchangeBuyer_TargetingValueDayPartTargeting';
-  protected $dayPartTargetingValueDataType = '';
-  public $longValue;
-  public $stringValue;
+    protected $creativeSizeValueType = 'Google_Service_AdExchangeBuyer_TargetingValueCreativeSize';
+    protected $creativeSizeValueDataType = '';
+    protected $dayPartTargetingValueType = 'Google_Service_AdExchangeBuyer_TargetingValueDayPartTargeting';
+    protected $dayPartTargetingValueDataType = '';
+    public $longValue;
+    public $stringValue;
 
-  /**
+    /**
    * @param Google_Service_AdExchangeBuyer_TargetingValueCreativeSize
    */
-  public function setCreativeSizeValue(Google_Service_AdExchangeBuyer_TargetingValueCreativeSize $creativeSizeValue)
-  {
-    $this->creativeSizeValue = $creativeSizeValue;
-  }
-  /**
+    public function setCreativeSizeValue(Google_Service_AdExchangeBuyer_TargetingValueCreativeSize $creativeSizeValue)
+    {
+        $this->creativeSizeValue = $creativeSizeValue;
+    }
+    /**
    * @return Google_Service_AdExchangeBuyer_TargetingValueCreativeSize
    */
-  public function getCreativeSizeValue()
-  {
-    return $this->creativeSizeValue;
-  }
-  /**
+    public function getCreativeSizeValue()
+    {
+        return $this->creativeSizeValue;
+    }
+    /**
    * @param Google_Service_AdExchangeBuyer_TargetingValueDayPartTargeting
    */
-  public function setDayPartTargetingValue(Google_Service_AdExchangeBuyer_TargetingValueDayPartTargeting $dayPartTargetingValue)
-  {
-    $this->dayPartTargetingValue = $dayPartTargetingValue;
-  }
-  /**
+    public function setDayPartTargetingValue(Google_Service_AdExchangeBuyer_TargetingValueDayPartTargeting $dayPartTargetingValue)
+    {
+        $this->dayPartTargetingValue = $dayPartTargetingValue;
+    }
+    /**
    * @return Google_Service_AdExchangeBuyer_TargetingValueDayPartTargeting
    */
-  public function getDayPartTargetingValue()
-  {
-    return $this->dayPartTargetingValue;
-  }
-  public function setLongValue($longValue)
-  {
-    $this->longValue = $longValue;
-  }
-  public function getLongValue()
-  {
-    return $this->longValue;
-  }
-  public function setStringValue($stringValue)
-  {
-    $this->stringValue = $stringValue;
-  }
-  public function getStringValue()
-  {
-    return $this->stringValue;
-  }
+    public function getDayPartTargetingValue()
+    {
+        return $this->dayPartTargetingValue;
+    }
+    public function setLongValue($longValue)
+    {
+        $this->longValue = $longValue;
+    }
+    public function getLongValue()
+    {
+        return $this->longValue;
+    }
+    public function setStringValue($stringValue)
+    {
+        $this->stringValue = $stringValue;
+    }
+    public function getStringValue()
+    {
+        return $this->stringValue;
+    }
 }

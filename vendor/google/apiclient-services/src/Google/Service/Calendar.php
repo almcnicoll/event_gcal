@@ -30,41 +30,45 @@
  */
 class Google_Service_Calendar extends Google_Service
 {
-  /** Manage your calendars. */
-  const CALENDAR =
+    /**
+ * Manage your calendars. 
+*/
+    const CALENDAR =
       "https://www.googleapis.com/auth/calendar";
-  /** View your calendars. */
-  const CALENDAR_READONLY =
+    /**
+ * View your calendars. 
+*/
+    const CALENDAR_READONLY =
       "https://www.googleapis.com/auth/calendar.readonly";
 
-  public $acl;
-  public $calendarList;
-  public $calendars;
-  public $channels;
-  public $colors;
-  public $events;
-  public $freebusy;
-  public $settings;
+    public $acl;
+    public $calendarList;
+    public $calendars;
+    public $channels;
+    public $colors;
+    public $events;
+    public $freebusy;
+    public $settings;
   
-  /**
+    /**
    * Constructs the internal representation of the Calendar service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'calendar/v3/';
-    $this->version = 'v3';
-    $this->serviceName = 'calendar';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'calendar/v3/';
+        $this->version = 'v3';
+        $this->serviceName = 'calendar';
 
-    $this->acl = new Google_Service_Calendar_Resource_Acl(
-        $this,
-        $this->serviceName,
-        'acl',
-        array(
-          'methods' => array(
+        $this->acl = new Google_Service_Calendar_Resource_Acl(
+            $this,
+            $this->serviceName,
+            'acl',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'calendars/{calendarId}/acl/{ruleId}',
               'httpMethod' => 'DELETE',
@@ -200,15 +204,15 @@ class Google_Service_Calendar extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->calendarList = new Google_Service_Calendar_Resource_CalendarList(
-        $this,
-        $this->serviceName,
-        'calendarList',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->calendarList = new Google_Service_Calendar_Resource_CalendarList(
+            $this,
+            $this->serviceName,
+            'calendarList',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'users/me/calendarList/{calendarId}',
               'httpMethod' => 'DELETE',
@@ -325,15 +329,15 @@ class Google_Service_Calendar extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->calendars = new Google_Service_Calendar_Resource_Calendars(
-        $this,
-        $this->serviceName,
-        'calendars',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->calendars = new Google_Service_Calendar_Resource_Calendars(
+            $this,
+            $this->serviceName,
+            'calendars',
+            array(
+            'methods' => array(
             'clear' => array(
               'path' => 'calendars/{calendarId}/clear',
               'httpMethod' => 'POST',
@@ -389,43 +393,43 @@ class Google_Service_Calendar extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->channels = new Google_Service_Calendar_Resource_Channels(
-        $this,
-        $this->serviceName,
-        'channels',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->channels = new Google_Service_Calendar_Resource_Channels(
+            $this,
+            $this->serviceName,
+            'channels',
+            array(
+            'methods' => array(
             'stop' => array(
               'path' => 'channels/stop',
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-    $this->colors = new Google_Service_Calendar_Resource_Colors(
-        $this,
-        $this->serviceName,
-        'colors',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->colors = new Google_Service_Calendar_Resource_Colors(
+            $this,
+            $this->serviceName,
+            'colors',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'colors',
               'httpMethod' => 'GET',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-    $this->events = new Google_Service_Calendar_Resource_Events(
-        $this,
-        $this->serviceName,
-        'events',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->events = new Google_Service_Calendar_Resource_Events(
+            $this,
+            $this->serviceName,
+            'events',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'calendars/{calendarId}/events/{eventId}',
               'httpMethod' => 'DELETE',
@@ -841,29 +845,29 @@ class Google_Service_Calendar extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->freebusy = new Google_Service_Calendar_Resource_Freebusy(
-        $this,
-        $this->serviceName,
-        'freebusy',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->freebusy = new Google_Service_Calendar_Resource_Freebusy(
+            $this,
+            $this->serviceName,
+            'freebusy',
+            array(
+            'methods' => array(
             'query' => array(
               'path' => 'freeBusy',
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-    $this->settings = new Google_Service_Calendar_Resource_Settings(
-        $this,
-        $this->serviceName,
-        'settings',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->settings = new Google_Service_Calendar_Resource_Settings(
+            $this,
+            $this->serviceName,
+            'settings',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'users/me/settings/{setting}',
               'httpMethod' => 'GET',
@@ -909,8 +913,8 @@ class Google_Service_Calendar extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

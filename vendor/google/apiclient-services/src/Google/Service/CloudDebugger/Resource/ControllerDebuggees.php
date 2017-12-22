@@ -25,7 +25,7 @@
  */
 class Google_Service_CloudDebugger_Resource_ControllerDebuggees extends Google_Service_Resource
 {
-  /**
+    /**
    * Registers the debuggee with the controller service.
    *
    * All agents attached to the same application must call this method with
@@ -37,14 +37,14 @@ class Google_Service_CloudDebugger_Resource_ControllerDebuggees extends Google_S
    * from data loss, or change the `debuggee_id` format. Agents must handle
    * `debuggee_id` value changing upon re-registration. (debuggees.register)
    *
-   * @param Google_Service_CloudDebugger_RegisterDebuggeeRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  Google_Service_CloudDebugger_RegisterDebuggeeRequest $postBody
+   * @param  array                                                $optParams Optional parameters.
    * @return Google_Service_CloudDebugger_RegisterDebuggeeResponse
    */
-  public function register(Google_Service_CloudDebugger_RegisterDebuggeeRequest $postBody, $optParams = array())
-  {
-    $params = array('postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('register', array($params), "Google_Service_CloudDebugger_RegisterDebuggeeResponse");
-  }
+    public function register(Google_Service_CloudDebugger_RegisterDebuggeeRequest $postBody, $optParams = array())
+    {
+        $params = array('postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('register', array($params), "Google_Service_CloudDebugger_RegisterDebuggeeResponse");
+    }
 }

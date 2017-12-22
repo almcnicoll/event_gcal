@@ -25,85 +25,85 @@
  */
 class Google_Service_CloudUserAccounts_Resource_Groups extends Google_Service_Resource
 {
-  /**
+    /**
    * Adds users to the specified group. (groups.addMember)
    *
-   * @param string $project Project ID for this request.
-   * @param string $groupName Name of the group for this request.
-   * @param Google_Service_CloudUserAccounts_GroupsAddMemberRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                  $project   Project ID for this request.
+   * @param  string                                                  $groupName Name of the group for this request.
+   * @param  Google_Service_CloudUserAccounts_GroupsAddMemberRequest $postBody
+   * @param  array                                                   $optParams Optional parameters.
    * @return Google_Service_CloudUserAccounts_Operation
    */
-  public function addMember($project, $groupName, Google_Service_CloudUserAccounts_GroupsAddMemberRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'groupName' => $groupName, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('addMember', array($params), "Google_Service_CloudUserAccounts_Operation");
-  }
-  /**
+    public function addMember($project, $groupName, Google_Service_CloudUserAccounts_GroupsAddMemberRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'groupName' => $groupName, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('addMember', array($params), "Google_Service_CloudUserAccounts_Operation");
+    }
+    /**
    * Deletes the specified Group resource. (groups.delete)
    *
-   * @param string $project Project ID for this request.
-   * @param string $groupName Name of the Group resource to delete.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $groupName Name of the Group resource to delete.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_CloudUserAccounts_Operation
    */
-  public function delete($project, $groupName, $optParams = array())
-  {
-    $params = array('project' => $project, 'groupName' => $groupName);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_CloudUserAccounts_Operation");
-  }
-  /**
+    public function delete($project, $groupName, $optParams = array())
+    {
+        $params = array('project' => $project, 'groupName' => $groupName);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_CloudUserAccounts_Operation");
+    }
+    /**
    * Returns the specified Group resource. (groups.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $groupName Name of the Group resource to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $groupName Name of the Group resource to return.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_CloudUserAccounts_Group
    */
-  public function get($project, $groupName, $optParams = array())
-  {
-    $params = array('project' => $project, 'groupName' => $groupName);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_CloudUserAccounts_Group");
-  }
-  /**
+    public function get($project, $groupName, $optParams = array())
+    {
+        $params = array('project' => $project, 'groupName' => $groupName);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_CloudUserAccounts_Group");
+    }
+    /**
    * Gets the access control policy for a resource. May be empty if no such policy
    * or resource exists. (groups.getIamPolicy)
    *
-   * @param string $project Project ID for this request.
-   * @param string $resource Name of the resource for this request.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $resource  Name of the resource for this request.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_CloudUserAccounts_Policy
    */
-  public function getIamPolicy($project, $resource, $optParams = array())
-  {
-    $params = array('project' => $project, 'resource' => $resource);
-    $params = array_merge($params, $optParams);
-    return $this->call('getIamPolicy', array($params), "Google_Service_CloudUserAccounts_Policy");
-  }
-  /**
+    public function getIamPolicy($project, $resource, $optParams = array())
+    {
+        $params = array('project' => $project, 'resource' => $resource);
+        $params = array_merge($params, $optParams);
+        return $this->call('getIamPolicy', array($params), "Google_Service_CloudUserAccounts_Policy");
+    }
+    /**
    * Creates a Group resource in the specified project using the data included in
    * the request. (groups.insert)
    *
-   * @param string $project Project ID for this request.
-   * @param Google_Service_CloudUserAccounts_Group $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                 $project   Project ID for this request.
+   * @param  Google_Service_CloudUserAccounts_Group $postBody
+   * @param  array                                  $optParams Optional parameters.
    * @return Google_Service_CloudUserAccounts_Operation
    */
-  public function insert($project, Google_Service_CloudUserAccounts_Group $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_CloudUserAccounts_Operation");
-  }
-  /**
+    public function insert($project, Google_Service_CloudUserAccounts_Group $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_CloudUserAccounts_Operation");
+    }
+    /**
    * Retrieves the list of groups contained within the specified project.
    * (groups.listGroups)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter expression for filtering listed
    * resources, in the form filter={expression}. Your {expression} must be in the
@@ -148,59 +148,59 @@ class Google_Service_CloudUserAccounts_Resource_Groups extends Google_Service_Re
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_CloudUserAccounts_GroupList
+   * @return    Google_Service_CloudUserAccounts_GroupList
    */
-  public function listGroups($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudUserAccounts_GroupList");
-  }
-  /**
+    public function listGroups($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_CloudUserAccounts_GroupList");
+    }
+    /**
    * Removes users from the specified group. (groups.removeMember)
    *
-   * @param string $project Project ID for this request.
-   * @param string $groupName Name of the group for this request.
-   * @param Google_Service_CloudUserAccounts_GroupsRemoveMemberRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                     $project   Project ID for this request.
+   * @param  string                                                     $groupName Name of the group for this request.
+   * @param  Google_Service_CloudUserAccounts_GroupsRemoveMemberRequest $postBody
+   * @param  array                                                      $optParams Optional parameters.
    * @return Google_Service_CloudUserAccounts_Operation
    */
-  public function removeMember($project, $groupName, Google_Service_CloudUserAccounts_GroupsRemoveMemberRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'groupName' => $groupName, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('removeMember', array($params), "Google_Service_CloudUserAccounts_Operation");
-  }
-  /**
+    public function removeMember($project, $groupName, Google_Service_CloudUserAccounts_GroupsRemoveMemberRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'groupName' => $groupName, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('removeMember', array($params), "Google_Service_CloudUserAccounts_Operation");
+    }
+    /**
    * Sets the access control policy on the specified resource. Replaces any
    * existing policy. (groups.setIamPolicy)
    *
-   * @param string $project Project ID for this request.
-   * @param string $resource Name of the resource for this request.
-   * @param Google_Service_CloudUserAccounts_Policy $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                  $project   Project ID for this request.
+   * @param  string                                  $resource  Name of the resource for this request.
+   * @param  Google_Service_CloudUserAccounts_Policy $postBody
+   * @param  array                                   $optParams Optional parameters.
    * @return Google_Service_CloudUserAccounts_Policy
    */
-  public function setIamPolicy($project, $resource, Google_Service_CloudUserAccounts_Policy $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setIamPolicy', array($params), "Google_Service_CloudUserAccounts_Policy");
-  }
-  /**
+    public function setIamPolicy($project, $resource, Google_Service_CloudUserAccounts_Policy $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('setIamPolicy', array($params), "Google_Service_CloudUserAccounts_Policy");
+    }
+    /**
    * Returns permissions that a caller has on the specified resource.
    * (groups.testIamPermissions)
    *
-   * @param string $project Project ID for this request.
-   * @param string $resource Name of the resource for this request.
-   * @param Google_Service_CloudUserAccounts_TestPermissionsRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                  $project   Project ID for this request.
+   * @param  string                                                  $resource  Name of the resource for this request.
+   * @param  Google_Service_CloudUserAccounts_TestPermissionsRequest $postBody
+   * @param  array                                                   $optParams Optional parameters.
    * @return Google_Service_CloudUserAccounts_TestPermissionsResponse
    */
-  public function testIamPermissions($project, $resource, Google_Service_CloudUserAccounts_TestPermissionsRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('testIamPermissions', array($params), "Google_Service_CloudUserAccounts_TestPermissionsResponse");
-  }
+    public function testIamPermissions($project, $resource, Google_Service_CloudUserAccounts_TestPermissionsRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('testIamPermissions', array($params), "Google_Service_CloudUserAccounts_TestPermissionsResponse");
+    }
 }

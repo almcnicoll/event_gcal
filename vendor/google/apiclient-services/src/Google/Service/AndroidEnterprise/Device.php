@@ -17,48 +17,48 @@
 
 class Google_Service_AndroidEnterprise_Device extends Google_Model
 {
-  public $androidId;
-  public $kind;
-  public $managementType;
-  protected $policyType = 'Google_Service_AndroidEnterprise_Policy';
-  protected $policyDataType = '';
+    public $androidId;
+    public $kind;
+    public $managementType;
+    protected $policyType = 'Google_Service_AndroidEnterprise_Policy';
+    protected $policyDataType = '';
 
-  public function setAndroidId($androidId)
-  {
-    $this->androidId = $androidId;
-  }
-  public function getAndroidId()
-  {
-    return $this->androidId;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setManagementType($managementType)
-  {
-    $this->managementType = $managementType;
-  }
-  public function getManagementType()
-  {
-    return $this->managementType;
-  }
-  /**
+    public function setAndroidId($androidId)
+    {
+        $this->androidId = $androidId;
+    }
+    public function getAndroidId()
+    {
+        return $this->androidId;
+    }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setManagementType($managementType)
+    {
+        $this->managementType = $managementType;
+    }
+    public function getManagementType()
+    {
+        return $this->managementType;
+    }
+    /**
    * @param Google_Service_AndroidEnterprise_Policy
    */
-  public function setPolicy(Google_Service_AndroidEnterprise_Policy $policy)
-  {
-    $this->policy = $policy;
-  }
-  /**
+    public function setPolicy(Google_Service_AndroidEnterprise_Policy $policy)
+    {
+        $this->policy = $policy;
+    }
+    /**
    * @return Google_Service_AndroidEnterprise_Policy
    */
-  public function getPolicy()
-  {
-    return $this->policy;
-  }
+    public function getPolicy()
+    {
+        return $this->policy;
+    }
 }

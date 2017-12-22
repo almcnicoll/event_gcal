@@ -25,12 +25,12 @@
  */
 class Google_Service_Compute_Resource_SslCertificates extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified SslCertificate resource. (sslCertificates.delete)
    *
-   * @param string $project Project ID for this request.
+   * @param string $project        Project ID for this request.
    * @param string $sslCertificate Name of the SslCertificate resource to delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams      Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -44,36 +44,36 @@ class Google_Service_Compute_Resource_SslCertificates extends Google_Service_Res
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $sslCertificate, $optParams = array())
-  {
-    $params = array('project' => $project, 'sslCertificate' => $sslCertificate);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $sslCertificate, $optParams = array())
+    {
+        $params = array('project' => $project, 'sslCertificate' => $sslCertificate);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified SslCertificate resource. Get a list of available SSL
    * certificates by making a list() request. (sslCertificates.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $sslCertificate Name of the SslCertificate resource to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project        Project ID for this request.
+   * @param  string $sslCertificate Name of the SslCertificate resource to return.
+   * @param  array  $optParams      Optional parameters.
    * @return Google_Service_Compute_SslCertificate
    */
-  public function get($project, $sslCertificate, $optParams = array())
-  {
-    $params = array('project' => $project, 'sslCertificate' => $sslCertificate);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_SslCertificate");
-  }
-  /**
+    public function get($project, $sslCertificate, $optParams = array())
+    {
+        $params = array('project' => $project, 'sslCertificate' => $sslCertificate);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_SslCertificate");
+    }
+    /**
    * Creates a SslCertificate resource in the specified project using the data
    * included in the request. (sslCertificates.insert)
    *
-   * @param string $project Project ID for this request.
+   * @param string                                $project   Project ID for this request.
    * @param Google_Service_Compute_SslCertificate $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                 $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -87,20 +87,20 @@ class Google_Service_Compute_Resource_SslCertificates extends Google_Service_Res
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, Google_Service_Compute_SslCertificate $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, Google_Service_Compute_SslCertificate $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves the list of SslCertificate resources available to the specified
    * project. (sslCertificates.listSslCertificates)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -144,12 +144,12 @@ class Google_Service_Compute_Resource_SslCertificates extends Google_Service_Res
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_SslCertificateList
+   * @return    Google_Service_Compute_SslCertificateList
    */
-  public function listSslCertificates($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_SslCertificateList");
-  }
+    public function listSslCertificates($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_SslCertificateList");
+    }
 }

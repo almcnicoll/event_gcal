@@ -17,32 +17,32 @@
 
 class Google_Service_CloudResourceManager_SearchOrganizationsRequest extends Google_Model
 {
-  public $filter;
-  public $pageSize;
-  public $pageToken;
+    public $filter;
+    public $pageSize;
+    public $pageToken;
 
-  public function setFilter($filter)
-  {
-    $this->filter = $filter;
-  }
-  public function getFilter()
-  {
-    return $this->filter;
-  }
-  public function setPageSize($pageSize)
-  {
-    $this->pageSize = $pageSize;
-  }
-  public function getPageSize()
-  {
-    return $this->pageSize;
-  }
-  public function setPageToken($pageToken)
-  {
-    $this->pageToken = $pageToken;
-  }
-  public function getPageToken()
-  {
-    return $this->pageToken;
-  }
+    public function setFilter($filter)
+    {
+        $this->filter = $filter;
+    }
+    public function getFilter()
+    {
+        return $this->filter;
+    }
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+    }
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
+    public function setPageToken($pageToken)
+    {
+        $this->pageToken = $pageToken;
+    }
+    public function getPageToken()
+    {
+        return $this->pageToken;
+    }
 }

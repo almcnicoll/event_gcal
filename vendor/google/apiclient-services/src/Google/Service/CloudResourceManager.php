@@ -31,38 +31,42 @@
  */
 class Google_Service_CloudResourceManager extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** View your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM_READ_ONLY =
+    /**
+ * View your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM_READ_ONLY =
       "https://www.googleapis.com/auth/cloud-platform.read-only";
 
-  public $folders;
-  public $liens;
-  public $operations;
-  public $organizations;
-  public $projects;
+    public $folders;
+    public $liens;
+    public $operations;
+    public $organizations;
+    public $projects;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudResourceManager service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://cloudresourcemanager.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'cloudresourcemanager';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://cloudresourcemanager.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'cloudresourcemanager';
 
-    $this->folders = new Google_Service_CloudResourceManager_Resource_Folders(
-        $this,
-        $this->serviceName,
-        'folders',
-        array(
-          'methods' => array(
+        $this->folders = new Google_Service_CloudResourceManager_Resource_Folders(
+            $this,
+            $this->serviceName,
+            'folders',
+            array(
+            'methods' => array(
             'clearOrgPolicy' => array(
               'path' => 'v1/{+resource}:clearOrgPolicy',
               'httpMethod' => 'POST',
@@ -124,15 +128,15 @@ class Google_Service_CloudResourceManager extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->liens = new Google_Service_CloudResourceManager_Resource_Liens(
-        $this,
-        $this->serviceName,
-        'liens',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->liens = new Google_Service_CloudResourceManager_Resource_Liens(
+            $this,
+            $this->serviceName,
+            'liens',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/liens',
               'httpMethod' => 'POST',
@@ -165,15 +169,15 @@ class Google_Service_CloudResourceManager extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->operations = new Google_Service_CloudResourceManager_Resource_Operations(
-        $this,
-        $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->operations = new Google_Service_CloudResourceManager_Resource_Operations(
+            $this,
+            $this->serviceName,
+            'operations',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -185,15 +189,15 @@ class Google_Service_CloudResourceManager extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->organizations = new Google_Service_CloudResourceManager_Resource_Organizations(
-        $this,
-        $this->serviceName,
-        'organizations',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->organizations = new Google_Service_CloudResourceManager_Resource_Organizations(
+            $this,
+            $this->serviceName,
+            'organizations',
+            array(
+            'methods' => array(
             'clearOrgPolicy' => array(
               'path' => 'v1/{+resource}:clearOrgPolicy',
               'httpMethod' => 'POST',
@@ -299,15 +303,15 @@ class Google_Service_CloudResourceManager extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects = new Google_Service_CloudResourceManager_Resource_Projects(
-        $this,
-        $this->serviceName,
-        'projects',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects = new Google_Service_CloudResourceManager_Resource_Projects(
+            $this,
+            $this->serviceName,
+            'projects',
+            array(
+            'methods' => array(
             'clearOrgPolicy' => array(
               'path' => 'v1/{+resource}:clearOrgPolicy',
               'httpMethod' => 'POST',
@@ -470,8 +474,8 @@ class Google_Service_CloudResourceManager extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

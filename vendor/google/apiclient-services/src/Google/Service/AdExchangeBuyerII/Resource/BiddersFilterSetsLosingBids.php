@@ -25,7 +25,7 @@
  */
 class Google_Service_AdExchangeBuyerII_Resource_BiddersFilterSetsLosingBids extends Google_Service_Resource
 {
-  /**
+    /**
    * List all reasons for which bids lost in the auction, with the number of bids
    * that lost for each reason. (losingBids.listBiddersFilterSetsLosingBids)
    *
@@ -40,7 +40,7 @@ class Google_Service_AdExchangeBuyerII_Resource_BiddersFilterSetsLosingBids exte
    *
    * - For an account-level filter set for the child seat buyer account 456
    * whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams     Optional parameters.
    *
    * @opt_param string pageToken A token identifying a page of results the server
    * should return. Typically, this is the value of
@@ -49,12 +49,12 @@ class Google_Service_AdExchangeBuyerII_Resource_BiddersFilterSetsLosingBids exte
    * @opt_param int pageSize Requested page size. The server may return fewer
    * results than requested. If unspecified, the server will pick an appropriate
    * default.
-   * @return Google_Service_AdExchangeBuyerII_ListLosingBidsResponse
+   * @return    Google_Service_AdExchangeBuyerII_ListLosingBidsResponse
    */
-  public function listBiddersFilterSetsLosingBids($filterSetName, $optParams = array())
-  {
-    $params = array('filterSetName' => $filterSetName);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeBuyerII_ListLosingBidsResponse");
-  }
+    public function listBiddersFilterSetsLosingBids($filterSetName, $optParams = array())
+    {
+        $params = array('filterSetName' => $filterSetName);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_AdExchangeBuyerII_ListLosingBidsResponse");
+    }
 }

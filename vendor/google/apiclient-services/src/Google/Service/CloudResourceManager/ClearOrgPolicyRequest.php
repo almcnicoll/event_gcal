@@ -17,23 +17,23 @@
 
 class Google_Service_CloudResourceManager_ClearOrgPolicyRequest extends Google_Model
 {
-  public $constraint;
-  public $etag;
+    public $constraint;
+    public $etag;
 
-  public function setConstraint($constraint)
-  {
-    $this->constraint = $constraint;
-  }
-  public function getConstraint()
-  {
-    return $this->constraint;
-  }
-  public function setEtag($etag)
-  {
-    $this->etag = $etag;
-  }
-  public function getEtag()
-  {
-    return $this->etag;
-  }
+    public function setConstraint($constraint)
+    {
+        $this->constraint = $constraint;
+    }
+    public function getConstraint()
+    {
+        return $this->constraint;
+    }
+    public function setEtag($etag)
+    {
+        $this->etag = $etag;
+    }
+    public function getEtag()
+    {
+        return $this->etag;
+    }
 }

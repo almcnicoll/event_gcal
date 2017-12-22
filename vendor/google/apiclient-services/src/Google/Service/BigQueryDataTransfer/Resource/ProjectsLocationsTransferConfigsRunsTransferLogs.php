@@ -25,13 +25,13 @@
  */
 class Google_Service_BigQueryDataTransfer_Resource_ProjectsLocationsTransferConfigsRunsTransferLogs extends Google_Service_Resource
 {
-  /**
+    /**
    * Returns user facing log messages for the data transfer run.
    * (transferLogs.listProjectsLocationsTransferConfigsRunsTransferLogs)
    *
-   * @param string $parent Transfer run name in the form:
-   * `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
-   * @param array $optParams Optional parameters.
+   * @param string $parent    Transfer run name in the form:
+   *                          `projects/{project_id}/transferConfigs/{config_Id}/runs/{run_id}`.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string pageToken Pagination token, which can be used to request a
    * specific page of `ListTransferLogsRequest` list results. For multiple-page
@@ -41,12 +41,12 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsLocationsTransferConf
    * of 1000 results.
    * @opt_param string messageTypes Message types to return. If not populated -
    * INFO, WARNING and ERROR messages are returned.
-   * @return Google_Service_BigQueryDataTransfer_ListTransferLogsResponse
+   * @return    Google_Service_BigQueryDataTransfer_ListTransferLogsResponse
    */
-  public function listProjectsLocationsTransferConfigsRunsTransferLogs($parent, $optParams = array())
-  {
-    $params = array('parent' => $parent);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_BigQueryDataTransfer_ListTransferLogsResponse");
-  }
+    public function listProjectsLocationsTransferConfigsRunsTransferLogs($parent, $optParams = array())
+    {
+        $params = array('parent' => $parent);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_BigQueryDataTransfer_ListTransferLogsResponse");
+    }
 }

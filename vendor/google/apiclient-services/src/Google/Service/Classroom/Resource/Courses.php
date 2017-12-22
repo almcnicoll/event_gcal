@@ -25,7 +25,7 @@
  */
 class Google_Service_Classroom_Resource_Courses extends Google_Service_Resource
 {
-  /**
+    /**
    * Creates a course.
    *
    * The user specified in `ownerId` is the owner of the created course and added
@@ -40,17 +40,17 @@ class Google_Service_Classroom_Resource_Courses extends Google_Service_Resource
    * `ALREADY_EXISTS` if an alias was specified in the `id` and already exists.
    * (courses.create)
    *
-   * @param Google_Service_Classroom_Course $postBody
-   * @param array $optParams Optional parameters.
+   * @param  Google_Service_Classroom_Course $postBody
+   * @param  array                           $optParams Optional parameters.
    * @return Google_Service_Classroom_Course
    */
-  public function create(Google_Service_Classroom_Course $postBody, $optParams = array())
-  {
-    $params = array('postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Classroom_Course");
-  }
-  /**
+    public function create(Google_Service_Classroom_Course $postBody, $optParams = array())
+    {
+        $params = array('postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_Classroom_Course");
+    }
+    /**
    * Deletes a course.
    *
    * This method returns the following error codes:
@@ -59,18 +59,18 @@ class Google_Service_Classroom_Resource_Courses extends Google_Service_Resource
    * requested course or for access errors. * `NOT_FOUND` if no course exists with
    * the requested ID. (courses.delete)
    *
-   * @param string $id Identifier of the course to delete. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param array $optParams Optional parameters.
+   * @param  string $id        Identifier of the course to delete. This identifier can be
+   *                          either the Classroom-assigned identifier or an alias.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
-  public function delete($id, $optParams = array())
-  {
-    $params = array('id' => $id);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
-  }
-  /**
+    public function delete($id, $optParams = array())
+    {
+        $params = array('id' => $id);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
+    }
+    /**
    * Returns a course.
    *
    * This method returns the following error codes:
@@ -79,18 +79,18 @@ class Google_Service_Classroom_Resource_Courses extends Google_Service_Resource
    * requested course or for access errors. * `NOT_FOUND` if no course exists with
    * the requested ID. (courses.get)
    *
-   * @param string $id Identifier of the course to return. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param array $optParams Optional parameters.
+   * @param  string $id        Identifier of the course to return. This identifier can be
+   *                          either the Classroom-assigned identifier or an alias.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Classroom_Course
    */
-  public function get($id, $optParams = array())
-  {
-    $params = array('id' => $id);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Classroom_Course");
-  }
-  /**
+    public function get($id, $optParams = array())
+    {
+        $params = array('id' => $id);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Classroom_Course");
+    }
+    /**
    * Returns a list of courses that the requesting user is permitted to view,
    * restricted to those that match the request. Returned courses are ordered by
    * creation time, with the most recently created coming first.
@@ -127,15 +127,15 @@ class Google_Service_Classroom_Resource_Courses extends Google_Service_Resource
    *
    * The list request must be otherwise identical to the one that resulted in this
    * token.
-   * @return Google_Service_Classroom_ListCoursesResponse
+   * @return    Google_Service_Classroom_ListCoursesResponse
    */
-  public function listCourses($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Classroom_ListCoursesResponse");
-  }
-  /**
+    public function listCourses($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Classroom_ListCoursesResponse");
+    }
+    /**
    * Updates one or more fields in a course.
    *
    * This method returns the following error codes:
@@ -146,10 +146,10 @@ class Google_Service_Classroom_Resource_Courses extends Google_Service_Resource
    * update mask or if no update mask is supplied. * `FAILED_PRECONDITION` for the
    * following request errors:     * CourseNotModifiable (courses.patch)
    *
-   * @param string $id Identifier of the course to update. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
+   * @param string                          $id        Identifier of the course to update. This identifier can be
+   *                                                   either the Classroom-assigned identifier or an alias.
    * @param Google_Service_Classroom_Course $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                           $optParams Optional parameters.
    *
    * @opt_param string updateMask Mask that identifies which fields on the course
    * to update. This field is required to do an update. The update will fail if
@@ -165,15 +165,15 @@ class Google_Service_Classroom_Resource_Courses extends Google_Service_Resource
    * When set in a query parameter, this field should be specified as
    *
    * `updateMask=,,...`
-   * @return Google_Service_Classroom_Course
+   * @return    Google_Service_Classroom_Course
    */
-  public function patch($id, Google_Service_Classroom_Course $postBody, $optParams = array())
-  {
-    $params = array('id' => $id, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Classroom_Course");
-  }
-  /**
+    public function patch($id, Google_Service_Classroom_Course $postBody, $optParams = array())
+    {
+        $params = array('id' => $id, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Classroom_Course");
+    }
+    /**
    * Updates a course.
    *
    * This method returns the following error codes:
@@ -183,16 +183,16 @@ class Google_Service_Classroom_Resource_Courses extends Google_Service_Resource
    * the requested ID. * `FAILED_PRECONDITION` for the following request errors:
    * * CourseNotModifiable (courses.update)
    *
-   * @param string $id Identifier of the course to update. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param Google_Service_Classroom_Course $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                          $id        Identifier of the course to update. This identifier can be
+   *                                                    either the Classroom-assigned identifier or an alias.
+   * @param  Google_Service_Classroom_Course $postBody
+   * @param  array                           $optParams Optional parameters.
    * @return Google_Service_Classroom_Course
    */
-  public function update($id, Google_Service_Classroom_Course $postBody, $optParams = array())
-  {
-    $params = array('id' => $id, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Classroom_Course");
-  }
+    public function update($id, Google_Service_Classroom_Course $postBody, $optParams = array())
+    {
+        $params = array('id' => $id, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('update', array($params), "Google_Service_Classroom_Course");
+    }
 }

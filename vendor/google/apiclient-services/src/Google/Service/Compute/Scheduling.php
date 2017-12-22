@@ -17,32 +17,32 @@
 
 class Google_Service_Compute_Scheduling extends Google_Model
 {
-  public $automaticRestart;
-  public $onHostMaintenance;
-  public $preemptible;
+    public $automaticRestart;
+    public $onHostMaintenance;
+    public $preemptible;
 
-  public function setAutomaticRestart($automaticRestart)
-  {
-    $this->automaticRestart = $automaticRestart;
-  }
-  public function getAutomaticRestart()
-  {
-    return $this->automaticRestart;
-  }
-  public function setOnHostMaintenance($onHostMaintenance)
-  {
-    $this->onHostMaintenance = $onHostMaintenance;
-  }
-  public function getOnHostMaintenance()
-  {
-    return $this->onHostMaintenance;
-  }
-  public function setPreemptible($preemptible)
-  {
-    $this->preemptible = $preemptible;
-  }
-  public function getPreemptible()
-  {
-    return $this->preemptible;
-  }
+    public function setAutomaticRestart($automaticRestart)
+    {
+        $this->automaticRestart = $automaticRestart;
+    }
+    public function getAutomaticRestart()
+    {
+        return $this->automaticRestart;
+    }
+    public function setOnHostMaintenance($onHostMaintenance)
+    {
+        $this->onHostMaintenance = $onHostMaintenance;
+    }
+    public function getOnHostMaintenance()
+    {
+        return $this->onHostMaintenance;
+    }
+    public function setPreemptible($preemptible)
+    {
+        $this->preemptible = $preemptible;
+    }
+    public function getPreemptible()
+    {
+        return $this->preemptible;
+    }
 }

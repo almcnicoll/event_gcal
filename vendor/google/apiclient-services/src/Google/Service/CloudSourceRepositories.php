@@ -30,41 +30,49 @@
  */
 class Google_Service_CloudSourceRepositories extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** Manage your source code repositories. */
-  const SOURCE_FULL_CONTROL =
+    /**
+ * Manage your source code repositories. 
+*/
+    const SOURCE_FULL_CONTROL =
       "https://www.googleapis.com/auth/source.full_control";
-  /** View the contents of your source code repositories. */
-  const SOURCE_READ_ONLY =
+    /**
+ * View the contents of your source code repositories. 
+*/
+    const SOURCE_READ_ONLY =
       "https://www.googleapis.com/auth/source.read_only";
-  /** Manage the contents of your source code repositories. */
-  const SOURCE_READ_WRITE =
+    /**
+ * Manage the contents of your source code repositories. 
+*/
+    const SOURCE_READ_WRITE =
       "https://www.googleapis.com/auth/source.read_write";
 
-  public $projects_repos;
+    public $projects_repos;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudSourceRepositories
    * service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://sourcerepo.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'sourcerepo';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://sourcerepo.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'sourcerepo';
 
-    $this->projects_repos = new Google_Service_CloudSourceRepositories_Resource_ProjectsRepos(
-        $this,
-        $this->serviceName,
-        'repos',
-        array(
-          'methods' => array(
+        $this->projects_repos = new Google_Service_CloudSourceRepositories_Resource_ProjectsRepos(
+            $this,
+            $this->serviceName,
+            'repos',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/{+parent}/repos',
               'httpMethod' => 'POST',
@@ -144,8 +152,8 @@ class Google_Service_CloudSourceRepositories extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

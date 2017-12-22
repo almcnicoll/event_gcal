@@ -17,32 +17,32 @@
 
 class Google_Service_AndroidEnterprise_UserToken extends Google_Model
 {
-  public $kind;
-  public $token;
-  public $userId;
+    public $kind;
+    public $token;
+    public $userId;
 
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setToken($token)
-  {
-    $this->token = $token;
-  }
-  public function getToken()
-  {
-    return $this->token;
-  }
-  public function setUserId($userId)
-  {
-    $this->userId = $userId;
-  }
-  public function getUserId()
-  {
-    return $this->userId;
-  }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setToken($token)
+    {
+        $this->token = $token;
+    }
+    public function getToken()
+    {
+        return $this->token;
+    }
+    public function setUserId($userId)
+    {
+        $this->userId = $userId;
+    }
+    public function getUserId()
+    {
+        return $this->userId;
+    }
 }

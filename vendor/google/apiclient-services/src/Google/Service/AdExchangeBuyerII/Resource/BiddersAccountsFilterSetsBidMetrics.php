@@ -25,7 +25,7 @@
  */
 class Google_Service_AdExchangeBuyerII_Resource_BiddersAccountsFilterSetsBidMetrics extends Google_Service_Resource
 {
-  /**
+    /**
    * Lists all metrics that are measured in terms of number of bids.
    * (bidMetrics.listBiddersAccountsFilterSetsBidMetrics)
    *
@@ -40,7 +40,7 @@ class Google_Service_AdExchangeBuyerII_Resource_BiddersAccountsFilterSetsBidMetr
    *
    * - For an account-level filter set for the child seat buyer account 456
    * whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams     Optional parameters.
    *
    * @opt_param string pageToken A token identifying a page of results the server
    * should return. Typically, this is the value of
@@ -49,12 +49,12 @@ class Google_Service_AdExchangeBuyerII_Resource_BiddersAccountsFilterSetsBidMetr
    * @opt_param int pageSize Requested page size. The server may return fewer
    * results than requested. If unspecified, the server will pick an appropriate
    * default.
-   * @return Google_Service_AdExchangeBuyerII_ListBidMetricsResponse
+   * @return    Google_Service_AdExchangeBuyerII_ListBidMetricsResponse
    */
-  public function listBiddersAccountsFilterSetsBidMetrics($filterSetName, $optParams = array())
-  {
-    $params = array('filterSetName' => $filterSetName);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeBuyerII_ListBidMetricsResponse");
-  }
+    public function listBiddersAccountsFilterSetsBidMetrics($filterSetName, $optParams = array())
+    {
+        $params = array('filterSetName' => $filterSetName);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_AdExchangeBuyerII_ListBidMetricsResponse");
+    }
 }

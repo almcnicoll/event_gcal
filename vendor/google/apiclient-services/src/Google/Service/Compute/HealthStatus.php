@@ -17,41 +17,41 @@
 
 class Google_Service_Compute_HealthStatus extends Google_Model
 {
-  public $healthState;
-  public $instance;
-  public $ipAddress;
-  public $port;
+    public $healthState;
+    public $instance;
+    public $ipAddress;
+    public $port;
 
-  public function setHealthState($healthState)
-  {
-    $this->healthState = $healthState;
-  }
-  public function getHealthState()
-  {
-    return $this->healthState;
-  }
-  public function setInstance($instance)
-  {
-    $this->instance = $instance;
-  }
-  public function getInstance()
-  {
-    return $this->instance;
-  }
-  public function setIpAddress($ipAddress)
-  {
-    $this->ipAddress = $ipAddress;
-  }
-  public function getIpAddress()
-  {
-    return $this->ipAddress;
-  }
-  public function setPort($port)
-  {
-    $this->port = $port;
-  }
-  public function getPort()
-  {
-    return $this->port;
-  }
+    public function setHealthState($healthState)
+    {
+        $this->healthState = $healthState;
+    }
+    public function getHealthState()
+    {
+        return $this->healthState;
+    }
+    public function setInstance($instance)
+    {
+        $this->instance = $instance;
+    }
+    public function getInstance()
+    {
+        return $this->instance;
+    }
+    public function setIpAddress($ipAddress)
+    {
+        $this->ipAddress = $ipAddress;
+    }
+    public function getIpAddress()
+    {
+        return $this->ipAddress;
+    }
+    public function setPort($port)
+    {
+        $this->port = $port;
+    }
+    public function getPort()
+    {
+        return $this->port;
+    }
 }

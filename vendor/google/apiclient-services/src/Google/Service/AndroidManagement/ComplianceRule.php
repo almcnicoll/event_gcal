@@ -17,46 +17,46 @@
 
 class Google_Service_AndroidManagement_ComplianceRule extends Google_Model
 {
-  protected $apiLevelConditionType = 'Google_Service_AndroidManagement_ApiLevelCondition';
-  protected $apiLevelConditionDataType = '';
-  public $disableApps;
-  protected $nonComplianceDetailConditionType = 'Google_Service_AndroidManagement_NonComplianceDetailCondition';
-  protected $nonComplianceDetailConditionDataType = '';
+    protected $apiLevelConditionType = 'Google_Service_AndroidManagement_ApiLevelCondition';
+    protected $apiLevelConditionDataType = '';
+    public $disableApps;
+    protected $nonComplianceDetailConditionType = 'Google_Service_AndroidManagement_NonComplianceDetailCondition';
+    protected $nonComplianceDetailConditionDataType = '';
 
-  /**
+    /**
    * @param Google_Service_AndroidManagement_ApiLevelCondition
    */
-  public function setApiLevelCondition(Google_Service_AndroidManagement_ApiLevelCondition $apiLevelCondition)
-  {
-    $this->apiLevelCondition = $apiLevelCondition;
-  }
-  /**
+    public function setApiLevelCondition(Google_Service_AndroidManagement_ApiLevelCondition $apiLevelCondition)
+    {
+        $this->apiLevelCondition = $apiLevelCondition;
+    }
+    /**
    * @return Google_Service_AndroidManagement_ApiLevelCondition
    */
-  public function getApiLevelCondition()
-  {
-    return $this->apiLevelCondition;
-  }
-  public function setDisableApps($disableApps)
-  {
-    $this->disableApps = $disableApps;
-  }
-  public function getDisableApps()
-  {
-    return $this->disableApps;
-  }
-  /**
+    public function getApiLevelCondition()
+    {
+        return $this->apiLevelCondition;
+    }
+    public function setDisableApps($disableApps)
+    {
+        $this->disableApps = $disableApps;
+    }
+    public function getDisableApps()
+    {
+        return $this->disableApps;
+    }
+    /**
    * @param Google_Service_AndroidManagement_NonComplianceDetailCondition
    */
-  public function setNonComplianceDetailCondition(Google_Service_AndroidManagement_NonComplianceDetailCondition $nonComplianceDetailCondition)
-  {
-    $this->nonComplianceDetailCondition = $nonComplianceDetailCondition;
-  }
-  /**
+    public function setNonComplianceDetailCondition(Google_Service_AndroidManagement_NonComplianceDetailCondition $nonComplianceDetailCondition)
+    {
+        $this->nonComplianceDetailCondition = $nonComplianceDetailCondition;
+    }
+    /**
    * @return Google_Service_AndroidManagement_NonComplianceDetailCondition
    */
-  public function getNonComplianceDetailCondition()
-  {
-    return $this->nonComplianceDetailCondition;
-  }
+    public function getNonComplianceDetailCondition()
+    {
+        return $this->nonComplianceDetailCondition;
+    }
 }

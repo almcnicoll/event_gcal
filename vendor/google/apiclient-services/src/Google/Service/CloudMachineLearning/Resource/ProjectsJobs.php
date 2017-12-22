@@ -25,61 +25,61 @@
  */
 class Google_Service_CloudMachineLearning_Resource_ProjectsJobs extends Google_Service_Resource
 {
-  /**
+    /**
    * Cancels a running job. (jobs.cancel)
    *
-   * @param string $name Required. The name of the job to cancel.
-   *
-   * Authorization: requires `Editor` role on the parent project.
-   * @param Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1CancelJobRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                                   $name      Required. The name of the job to cancel.
+   *                                                                                             Authorization: requires `Editor` role on
+   *                                                                                             the parent project.
+   * @param  Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1CancelJobRequest $postBody
+   * @param  array                                                                    $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearning_GoogleProtobufEmpty
    */
-  public function cancel($name, Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1CancelJobRequest $postBody, $optParams = array())
-  {
-    $params = array('name' => $name, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('cancel', array($params), "Google_Service_CloudMachineLearning_GoogleProtobufEmpty");
-  }
-  /**
+    public function cancel($name, Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1CancelJobRequest $postBody, $optParams = array())
+    {
+        $params = array('name' => $name, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('cancel', array($params), "Google_Service_CloudMachineLearning_GoogleProtobufEmpty");
+    }
+    /**
    * Creates a training or a batch prediction job. (jobs.create)
    *
-   * @param string $parent Required. The project name.
-   *
-   * Authorization: requires `Editor` role on the specified project.
-   * @param Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Job $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                      $parent    Required. The project name.
+   *                                                                                Authorization: requires
+   *                                                                                `Editor` role on the
+   *                                                                                specified project.
+   * @param  Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Job $postBody
+   * @param  array                                                       $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Job
    */
-  public function create($parent, Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Job $postBody, $optParams = array())
-  {
-    $params = array('parent' => $parent, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Job");
-  }
-  /**
+    public function create($parent, Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Job $postBody, $optParams = array())
+    {
+        $params = array('parent' => $parent, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Job");
+    }
+    /**
    * Describes a job. (jobs.get)
    *
-   * @param string $name Required. The name of the job to get the description of.
-   *
-   * Authorization: requires `Viewer` role on the parent project.
-   * @param array $optParams Optional parameters.
+   * @param  string $name      Required. The name of the job to get the description of.
+   *                          Authorization: requires `Viewer` role on the parent
+   *                          project.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Job
    */
-  public function get($name, $optParams = array())
-  {
-    $params = array('name' => $name);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Job");
-  }
-  /**
+    public function get($name, $optParams = array())
+    {
+        $params = array('name' => $name);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1Job");
+    }
+    /**
    * Lists the jobs in the project. (jobs.listProjectsJobs)
    *
-   * @param string $parent Required. The name of the project for which to list
-   * jobs.
-   *
-   * Authorization: requires `Viewer` role on the specified project.
-   * @param array $optParams Optional parameters.
+   * @param string $parent    Required. The name of the project for which to list
+   *                          jobs. Authorization: requires `Viewer` role on the
+   *                          specified project.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. The number of jobs to retrieve per "page"
    * of results. If there are more remaining results than this number, the
@@ -92,12 +92,12 @@ class Google_Service_CloudMachineLearning_Resource_ProjectsJobs extends Google_S
    *
    * You get the token from the `next_page_token` field of the response from the
    * previous call.
-   * @return Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1ListJobsResponse
+   * @return    Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1ListJobsResponse
    */
-  public function listProjectsJobs($parent, $optParams = array())
-  {
-    $params = array('parent' => $parent);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1ListJobsResponse");
-  }
+    public function listProjectsJobs($parent, $optParams = array())
+    {
+        $params = array('parent' => $parent);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_CloudMachineLearning_GoogleCloudMlV1beta1ListJobsResponse");
+    }
 }

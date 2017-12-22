@@ -25,17 +25,17 @@
  */
 class Google_Service_Analytics_Resource_Provisioning extends Google_Service_Resource
 {
-  /**
+    /**
    * Creates an account ticket. (provisioning.createAccountTicket)
    *
-   * @param Google_Service_Analytics_AccountTicket $postBody
-   * @param array $optParams Optional parameters.
+   * @param  Google_Service_Analytics_AccountTicket $postBody
+   * @param  array                                  $optParams Optional parameters.
    * @return Google_Service_Analytics_AccountTicket
    */
-  public function createAccountTicket(Google_Service_Analytics_AccountTicket $postBody, $optParams = array())
-  {
-    $params = array('postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('createAccountTicket', array($params), "Google_Service_Analytics_AccountTicket");
-  }
+    public function createAccountTicket(Google_Service_Analytics_AccountTicket $postBody, $optParams = array())
+    {
+        $params = array('postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('createAccountTicket', array($params), "Google_Service_Analytics_AccountTicket");
+    }
 }

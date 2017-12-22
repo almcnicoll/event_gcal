@@ -17,167 +17,167 @@
 
 class Google_Service_Bigquery_JobStatistics2 extends Google_Collection
 {
-  protected $collection_key = 'undeclaredQueryParameters';
-  public $billingTier;
-  public $cacheHit;
-  public $ddlOperationPerformed;
-  protected $ddlTargetTableType = 'Google_Service_Bigquery_TableReference';
-  protected $ddlTargetTableDataType = '';
-  public $estimatedBytesProcessed;
-  public $numDmlAffectedRows;
-  protected $queryPlanType = 'Google_Service_Bigquery_ExplainQueryStage';
-  protected $queryPlanDataType = 'array';
-  protected $referencedTablesType = 'Google_Service_Bigquery_TableReference';
-  protected $referencedTablesDataType = 'array';
-  protected $schemaType = 'Google_Service_Bigquery_TableSchema';
-  protected $schemaDataType = '';
-  public $statementType;
-  public $totalBytesBilled;
-  public $totalBytesProcessed;
-  public $totalSlotMs;
-  protected $undeclaredQueryParametersType = 'Google_Service_Bigquery_QueryParameter';
-  protected $undeclaredQueryParametersDataType = 'array';
+    protected $collection_key = 'undeclaredQueryParameters';
+    public $billingTier;
+    public $cacheHit;
+    public $ddlOperationPerformed;
+    protected $ddlTargetTableType = 'Google_Service_Bigquery_TableReference';
+    protected $ddlTargetTableDataType = '';
+    public $estimatedBytesProcessed;
+    public $numDmlAffectedRows;
+    protected $queryPlanType = 'Google_Service_Bigquery_ExplainQueryStage';
+    protected $queryPlanDataType = 'array';
+    protected $referencedTablesType = 'Google_Service_Bigquery_TableReference';
+    protected $referencedTablesDataType = 'array';
+    protected $schemaType = 'Google_Service_Bigquery_TableSchema';
+    protected $schemaDataType = '';
+    public $statementType;
+    public $totalBytesBilled;
+    public $totalBytesProcessed;
+    public $totalSlotMs;
+    protected $undeclaredQueryParametersType = 'Google_Service_Bigquery_QueryParameter';
+    protected $undeclaredQueryParametersDataType = 'array';
 
-  public function setBillingTier($billingTier)
-  {
-    $this->billingTier = $billingTier;
-  }
-  public function getBillingTier()
-  {
-    return $this->billingTier;
-  }
-  public function setCacheHit($cacheHit)
-  {
-    $this->cacheHit = $cacheHit;
-  }
-  public function getCacheHit()
-  {
-    return $this->cacheHit;
-  }
-  public function setDdlOperationPerformed($ddlOperationPerformed)
-  {
-    $this->ddlOperationPerformed = $ddlOperationPerformed;
-  }
-  public function getDdlOperationPerformed()
-  {
-    return $this->ddlOperationPerformed;
-  }
-  /**
+    public function setBillingTier($billingTier)
+    {
+        $this->billingTier = $billingTier;
+    }
+    public function getBillingTier()
+    {
+        return $this->billingTier;
+    }
+    public function setCacheHit($cacheHit)
+    {
+        $this->cacheHit = $cacheHit;
+    }
+    public function getCacheHit()
+    {
+        return $this->cacheHit;
+    }
+    public function setDdlOperationPerformed($ddlOperationPerformed)
+    {
+        $this->ddlOperationPerformed = $ddlOperationPerformed;
+    }
+    public function getDdlOperationPerformed()
+    {
+        return $this->ddlOperationPerformed;
+    }
+    /**
    * @param Google_Service_Bigquery_TableReference
    */
-  public function setDdlTargetTable(Google_Service_Bigquery_TableReference $ddlTargetTable)
-  {
-    $this->ddlTargetTable = $ddlTargetTable;
-  }
-  /**
+    public function setDdlTargetTable(Google_Service_Bigquery_TableReference $ddlTargetTable)
+    {
+        $this->ddlTargetTable = $ddlTargetTable;
+    }
+    /**
    * @return Google_Service_Bigquery_TableReference
    */
-  public function getDdlTargetTable()
-  {
-    return $this->ddlTargetTable;
-  }
-  public function setEstimatedBytesProcessed($estimatedBytesProcessed)
-  {
-    $this->estimatedBytesProcessed = $estimatedBytesProcessed;
-  }
-  public function getEstimatedBytesProcessed()
-  {
-    return $this->estimatedBytesProcessed;
-  }
-  public function setNumDmlAffectedRows($numDmlAffectedRows)
-  {
-    $this->numDmlAffectedRows = $numDmlAffectedRows;
-  }
-  public function getNumDmlAffectedRows()
-  {
-    return $this->numDmlAffectedRows;
-  }
-  /**
+    public function getDdlTargetTable()
+    {
+        return $this->ddlTargetTable;
+    }
+    public function setEstimatedBytesProcessed($estimatedBytesProcessed)
+    {
+        $this->estimatedBytesProcessed = $estimatedBytesProcessed;
+    }
+    public function getEstimatedBytesProcessed()
+    {
+        return $this->estimatedBytesProcessed;
+    }
+    public function setNumDmlAffectedRows($numDmlAffectedRows)
+    {
+        $this->numDmlAffectedRows = $numDmlAffectedRows;
+    }
+    public function getNumDmlAffectedRows()
+    {
+        return $this->numDmlAffectedRows;
+    }
+    /**
    * @param Google_Service_Bigquery_ExplainQueryStage
    */
-  public function setQueryPlan($queryPlan)
-  {
-    $this->queryPlan = $queryPlan;
-  }
-  /**
+    public function setQueryPlan($queryPlan)
+    {
+        $this->queryPlan = $queryPlan;
+    }
+    /**
    * @return Google_Service_Bigquery_ExplainQueryStage
    */
-  public function getQueryPlan()
-  {
-    return $this->queryPlan;
-  }
-  /**
+    public function getQueryPlan()
+    {
+        return $this->queryPlan;
+    }
+    /**
    * @param Google_Service_Bigquery_TableReference
    */
-  public function setReferencedTables($referencedTables)
-  {
-    $this->referencedTables = $referencedTables;
-  }
-  /**
+    public function setReferencedTables($referencedTables)
+    {
+        $this->referencedTables = $referencedTables;
+    }
+    /**
    * @return Google_Service_Bigquery_TableReference
    */
-  public function getReferencedTables()
-  {
-    return $this->referencedTables;
-  }
-  /**
+    public function getReferencedTables()
+    {
+        return $this->referencedTables;
+    }
+    /**
    * @param Google_Service_Bigquery_TableSchema
    */
-  public function setSchema(Google_Service_Bigquery_TableSchema $schema)
-  {
-    $this->schema = $schema;
-  }
-  /**
+    public function setSchema(Google_Service_Bigquery_TableSchema $schema)
+    {
+        $this->schema = $schema;
+    }
+    /**
    * @return Google_Service_Bigquery_TableSchema
    */
-  public function getSchema()
-  {
-    return $this->schema;
-  }
-  public function setStatementType($statementType)
-  {
-    $this->statementType = $statementType;
-  }
-  public function getStatementType()
-  {
-    return $this->statementType;
-  }
-  public function setTotalBytesBilled($totalBytesBilled)
-  {
-    $this->totalBytesBilled = $totalBytesBilled;
-  }
-  public function getTotalBytesBilled()
-  {
-    return $this->totalBytesBilled;
-  }
-  public function setTotalBytesProcessed($totalBytesProcessed)
-  {
-    $this->totalBytesProcessed = $totalBytesProcessed;
-  }
-  public function getTotalBytesProcessed()
-  {
-    return $this->totalBytesProcessed;
-  }
-  public function setTotalSlotMs($totalSlotMs)
-  {
-    $this->totalSlotMs = $totalSlotMs;
-  }
-  public function getTotalSlotMs()
-  {
-    return $this->totalSlotMs;
-  }
-  /**
+    public function getSchema()
+    {
+        return $this->schema;
+    }
+    public function setStatementType($statementType)
+    {
+        $this->statementType = $statementType;
+    }
+    public function getStatementType()
+    {
+        return $this->statementType;
+    }
+    public function setTotalBytesBilled($totalBytesBilled)
+    {
+        $this->totalBytesBilled = $totalBytesBilled;
+    }
+    public function getTotalBytesBilled()
+    {
+        return $this->totalBytesBilled;
+    }
+    public function setTotalBytesProcessed($totalBytesProcessed)
+    {
+        $this->totalBytesProcessed = $totalBytesProcessed;
+    }
+    public function getTotalBytesProcessed()
+    {
+        return $this->totalBytesProcessed;
+    }
+    public function setTotalSlotMs($totalSlotMs)
+    {
+        $this->totalSlotMs = $totalSlotMs;
+    }
+    public function getTotalSlotMs()
+    {
+        return $this->totalSlotMs;
+    }
+    /**
    * @param Google_Service_Bigquery_QueryParameter
    */
-  public function setUndeclaredQueryParameters($undeclaredQueryParameters)
-  {
-    $this->undeclaredQueryParameters = $undeclaredQueryParameters;
-  }
-  /**
+    public function setUndeclaredQueryParameters($undeclaredQueryParameters)
+    {
+        $this->undeclaredQueryParameters = $undeclaredQueryParameters;
+    }
+    /**
    * @return Google_Service_Bigquery_QueryParameter
    */
-  public function getUndeclaredQueryParameters()
-  {
-    return $this->undeclaredQueryParameters;
-  }
+    public function getUndeclaredQueryParameters()
+    {
+        return $this->undeclaredQueryParameters;
+    }
 }

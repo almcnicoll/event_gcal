@@ -17,82 +17,82 @@
 
 class Google_Service_CloudResourceManager_Constraint extends Google_Model
 {
-  protected $booleanConstraintType = 'Google_Service_CloudResourceManager_BooleanConstraint';
-  protected $booleanConstraintDataType = '';
-  public $constraintDefault;
-  public $description;
-  public $displayName;
-  protected $listConstraintType = 'Google_Service_CloudResourceManager_ListConstraint';
-  protected $listConstraintDataType = '';
-  public $name;
-  public $version;
+    protected $booleanConstraintType = 'Google_Service_CloudResourceManager_BooleanConstraint';
+    protected $booleanConstraintDataType = '';
+    public $constraintDefault;
+    public $description;
+    public $displayName;
+    protected $listConstraintType = 'Google_Service_CloudResourceManager_ListConstraint';
+    protected $listConstraintDataType = '';
+    public $name;
+    public $version;
 
-  /**
+    /**
    * @param Google_Service_CloudResourceManager_BooleanConstraint
    */
-  public function setBooleanConstraint(Google_Service_CloudResourceManager_BooleanConstraint $booleanConstraint)
-  {
-    $this->booleanConstraint = $booleanConstraint;
-  }
-  /**
+    public function setBooleanConstraint(Google_Service_CloudResourceManager_BooleanConstraint $booleanConstraint)
+    {
+        $this->booleanConstraint = $booleanConstraint;
+    }
+    /**
    * @return Google_Service_CloudResourceManager_BooleanConstraint
    */
-  public function getBooleanConstraint()
-  {
-    return $this->booleanConstraint;
-  }
-  public function setConstraintDefault($constraintDefault)
-  {
-    $this->constraintDefault = $constraintDefault;
-  }
-  public function getConstraintDefault()
-  {
-    return $this->constraintDefault;
-  }
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  public function setDisplayName($displayName)
-  {
-    $this->displayName = $displayName;
-  }
-  public function getDisplayName()
-  {
-    return $this->displayName;
-  }
-  /**
+    public function getBooleanConstraint()
+    {
+        return $this->booleanConstraint;
+    }
+    public function setConstraintDefault($constraintDefault)
+    {
+        $this->constraintDefault = $constraintDefault;
+    }
+    public function getConstraintDefault()
+    {
+        return $this->constraintDefault;
+    }
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    public function setDisplayName($displayName)
+    {
+        $this->displayName = $displayName;
+    }
+    public function getDisplayName()
+    {
+        return $this->displayName;
+    }
+    /**
    * @param Google_Service_CloudResourceManager_ListConstraint
    */
-  public function setListConstraint(Google_Service_CloudResourceManager_ListConstraint $listConstraint)
-  {
-    $this->listConstraint = $listConstraint;
-  }
-  /**
+    public function setListConstraint(Google_Service_CloudResourceManager_ListConstraint $listConstraint)
+    {
+        $this->listConstraint = $listConstraint;
+    }
+    /**
    * @return Google_Service_CloudResourceManager_ListConstraint
    */
-  public function getListConstraint()
-  {
-    return $this->listConstraint;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setVersion($version)
-  {
-    $this->version = $version;
-  }
-  public function getVersion()
-  {
-    return $this->version;
-  }
+    public function getListConstraint()
+    {
+        return $this->listConstraint;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setVersion($version)
+    {
+        $this->version = $version;
+    }
+    public function getVersion()
+    {
+        return $this->version;
+    }
 }

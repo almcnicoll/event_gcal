@@ -17,53 +17,53 @@
 
 class Google_Service_Appengine_Deployment extends Google_Model
 {
-  protected $containerType = 'Google_Service_Appengine_ContainerInfo';
-  protected $containerDataType = '';
-  protected $filesType = 'Google_Service_Appengine_FileInfo';
-  protected $filesDataType = 'map';
-  protected $zipType = 'Google_Service_Appengine_ZipInfo';
-  protected $zipDataType = '';
+    protected $containerType = 'Google_Service_Appengine_ContainerInfo';
+    protected $containerDataType = '';
+    protected $filesType = 'Google_Service_Appengine_FileInfo';
+    protected $filesDataType = 'map';
+    protected $zipType = 'Google_Service_Appengine_ZipInfo';
+    protected $zipDataType = '';
 
-  /**
+    /**
    * @param Google_Service_Appengine_ContainerInfo
    */
-  public function setContainer(Google_Service_Appengine_ContainerInfo $container)
-  {
-    $this->container = $container;
-  }
-  /**
+    public function setContainer(Google_Service_Appengine_ContainerInfo $container)
+    {
+        $this->container = $container;
+    }
+    /**
    * @return Google_Service_Appengine_ContainerInfo
    */
-  public function getContainer()
-  {
-    return $this->container;
-  }
-  /**
+    public function getContainer()
+    {
+        return $this->container;
+    }
+    /**
    * @param Google_Service_Appengine_FileInfo
    */
-  public function setFiles($files)
-  {
-    $this->files = $files;
-  }
-  /**
+    public function setFiles($files)
+    {
+        $this->files = $files;
+    }
+    /**
    * @return Google_Service_Appengine_FileInfo
    */
-  public function getFiles()
-  {
-    return $this->files;
-  }
-  /**
+    public function getFiles()
+    {
+        return $this->files;
+    }
+    /**
    * @param Google_Service_Appengine_ZipInfo
    */
-  public function setZip(Google_Service_Appengine_ZipInfo $zip)
-  {
-    $this->zip = $zip;
-  }
-  /**
+    public function setZip(Google_Service_Appengine_ZipInfo $zip)
+    {
+        $this->zip = $zip;
+    }
+    /**
    * @return Google_Service_Appengine_ZipInfo
    */
-  public function getZip()
-  {
-    return $this->zip;
-  }
+    public function getZip()
+    {
+        return $this->zip;
+    }
 }

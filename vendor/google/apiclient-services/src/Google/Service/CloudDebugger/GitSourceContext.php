@@ -17,23 +17,23 @@
 
 class Google_Service_CloudDebugger_GitSourceContext extends Google_Model
 {
-  public $revisionId;
-  public $url;
+    public $revisionId;
+    public $url;
 
-  public function setRevisionId($revisionId)
-  {
-    $this->revisionId = $revisionId;
-  }
-  public function getRevisionId()
-  {
-    return $this->revisionId;
-  }
-  public function setUrl($url)
-  {
-    $this->url = $url;
-  }
-  public function getUrl()
-  {
-    return $this->url;
-  }
+    public function setRevisionId($revisionId)
+    {
+        $this->revisionId = $revisionId;
+    }
+    public function getRevisionId()
+    {
+        return $this->revisionId;
+    }
+    public function setUrl($url)
+    {
+        $this->url = $url;
+    }
+    public function getUrl()
+    {
+        return $this->url;
+    }
 }

@@ -17,33 +17,33 @@
 
 class Google_Service_AndroidEnterprise_AdministratorWebTokenSpec extends Google_Collection
 {
-  protected $collection_key = 'permission';
-  public $kind;
-  public $parent;
-  public $permission;
+    protected $collection_key = 'permission';
+    public $kind;
+    public $parent;
+    public $permission;
 
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setParent($parent)
-  {
-    $this->parent = $parent;
-  }
-  public function getParent()
-  {
-    return $this->parent;
-  }
-  public function setPermission($permission)
-  {
-    $this->permission = $permission;
-  }
-  public function getPermission()
-  {
-    return $this->permission;
-  }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setParent($parent)
+    {
+        $this->parent = $parent;
+    }
+    public function getParent()
+    {
+        return $this->parent;
+    }
+    public function setPermission($permission)
+    {
+        $this->permission = $permission;
+    }
+    public function getPermission()
+    {
+        return $this->permission;
+    }
 }

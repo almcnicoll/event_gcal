@@ -25,37 +25,37 @@
  */
 class Google_Service_CloudUserAccounts_Resource_Linux extends Google_Service_Resource
 {
-  /**
+    /**
    * Returns a list of authorized public keys for a specific user account.
    * (linux.getAuthorizedKeysView)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for this request.
-   * @param string $user The user account for which you want to get a list of
-   * authorized public keys.
-   * @param string $instance The fully-qualified URL of the virtual machine
-   * requesting the view.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $zone      Name of the zone for this request.
+   * @param string $user      The user account for which you want to get a list of
+   *                          authorized public keys.
+   * @param string $instance  The fully-qualified URL of the virtual machine
+   *                          requesting the view.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param bool login Whether the view was requested as part of a user-
    * initiated login.
-   * @return Google_Service_CloudUserAccounts_LinuxGetAuthorizedKeysViewResponse
+   * @return    Google_Service_CloudUserAccounts_LinuxGetAuthorizedKeysViewResponse
    */
-  public function getAuthorizedKeysView($project, $zone, $user, $instance, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'user' => $user, 'instance' => $instance);
-    $params = array_merge($params, $optParams);
-    return $this->call('getAuthorizedKeysView', array($params), "Google_Service_CloudUserAccounts_LinuxGetAuthorizedKeysViewResponse");
-  }
-  /**
+    public function getAuthorizedKeysView($project, $zone, $user, $instance, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'user' => $user, 'instance' => $instance);
+        $params = array_merge($params, $optParams);
+        return $this->call('getAuthorizedKeysView', array($params), "Google_Service_CloudUserAccounts_LinuxGetAuthorizedKeysViewResponse");
+    }
+    /**
    * Retrieves a list of user accounts for an instance within a specific project.
    * (linux.getLinuxAccountViews)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for this request.
-   * @param string $instance The fully-qualified URL of the virtual machine
-   * requesting the views.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $zone      Name of the zone for this request.
+   * @param string $instance  The fully-qualified URL of the virtual machine
+   *                          requesting the views.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter expression for filtering listed
    * resources, in the form filter={expression}. Your {expression} must be in the
@@ -100,12 +100,12 @@ class Google_Service_CloudUserAccounts_Resource_Linux extends Google_Service_Res
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_CloudUserAccounts_LinuxGetLinuxAccountViewsResponse
+   * @return    Google_Service_CloudUserAccounts_LinuxGetLinuxAccountViewsResponse
    */
-  public function getLinuxAccountViews($project, $zone, $instance, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'instance' => $instance);
-    $params = array_merge($params, $optParams);
-    return $this->call('getLinuxAccountViews', array($params), "Google_Service_CloudUserAccounts_LinuxGetLinuxAccountViewsResponse");
-  }
+    public function getLinuxAccountViews($project, $zone, $instance, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'instance' => $instance);
+        $params = array_merge($params, $optParams);
+        return $this->call('getLinuxAccountViews', array($params), "Google_Service_CloudUserAccounts_LinuxGetLinuxAccountViewsResponse");
+    }
 }

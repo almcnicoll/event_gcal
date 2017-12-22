@@ -17,68 +17,68 @@
 
 class Google_Service_AndroidManagement_StatusReportingSettings extends Google_Model
 {
-  public $deviceSettingsEnabled;
-  public $displayInfoEnabled;
-  public $hardwareStatusEnabled;
-  public $memoryInfoEnabled;
-  public $networkInfoEnabled;
-  public $powerManagementEventsEnabled;
-  public $softwareInfoEnabled;
+    public $deviceSettingsEnabled;
+    public $displayInfoEnabled;
+    public $hardwareStatusEnabled;
+    public $memoryInfoEnabled;
+    public $networkInfoEnabled;
+    public $powerManagementEventsEnabled;
+    public $softwareInfoEnabled;
 
-  public function setDeviceSettingsEnabled($deviceSettingsEnabled)
-  {
-    $this->deviceSettingsEnabled = $deviceSettingsEnabled;
-  }
-  public function getDeviceSettingsEnabled()
-  {
-    return $this->deviceSettingsEnabled;
-  }
-  public function setDisplayInfoEnabled($displayInfoEnabled)
-  {
-    $this->displayInfoEnabled = $displayInfoEnabled;
-  }
-  public function getDisplayInfoEnabled()
-  {
-    return $this->displayInfoEnabled;
-  }
-  public function setHardwareStatusEnabled($hardwareStatusEnabled)
-  {
-    $this->hardwareStatusEnabled = $hardwareStatusEnabled;
-  }
-  public function getHardwareStatusEnabled()
-  {
-    return $this->hardwareStatusEnabled;
-  }
-  public function setMemoryInfoEnabled($memoryInfoEnabled)
-  {
-    $this->memoryInfoEnabled = $memoryInfoEnabled;
-  }
-  public function getMemoryInfoEnabled()
-  {
-    return $this->memoryInfoEnabled;
-  }
-  public function setNetworkInfoEnabled($networkInfoEnabled)
-  {
-    $this->networkInfoEnabled = $networkInfoEnabled;
-  }
-  public function getNetworkInfoEnabled()
-  {
-    return $this->networkInfoEnabled;
-  }
-  public function setPowerManagementEventsEnabled($powerManagementEventsEnabled)
-  {
-    $this->powerManagementEventsEnabled = $powerManagementEventsEnabled;
-  }
-  public function getPowerManagementEventsEnabled()
-  {
-    return $this->powerManagementEventsEnabled;
-  }
-  public function setSoftwareInfoEnabled($softwareInfoEnabled)
-  {
-    $this->softwareInfoEnabled = $softwareInfoEnabled;
-  }
-  public function getSoftwareInfoEnabled()
-  {
-    return $this->softwareInfoEnabled;
-  }
+    public function setDeviceSettingsEnabled($deviceSettingsEnabled)
+    {
+        $this->deviceSettingsEnabled = $deviceSettingsEnabled;
+    }
+    public function getDeviceSettingsEnabled()
+    {
+        return $this->deviceSettingsEnabled;
+    }
+    public function setDisplayInfoEnabled($displayInfoEnabled)
+    {
+        $this->displayInfoEnabled = $displayInfoEnabled;
+    }
+    public function getDisplayInfoEnabled()
+    {
+        return $this->displayInfoEnabled;
+    }
+    public function setHardwareStatusEnabled($hardwareStatusEnabled)
+    {
+        $this->hardwareStatusEnabled = $hardwareStatusEnabled;
+    }
+    public function getHardwareStatusEnabled()
+    {
+        return $this->hardwareStatusEnabled;
+    }
+    public function setMemoryInfoEnabled($memoryInfoEnabled)
+    {
+        $this->memoryInfoEnabled = $memoryInfoEnabled;
+    }
+    public function getMemoryInfoEnabled()
+    {
+        return $this->memoryInfoEnabled;
+    }
+    public function setNetworkInfoEnabled($networkInfoEnabled)
+    {
+        $this->networkInfoEnabled = $networkInfoEnabled;
+    }
+    public function getNetworkInfoEnabled()
+    {
+        return $this->networkInfoEnabled;
+    }
+    public function setPowerManagementEventsEnabled($powerManagementEventsEnabled)
+    {
+        $this->powerManagementEventsEnabled = $powerManagementEventsEnabled;
+    }
+    public function getPowerManagementEventsEnabled()
+    {
+        return $this->powerManagementEventsEnabled;
+    }
+    public function setSoftwareInfoEnabled($softwareInfoEnabled)
+    {
+        $this->softwareInfoEnabled = $softwareInfoEnabled;
+    }
+    public function getSoftwareInfoEnabled()
+    {
+        return $this->softwareInfoEnabled;
+    }
 }

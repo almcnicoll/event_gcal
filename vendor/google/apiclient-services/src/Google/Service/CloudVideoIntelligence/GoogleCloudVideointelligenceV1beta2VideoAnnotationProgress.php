@@ -17,41 +17,41 @@
 
 class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta2VideoAnnotationProgress extends Google_Model
 {
-  public $inputUri;
-  public $progressPercent;
-  public $startTime;
-  public $updateTime;
+    public $inputUri;
+    public $progressPercent;
+    public $startTime;
+    public $updateTime;
 
-  public function setInputUri($inputUri)
-  {
-    $this->inputUri = $inputUri;
-  }
-  public function getInputUri()
-  {
-    return $this->inputUri;
-  }
-  public function setProgressPercent($progressPercent)
-  {
-    $this->progressPercent = $progressPercent;
-  }
-  public function getProgressPercent()
-  {
-    return $this->progressPercent;
-  }
-  public function setStartTime($startTime)
-  {
-    $this->startTime = $startTime;
-  }
-  public function getStartTime()
-  {
-    return $this->startTime;
-  }
-  public function setUpdateTime($updateTime)
-  {
-    $this->updateTime = $updateTime;
-  }
-  public function getUpdateTime()
-  {
-    return $this->updateTime;
-  }
+    public function setInputUri($inputUri)
+    {
+        $this->inputUri = $inputUri;
+    }
+    public function getInputUri()
+    {
+        return $this->inputUri;
+    }
+    public function setProgressPercent($progressPercent)
+    {
+        $this->progressPercent = $progressPercent;
+    }
+    public function getProgressPercent()
+    {
+        return $this->progressPercent;
+    }
+    public function setStartTime($startTime)
+    {
+        $this->startTime = $startTime;
+    }
+    public function getStartTime()
+    {
+        return $this->startTime;
+    }
+    public function setUpdateTime($updateTime)
+    {
+        $this->updateTime = $updateTime;
+    }
+    public function getUpdateTime()
+    {
+        return $this->updateTime;
+    }
 }

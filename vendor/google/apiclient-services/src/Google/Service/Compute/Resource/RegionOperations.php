@@ -25,44 +25,44 @@
  */
 class Google_Service_Compute_Resource_RegionOperations extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified region-specific Operations resource.
    * (regionOperations.delete)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
+   * @param string $project   Project ID for this request.
+   * @param string $region    Name of the region for this request.
    * @param string $operation Name of the Operations resource to delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams Optional parameters.
    */
-  public function delete($project, $region, $operation, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'operation' => $operation);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params));
-  }
-  /**
+    public function delete($project, $region, $operation, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'operation' => $operation);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params));
+    }
+    /**
    * Retrieves the specified region-specific Operations resource.
    * (regionOperations.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param string $operation Name of the Operations resource to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $region    Name of the region for this request.
+   * @param  string $operation Name of the Operations resource to return.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
-  public function get($project, $region, $operation, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'operation' => $operation);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function get($project, $region, $operation, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'operation' => $operation);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves a list of Operation resources contained within the specified
    * region. (regionOperations.listRegionOperations)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $region    Name of the region for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -106,12 +106,12 @@ class Google_Service_Compute_Resource_RegionOperations extends Google_Service_Re
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_OperationList
+   * @return    Google_Service_Compute_OperationList
    */
-  public function listRegionOperations($project, $region, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_OperationList");
-  }
+    public function listRegionOperations($project, $region, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_OperationList");
+    }
 }

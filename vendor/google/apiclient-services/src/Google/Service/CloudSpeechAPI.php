@@ -30,32 +30,34 @@
  */
 class Google_Service_CloudSpeechAPI extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $operations;
-  public $speech;
+    public $operations;
+    public $speech;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudSpeechAPI service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://speech.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1beta1';
-    $this->serviceName = 'speech';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://speech.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1beta1';
+        $this->serviceName = 'speech';
 
-    $this->operations = new Google_Service_CloudSpeechAPI_Resource_Operations(
-        $this,
-        $this->serviceName,
-        'operations',
-        array(
-          'methods' => array(
+        $this->operations = new Google_Service_CloudSpeechAPI_Resource_Operations(
+            $this,
+            $this->serviceName,
+            'operations',
+            array(
+            'methods' => array(
             'cancel' => array(
               'path' => 'v1beta1/operations/{+name}:cancel',
               'httpMethod' => 'POST',
@@ -108,15 +110,15 @@ class Google_Service_CloudSpeechAPI extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->speech = new Google_Service_CloudSpeechAPI_Resource_Speech(
-        $this,
-        $this->serviceName,
-        'speech',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->speech = new Google_Service_CloudSpeechAPI_Resource_Speech(
+            $this,
+            $this->serviceName,
+            'speech',
+            array(
+            'methods' => array(
             'asyncrecognize' => array(
               'path' => 'v1beta1/speech:asyncrecognize',
               'httpMethod' => 'POST',
@@ -126,8 +128,8 @@ class Google_Service_CloudSpeechAPI extends Google_Service
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

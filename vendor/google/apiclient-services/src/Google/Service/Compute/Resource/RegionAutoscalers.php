@@ -25,13 +25,13 @@
  */
 class Google_Service_Compute_Resource_RegionAutoscalers extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified autoscaler. (regionAutoscalers.delete)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
+   * @param string $project    Project ID for this request.
+   * @param string $region     Name of the region scoping this request.
    * @param string $autoscaler Name of the autoscaler to delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams  Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -45,37 +45,37 @@ class Google_Service_Compute_Resource_RegionAutoscalers extends Google_Service_R
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $region, $autoscaler, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'autoscaler' => $autoscaler);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $region, $autoscaler, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'autoscaler' => $autoscaler);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified autoscaler. (regionAutoscalers.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
-   * @param string $autoscaler Name of the autoscaler to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project    Project ID for this request.
+   * @param  string $region     Name of the region scoping this request.
+   * @param  string $autoscaler Name of the autoscaler to return.
+   * @param  array  $optParams  Optional parameters.
    * @return Google_Service_Compute_Autoscaler
    */
-  public function get($project, $region, $autoscaler, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'autoscaler' => $autoscaler);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_Autoscaler");
-  }
-  /**
+    public function get($project, $region, $autoscaler, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'autoscaler' => $autoscaler);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_Autoscaler");
+    }
+    /**
    * Creates an autoscaler in the specified project using the data included in the
    * request. (regionAutoscalers.insert)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
+   * @param string                            $project   Project ID for this request.
+   * @param string                            $region    Name of the region scoping this request.
    * @param Google_Service_Compute_Autoscaler $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                             $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -89,21 +89,21 @@ class Google_Service_Compute_Resource_RegionAutoscalers extends Google_Service_R
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, $region, Google_Service_Compute_Autoscaler $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, $region, Google_Service_Compute_Autoscaler $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves a list of autoscalers contained within the specified region.
    * (regionAutoscalers.listRegionAutoscalers)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $region    Name of the region scoping this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -147,23 +147,23 @@ class Google_Service_Compute_Resource_RegionAutoscalers extends Google_Service_R
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_RegionAutoscalerList
+   * @return    Google_Service_Compute_RegionAutoscalerList
    */
-  public function listRegionAutoscalers($project, $region, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_RegionAutoscalerList");
-  }
-  /**
+    public function listRegionAutoscalers($project, $region, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_RegionAutoscalerList");
+    }
+    /**
    * Updates an autoscaler in the specified project using the data included in the
    * request. This method supports PATCH semantics and uses the JSON merge patch
    * format and processing rules. (regionAutoscalers.patch)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
+   * @param string                            $project   Project ID for this request.
+   * @param string                            $region    Name of the region scoping this request.
    * @param Google_Service_Compute_Autoscaler $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                             $optParams Optional parameters.
    *
    * @opt_param string autoscaler Name of the autoscaler to patch.
    * @opt_param string requestId An optional request ID to identify requests.
@@ -178,22 +178,22 @@ class Google_Service_Compute_Resource_RegionAutoscalers extends Google_Service_R
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function patch($project, $region, Google_Service_Compute_Autoscaler $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function patch($project, $region, Google_Service_Compute_Autoscaler $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Updates an autoscaler in the specified project using the data included in the
    * request. (regionAutoscalers.update)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
+   * @param string                            $project   Project ID for this request.
+   * @param string                            $region    Name of the region scoping this request.
    * @param Google_Service_Compute_Autoscaler $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                             $optParams Optional parameters.
    *
    * @opt_param string autoscaler Name of the autoscaler to update.
    * @opt_param string requestId An optional request ID to identify requests.
@@ -208,12 +208,12 @@ class Google_Service_Compute_Resource_RegionAutoscalers extends Google_Service_R
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function update($project, $region, Google_Service_Compute_Autoscaler $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Compute_Operation");
-  }
+    public function update($project, $region, Google_Service_Compute_Autoscaler $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('update', array($params), "Google_Service_Compute_Operation");
+    }
 }

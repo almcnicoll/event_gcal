@@ -17,14 +17,14 @@
 
 class Google_Service_CloudResourceManager_ListConstraint extends Google_Model
 {
-  public $suggestedValue;
+    public $suggestedValue;
 
-  public function setSuggestedValue($suggestedValue)
-  {
-    $this->suggestedValue = $suggestedValue;
-  }
-  public function getSuggestedValue()
-  {
-    return $this->suggestedValue;
-  }
+    public function setSuggestedValue($suggestedValue)
+    {
+        $this->suggestedValue = $suggestedValue;
+    }
+    public function getSuggestedValue()
+    {
+        return $this->suggestedValue;
+    }
 }

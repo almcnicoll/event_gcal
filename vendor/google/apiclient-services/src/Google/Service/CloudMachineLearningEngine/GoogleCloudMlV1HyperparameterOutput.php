@@ -17,56 +17,56 @@
 
 class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutput extends Google_Collection
 {
-  protected $collection_key = 'allMetrics';
-  protected $allMetricsType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutputHyperparameterMetric';
-  protected $allMetricsDataType = 'array';
-  protected $finalMetricType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutputHyperparameterMetric';
-  protected $finalMetricDataType = '';
-  public $hyperparameters;
-  public $trialId;
+    protected $collection_key = 'allMetrics';
+    protected $allMetricsType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutputHyperparameterMetric';
+    protected $allMetricsDataType = 'array';
+    protected $finalMetricType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutputHyperparameterMetric';
+    protected $finalMetricDataType = '';
+    public $hyperparameters;
+    public $trialId;
 
-  /**
+    /**
    * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutputHyperparameterMetric
    */
-  public function setAllMetrics($allMetrics)
-  {
-    $this->allMetrics = $allMetrics;
-  }
-  /**
+    public function setAllMetrics($allMetrics)
+    {
+        $this->allMetrics = $allMetrics;
+    }
+    /**
    * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutputHyperparameterMetric
    */
-  public function getAllMetrics()
-  {
-    return $this->allMetrics;
-  }
-  /**
+    public function getAllMetrics()
+    {
+        return $this->allMetrics;
+    }
+    /**
    * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutputHyperparameterMetric
    */
-  public function setFinalMetric(Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutputHyperparameterMetric $finalMetric)
-  {
-    $this->finalMetric = $finalMetric;
-  }
-  /**
+    public function setFinalMetric(Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutputHyperparameterMetric $finalMetric)
+    {
+        $this->finalMetric = $finalMetric;
+    }
+    /**
    * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutputHyperparameterMetric
    */
-  public function getFinalMetric()
-  {
-    return $this->finalMetric;
-  }
-  public function setHyperparameters($hyperparameters)
-  {
-    $this->hyperparameters = $hyperparameters;
-  }
-  public function getHyperparameters()
-  {
-    return $this->hyperparameters;
-  }
-  public function setTrialId($trialId)
-  {
-    $this->trialId = $trialId;
-  }
-  public function getTrialId()
-  {
-    return $this->trialId;
-  }
+    public function getFinalMetric()
+    {
+        return $this->finalMetric;
+    }
+    public function setHyperparameters($hyperparameters)
+    {
+        $this->hyperparameters = $hyperparameters;
+    }
+    public function getHyperparameters()
+    {
+        return $this->hyperparameters;
+    }
+    public function setTrialId($trialId)
+    {
+        $this->trialId = $trialId;
+    }
+    public function getTrialId()
+    {
+        return $this->trialId;
+    }
 }

@@ -30,39 +30,41 @@
  */
 class Google_Service_CloudVideoIntelligence extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $videos;
+    public $videos;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudVideoIntelligence
    * service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://videointelligence.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1beta1';
-    $this->serviceName = 'videointelligence';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://videointelligence.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1beta1';
+        $this->serviceName = 'videointelligence';
 
-    $this->videos = new Google_Service_CloudVideoIntelligence_Resource_Videos(
-        $this,
-        $this->serviceName,
-        'videos',
-        array(
-          'methods' => array(
+        $this->videos = new Google_Service_CloudVideoIntelligence_Resource_Videos(
+            $this,
+            $this->serviceName,
+            'videos',
+            array(
+            'methods' => array(
             'annotate' => array(
               'path' => 'v1beta1/videos:annotate',
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

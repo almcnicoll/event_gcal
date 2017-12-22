@@ -31,37 +31,41 @@
  */
 class Google_Service_CloudIot extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** Register and manage devices in the Google Cloud IoT service. */
-  const CLOUDIOT =
+    /**
+ * Register and manage devices in the Google Cloud IoT service. 
+*/
+    const CLOUDIOT =
       "https://www.googleapis.com/auth/cloudiot";
 
-  public $projects_locations_registries;
-  public $projects_locations_registries_devices;
-  public $projects_locations_registries_devices_configVersions;
-  public $projects_locations_registries_devices_states;
+    public $projects_locations_registries;
+    public $projects_locations_registries_devices;
+    public $projects_locations_registries_devices_configVersions;
+    public $projects_locations_registries_devices_states;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudIot service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://cloudiot.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'cloudiot';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://cloudiot.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'cloudiot';
 
-    $this->projects_locations_registries = new Google_Service_CloudIot_Resource_ProjectsLocationsRegistries(
-        $this,
-        $this->serviceName,
-        'registries',
-        array(
-          'methods' => array(
+        $this->projects_locations_registries = new Google_Service_CloudIot_Resource_ProjectsLocationsRegistries(
+            $this,
+            $this->serviceName,
+            'registries',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/{+parent}/registries',
               'httpMethod' => 'POST',
@@ -155,15 +159,15 @@ class Google_Service_CloudIot extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_locations_registries_devices = new Google_Service_CloudIot_Resource_ProjectsLocationsRegistriesDevices(
-        $this,
-        $this->serviceName,
-        'devices',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_locations_registries_devices = new Google_Service_CloudIot_Resource_ProjectsLocationsRegistriesDevices(
+            $this,
+            $this->serviceName,
+            'devices',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/{+parent}/devices',
               'httpMethod' => 'POST',
@@ -255,15 +259,15 @@ class Google_Service_CloudIot extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_locations_registries_devices_configVersions = new Google_Service_CloudIot_Resource_ProjectsLocationsRegistriesDevicesConfigVersions(
-        $this,
-        $this->serviceName,
-        'configVersions',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_locations_registries_devices_configVersions = new Google_Service_CloudIot_Resource_ProjectsLocationsRegistriesDevicesConfigVersions(
+            $this,
+            $this->serviceName,
+            'configVersions',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'v1/{+name}/configVersions',
               'httpMethod' => 'GET',
@@ -279,15 +283,15 @@ class Google_Service_CloudIot extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_locations_registries_devices_states = new Google_Service_CloudIot_Resource_ProjectsLocationsRegistriesDevicesStates(
-        $this,
-        $this->serviceName,
-        'states',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_locations_registries_devices_states = new Google_Service_CloudIot_Resource_ProjectsLocationsRegistriesDevicesStates(
+            $this,
+            $this->serviceName,
+            'states',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'v1/{+name}/states',
               'httpMethod' => 'GET',
@@ -303,8 +307,8 @@ class Google_Service_CloudIot extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

@@ -25,7 +25,7 @@
  */
 class Google_Service_Clouderrorreporting_Resource_ProjectsGroupStats extends Google_Service_Resource
 {
-  /**
+    /**
    * Lists the specified groups. (groupStats.listProjectsGroupStats)
    *
    * @param string $projectName [Required] The resource name of the Google Cloud
@@ -33,7 +33,7 @@ class Google_Service_Clouderrorreporting_Resource_ProjectsGroupStats extends Goo
    * ID.
    *
    * Example: projects/my-project-123.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams   Optional parameters.
    *
    * @opt_param string timeRange.period Restricts the query to the specified time
    * range.
@@ -60,12 +60,12 @@ class Google_Service_Clouderrorreporting_Resource_ProjectsGroupStats extends Goo
    * @opt_param string pageToken [Optional] A `next_page_token` provided by a
    * previous response. To view additional results, pass this token along with the
    * identical query parameters as the first request.
-   * @return Google_Service_Clouderrorreporting_ListGroupStatsResponse
+   * @return    Google_Service_Clouderrorreporting_ListGroupStatsResponse
    */
-  public function listProjectsGroupStats($projectName, $optParams = array())
-  {
-    $params = array('projectName' => $projectName);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Clouderrorreporting_ListGroupStatsResponse");
-  }
+    public function listProjectsGroupStats($projectName, $optParams = array())
+    {
+        $params = array('projectName' => $projectName);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Clouderrorreporting_ListGroupStatsResponse");
+    }
 }

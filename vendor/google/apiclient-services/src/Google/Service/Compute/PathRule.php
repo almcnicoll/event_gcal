@@ -17,24 +17,24 @@
 
 class Google_Service_Compute_PathRule extends Google_Collection
 {
-  protected $collection_key = 'paths';
-  public $paths;
-  public $service;
+    protected $collection_key = 'paths';
+    public $paths;
+    public $service;
 
-  public function setPaths($paths)
-  {
-    $this->paths = $paths;
-  }
-  public function getPaths()
-  {
-    return $this->paths;
-  }
-  public function setService($service)
-  {
-    $this->service = $service;
-  }
-  public function getService()
-  {
-    return $this->service;
-  }
+    public function setPaths($paths)
+    {
+        $this->paths = $paths;
+    }
+    public function getPaths()
+    {
+        return $this->paths;
+    }
+    public function setService($service)
+    {
+        $this->service = $service;
+    }
+    public function getService()
+    {
+        return $this->service;
+    }
 }

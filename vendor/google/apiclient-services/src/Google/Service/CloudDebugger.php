@@ -31,51 +31,55 @@
  */
 class Google_Service_CloudDebugger extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** Manage cloud debugger. */
-  const CLOUD_DEBUGGER =
+    /**
+ * Manage cloud debugger. 
+*/
+    const CLOUD_DEBUGGER =
       "https://www.googleapis.com/auth/cloud_debugger";
 
-  public $controller_debuggees;
-  public $controller_debuggees_breakpoints;
-  public $debugger_debuggees;
-  public $debugger_debuggees_breakpoints;
+    public $controller_debuggees;
+    public $controller_debuggees_breakpoints;
+    public $debugger_debuggees;
+    public $debugger_debuggees_breakpoints;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudDebugger service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://clouddebugger.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v2';
-    $this->serviceName = 'clouddebugger';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://clouddebugger.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v2';
+        $this->serviceName = 'clouddebugger';
 
-    $this->controller_debuggees = new Google_Service_CloudDebugger_Resource_ControllerDebuggees(
-        $this,
-        $this->serviceName,
-        'debuggees',
-        array(
-          'methods' => array(
+        $this->controller_debuggees = new Google_Service_CloudDebugger_Resource_ControllerDebuggees(
+            $this,
+            $this->serviceName,
+            'debuggees',
+            array(
+            'methods' => array(
             'register' => array(
               'path' => 'v2/controller/debuggees/register',
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-    $this->controller_debuggees_breakpoints = new Google_Service_CloudDebugger_Resource_ControllerDebuggeesBreakpoints(
-        $this,
-        $this->serviceName,
-        'breakpoints',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->controller_debuggees_breakpoints = new Google_Service_CloudDebugger_Resource_ControllerDebuggeesBreakpoints(
+            $this,
+            $this->serviceName,
+            'breakpoints',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'v2/controller/debuggees/{debuggeeId}/breakpoints',
               'httpMethod' => 'GET',
@@ -110,15 +114,15 @@ class Google_Service_CloudDebugger extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->debugger_debuggees = new Google_Service_CloudDebugger_Resource_DebuggerDebuggees(
-        $this,
-        $this->serviceName,
-        'debuggees',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->debugger_debuggees = new Google_Service_CloudDebugger_Resource_DebuggerDebuggees(
+            $this,
+            $this->serviceName,
+            'debuggees',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'v2/debugger/debuggees',
               'httpMethod' => 'GET',
@@ -137,15 +141,15 @@ class Google_Service_CloudDebugger extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->debugger_debuggees_breakpoints = new Google_Service_CloudDebugger_Resource_DebuggerDebuggeesBreakpoints(
-        $this,
-        $this->serviceName,
-        'breakpoints',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->debugger_debuggees_breakpoints = new Google_Service_CloudDebugger_Resource_DebuggerDebuggeesBreakpoints(
+            $this,
+            $this->serviceName,
+            'breakpoints',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'v2/debugger/debuggees/{debuggeeId}/breakpoints/{breakpointId}',
               'httpMethod' => 'DELETE',
@@ -233,8 +237,8 @@ class Google_Service_CloudDebugger extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

@@ -17,15 +17,15 @@
 
 class Google_Service_Bigquery_JobStatistics4 extends Google_Collection
 {
-  protected $collection_key = 'destinationUriFileCounts';
-  public $destinationUriFileCounts;
+    protected $collection_key = 'destinationUriFileCounts';
+    public $destinationUriFileCounts;
 
-  public function setDestinationUriFileCounts($destinationUriFileCounts)
-  {
-    $this->destinationUriFileCounts = $destinationUriFileCounts;
-  }
-  public function getDestinationUriFileCounts()
-  {
-    return $this->destinationUriFileCounts;
-  }
+    public function setDestinationUriFileCounts($destinationUriFileCounts)
+    {
+        $this->destinationUriFileCounts = $destinationUriFileCounts;
+    }
+    public function getDestinationUriFileCounts()
+    {
+        return $this->destinationUriFileCounts;
+    }
 }

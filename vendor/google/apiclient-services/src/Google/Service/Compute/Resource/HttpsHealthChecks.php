@@ -25,13 +25,13 @@
  */
 class Google_Service_Compute_Resource_HttpsHealthChecks extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified HttpsHealthCheck resource. (httpsHealthChecks.delete)
    *
-   * @param string $project Project ID for this request.
+   * @param string $project          Project ID for this request.
    * @param string $httpsHealthCheck Name of the HttpsHealthCheck resource to
    * delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams        Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -45,37 +45,37 @@ class Google_Service_Compute_Resource_HttpsHealthChecks extends Google_Service_R
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $httpsHealthCheck, $optParams = array())
-  {
-    $params = array('project' => $project, 'httpsHealthCheck' => $httpsHealthCheck);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $httpsHealthCheck, $optParams = array())
+    {
+        $params = array('project' => $project, 'httpsHealthCheck' => $httpsHealthCheck);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified HttpsHealthCheck resource. Get a list of available
    * HTTPS health checks by making a list() request. (httpsHealthChecks.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $httpsHealthCheck Name of the HttpsHealthCheck resource to
+   * @param  string $project          Project ID for this request.
+   * @param  string $httpsHealthCheck Name of the HttpsHealthCheck resource to
    * return.
-   * @param array $optParams Optional parameters.
+   * @param  array  $optParams        Optional parameters.
    * @return Google_Service_Compute_HttpsHealthCheck
    */
-  public function get($project, $httpsHealthCheck, $optParams = array())
-  {
-    $params = array('project' => $project, 'httpsHealthCheck' => $httpsHealthCheck);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_HttpsHealthCheck");
-  }
-  /**
+    public function get($project, $httpsHealthCheck, $optParams = array())
+    {
+        $params = array('project' => $project, 'httpsHealthCheck' => $httpsHealthCheck);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_HttpsHealthCheck");
+    }
+    /**
    * Creates a HttpsHealthCheck resource in the specified project using the data
    * included in the request. (httpsHealthChecks.insert)
    *
-   * @param string $project Project ID for this request.
+   * @param string                                  $project   Project ID for this request.
    * @param Google_Service_Compute_HttpsHealthCheck $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                   $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -89,20 +89,20 @@ class Google_Service_Compute_Resource_HttpsHealthChecks extends Google_Service_R
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, Google_Service_Compute_HttpsHealthCheck $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, Google_Service_Compute_HttpsHealthCheck $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves the list of HttpsHealthCheck resources available to the specified
    * project. (httpsHealthChecks.listHttpsHealthChecks)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -146,24 +146,24 @@ class Google_Service_Compute_Resource_HttpsHealthChecks extends Google_Service_R
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_HttpsHealthCheckList
+   * @return    Google_Service_Compute_HttpsHealthCheckList
    */
-  public function listHttpsHealthChecks($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_HttpsHealthCheckList");
-  }
-  /**
+    public function listHttpsHealthChecks($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_HttpsHealthCheckList");
+    }
+    /**
    * Updates a HttpsHealthCheck resource in the specified project using the data
    * included in the request. This method supports PATCH semantics and uses the
    * JSON merge patch format and processing rules. (httpsHealthChecks.patch)
    *
-   * @param string $project Project ID for this request.
-   * @param string $httpsHealthCheck Name of the HttpsHealthCheck resource to
-   * patch.
+   * @param string                                  $project          Project ID for this request.
+   * @param string                                  $httpsHealthCheck Name of the HttpsHealthCheck resource to
+   *                                                                  patch.
    * @param Google_Service_Compute_HttpsHealthCheck $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                   $optParams        Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -177,23 +177,23 @@ class Google_Service_Compute_Resource_HttpsHealthChecks extends Google_Service_R
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function patch($project, $httpsHealthCheck, Google_Service_Compute_HttpsHealthCheck $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'httpsHealthCheck' => $httpsHealthCheck, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function patch($project, $httpsHealthCheck, Google_Service_Compute_HttpsHealthCheck $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'httpsHealthCheck' => $httpsHealthCheck, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Updates a HttpsHealthCheck resource in the specified project using the data
    * included in the request. (httpsHealthChecks.update)
    *
-   * @param string $project Project ID for this request.
-   * @param string $httpsHealthCheck Name of the HttpsHealthCheck resource to
-   * update.
+   * @param string                                  $project          Project ID for this request.
+   * @param string                                  $httpsHealthCheck Name of the HttpsHealthCheck resource to
+   *                                                                  update.
    * @param Google_Service_Compute_HttpsHealthCheck $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                   $optParams        Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -207,12 +207,12 @@ class Google_Service_Compute_Resource_HttpsHealthChecks extends Google_Service_R
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function update($project, $httpsHealthCheck, Google_Service_Compute_HttpsHealthCheck $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'httpsHealthCheck' => $httpsHealthCheck, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Compute_Operation");
-  }
+    public function update($project, $httpsHealthCheck, Google_Service_Compute_HttpsHealthCheck $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'httpsHealthCheck' => $httpsHealthCheck, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('update', array($params), "Google_Service_Compute_Operation");
+    }
 }

@@ -30,34 +30,36 @@
  */
 class Google_Service_Chromewebstore extends Google_Service
 {
-  /** View your Chrome Web Store apps and extensions. */
-  const CHROMEWEBSTORE_READONLY =
+    /**
+ * View your Chrome Web Store apps and extensions. 
+*/
+    const CHROMEWEBSTORE_READONLY =
       "https://www.googleapis.com/auth/chromewebstore.readonly";
 
-  public $inAppProducts;
-  public $items;
-  public $licenses;
-  public $payments;
+    public $inAppProducts;
+    public $items;
+    public $licenses;
+    public $payments;
   
-  /**
+    /**
    * Constructs the internal representation of the Chromewebstore service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'chromewebstore/v1.1/';
-    $this->version = 'v1.1';
-    $this->serviceName = 'chromewebstore';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'chromewebstore/v1.1/';
+        $this->version = 'v1.1';
+        $this->serviceName = 'chromewebstore';
 
-    $this->inAppProducts = new Google_Service_Chromewebstore_Resource_InAppProducts(
-        $this,
-        $this->serviceName,
-        'inAppProducts',
-        array(
-          'methods' => array(
+        $this->inAppProducts = new Google_Service_Chromewebstore_Resource_InAppProducts(
+            $this,
+            $this->serviceName,
+            'inAppProducts',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'items/{itemId}/skus/{sku}',
               'httpMethod' => 'GET',
@@ -108,15 +110,15 @@ class Google_Service_Chromewebstore extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->items = new Google_Service_Chromewebstore_Resource_Items(
-        $this,
-        $this->serviceName,
-        'items',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->items = new Google_Service_Chromewebstore_Resource_Items(
+            $this,
+            $this->serviceName,
+            'items',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'items/{itemId}',
               'httpMethod' => 'GET',
@@ -179,15 +181,15 @@ class Google_Service_Chromewebstore extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->licenses = new Google_Service_Chromewebstore_Resource_Licenses(
-        $this,
-        $this->serviceName,
-        'licenses',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->licenses = new Google_Service_Chromewebstore_Resource_Licenses(
+            $this,
+            $this->serviceName,
+            'licenses',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'licenses/{appId}/{userId}',
               'httpMethod' => 'GET',
@@ -197,15 +199,15 @@ class Google_Service_Chromewebstore extends Google_Service
               'httpMethod' => 'GET',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-    $this->payments = new Google_Service_Chromewebstore_Resource_Payments(
-        $this,
-        $this->serviceName,
-        'payments',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->payments = new Google_Service_Chromewebstore_Resource_Payments(
+            $this,
+            $this->serviceName,
+            'payments',
+            array(
+            'methods' => array(
             'buy' => array(
               'path' => 'payments/buy',
               'httpMethod' => 'POST',
@@ -240,8 +242,8 @@ class Google_Service_Chromewebstore extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

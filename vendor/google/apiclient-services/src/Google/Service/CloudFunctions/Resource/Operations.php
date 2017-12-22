@@ -25,22 +25,22 @@
  */
 class Google_Service_CloudFunctions_Resource_Operations extends Google_Service_Resource
 {
-  /**
+    /**
    * Gets the latest state of a long-running operation.  Clients can use this
    * method to poll the operation result at intervals as recommended by the API
    * service. (operations.get)
    *
-   * @param string $name The name of the operation resource.
-   * @param array $optParams Optional parameters.
+   * @param  string $name      The name of the operation resource.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_CloudFunctions_Operation
    */
-  public function get($name, $optParams = array())
-  {
-    $params = array('name' => $name);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_CloudFunctions_Operation");
-  }
-  /**
+    public function get($name, $optParams = array())
+    {
+        $params = array('name' => $name);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_CloudFunctions_Operation");
+    }
+    /**
    * Lists operations that match the specified filter in the request. If the
    * server doesn't support this method, it returns `UNIMPLEMENTED`.
    *
@@ -58,12 +58,12 @@ class Google_Service_CloudFunctions_Resource_Operations extends Google_Service_R
    * @opt_param string name The name of the operation's parent resource.
    * @opt_param string pageToken The standard list page token.
    * @opt_param int pageSize The standard list page size.
-   * @return Google_Service_CloudFunctions_ListOperationsResponse
+   * @return    Google_Service_CloudFunctions_ListOperationsResponse
    */
-  public function listOperations($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudFunctions_ListOperationsResponse");
-  }
+    public function listOperations($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_CloudFunctions_ListOperationsResponse");
+    }
 }

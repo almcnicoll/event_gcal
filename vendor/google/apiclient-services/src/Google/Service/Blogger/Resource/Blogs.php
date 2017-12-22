@@ -25,46 +25,47 @@
  */
 class Google_Service_Blogger_Resource_Blogs extends Google_Service_Resource
 {
-  /**
+    /**
    * Gets one blog by ID. (blogs.get)
    *
-   * @param string $blogId The ID of the blog to get.
-   * @param array $optParams Optional parameters.
+   * @param string $blogId    The ID of the blog to get.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string maxPosts Maximum number of posts to pull back with the
    * blog.
    * @opt_param string view Access level with which to view the blog. Note that
    * some fields require elevated access.
-   * @return Google_Service_Blogger_Blog
+   * @return    Google_Service_Blogger_Blog
    */
-  public function get($blogId, $optParams = array())
-  {
-    $params = array('blogId' => $blogId);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Blogger_Blog");
-  }
-  /**
+    public function get($blogId, $optParams = array())
+    {
+        $params = array('blogId' => $blogId);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Blogger_Blog");
+    }
+    /**
    * Retrieve a Blog by URL. (blogs.getByUrl)
    *
-   * @param string $url The URL of the blog to retrieve.
-   * @param array $optParams Optional parameters.
+   * @param string $url       The URL of the blog to retrieve.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string view Access level with which to view the blog. Note that
    * some fields require elevated access.
-   * @return Google_Service_Blogger_Blog
+   * @return    Google_Service_Blogger_Blog
    */
-  public function getByUrl($url, $optParams = array())
-  {
-    $params = array('url' => $url);
-    $params = array_merge($params, $optParams);
-    return $this->call('getByUrl', array($params), "Google_Service_Blogger_Blog");
-  }
-  /**
+    public function getByUrl($url, $optParams = array())
+    {
+        $params = array('url' => $url);
+        $params = array_merge($params, $optParams);
+        return $this->call('getByUrl', array($params), "Google_Service_Blogger_Blog");
+    }
+    /**
    * Retrieves a list of blogs, possibly filtered. (blogs.listByUser)
    *
-   * @param string $userId ID of the user whose blogs are to be fetched. Either
-   * the word 'self' (sans quote marks) or the user's profile identifier.
-   * @param array $optParams Optional parameters.
+   * @param string $userId    ID of the user whose blogs are to be fetched. Either
+   *                          the word 'self' (sans quote marks) or the user's
+   *                          profile identifier.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param bool fetchUserInfo Whether the response is a list of blogs with
    * per-user information instead of just blogs.
@@ -75,12 +76,12 @@ class Google_Service_Blogger_Resource_Blogs extends Google_Service_Resource
    * Live blogs only). Note that ADMIN access is required to view deleted blogs.
    * @opt_param string view Access level with which to view the blogs. Note that
    * some fields require elevated access.
-   * @return Google_Service_Blogger_BlogList
+   * @return    Google_Service_Blogger_BlogList
    */
-  public function listByUser($userId, $optParams = array())
-  {
-    $params = array('userId' => $userId);
-    $params = array_merge($params, $optParams);
-    return $this->call('listByUser', array($params), "Google_Service_Blogger_BlogList");
-  }
+    public function listByUser($userId, $optParams = array())
+    {
+        $params = array('userId' => $userId);
+        $params = array_merge($params, $optParams);
+        return $this->call('listByUser', array($params), "Google_Service_Blogger_BlogList");
+    }
 }

@@ -30,69 +30,81 @@
  */
 class Google_Service_Analytics extends Google_Service
 {
-  /** View and manage your Google Analytics data. */
-  const ANALYTICS =
+    /**
+ * View and manage your Google Analytics data. 
+*/
+    const ANALYTICS =
       "https://www.googleapis.com/auth/analytics";
-  /** Edit Google Analytics management entities. */
-  const ANALYTICS_EDIT =
+    /**
+ * Edit Google Analytics management entities. 
+*/
+    const ANALYTICS_EDIT =
       "https://www.googleapis.com/auth/analytics.edit";
-  /** Manage Google Analytics Account users by email address. */
-  const ANALYTICS_MANAGE_USERS =
+    /**
+ * Manage Google Analytics Account users by email address. 
+*/
+    const ANALYTICS_MANAGE_USERS =
       "https://www.googleapis.com/auth/analytics.manage.users";
-  /** View Google Analytics user permissions. */
-  const ANALYTICS_MANAGE_USERS_READONLY =
+    /**
+ * View Google Analytics user permissions. 
+*/
+    const ANALYTICS_MANAGE_USERS_READONLY =
       "https://www.googleapis.com/auth/analytics.manage.users.readonly";
-  /** Create a new Google Analytics account along with its default property and view. */
-  const ANALYTICS_PROVISION =
+    /**
+ * Create a new Google Analytics account along with its default property and view. 
+*/
+    const ANALYTICS_PROVISION =
       "https://www.googleapis.com/auth/analytics.provision";
-  /** View your Google Analytics data. */
-  const ANALYTICS_READONLY =
+    /**
+ * View your Google Analytics data. 
+*/
+    const ANALYTICS_READONLY =
       "https://www.googleapis.com/auth/analytics.readonly";
 
-  public $data_ga;
-  public $data_mcf;
-  public $data_realtime;
-  public $management_accountSummaries;
-  public $management_accountUserLinks;
-  public $management_accounts;
-  public $management_customDataSources;
-  public $management_customDimensions;
-  public $management_customMetrics;
-  public $management_experiments;
-  public $management_filters;
-  public $management_goals;
-  public $management_profileFilterLinks;
-  public $management_profileUserLinks;
-  public $management_profiles;
-  public $management_remarketingAudience;
-  public $management_segments;
-  public $management_unsampledReports;
-  public $management_uploads;
-  public $management_webPropertyAdWordsLinks;
-  public $management_webproperties;
-  public $management_webpropertyUserLinks;
-  public $metadata_columns;
-  public $provisioning;
+    public $data_ga;
+    public $data_mcf;
+    public $data_realtime;
+    public $management_accountSummaries;
+    public $management_accountUserLinks;
+    public $management_accounts;
+    public $management_customDataSources;
+    public $management_customDimensions;
+    public $management_customMetrics;
+    public $management_experiments;
+    public $management_filters;
+    public $management_goals;
+    public $management_profileFilterLinks;
+    public $management_profileUserLinks;
+    public $management_profiles;
+    public $management_remarketingAudience;
+    public $management_segments;
+    public $management_unsampledReports;
+    public $management_uploads;
+    public $management_webPropertyAdWordsLinks;
+    public $management_webproperties;
+    public $management_webpropertyUserLinks;
+    public $metadata_columns;
+    public $provisioning;
   
-  /**
+    /**
    * Constructs the internal representation of the Analytics service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'analytics/v3/';
-    $this->version = 'v3';
-    $this->serviceName = 'analytics';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'analytics/v3/';
+        $this->version = 'v3';
+        $this->serviceName = 'analytics';
 
-    $this->data_ga = new Google_Service_Analytics_Resource_DataGa(
-        $this,
-        $this->serviceName,
-        'ga',
-        array(
-          'methods' => array(
+        $this->data_ga = new Google_Service_Analytics_Resource_DataGa(
+            $this,
+            $this->serviceName,
+            'ga',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'data/ga',
               'httpMethod' => 'GET',
@@ -155,15 +167,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->data_mcf = new Google_Service_Analytics_Resource_DataMcf(
-        $this,
-        $this->serviceName,
-        'mcf',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->data_mcf = new Google_Service_Analytics_Resource_DataMcf(
+            $this,
+            $this->serviceName,
+            'mcf',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'data/mcf',
               'httpMethod' => 'GET',
@@ -214,15 +226,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->data_realtime = new Google_Service_Analytics_Resource_DataRealtime(
-        $this,
-        $this->serviceName,
-        'realtime',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->data_realtime = new Google_Service_Analytics_Resource_DataRealtime(
+            $this,
+            $this->serviceName,
+            'realtime',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'data/realtime',
               'httpMethod' => 'GET',
@@ -255,15 +267,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_accountSummaries = new Google_Service_Analytics_Resource_ManagementAccountSummaries(
-        $this,
-        $this->serviceName,
-        'accountSummaries',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_accountSummaries = new Google_Service_Analytics_Resource_ManagementAccountSummaries(
+            $this,
+            $this->serviceName,
+            'accountSummaries',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'management/accountSummaries',
               'httpMethod' => 'GET',
@@ -278,15 +290,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_accountUserLinks = new Google_Service_Analytics_Resource_ManagementAccountUserLinks(
-        $this,
-        $this->serviceName,
-        'accountUserLinks',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_accountUserLinks = new Google_Service_Analytics_Resource_ManagementAccountUserLinks(
+            $this,
+            $this->serviceName,
+            'accountUserLinks',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'management/accounts/{accountId}/entityUserLinks/{linkId}',
               'httpMethod' => 'DELETE',
@@ -346,15 +358,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_accounts = new Google_Service_Analytics_Resource_ManagementAccounts(
-        $this,
-        $this->serviceName,
-        'accounts',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_accounts = new Google_Service_Analytics_Resource_ManagementAccounts(
+            $this,
+            $this->serviceName,
+            'accounts',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'management/accounts',
               'httpMethod' => 'GET',
@@ -369,15 +381,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_customDataSources = new Google_Service_Analytics_Resource_ManagementCustomDataSources(
-        $this,
-        $this->serviceName,
-        'customDataSources',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_customDataSources = new Google_Service_Analytics_Resource_ManagementCustomDataSources(
+            $this,
+            $this->serviceName,
+            'customDataSources',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}/customDataSources',
               'httpMethod' => 'GET',
@@ -402,15 +414,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_customDimensions = new Google_Service_Analytics_Resource_ManagementCustomDimensions(
-        $this,
-        $this->serviceName,
-        'customDimensions',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_customDimensions = new Google_Service_Analytics_Resource_ManagementCustomDimensions(
+            $this,
+            $this->serviceName,
+            'customDimensions',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}/customDimensions/{customDimensionId}',
               'httpMethod' => 'GET',
@@ -518,15 +530,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_customMetrics = new Google_Service_Analytics_Resource_ManagementCustomMetrics(
-        $this,
-        $this->serviceName,
-        'customMetrics',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_customMetrics = new Google_Service_Analytics_Resource_ManagementCustomMetrics(
+            $this,
+            $this->serviceName,
+            'customMetrics',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}/customMetrics/{customMetricId}',
               'httpMethod' => 'GET',
@@ -634,15 +646,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_experiments = new Google_Service_Analytics_Resource_ManagementExperiments(
-        $this,
-        $this->serviceName,
-        'experiments',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_experiments = new Google_Service_Analytics_Resource_ManagementExperiments(
+            $this,
+            $this->serviceName,
+            'experiments',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/experiments/{experimentId}',
               'httpMethod' => 'DELETE',
@@ -792,15 +804,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_filters = new Google_Service_Analytics_Resource_ManagementFilters(
-        $this,
-        $this->serviceName,
-        'filters',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_filters = new Google_Service_Analytics_Resource_ManagementFilters(
+            $this,
+            $this->serviceName,
+            'filters',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'management/accounts/{accountId}/filters/{filterId}',
               'httpMethod' => 'DELETE',
@@ -890,15 +902,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_goals = new Google_Service_Analytics_Resource_ManagementGoals(
-        $this,
-        $this->serviceName,
-        'goals',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_goals = new Google_Service_Analytics_Resource_ManagementGoals(
+            $this,
+            $this->serviceName,
+            'goals',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals/{goalId}',
               'httpMethod' => 'GET',
@@ -1023,15 +1035,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_profileFilterLinks = new Google_Service_Analytics_Resource_ManagementProfileFilterLinks(
-        $this,
-        $this->serviceName,
-        'profileFilterLinks',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_profileFilterLinks = new Google_Service_Analytics_Resource_ManagementProfileFilterLinks(
+            $this,
+            $this->serviceName,
+            'profileFilterLinks',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/profileFilterLinks/{linkId}',
               'httpMethod' => 'DELETE',
@@ -1181,15 +1193,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_profileUserLinks = new Google_Service_Analytics_Resource_ManagementProfileUserLinks(
-        $this,
-        $this->serviceName,
-        'profileUserLinks',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_profileUserLinks = new Google_Service_Analytics_Resource_ManagementProfileUserLinks(
+            $this,
+            $this->serviceName,
+            'profileUserLinks',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/entityUserLinks/{linkId}',
               'httpMethod' => 'DELETE',
@@ -1289,15 +1301,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_profiles = new Google_Service_Analytics_Resource_ManagementProfiles(
-        $this,
-        $this->serviceName,
-        'profiles',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_profiles = new Google_Service_Analytics_Resource_ManagementProfiles(
+            $this,
+            $this->serviceName,
+            'profiles',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}',
               'httpMethod' => 'DELETE',
@@ -1417,15 +1429,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_remarketingAudience = new Google_Service_Analytics_Resource_ManagementRemarketingAudience(
-        $this,
-        $this->serviceName,
-        'remarketingAudience',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_remarketingAudience = new Google_Service_Analytics_Resource_ManagementRemarketingAudience(
+            $this,
+            $this->serviceName,
+            'remarketingAudience',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}/remarketingAudiences/{remarketingAudienceId}',
               'httpMethod' => 'DELETE',
@@ -1549,15 +1561,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_segments = new Google_Service_Analytics_Resource_ManagementSegments(
-        $this,
-        $this->serviceName,
-        'segments',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_segments = new Google_Service_Analytics_Resource_ManagementSegments(
+            $this,
+            $this->serviceName,
+            'segments',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'management/segments',
               'httpMethod' => 'GET',
@@ -1572,15 +1584,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_unsampledReports = new Google_Service_Analytics_Resource_ManagementUnsampledReports(
-        $this,
-        $this->serviceName,
-        'unsampledReports',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_unsampledReports = new Google_Service_Analytics_Resource_ManagementUnsampledReports(
+            $this,
+            $this->serviceName,
+            'unsampledReports',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/unsampledReports/{unsampledReportId}',
               'httpMethod' => 'DELETE',
@@ -1680,15 +1692,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_uploads = new Google_Service_Analytics_Resource_ManagementUploads(
-        $this,
-        $this->serviceName,
-        'uploads',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_uploads = new Google_Service_Analytics_Resource_ManagementUploads(
+            $this,
+            $this->serviceName,
+            'uploads',
+            array(
+            'methods' => array(
             'deleteUploadData' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}/customDataSources/{customDataSourceId}/deleteUploadData',
               'httpMethod' => 'POST',
@@ -1783,15 +1795,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_webPropertyAdWordsLinks = new Google_Service_Analytics_Resource_ManagementWebPropertyAdWordsLinks(
-        $this,
-        $this->serviceName,
-        'webPropertyAdWordsLinks',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_webPropertyAdWordsLinks = new Google_Service_Analytics_Resource_ManagementWebPropertyAdWordsLinks(
+            $this,
+            $this->serviceName,
+            'webPropertyAdWordsLinks',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks/{webPropertyAdWordsLinkId}',
               'httpMethod' => 'DELETE',
@@ -1911,15 +1923,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_webproperties = new Google_Service_Analytics_Resource_ManagementWebproperties(
-        $this,
-        $this->serviceName,
-        'webproperties',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_webproperties = new Google_Service_Analytics_Resource_ManagementWebproperties(
+            $this,
+            $this->serviceName,
+            'webproperties',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}',
               'httpMethod' => 'GET',
@@ -1994,15 +2006,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->management_webpropertyUserLinks = new Google_Service_Analytics_Resource_ManagementWebpropertyUserLinks(
-        $this,
-        $this->serviceName,
-        'webpropertyUserLinks',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->management_webpropertyUserLinks = new Google_Service_Analytics_Resource_ManagementWebpropertyUserLinks(
+            $this,
+            $this->serviceName,
+            'webpropertyUserLinks',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'management/accounts/{accountId}/webproperties/{webPropertyId}/entityUserLinks/{linkId}',
               'httpMethod' => 'DELETE',
@@ -2082,15 +2094,15 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->metadata_columns = new Google_Service_Analytics_Resource_MetadataColumns(
-        $this,
-        $this->serviceName,
-        'columns',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->metadata_columns = new Google_Service_Analytics_Resource_MetadataColumns(
+            $this,
+            $this->serviceName,
+            'columns',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'metadata/{reportType}/columns',
               'httpMethod' => 'GET',
@@ -2102,22 +2114,22 @@ class Google_Service_Analytics extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->provisioning = new Google_Service_Analytics_Resource_Provisioning(
-        $this,
-        $this->serviceName,
-        'provisioning',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->provisioning = new Google_Service_Analytics_Resource_Provisioning(
+            $this,
+            $this->serviceName,
+            'provisioning',
+            array(
+            'methods' => array(
             'createAccountTicket' => array(
               'path' => 'provisioning/createAccountTicket',
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

@@ -17,23 +17,23 @@
 
 class Google_Service_Appengine_EndpointsApiService extends Google_Model
 {
-  public $configId;
-  public $name;
+    public $configId;
+    public $name;
 
-  public function setConfigId($configId)
-  {
-    $this->configId = $configId;
-  }
-  public function getConfigId()
-  {
-    return $this->configId;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
+    public function setConfigId($configId)
+    {
+        $this->configId = $configId;
+    }
+    public function getConfigId()
+    {
+        return $this->configId;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
 }

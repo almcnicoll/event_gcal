@@ -30,41 +30,45 @@
  */
 class Google_Service_AnalyticsReporting extends Google_Service
 {
-  /** View and manage your Google Analytics data. */
-  const ANALYTICS =
+    /**
+ * View and manage your Google Analytics data. 
+*/
+    const ANALYTICS =
       "https://www.googleapis.com/auth/analytics";
-  /** View your Google Analytics data. */
-  const ANALYTICS_READONLY =
+    /**
+ * View your Google Analytics data. 
+*/
+    const ANALYTICS_READONLY =
       "https://www.googleapis.com/auth/analytics.readonly";
 
-  public $reports;
+    public $reports;
   
-  /**
+    /**
    * Constructs the internal representation of the AnalyticsReporting service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://analyticsreporting.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v4';
-    $this->serviceName = 'analyticsreporting';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://analyticsreporting.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v4';
+        $this->serviceName = 'analyticsreporting';
 
-    $this->reports = new Google_Service_AnalyticsReporting_Resource_Reports(
-        $this,
-        $this->serviceName,
-        'reports',
-        array(
-          'methods' => array(
+        $this->reports = new Google_Service_AnalyticsReporting_Resource_Reports(
+            $this,
+            $this->serviceName,
+            'reports',
+            array(
+            'methods' => array(
             'batchGet' => array(
               'path' => 'v4/reports:batchGet',
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

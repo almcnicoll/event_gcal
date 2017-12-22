@@ -17,57 +17,57 @@
 
 class Google_Service_Compute_AttachedDiskInitializeParams extends Google_Model
 {
-  public $diskName;
-  public $diskSizeGb;
-  public $diskType;
-  public $sourceImage;
-  protected $sourceImageEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
-  protected $sourceImageEncryptionKeyDataType = '';
+    public $diskName;
+    public $diskSizeGb;
+    public $diskType;
+    public $sourceImage;
+    protected $sourceImageEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
+    protected $sourceImageEncryptionKeyDataType = '';
 
-  public function setDiskName($diskName)
-  {
-    $this->diskName = $diskName;
-  }
-  public function getDiskName()
-  {
-    return $this->diskName;
-  }
-  public function setDiskSizeGb($diskSizeGb)
-  {
-    $this->diskSizeGb = $diskSizeGb;
-  }
-  public function getDiskSizeGb()
-  {
-    return $this->diskSizeGb;
-  }
-  public function setDiskType($diskType)
-  {
-    $this->diskType = $diskType;
-  }
-  public function getDiskType()
-  {
-    return $this->diskType;
-  }
-  public function setSourceImage($sourceImage)
-  {
-    $this->sourceImage = $sourceImage;
-  }
-  public function getSourceImage()
-  {
-    return $this->sourceImage;
-  }
-  /**
+    public function setDiskName($diskName)
+    {
+        $this->diskName = $diskName;
+    }
+    public function getDiskName()
+    {
+        return $this->diskName;
+    }
+    public function setDiskSizeGb($diskSizeGb)
+    {
+        $this->diskSizeGb = $diskSizeGb;
+    }
+    public function getDiskSizeGb()
+    {
+        return $this->diskSizeGb;
+    }
+    public function setDiskType($diskType)
+    {
+        $this->diskType = $diskType;
+    }
+    public function getDiskType()
+    {
+        return $this->diskType;
+    }
+    public function setSourceImage($sourceImage)
+    {
+        $this->sourceImage = $sourceImage;
+    }
+    public function getSourceImage()
+    {
+        return $this->sourceImage;
+    }
+    /**
    * @param Google_Service_Compute_CustomerEncryptionKey
    */
-  public function setSourceImageEncryptionKey(Google_Service_Compute_CustomerEncryptionKey $sourceImageEncryptionKey)
-  {
-    $this->sourceImageEncryptionKey = $sourceImageEncryptionKey;
-  }
-  /**
+    public function setSourceImageEncryptionKey(Google_Service_Compute_CustomerEncryptionKey $sourceImageEncryptionKey)
+    {
+        $this->sourceImageEncryptionKey = $sourceImageEncryptionKey;
+    }
+    /**
    * @return Google_Service_Compute_CustomerEncryptionKey
    */
-  public function getSourceImageEncryptionKey()
-  {
-    return $this->sourceImageEncryptionKey;
-  }
+    public function getSourceImageEncryptionKey()
+    {
+        return $this->sourceImageEncryptionKey;
+    }
 }

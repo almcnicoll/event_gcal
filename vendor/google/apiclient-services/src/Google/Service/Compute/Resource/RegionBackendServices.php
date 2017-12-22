@@ -25,14 +25,14 @@
  */
 class Google_Service_Compute_Resource_RegionBackendServices extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified regional BackendService resource.
    * (regionBackendServices.delete)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
+   * @param string $project        Project ID for this request.
+   * @param string $region         Name of the region scoping this request.
    * @param string $backendService Name of the BackendService resource to delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams      Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -46,58 +46,58 @@ class Google_Service_Compute_Resource_RegionBackendServices extends Google_Servi
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $region, $backendService, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'backendService' => $backendService);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $region, $backendService, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'backendService' => $backendService);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified regional BackendService resource.
    * (regionBackendServices.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
-   * @param string $backendService Name of the BackendService resource to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project        Project ID for this request.
+   * @param  string $region         Name of the region scoping this request.
+   * @param  string $backendService Name of the BackendService resource to return.
+   * @param  array  $optParams      Optional parameters.
    * @return Google_Service_Compute_BackendService
    */
-  public function get($project, $region, $backendService, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'backendService' => $backendService);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_BackendService");
-  }
-  /**
+    public function get($project, $region, $backendService, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'backendService' => $backendService);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_BackendService");
+    }
+    /**
    * Gets the most recent health check results for this regional BackendService.
    * (regionBackendServices.getHealth)
    *
-   * @param string $project
-   * @param string $region Name of the region scoping this request.
-   * @param string $backendService Name of the BackendService resource to which
-   * the queried instance belongs.
-   * @param Google_Service_Compute_ResourceGroupReference $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                        $project
+   * @param  string                                        $region         Name of the region scoping this request.
+   * @param  string                                        $backendService Name of the BackendService resource to which
+   *                                                                      the queried instance belongs.
+   * @param  Google_Service_Compute_ResourceGroupReference $postBody
+   * @param  array                                         $optParams      Optional parameters.
    * @return Google_Service_Compute_BackendServiceGroupHealth
    */
-  public function getHealth($project, $region, $backendService, Google_Service_Compute_ResourceGroupReference $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'backendService' => $backendService, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('getHealth', array($params), "Google_Service_Compute_BackendServiceGroupHealth");
-  }
-  /**
+    public function getHealth($project, $region, $backendService, Google_Service_Compute_ResourceGroupReference $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'backendService' => $backendService, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('getHealth', array($params), "Google_Service_Compute_BackendServiceGroupHealth");
+    }
+    /**
    * Creates a regional BackendService resource in the specified project using the
    * data included in the request. There are several restrictions and guidelines
    * to keep in mind when creating a regional backend service. Read  Restrictions
    * and Guidelines for more information. (regionBackendServices.insert)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
+   * @param string                                $project   Project ID for this request.
+   * @param string                                $region    Name of the region scoping this request.
    * @param Google_Service_Compute_BackendService $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                 $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -111,22 +111,22 @@ class Google_Service_Compute_Resource_RegionBackendServices extends Google_Servi
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, $region, Google_Service_Compute_BackendService $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, $region, Google_Service_Compute_BackendService $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves the list of regional BackendService resources available to the
    * specified project in the given region.
    * (regionBackendServices.listRegionBackendServices)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $region    Name of the region scoping this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -170,26 +170,26 @@ class Google_Service_Compute_Resource_RegionBackendServices extends Google_Servi
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_BackendServiceList
+   * @return    Google_Service_Compute_BackendServiceList
    */
-  public function listRegionBackendServices($project, $region, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_BackendServiceList");
-  }
-  /**
+    public function listRegionBackendServices($project, $region, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_BackendServiceList");
+    }
+    /**
    * Updates the specified regional BackendService resource with the data included
    * in the request. There are several restrictions and guidelines to keep in mind
    * when updating a backend service. Read  Restrictions and Guidelines for more
    * information. This method supports PATCH semantics and uses the JSON merge
    * patch format and processing rules. (regionBackendServices.patch)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
-   * @param string $backendService Name of the BackendService resource to patch.
+   * @param string                                $project        Project ID for this request.
+   * @param string                                $region         Name of the region scoping this request.
+   * @param string                                $backendService Name of the BackendService resource to patch.
    * @param Google_Service_Compute_BackendService $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                 $optParams      Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -203,25 +203,25 @@ class Google_Service_Compute_Resource_RegionBackendServices extends Google_Servi
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function patch($project, $region, $backendService, Google_Service_Compute_BackendService $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'backendService' => $backendService, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function patch($project, $region, $backendService, Google_Service_Compute_BackendService $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'backendService' => $backendService, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Updates the specified regional BackendService resource with the data included
    * in the request. There are several restrictions and guidelines to keep in mind
    * when updating a backend service. Read  Restrictions and Guidelines for more
    * information. (regionBackendServices.update)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region scoping this request.
-   * @param string $backendService Name of the BackendService resource to update.
+   * @param string                                $project        Project ID for this request.
+   * @param string                                $region         Name of the region scoping this request.
+   * @param string                                $backendService Name of the BackendService resource to update.
    * @param Google_Service_Compute_BackendService $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                 $optParams      Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -235,12 +235,12 @@ class Google_Service_Compute_Resource_RegionBackendServices extends Google_Servi
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function update($project, $region, $backendService, Google_Service_Compute_BackendService $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'backendService' => $backendService, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Compute_Operation");
-  }
+    public function update($project, $region, $backendService, Google_Service_Compute_BackendService $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'backendService' => $backendService, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('update', array($params), "Google_Service_Compute_Operation");
+    }
 }

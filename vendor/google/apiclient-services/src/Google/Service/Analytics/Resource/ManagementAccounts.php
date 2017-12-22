@@ -25,7 +25,7 @@
  */
 class Google_Service_Analytics_Resource_ManagementAccounts extends Google_Service_Resource
 {
-  /**
+    /**
    * Lists all accounts to which the user has access.
    * (accounts.listManagementAccounts)
    *
@@ -36,12 +36,12 @@ class Google_Service_Analytics_Resource_ManagementAccounts extends Google_Servic
    * @opt_param int start-index An index of the first account to retrieve. Use
    * this parameter as a pagination mechanism along with the max-results
    * parameter.
-   * @return Google_Service_Analytics_Accounts
+   * @return    Google_Service_Analytics_Accounts
    */
-  public function listManagementAccounts($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Analytics_Accounts");
-  }
+    public function listManagementAccounts($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Analytics_Accounts");
+    }
 }

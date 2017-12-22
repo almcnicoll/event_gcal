@@ -17,23 +17,23 @@
 
 class Google_Service_Compute_CustomerEncryptionKey extends Google_Model
 {
-  public $rawKey;
-  public $sha256;
+    public $rawKey;
+    public $sha256;
 
-  public function setRawKey($rawKey)
-  {
-    $this->rawKey = $rawKey;
-  }
-  public function getRawKey()
-  {
-    return $this->rawKey;
-  }
-  public function setSha256($sha256)
-  {
-    $this->sha256 = $sha256;
-  }
-  public function getSha256()
-  {
-    return $this->sha256;
-  }
+    public function setRawKey($rawKey)
+    {
+        $this->rawKey = $rawKey;
+    }
+    public function getRawKey()
+    {
+        return $this->rawKey;
+    }
+    public function setSha256($sha256)
+    {
+        $this->sha256 = $sha256;
+    }
+    public function getSha256()
+    {
+        return $this->sha256;
+    }
 }

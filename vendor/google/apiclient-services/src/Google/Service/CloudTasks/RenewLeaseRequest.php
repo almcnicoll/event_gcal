@@ -17,32 +17,32 @@
 
 class Google_Service_CloudTasks_RenewLeaseRequest extends Google_Model
 {
-  public $leaseDuration;
-  public $responseView;
-  public $scheduleTime;
+    public $leaseDuration;
+    public $responseView;
+    public $scheduleTime;
 
-  public function setLeaseDuration($leaseDuration)
-  {
-    $this->leaseDuration = $leaseDuration;
-  }
-  public function getLeaseDuration()
-  {
-    return $this->leaseDuration;
-  }
-  public function setResponseView($responseView)
-  {
-    $this->responseView = $responseView;
-  }
-  public function getResponseView()
-  {
-    return $this->responseView;
-  }
-  public function setScheduleTime($scheduleTime)
-  {
-    $this->scheduleTime = $scheduleTime;
-  }
-  public function getScheduleTime()
-  {
-    return $this->scheduleTime;
-  }
+    public function setLeaseDuration($leaseDuration)
+    {
+        $this->leaseDuration = $leaseDuration;
+    }
+    public function getLeaseDuration()
+    {
+        return $this->leaseDuration;
+    }
+    public function setResponseView($responseView)
+    {
+        $this->responseView = $responseView;
+    }
+    public function getResponseView()
+    {
+        return $this->responseView;
+    }
+    public function setScheduleTime($scheduleTime)
+    {
+        $this->scheduleTime = $scheduleTime;
+    }
+    public function getScheduleTime()
+    {
+        return $this->scheduleTime;
+    }
 }

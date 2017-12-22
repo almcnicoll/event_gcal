@@ -17,96 +17,96 @@
 
 class Google_Service_CloudTasks_Queue extends Google_Model
 {
-  protected $appEngineHttpTargetType = 'Google_Service_CloudTasks_AppEngineHttpTarget';
-  protected $appEngineHttpTargetDataType = '';
-  public $name;
-  protected $pullTargetType = 'Google_Service_CloudTasks_PullTarget';
-  protected $pullTargetDataType = '';
-  public $purgeTime;
-  protected $rateLimitsType = 'Google_Service_CloudTasks_RateLimits';
-  protected $rateLimitsDataType = '';
-  protected $retryConfigType = 'Google_Service_CloudTasks_RetryConfig';
-  protected $retryConfigDataType = '';
-  public $state;
+    protected $appEngineHttpTargetType = 'Google_Service_CloudTasks_AppEngineHttpTarget';
+    protected $appEngineHttpTargetDataType = '';
+    public $name;
+    protected $pullTargetType = 'Google_Service_CloudTasks_PullTarget';
+    protected $pullTargetDataType = '';
+    public $purgeTime;
+    protected $rateLimitsType = 'Google_Service_CloudTasks_RateLimits';
+    protected $rateLimitsDataType = '';
+    protected $retryConfigType = 'Google_Service_CloudTasks_RetryConfig';
+    protected $retryConfigDataType = '';
+    public $state;
 
-  /**
+    /**
    * @param Google_Service_CloudTasks_AppEngineHttpTarget
    */
-  public function setAppEngineHttpTarget(Google_Service_CloudTasks_AppEngineHttpTarget $appEngineHttpTarget)
-  {
-    $this->appEngineHttpTarget = $appEngineHttpTarget;
-  }
-  /**
+    public function setAppEngineHttpTarget(Google_Service_CloudTasks_AppEngineHttpTarget $appEngineHttpTarget)
+    {
+        $this->appEngineHttpTarget = $appEngineHttpTarget;
+    }
+    /**
    * @return Google_Service_CloudTasks_AppEngineHttpTarget
    */
-  public function getAppEngineHttpTarget()
-  {
-    return $this->appEngineHttpTarget;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  /**
+    public function getAppEngineHttpTarget()
+    {
+        return $this->appEngineHttpTarget;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    /**
    * @param Google_Service_CloudTasks_PullTarget
    */
-  public function setPullTarget(Google_Service_CloudTasks_PullTarget $pullTarget)
-  {
-    $this->pullTarget = $pullTarget;
-  }
-  /**
+    public function setPullTarget(Google_Service_CloudTasks_PullTarget $pullTarget)
+    {
+        $this->pullTarget = $pullTarget;
+    }
+    /**
    * @return Google_Service_CloudTasks_PullTarget
    */
-  public function getPullTarget()
-  {
-    return $this->pullTarget;
-  }
-  public function setPurgeTime($purgeTime)
-  {
-    $this->purgeTime = $purgeTime;
-  }
-  public function getPurgeTime()
-  {
-    return $this->purgeTime;
-  }
-  /**
+    public function getPullTarget()
+    {
+        return $this->pullTarget;
+    }
+    public function setPurgeTime($purgeTime)
+    {
+        $this->purgeTime = $purgeTime;
+    }
+    public function getPurgeTime()
+    {
+        return $this->purgeTime;
+    }
+    /**
    * @param Google_Service_CloudTasks_RateLimits
    */
-  public function setRateLimits(Google_Service_CloudTasks_RateLimits $rateLimits)
-  {
-    $this->rateLimits = $rateLimits;
-  }
-  /**
+    public function setRateLimits(Google_Service_CloudTasks_RateLimits $rateLimits)
+    {
+        $this->rateLimits = $rateLimits;
+    }
+    /**
    * @return Google_Service_CloudTasks_RateLimits
    */
-  public function getRateLimits()
-  {
-    return $this->rateLimits;
-  }
-  /**
+    public function getRateLimits()
+    {
+        return $this->rateLimits;
+    }
+    /**
    * @param Google_Service_CloudTasks_RetryConfig
    */
-  public function setRetryConfig(Google_Service_CloudTasks_RetryConfig $retryConfig)
-  {
-    $this->retryConfig = $retryConfig;
-  }
-  /**
+    public function setRetryConfig(Google_Service_CloudTasks_RetryConfig $retryConfig)
+    {
+        $this->retryConfig = $retryConfig;
+    }
+    /**
    * @return Google_Service_CloudTasks_RetryConfig
    */
-  public function getRetryConfig()
-  {
-    return $this->retryConfig;
-  }
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  public function getState()
-  {
-    return $this->state;
-  }
+    public function getRetryConfig()
+    {
+        return $this->retryConfig;
+    }
+    public function setState($state)
+    {
+        $this->state = $state;
+    }
+    public function getState()
+    {
+        return $this->state;
+    }
 }

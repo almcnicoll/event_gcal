@@ -17,32 +17,32 @@
 
 class Google_Service_AndroidManagement_SystemUpdate extends Google_Model
 {
-  public $endMinutes;
-  public $startMinutes;
-  public $type;
+    public $endMinutes;
+    public $startMinutes;
+    public $type;
 
-  public function setEndMinutes($endMinutes)
-  {
-    $this->endMinutes = $endMinutes;
-  }
-  public function getEndMinutes()
-  {
-    return $this->endMinutes;
-  }
-  public function setStartMinutes($startMinutes)
-  {
-    $this->startMinutes = $startMinutes;
-  }
-  public function getStartMinutes()
-  {
-    return $this->startMinutes;
-  }
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  public function getType()
-  {
-    return $this->type;
-  }
+    public function setEndMinutes($endMinutes)
+    {
+        $this->endMinutes = $endMinutes;
+    }
+    public function getEndMinutes()
+    {
+        return $this->endMinutes;
+    }
+    public function setStartMinutes($startMinutes)
+    {
+        $this->startMinutes = $startMinutes;
+    }
+    public function getStartMinutes()
+    {
+        return $this->startMinutes;
+    }
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+    public function getType()
+    {
+        return $this->type;
+    }
 }

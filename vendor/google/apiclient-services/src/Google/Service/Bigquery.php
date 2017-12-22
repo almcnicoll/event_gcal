@@ -30,53 +30,67 @@
  */
 class Google_Service_Bigquery extends Google_Service
 {
-  /** View and manage your data in Google BigQuery. */
-  const BIGQUERY =
+    /**
+ * View and manage your data in Google BigQuery. 
+*/
+    const BIGQUERY =
       "https://www.googleapis.com/auth/bigquery";
-  /** Insert data into Google BigQuery. */
-  const BIGQUERY_INSERTDATA =
+    /**
+ * Insert data into Google BigQuery. 
+*/
+    const BIGQUERY_INSERTDATA =
       "https://www.googleapis.com/auth/bigquery.insertdata";
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** View your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM_READ_ONLY =
+    /**
+ * View your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM_READ_ONLY =
       "https://www.googleapis.com/auth/cloud-platform.read-only";
-  /** Manage your data and permissions in Google Cloud Storage. */
-  const DEVSTORAGE_FULL_CONTROL =
+    /**
+ * Manage your data and permissions in Google Cloud Storage. 
+*/
+    const DEVSTORAGE_FULL_CONTROL =
       "https://www.googleapis.com/auth/devstorage.full_control";
-  /** View your data in Google Cloud Storage. */
-  const DEVSTORAGE_READ_ONLY =
+    /**
+ * View your data in Google Cloud Storage. 
+*/
+    const DEVSTORAGE_READ_ONLY =
       "https://www.googleapis.com/auth/devstorage.read_only";
-  /** Manage your data in Google Cloud Storage. */
-  const DEVSTORAGE_READ_WRITE =
+    /**
+ * Manage your data in Google Cloud Storage. 
+*/
+    const DEVSTORAGE_READ_WRITE =
       "https://www.googleapis.com/auth/devstorage.read_write";
 
-  public $datasets;
-  public $jobs;
-  public $projects;
-  public $tabledata;
-  public $tables;
+    public $datasets;
+    public $jobs;
+    public $projects;
+    public $tabledata;
+    public $tables;
   
-  /**
+    /**
    * Constructs the internal representation of the Bigquery service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'bigquery/v2/';
-    $this->version = 'v2';
-    $this->serviceName = 'bigquery';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'bigquery/v2/';
+        $this->version = 'v2';
+        $this->serviceName = 'bigquery';
 
-    $this->datasets = new Google_Service_Bigquery_Resource_Datasets(
-        $this,
-        $this->serviceName,
-        'datasets',
-        array(
-          'methods' => array(
+        $this->datasets = new Google_Service_Bigquery_Resource_Datasets(
+            $this,
+            $this->serviceName,
+            'datasets',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'projects/{projectId}/datasets/{datasetId}',
               'httpMethod' => 'DELETE',
@@ -178,15 +192,15 @@ class Google_Service_Bigquery extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->jobs = new Google_Service_Bigquery_Resource_Jobs(
-        $this,
-        $this->serviceName,
-        'jobs',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->jobs = new Google_Service_Bigquery_Resource_Jobs(
+            $this,
+            $this->serviceName,
+            'jobs',
+            array(
+            'methods' => array(
             'cancel' => array(
               'path' => 'projects/{projectId}/jobs/{jobId}/cancel',
               'httpMethod' => 'POST',
@@ -300,15 +314,15 @@ class Google_Service_Bigquery extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects = new Google_Service_Bigquery_Resource_Projects(
-        $this,
-        $this->serviceName,
-        'projects',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects = new Google_Service_Bigquery_Resource_Projects(
+            $this,
+            $this->serviceName,
+            'projects',
+            array(
+            'methods' => array(
             'getServiceAccount' => array(
               'path' => 'projects/{projectId}/serviceAccount',
               'httpMethod' => 'GET',
@@ -333,15 +347,15 @@ class Google_Service_Bigquery extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->tabledata = new Google_Service_Bigquery_Resource_Tabledata(
-        $this,
-        $this->serviceName,
-        'tabledata',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->tabledata = new Google_Service_Bigquery_Resource_Tabledata(
+            $this,
+            $this->serviceName,
+            'tabledata',
+            array(
+            'methods' => array(
             'insertAll' => array(
               'path' => 'projects/{projectId}/datasets/{datasetId}/tables/{tableId}/insertAll',
               'httpMethod' => 'POST',
@@ -399,15 +413,15 @@ class Google_Service_Bigquery extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->tables = new Google_Service_Bigquery_Resource_Tables(
-        $this,
-        $this->serviceName,
-        'tables',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->tables = new Google_Service_Bigquery_Resource_Tables(
+            $this,
+            $this->serviceName,
+            'tables',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'projects/{projectId}/datasets/{datasetId}/tables/{tableId}',
               'httpMethod' => 'DELETE',
@@ -531,8 +545,8 @@ class Google_Service_Bigquery extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

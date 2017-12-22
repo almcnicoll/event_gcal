@@ -25,21 +25,22 @@
  */
 class Google_Service_CloudMonitoring_Resource_TimeseriesDescriptors extends Google_Service_Resource
 {
-  /**
+    /**
    * List the descriptors of the time series that match the metric and labels
    * values and that have data points in the interval. Large responses are
    * paginated; use the nextPageToken returned in the response to request
    * subsequent pages of results by setting the pageToken query parameter to the
    * value of the nextPageToken. (timeseriesDescriptors.listTimeseriesDescriptors)
    *
-   * @param string $project The project ID to which this time series belongs. The
-   * value can be the numeric project ID or string-based project name.
-   * @param string $metric Metric names are protocol-free URLs as listed in the
-   * Supported Metrics page. For example,
-   * compute.googleapis.com/instance/disk/read_ops_count.
-   * @param string $youngest End of the time interval (inclusive), which is
-   * expressed as an RFC 3339 timestamp.
-   * @param array $optParams Optional parameters.
+   * @param string $project   The project ID to which this time series belongs. The
+   *                          value can be the numeric project ID or string-based
+   *                          project name.
+   * @param string $metric    Metric names are protocol-free URLs as listed in the
+   *                          Supported Metrics page. For example,
+   *                          compute.googleapis.com/instance/disk/read_ops_count.
+   * @param string $youngest  End of the time interval (inclusive), which is
+   *                          expressed as an RFC 3339 timestamp.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string aggregator The aggregation function that will reduce the
    * data points in each window to a single point. This parameter is only valid
@@ -72,12 +73,12 @@ class Google_Service_CloudMonitoring_Resource_TimeseriesDescriptors extends Goog
    * only valid for non-cumulative metric types. Units: - m: minute  - h: hour  -
    * d: day  - w: week  Examples: 3m, 4w. Only one unit is allowed, for example:
    * 2w3d is not allowed; you should use 17d instead.
-   * @return Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse
+   * @return    Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse
    */
-  public function listTimeseriesDescriptors($project, $metric, $youngest, $optParams = array())
-  {
-    $params = array('project' => $project, 'metric' => $metric, 'youngest' => $youngest);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse");
-  }
+    public function listTimeseriesDescriptors($project, $metric, $youngest, $optParams = array())
+    {
+        $params = array('project' => $project, 'metric' => $metric, 'youngest' => $youngest);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_CloudMonitoring_ListTimeseriesDescriptorsResponse");
+    }
 }

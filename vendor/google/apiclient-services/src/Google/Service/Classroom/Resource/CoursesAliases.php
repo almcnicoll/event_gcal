@@ -25,7 +25,7 @@
  */
 class Google_Service_Classroom_Resource_CoursesAliases extends Google_Service_Resource
 {
-  /**
+    /**
    * Creates an alias for a course.
    *
    * This method returns the following error codes:
@@ -37,19 +37,20 @@ class Google_Service_Classroom_Resource_CoursesAliases extends Google_Service_Re
    * example, if a user not in a domain   attempts to access a domain-scoped
    * alias). (aliases.create)
    *
-   * @param string $courseId Identifier of the course to alias. This identifier
-   * can be either the Classroom-assigned identifier or an alias.
-   * @param Google_Service_Classroom_CourseAlias $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                               $courseId  Identifier of the course to alias. This identifier
+   *                                                         can be either the Classroom-assigned identifier or
+   *                                                         an alias.
+   * @param  Google_Service_Classroom_CourseAlias $postBody
+   * @param  array                                $optParams Optional parameters.
    * @return Google_Service_Classroom_CourseAlias
    */
-  public function create($courseId, Google_Service_Classroom_CourseAlias $postBody, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Classroom_CourseAlias");
-  }
-  /**
+    public function create($courseId, Google_Service_Classroom_CourseAlias $postBody, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_Classroom_CourseAlias");
+    }
+    /**
    * Deletes an alias of a course.
    *
    * This method returns the following error codes:
@@ -60,21 +61,21 @@ class Google_Service_Classroom_Resource_CoursesAliases extends Google_Service_Re
    * requesting user or course (for example, if a user not in a domain   attempts
    * to delete a domain-scoped alias). (aliases.delete)
    *
-   * @param string $courseId Identifier of the course whose alias should be
-   * deleted. This identifier can be either the Classroom-assigned identifier or
-   * an alias.
-   * @param string $alias Alias to delete. This may not be the Classroom-assigned
-   * identifier.
-   * @param array $optParams Optional parameters.
+   * @param  string $courseId  Identifier of the course whose alias should be
+   *                          deleted. This identifier can be either the
+   *                          Classroom-assigned identifier or an alias.
+   * @param  string $alias     Alias to delete. This may not be the Classroom-assigned
+   *                          identifier.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
-  public function delete($courseId, $alias, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'alias' => $alias);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
-  }
-  /**
+    public function delete($courseId, $alias, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'alias' => $alias);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
+    }
+    /**
    * Returns a list of aliases for a course.
    *
    * This method returns the following error codes:
@@ -83,9 +84,10 @@ class Google_Service_Classroom_Resource_CoursesAliases extends Google_Service_Re
    * course or for access errors. * `NOT_FOUND` if the course does not exist.
    * (aliases.listCoursesAliases)
    *
-   * @param string $courseId The identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param array $optParams Optional parameters.
+   * @param string $courseId  The identifier of the course. This identifier can be
+   *                          either the Classroom-assigned identifier or an
+   *                          alias.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string pageToken nextPageToken value returned from a previous list
    * call, indicating that the subsequent page of results should be returned.
@@ -96,12 +98,12 @@ class Google_Service_Classroom_Resource_CoursesAliases extends Google_Service_Re
    * unspecified indicates that the server may assign a maximum.
    *
    * The server may return fewer than the specified number of results.
-   * @return Google_Service_Classroom_ListCourseAliasesResponse
+   * @return    Google_Service_Classroom_ListCourseAliasesResponse
    */
-  public function listCoursesAliases($courseId, $optParams = array())
-  {
-    $params = array('courseId' => $courseId);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Classroom_ListCourseAliasesResponse");
-  }
+    public function listCoursesAliases($courseId, $optParams = array())
+    {
+        $params = array('courseId' => $courseId);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Classroom_ListCourseAliasesResponse");
+    }
 }

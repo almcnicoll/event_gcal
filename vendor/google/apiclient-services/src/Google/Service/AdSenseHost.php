@@ -31,39 +31,41 @@
  */
 class Google_Service_AdSenseHost extends Google_Service
 {
-  /** View and manage your AdSense host data and associated accounts. */
-  const ADSENSEHOST =
+    /**
+ * View and manage your AdSense host data and associated accounts. 
+*/
+    const ADSENSEHOST =
       "https://www.googleapis.com/auth/adsensehost";
 
-  public $accounts;
-  public $accounts_adclients;
-  public $accounts_adunits;
-  public $accounts_reports;
-  public $adclients;
-  public $associationsessions;
-  public $customchannels;
-  public $reports;
-  public $urlchannels;
+    public $accounts;
+    public $accounts_adclients;
+    public $accounts_adunits;
+    public $accounts_reports;
+    public $adclients;
+    public $associationsessions;
+    public $customchannels;
+    public $reports;
+    public $urlchannels;
   
-  /**
+    /**
    * Constructs the internal representation of the AdSenseHost service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'adsensehost/v4.1/';
-    $this->version = 'v4.1';
-    $this->serviceName = 'adsensehost';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'adsensehost/v4.1/';
+        $this->version = 'v4.1';
+        $this->serviceName = 'adsensehost';
 
-    $this->accounts = new Google_Service_AdSenseHost_Resource_Accounts(
-        $this,
-        $this->serviceName,
-        'accounts',
-        array(
-          'methods' => array(
+        $this->accounts = new Google_Service_AdSenseHost_Resource_Accounts(
+            $this,
+            $this->serviceName,
+            'accounts',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'accounts/{accountId}',
               'httpMethod' => 'GET',
@@ -86,15 +88,15 @@ class Google_Service_AdSenseHost extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_adclients = new Google_Service_AdSenseHost_Resource_AccountsAdclients(
-        $this,
-        $this->serviceName,
-        'adclients',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_adclients = new Google_Service_AdSenseHost_Resource_AccountsAdclients(
+            $this,
+            $this->serviceName,
+            'adclients',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'accounts/{accountId}/adclients/{adClientId}',
               'httpMethod' => 'GET',
@@ -129,15 +131,15 @@ class Google_Service_AdSenseHost extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_adunits = new Google_Service_AdSenseHost_Resource_AccountsAdunits(
-        $this,
-        $this->serviceName,
-        'adunits',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_adunits = new Google_Service_AdSenseHost_Resource_AccountsAdunits(
+            $this,
+            $this->serviceName,
+            'adunits',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}',
               'httpMethod' => 'DELETE',
@@ -281,15 +283,15 @@ class Google_Service_AdSenseHost extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->accounts_reports = new Google_Service_AdSenseHost_Resource_AccountsReports(
-        $this,
-        $this->serviceName,
-        'reports',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->accounts_reports = new Google_Service_AdSenseHost_Resource_AccountsReports(
+            $this,
+            $this->serviceName,
+            'reports',
+            array(
+            'methods' => array(
             'generate' => array(
               'path' => 'accounts/{accountId}/reports',
               'httpMethod' => 'GET',
@@ -343,15 +345,15 @@ class Google_Service_AdSenseHost extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->adclients = new Google_Service_AdSenseHost_Resource_Adclients(
-        $this,
-        $this->serviceName,
-        'adclients',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->adclients = new Google_Service_AdSenseHost_Resource_Adclients(
+            $this,
+            $this->serviceName,
+            'adclients',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'adclients/{adClientId}',
               'httpMethod' => 'GET',
@@ -376,15 +378,15 @@ class Google_Service_AdSenseHost extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->associationsessions = new Google_Service_AdSenseHost_Resource_Associationsessions(
-        $this,
-        $this->serviceName,
-        'associationsessions',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->associationsessions = new Google_Service_AdSenseHost_Resource_Associationsessions(
+            $this,
+            $this->serviceName,
+            'associationsessions',
+            array(
+            'methods' => array(
             'start' => array(
               'path' => 'associationsessions/start',
               'httpMethod' => 'GET',
@@ -420,15 +422,15 @@ class Google_Service_AdSenseHost extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->customchannels = new Google_Service_AdSenseHost_Resource_Customchannels(
-        $this,
-        $this->serviceName,
-        'customchannels',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->customchannels = new Google_Service_AdSenseHost_Resource_Customchannels(
+            $this,
+            $this->serviceName,
+            'customchannels',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'adclients/{adClientId}/customchannels/{customChannelId}',
               'httpMethod' => 'DELETE',
@@ -513,15 +515,15 @@ class Google_Service_AdSenseHost extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->reports = new Google_Service_AdSenseHost_Resource_Reports(
-        $this,
-        $this->serviceName,
-        'reports',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->reports = new Google_Service_AdSenseHost_Resource_Reports(
+            $this,
+            $this->serviceName,
+            'reports',
+            array(
+            'methods' => array(
             'generate' => array(
               'path' => 'reports',
               'httpMethod' => 'GET',
@@ -570,15 +572,15 @@ class Google_Service_AdSenseHost extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->urlchannels = new Google_Service_AdSenseHost_Resource_Urlchannels(
-        $this,
-        $this->serviceName,
-        'urlchannels',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->urlchannels = new Google_Service_AdSenseHost_Resource_Urlchannels(
+            $this,
+            $this->serviceName,
+            'urlchannels',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'adclients/{adClientId}/urlchannels/{urlChannelId}',
               'httpMethod' => 'DELETE',
@@ -623,8 +625,8 @@ class Google_Service_AdSenseHost extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

@@ -17,57 +17,57 @@
 
 class Google_Service_CloudTasks_AppEngineHttpRequest extends Google_Model
 {
-  protected $appEngineRoutingType = 'Google_Service_CloudTasks_AppEngineRouting';
-  protected $appEngineRoutingDataType = '';
-  public $headers;
-  public $httpMethod;
-  public $payload;
-  public $relativeUrl;
+    protected $appEngineRoutingType = 'Google_Service_CloudTasks_AppEngineRouting';
+    protected $appEngineRoutingDataType = '';
+    public $headers;
+    public $httpMethod;
+    public $payload;
+    public $relativeUrl;
 
-  /**
+    /**
    * @param Google_Service_CloudTasks_AppEngineRouting
    */
-  public function setAppEngineRouting(Google_Service_CloudTasks_AppEngineRouting $appEngineRouting)
-  {
-    $this->appEngineRouting = $appEngineRouting;
-  }
-  /**
+    public function setAppEngineRouting(Google_Service_CloudTasks_AppEngineRouting $appEngineRouting)
+    {
+        $this->appEngineRouting = $appEngineRouting;
+    }
+    /**
    * @return Google_Service_CloudTasks_AppEngineRouting
    */
-  public function getAppEngineRouting()
-  {
-    return $this->appEngineRouting;
-  }
-  public function setHeaders($headers)
-  {
-    $this->headers = $headers;
-  }
-  public function getHeaders()
-  {
-    return $this->headers;
-  }
-  public function setHttpMethod($httpMethod)
-  {
-    $this->httpMethod = $httpMethod;
-  }
-  public function getHttpMethod()
-  {
-    return $this->httpMethod;
-  }
-  public function setPayload($payload)
-  {
-    $this->payload = $payload;
-  }
-  public function getPayload()
-  {
-    return $this->payload;
-  }
-  public function setRelativeUrl($relativeUrl)
-  {
-    $this->relativeUrl = $relativeUrl;
-  }
-  public function getRelativeUrl()
-  {
-    return $this->relativeUrl;
-  }
+    public function getAppEngineRouting()
+    {
+        return $this->appEngineRouting;
+    }
+    public function setHeaders($headers)
+    {
+        $this->headers = $headers;
+    }
+    public function getHeaders()
+    {
+        return $this->headers;
+    }
+    public function setHttpMethod($httpMethod)
+    {
+        $this->httpMethod = $httpMethod;
+    }
+    public function getHttpMethod()
+    {
+        return $this->httpMethod;
+    }
+    public function setPayload($payload)
+    {
+        $this->payload = $payload;
+    }
+    public function getPayload()
+    {
+        return $this->payload;
+    }
+    public function setRelativeUrl($relativeUrl)
+    {
+        $this->relativeUrl = $relativeUrl;
+    }
+    public function getRelativeUrl()
+    {
+        return $this->relativeUrl;
+    }
 }

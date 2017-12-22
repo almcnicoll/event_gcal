@@ -25,7 +25,7 @@
  */
 class Google_Service_Analytics_Resource_ManagementSegments extends Google_Service_Resource
 {
-  /**
+    /**
    * Lists segments to which the user has access.
    * (segments.listManagementSegments)
    *
@@ -36,12 +36,12 @@ class Google_Service_Analytics_Resource_ManagementSegments extends Google_Servic
    * @opt_param int start-index An index of the first segment to retrieve. Use
    * this parameter as a pagination mechanism along with the max-results
    * parameter.
-   * @return Google_Service_Analytics_Segments
+   * @return    Google_Service_Analytics_Segments
    */
-  public function listManagementSegments($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Analytics_Segments");
-  }
+    public function listManagementSegments($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Analytics_Segments");
+    }
 }

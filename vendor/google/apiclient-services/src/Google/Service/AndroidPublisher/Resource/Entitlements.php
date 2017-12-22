@@ -25,25 +25,25 @@
  */
 class Google_Service_AndroidPublisher_Resource_Entitlements extends Google_Service_Resource
 {
-  /**
+    /**
    * Lists the user's current inapp item or subscription entitlements
    * (entitlements.listEntitlements)
    *
    * @param string $packageName The package name of the application the inapp
    * product was sold in (for example, 'com.some.thing').
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams   Optional parameters.
    *
    * @opt_param string maxResults
    * @opt_param string productId The product id of the inapp product (for example,
    * 'sku1'). This can be used to restrict the result set.
    * @opt_param string startIndex
    * @opt_param string token
-   * @return Google_Service_AndroidPublisher_EntitlementsListResponse
+   * @return    Google_Service_AndroidPublisher_EntitlementsListResponse
    */
-  public function listEntitlements($packageName, $optParams = array())
-  {
-    $params = array('packageName' => $packageName);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AndroidPublisher_EntitlementsListResponse");
-  }
+    public function listEntitlements($packageName, $optParams = array())
+    {
+        $params = array('packageName' => $packageName);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_AndroidPublisher_EntitlementsListResponse");
+    }
 }

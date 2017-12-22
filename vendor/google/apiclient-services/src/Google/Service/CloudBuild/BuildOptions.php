@@ -17,60 +17,60 @@
 
 class Google_Service_CloudBuild_BuildOptions extends Google_Collection
 {
-  protected $collection_key = 'sourceProvenanceHash';
-  public $diskSizeGb;
-  public $logStreamingOption;
-  public $machineType;
-  public $requestedVerifyOption;
-  public $sourceProvenanceHash;
-  public $substitutionOption;
+    protected $collection_key = 'sourceProvenanceHash';
+    public $diskSizeGb;
+    public $logStreamingOption;
+    public $machineType;
+    public $requestedVerifyOption;
+    public $sourceProvenanceHash;
+    public $substitutionOption;
 
-  public function setDiskSizeGb($diskSizeGb)
-  {
-    $this->diskSizeGb = $diskSizeGb;
-  }
-  public function getDiskSizeGb()
-  {
-    return $this->diskSizeGb;
-  }
-  public function setLogStreamingOption($logStreamingOption)
-  {
-    $this->logStreamingOption = $logStreamingOption;
-  }
-  public function getLogStreamingOption()
-  {
-    return $this->logStreamingOption;
-  }
-  public function setMachineType($machineType)
-  {
-    $this->machineType = $machineType;
-  }
-  public function getMachineType()
-  {
-    return $this->machineType;
-  }
-  public function setRequestedVerifyOption($requestedVerifyOption)
-  {
-    $this->requestedVerifyOption = $requestedVerifyOption;
-  }
-  public function getRequestedVerifyOption()
-  {
-    return $this->requestedVerifyOption;
-  }
-  public function setSourceProvenanceHash($sourceProvenanceHash)
-  {
-    $this->sourceProvenanceHash = $sourceProvenanceHash;
-  }
-  public function getSourceProvenanceHash()
-  {
-    return $this->sourceProvenanceHash;
-  }
-  public function setSubstitutionOption($substitutionOption)
-  {
-    $this->substitutionOption = $substitutionOption;
-  }
-  public function getSubstitutionOption()
-  {
-    return $this->substitutionOption;
-  }
+    public function setDiskSizeGb($diskSizeGb)
+    {
+        $this->diskSizeGb = $diskSizeGb;
+    }
+    public function getDiskSizeGb()
+    {
+        return $this->diskSizeGb;
+    }
+    public function setLogStreamingOption($logStreamingOption)
+    {
+        $this->logStreamingOption = $logStreamingOption;
+    }
+    public function getLogStreamingOption()
+    {
+        return $this->logStreamingOption;
+    }
+    public function setMachineType($machineType)
+    {
+        $this->machineType = $machineType;
+    }
+    public function getMachineType()
+    {
+        return $this->machineType;
+    }
+    public function setRequestedVerifyOption($requestedVerifyOption)
+    {
+        $this->requestedVerifyOption = $requestedVerifyOption;
+    }
+    public function getRequestedVerifyOption()
+    {
+        return $this->requestedVerifyOption;
+    }
+    public function setSourceProvenanceHash($sourceProvenanceHash)
+    {
+        $this->sourceProvenanceHash = $sourceProvenanceHash;
+    }
+    public function getSourceProvenanceHash()
+    {
+        return $this->sourceProvenanceHash;
+    }
+    public function setSubstitutionOption($substitutionOption)
+    {
+        $this->substitutionOption = $substitutionOption;
+    }
+    public function getSubstitutionOption()
+    {
+        return $this->substitutionOption;
+    }
 }

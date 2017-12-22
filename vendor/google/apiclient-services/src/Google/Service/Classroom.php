@@ -30,94 +30,130 @@
  */
 class Google_Service_Classroom extends Google_Service
 {
-  /** View and manage announcements in Google Classroom. */
-  const CLASSROOM_ANNOUNCEMENTS =
+    /**
+ * View and manage announcements in Google Classroom. 
+*/
+    const CLASSROOM_ANNOUNCEMENTS =
       "https://www.googleapis.com/auth/classroom.announcements";
-  /** View announcements in Google Classroom. */
-  const CLASSROOM_ANNOUNCEMENTS_READONLY =
+    /**
+ * View announcements in Google Classroom. 
+*/
+    const CLASSROOM_ANNOUNCEMENTS_READONLY =
       "https://www.googleapis.com/auth/classroom.announcements.readonly";
-  /** Manage your Google Classroom classes. */
-  const CLASSROOM_COURSES =
+    /**
+ * Manage your Google Classroom classes. 
+*/
+    const CLASSROOM_COURSES =
       "https://www.googleapis.com/auth/classroom.courses";
-  /** View your Google Classroom classes. */
-  const CLASSROOM_COURSES_READONLY =
+    /**
+ * View your Google Classroom classes. 
+*/
+    const CLASSROOM_COURSES_READONLY =
       "https://www.googleapis.com/auth/classroom.courses.readonly";
-  /** Manage your course work and view your grades in Google Classroom. */
-  const CLASSROOM_COURSEWORK_ME =
+    /**
+ * Manage your course work and view your grades in Google Classroom. 
+*/
+    const CLASSROOM_COURSEWORK_ME =
       "https://www.googleapis.com/auth/classroom.coursework.me";
-  /** View your course work and grades in Google Classroom. */
-  const CLASSROOM_COURSEWORK_ME_READONLY =
+    /**
+ * View your course work and grades in Google Classroom. 
+*/
+    const CLASSROOM_COURSEWORK_ME_READONLY =
       "https://www.googleapis.com/auth/classroom.coursework.me.readonly";
-  /** Manage course work and grades for students in the Google Classroom classes you teach and view the course work and grades for classes you administer. */
-  const CLASSROOM_COURSEWORK_STUDENTS =
+    /**
+ * Manage course work and grades for students in the Google Classroom classes you teach and view the course work and grades for classes you administer. 
+*/
+    const CLASSROOM_COURSEWORK_STUDENTS =
       "https://www.googleapis.com/auth/classroom.coursework.students";
-  /** View course work and grades for students in the Google Classroom classes you teach or administer. */
-  const CLASSROOM_COURSEWORK_STUDENTS_READONLY =
+    /**
+ * View course work and grades for students in the Google Classroom classes you teach or administer. 
+*/
+    const CLASSROOM_COURSEWORK_STUDENTS_READONLY =
       "https://www.googleapis.com/auth/classroom.coursework.students.readonly";
-  /** View your Google Classroom guardians. */
-  const CLASSROOM_GUARDIANLINKS_ME_READONLY =
+    /**
+ * View your Google Classroom guardians. 
+*/
+    const CLASSROOM_GUARDIANLINKS_ME_READONLY =
       "https://www.googleapis.com/auth/classroom.guardianlinks.me.readonly";
-  /** View and manage guardians for students in your Google Classroom classes. */
-  const CLASSROOM_GUARDIANLINKS_STUDENTS =
+    /**
+ * View and manage guardians for students in your Google Classroom classes. 
+*/
+    const CLASSROOM_GUARDIANLINKS_STUDENTS =
       "https://www.googleapis.com/auth/classroom.guardianlinks.students";
-  /** View guardians for students in your Google Classroom classes. */
-  const CLASSROOM_GUARDIANLINKS_STUDENTS_READONLY =
+    /**
+ * View guardians for students in your Google Classroom classes. 
+*/
+    const CLASSROOM_GUARDIANLINKS_STUDENTS_READONLY =
       "https://www.googleapis.com/auth/classroom.guardianlinks.students.readonly";
-  /** View the email addresses of people in your classes. */
-  const CLASSROOM_PROFILE_EMAILS =
+    /**
+ * View the email addresses of people in your classes. 
+*/
+    const CLASSROOM_PROFILE_EMAILS =
       "https://www.googleapis.com/auth/classroom.profile.emails";
-  /** View the profile photos of people in your classes. */
-  const CLASSROOM_PROFILE_PHOTOS =
+    /**
+ * View the profile photos of people in your classes. 
+*/
+    const CLASSROOM_PROFILE_PHOTOS =
       "https://www.googleapis.com/auth/classroom.profile.photos";
-  /** Receive notifications about your Google Classroom data. */
-  const CLASSROOM_PUSH_NOTIFICATIONS =
+    /**
+ * Receive notifications about your Google Classroom data. 
+*/
+    const CLASSROOM_PUSH_NOTIFICATIONS =
       "https://www.googleapis.com/auth/classroom.push-notifications";
-  /** Manage your Google Classroom class rosters. */
-  const CLASSROOM_ROSTERS =
+    /**
+ * Manage your Google Classroom class rosters. 
+*/
+    const CLASSROOM_ROSTERS =
       "https://www.googleapis.com/auth/classroom.rosters";
-  /** View your Google Classroom class rosters. */
-  const CLASSROOM_ROSTERS_READONLY =
+    /**
+ * View your Google Classroom class rosters. 
+*/
+    const CLASSROOM_ROSTERS_READONLY =
       "https://www.googleapis.com/auth/classroom.rosters.readonly";
-  /** View your course work and grades in Google Classroom. */
-  const CLASSROOM_STUDENT_SUBMISSIONS_ME_READONLY =
+    /**
+ * View your course work and grades in Google Classroom. 
+*/
+    const CLASSROOM_STUDENT_SUBMISSIONS_ME_READONLY =
       "https://www.googleapis.com/auth/classroom.student-submissions.me.readonly";
-  /** View course work and grades for students in the Google Classroom classes you teach or administer. */
-  const CLASSROOM_STUDENT_SUBMISSIONS_STUDENTS_READONLY =
+    /**
+ * View course work and grades for students in the Google Classroom classes you teach or administer. 
+*/
+    const CLASSROOM_STUDENT_SUBMISSIONS_STUDENTS_READONLY =
       "https://www.googleapis.com/auth/classroom.student-submissions.students.readonly";
 
-  public $courses;
-  public $courses_aliases;
-  public $courses_announcements;
-  public $courses_courseWork;
-  public $courses_courseWork_studentSubmissions;
-  public $courses_students;
-  public $courses_teachers;
-  public $courses_topics;
-  public $invitations;
-  public $registrations;
-  public $userProfiles;
-  public $userProfiles_guardianInvitations;
-  public $userProfiles_guardians;
+    public $courses;
+    public $courses_aliases;
+    public $courses_announcements;
+    public $courses_courseWork;
+    public $courses_courseWork_studentSubmissions;
+    public $courses_students;
+    public $courses_teachers;
+    public $courses_topics;
+    public $invitations;
+    public $registrations;
+    public $userProfiles;
+    public $userProfiles_guardianInvitations;
+    public $userProfiles_guardians;
   
-  /**
+    /**
    * Constructs the internal representation of the Classroom service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://classroom.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'classroom';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://classroom.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'classroom';
 
-    $this->courses = new Google_Service_Classroom_Resource_Courses(
-        $this,
-        $this->serviceName,
-        'courses',
-        array(
-          'methods' => array(
+        $this->courses = new Google_Service_Classroom_Resource_Courses(
+            $this,
+            $this->serviceName,
+            'courses',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/courses',
               'httpMethod' => 'POST',
@@ -193,15 +229,15 @@ class Google_Service_Classroom extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->courses_aliases = new Google_Service_Classroom_Resource_CoursesAliases(
-        $this,
-        $this->serviceName,
-        'aliases',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->courses_aliases = new Google_Service_Classroom_Resource_CoursesAliases(
+            $this,
+            $this->serviceName,
+            'aliases',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/courses/{courseId}/aliases',
               'httpMethod' => 'POST',
@@ -246,15 +282,15 @@ class Google_Service_Classroom extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->courses_announcements = new Google_Service_Classroom_Resource_CoursesAnnouncements(
-        $this,
-        $this->serviceName,
-        'announcements',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->courses_announcements = new Google_Service_Classroom_Resource_CoursesAnnouncements(
+            $this,
+            $this->serviceName,
+            'announcements',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/courses/{courseId}/announcements',
               'httpMethod' => 'POST',
@@ -357,15 +393,15 @@ class Google_Service_Classroom extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->courses_courseWork = new Google_Service_Classroom_Resource_CoursesCourseWork(
-        $this,
-        $this->serviceName,
-        'courseWork',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->courses_courseWork = new Google_Service_Classroom_Resource_CoursesCourseWork(
+            $this,
+            $this->serviceName,
+            'courseWork',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/courses/{courseId}/courseWork',
               'httpMethod' => 'POST',
@@ -468,15 +504,15 @@ class Google_Service_Classroom extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->courses_courseWork_studentSubmissions = new Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions(
-        $this,
-        $this->serviceName,
-        'studentSubmissions',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->courses_courseWork_studentSubmissions = new Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions(
+            $this,
+            $this->serviceName,
+            'studentSubmissions',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions/{id}',
               'httpMethod' => 'GET',
@@ -638,15 +674,15 @@ class Google_Service_Classroom extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->courses_students = new Google_Service_Classroom_Resource_CoursesStudents(
-        $this,
-        $this->serviceName,
-        'students',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->courses_students = new Google_Service_Classroom_Resource_CoursesStudents(
+            $this,
+            $this->serviceName,
+            'students',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/courses/{courseId}/students',
               'httpMethod' => 'POST',
@@ -710,15 +746,15 @@ class Google_Service_Classroom extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->courses_teachers = new Google_Service_Classroom_Resource_CoursesTeachers(
-        $this,
-        $this->serviceName,
-        'teachers',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->courses_teachers = new Google_Service_Classroom_Resource_CoursesTeachers(
+            $this,
+            $this->serviceName,
+            'teachers',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/courses/{courseId}/teachers',
               'httpMethod' => 'POST',
@@ -778,15 +814,15 @@ class Google_Service_Classroom extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->courses_topics = new Google_Service_Classroom_Resource_CoursesTopics(
-        $this,
-        $this->serviceName,
-        'topics',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->courses_topics = new Google_Service_Classroom_Resource_CoursesTopics(
+            $this,
+            $this->serviceName,
+            'topics',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'v1/courses/{courseId}/topics/{id}',
               'httpMethod' => 'GET',
@@ -821,15 +857,15 @@ class Google_Service_Classroom extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->invitations = new Google_Service_Classroom_Resource_Invitations(
-        $this,
-        $this->serviceName,
-        'invitations',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->invitations = new Google_Service_Classroom_Resource_Invitations(
+            $this,
+            $this->serviceName,
+            'invitations',
+            array(
+            'methods' => array(
             'accept' => array(
               'path' => 'v1/invitations/{id}:accept',
               'httpMethod' => 'POST',
@@ -886,15 +922,15 @@ class Google_Service_Classroom extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->registrations = new Google_Service_Classroom_Resource_Registrations(
-        $this,
-        $this->serviceName,
-        'registrations',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->registrations = new Google_Service_Classroom_Resource_Registrations(
+            $this,
+            $this->serviceName,
+            'registrations',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/registrations',
               'httpMethod' => 'POST',
@@ -910,15 +946,15 @@ class Google_Service_Classroom extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->userProfiles = new Google_Service_Classroom_Resource_UserProfiles(
-        $this,
-        $this->serviceName,
-        'userProfiles',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->userProfiles = new Google_Service_Classroom_Resource_UserProfiles(
+            $this,
+            $this->serviceName,
+            'userProfiles',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'v1/userProfiles/{userId}',
               'httpMethod' => 'GET',
@@ -930,15 +966,15 @@ class Google_Service_Classroom extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->userProfiles_guardianInvitations = new Google_Service_Classroom_Resource_UserProfilesGuardianInvitations(
-        $this,
-        $this->serviceName,
-        'guardianInvitations',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->userProfiles_guardianInvitations = new Google_Service_Classroom_Resource_UserProfilesGuardianInvitations(
+            $this,
+            $this->serviceName,
+            'guardianInvitations',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/userProfiles/{studentId}/guardianInvitations',
               'httpMethod' => 'POST',
@@ -1011,15 +1047,15 @@ class Google_Service_Classroom extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->userProfiles_guardians = new Google_Service_Classroom_Resource_UserProfilesGuardians(
-        $this,
-        $this->serviceName,
-        'guardians',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->userProfiles_guardians = new Google_Service_Classroom_Resource_UserProfilesGuardians(
+            $this,
+            $this->serviceName,
+            'guardians',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'v1/userProfiles/{studentId}/guardians/{guardianId}',
               'httpMethod' => 'DELETE',
@@ -1073,8 +1109,8 @@ class Google_Service_Classroom extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

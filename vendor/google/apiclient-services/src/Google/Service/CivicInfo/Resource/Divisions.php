@@ -25,7 +25,7 @@
  */
 class Google_Service_CivicInfo_Resource_Divisions extends Google_Service_Resource
 {
-  /**
+    /**
    * Searches for political divisions by their natural name or OCD ID.
    * (divisions.search)
    *
@@ -36,12 +36,12 @@ class Google_Service_CivicInfo_Resource_Divisions extends Google_Service_Resourc
    * treated as required patterns. In addition to that, most query operators of
    * the Apache Lucene library are supported. See
    * http://lucene.apache.org/core/2_9_4/queryparsersyntax.html
-   * @return Google_Service_CivicInfo_DivisionSearchResponse
+   * @return    Google_Service_CivicInfo_DivisionSearchResponse
    */
-  public function search($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('search', array($params), "Google_Service_CivicInfo_DivisionSearchResponse");
-  }
+    public function search($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('search', array($params), "Google_Service_CivicInfo_DivisionSearchResponse");
+    }
 }

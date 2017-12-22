@@ -17,41 +17,41 @@
 
 class Google_Service_AndroidEnterprise_Permission extends Google_Model
 {
-  public $description;
-  public $kind;
-  public $name;
-  public $permissionId;
+    public $description;
+    public $kind;
+    public $name;
+    public $permissionId;
 
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setPermissionId($permissionId)
-  {
-    $this->permissionId = $permissionId;
-  }
-  public function getPermissionId()
-  {
-    return $this->permissionId;
-  }
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setPermissionId($permissionId)
+    {
+        $this->permissionId = $permissionId;
+    }
+    public function getPermissionId()
+    {
+        return $this->permissionId;
+    }
 }

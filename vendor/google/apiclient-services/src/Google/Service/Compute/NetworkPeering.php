@@ -17,50 +17,50 @@
 
 class Google_Service_Compute_NetworkPeering extends Google_Model
 {
-  public $autoCreateRoutes;
-  public $name;
-  public $network;
-  public $state;
-  public $stateDetails;
+    public $autoCreateRoutes;
+    public $name;
+    public $network;
+    public $state;
+    public $stateDetails;
 
-  public function setAutoCreateRoutes($autoCreateRoutes)
-  {
-    $this->autoCreateRoutes = $autoCreateRoutes;
-  }
-  public function getAutoCreateRoutes()
-  {
-    return $this->autoCreateRoutes;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setNetwork($network)
-  {
-    $this->network = $network;
-  }
-  public function getNetwork()
-  {
-    return $this->network;
-  }
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  public function getState()
-  {
-    return $this->state;
-  }
-  public function setStateDetails($stateDetails)
-  {
-    $this->stateDetails = $stateDetails;
-  }
-  public function getStateDetails()
-  {
-    return $this->stateDetails;
-  }
+    public function setAutoCreateRoutes($autoCreateRoutes)
+    {
+        $this->autoCreateRoutes = $autoCreateRoutes;
+    }
+    public function getAutoCreateRoutes()
+    {
+        return $this->autoCreateRoutes;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setNetwork($network)
+    {
+        $this->network = $network;
+    }
+    public function getNetwork()
+    {
+        return $this->network;
+    }
+    public function setState($state)
+    {
+        $this->state = $state;
+    }
+    public function getState()
+    {
+        return $this->state;
+    }
+    public function setStateDetails($stateDetails)
+    {
+        $this->stateDetails = $stateDetails;
+    }
+    public function getStateDetails()
+    {
+        return $this->stateDetails;
+    }
 }

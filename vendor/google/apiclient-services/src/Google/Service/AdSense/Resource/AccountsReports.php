@@ -25,7 +25,7 @@
  */
 class Google_Service_AdSense_Resource_AccountsReports extends Google_Service_Resource
 {
-  /**
+    /**
    * Generate an AdSense report based on the report request sent in the query
    * parameters. Returns the result as JSON; to retrieve output in CSV format
    * specify "alt=csv" as a query parameter. (reports.generate)
@@ -33,9 +33,9 @@ class Google_Service_AdSense_Resource_AccountsReports extends Google_Service_Res
    * @param string $accountId Account upon which to report.
    * @param string $startDate Start of the date range to report on in "YYYY-MM-DD"
    * format, inclusive.
-   * @param string $endDate End of the date range to report on in "YYYY-MM-DD"
-   * format, inclusive.
-   * @param array $optParams Optional parameters.
+   * @param string $endDate   End of the date range to report on in "YYYY-MM-DD"
+   *                          format, inclusive.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string currency Optional currency to use when reporting on
    * monetary metrics. Defaults to the account's currency if not set.
@@ -53,12 +53,12 @@ class Google_Service_AdSense_Resource_AccountsReports extends Google_Service_Res
    * @opt_param bool useTimezoneReporting Whether the report should be generated
    * in the AdSense account's local timezone. If false default PST/PDT timezone
    * will be used.
-   * @return Google_Service_AdSense_AdsenseReportsGenerateResponse
+   * @return    Google_Service_AdSense_AdsenseReportsGenerateResponse
    */
-  public function generate($accountId, $startDate, $endDate, $optParams = array())
-  {
-    $params = array('accountId' => $accountId, 'startDate' => $startDate, 'endDate' => $endDate);
-    $params = array_merge($params, $optParams);
-    return $this->call('generate', array($params), "Google_Service_AdSense_AdsenseReportsGenerateResponse");
-  }
+    public function generate($accountId, $startDate, $endDate, $optParams = array())
+    {
+        $params = array('accountId' => $accountId, 'startDate' => $startDate, 'endDate' => $endDate);
+        $params = array_merge($params, $optParams);
+        return $this->call('generate', array($params), "Google_Service_AdSense_AdsenseReportsGenerateResponse");
+    }
 }

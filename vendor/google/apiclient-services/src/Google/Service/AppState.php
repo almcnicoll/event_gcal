@@ -30,31 +30,33 @@
  */
 class Google_Service_AppState extends Google_Service
 {
-  /** View and manage your data for this application. */
-  const APPSTATE =
+    /**
+ * View and manage your data for this application. 
+*/
+    const APPSTATE =
       "https://www.googleapis.com/auth/appstate";
 
-  public $states;
+    public $states;
   
-  /**
+    /**
    * Constructs the internal representation of the AppState service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'appstate/v1/';
-    $this->version = 'v1';
-    $this->serviceName = 'appstate';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'appstate/v1/';
+        $this->version = 'v1';
+        $this->serviceName = 'appstate';
 
-    $this->states = new Google_Service_AppState_Resource_States(
-        $this,
-        $this->serviceName,
-        'states',
-        array(
-          'methods' => array(
+        $this->states = new Google_Service_AppState_Resource_States(
+            $this,
+            $this->serviceName,
+            'states',
+            array(
+            'methods' => array(
             'clear' => array(
               'path' => 'states/{stateKey}/clear',
               'httpMethod' => 'POST',
@@ -113,8 +115,8 @@ class Google_Service_AppState extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

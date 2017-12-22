@@ -17,50 +17,50 @@
 
 class Google_Service_CloudKMS_CryptoKeyVersion extends Google_Model
 {
-  public $createTime;
-  public $destroyEventTime;
-  public $destroyTime;
-  public $name;
-  public $state;
+    public $createTime;
+    public $destroyEventTime;
+    public $destroyTime;
+    public $name;
+    public $state;
 
-  public function setCreateTime($createTime)
-  {
-    $this->createTime = $createTime;
-  }
-  public function getCreateTime()
-  {
-    return $this->createTime;
-  }
-  public function setDestroyEventTime($destroyEventTime)
-  {
-    $this->destroyEventTime = $destroyEventTime;
-  }
-  public function getDestroyEventTime()
-  {
-    return $this->destroyEventTime;
-  }
-  public function setDestroyTime($destroyTime)
-  {
-    $this->destroyTime = $destroyTime;
-  }
-  public function getDestroyTime()
-  {
-    return $this->destroyTime;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  public function getState()
-  {
-    return $this->state;
-  }
+    public function setCreateTime($createTime)
+    {
+        $this->createTime = $createTime;
+    }
+    public function getCreateTime()
+    {
+        return $this->createTime;
+    }
+    public function setDestroyEventTime($destroyEventTime)
+    {
+        $this->destroyEventTime = $destroyEventTime;
+    }
+    public function getDestroyEventTime()
+    {
+        return $this->destroyEventTime;
+    }
+    public function setDestroyTime($destroyTime)
+    {
+        $this->destroyTime = $destroyTime;
+    }
+    public function getDestroyTime()
+    {
+        return $this->destroyTime;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setState($state)
+    {
+        $this->state = $state;
+    }
+    public function getState()
+    {
+        return $this->state;
+    }
 }

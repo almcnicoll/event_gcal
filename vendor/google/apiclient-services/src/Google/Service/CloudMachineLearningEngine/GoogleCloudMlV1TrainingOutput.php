@@ -17,49 +17,49 @@
 
 class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1TrainingOutput extends Google_Collection
 {
-  protected $collection_key = 'trials';
-  public $completedTrialCount;
-  public $consumedMLUnits;
-  public $isHyperparameterTuningJob;
-  protected $trialsType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutput';
-  protected $trialsDataType = 'array';
+    protected $collection_key = 'trials';
+    public $completedTrialCount;
+    public $consumedMLUnits;
+    public $isHyperparameterTuningJob;
+    protected $trialsType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutput';
+    protected $trialsDataType = 'array';
 
-  public function setCompletedTrialCount($completedTrialCount)
-  {
-    $this->completedTrialCount = $completedTrialCount;
-  }
-  public function getCompletedTrialCount()
-  {
-    return $this->completedTrialCount;
-  }
-  public function setConsumedMLUnits($consumedMLUnits)
-  {
-    $this->consumedMLUnits = $consumedMLUnits;
-  }
-  public function getConsumedMLUnits()
-  {
-    return $this->consumedMLUnits;
-  }
-  public function setIsHyperparameterTuningJob($isHyperparameterTuningJob)
-  {
-    $this->isHyperparameterTuningJob = $isHyperparameterTuningJob;
-  }
-  public function getIsHyperparameterTuningJob()
-  {
-    return $this->isHyperparameterTuningJob;
-  }
-  /**
+    public function setCompletedTrialCount($completedTrialCount)
+    {
+        $this->completedTrialCount = $completedTrialCount;
+    }
+    public function getCompletedTrialCount()
+    {
+        return $this->completedTrialCount;
+    }
+    public function setConsumedMLUnits($consumedMLUnits)
+    {
+        $this->consumedMLUnits = $consumedMLUnits;
+    }
+    public function getConsumedMLUnits()
+    {
+        return $this->consumedMLUnits;
+    }
+    public function setIsHyperparameterTuningJob($isHyperparameterTuningJob)
+    {
+        $this->isHyperparameterTuningJob = $isHyperparameterTuningJob;
+    }
+    public function getIsHyperparameterTuningJob()
+    {
+        return $this->isHyperparameterTuningJob;
+    }
+    /**
    * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutput
    */
-  public function setTrials($trials)
-  {
-    $this->trials = $trials;
-  }
-  /**
+    public function setTrials($trials)
+    {
+        $this->trials = $trials;
+    }
+    /**
    * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1HyperparameterOutput
    */
-  public function getTrials()
-  {
-    return $this->trials;
-  }
+    public function getTrials()
+    {
+        return $this->trials;
+    }
 }

@@ -17,32 +17,32 @@
 
 class Google_Service_Compute_NetworksAddPeeringRequest extends Google_Model
 {
-  public $autoCreateRoutes;
-  public $name;
-  public $peerNetwork;
+    public $autoCreateRoutes;
+    public $name;
+    public $peerNetwork;
 
-  public function setAutoCreateRoutes($autoCreateRoutes)
-  {
-    $this->autoCreateRoutes = $autoCreateRoutes;
-  }
-  public function getAutoCreateRoutes()
-  {
-    return $this->autoCreateRoutes;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setPeerNetwork($peerNetwork)
-  {
-    $this->peerNetwork = $peerNetwork;
-  }
-  public function getPeerNetwork()
-  {
-    return $this->peerNetwork;
-  }
+    public function setAutoCreateRoutes($autoCreateRoutes)
+    {
+        $this->autoCreateRoutes = $autoCreateRoutes;
+    }
+    public function getAutoCreateRoutes()
+    {
+        return $this->autoCreateRoutes;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setPeerNetwork($peerNetwork)
+    {
+        $this->peerNetwork = $peerNetwork;
+    }
+    public function getPeerNetwork()
+    {
+        return $this->peerNetwork;
+    }
 }

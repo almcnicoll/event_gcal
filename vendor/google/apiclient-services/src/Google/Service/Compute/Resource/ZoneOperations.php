@@ -25,44 +25,44 @@
  */
 class Google_Service_Compute_Resource_ZoneOperations extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified zone-specific Operations resource.
    * (zoneOperations.delete)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for this request.
+   * @param string $project   Project ID for this request.
+   * @param string $zone      Name of the zone for this request.
    * @param string $operation Name of the Operations resource to delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams Optional parameters.
    */
-  public function delete($project, $zone, $operation, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'operation' => $operation);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params));
-  }
-  /**
+    public function delete($project, $zone, $operation, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'operation' => $operation);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params));
+    }
+    /**
    * Retrieves the specified zone-specific Operations resource.
    * (zoneOperations.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for this request.
-   * @param string $operation Name of the Operations resource to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $zone      Name of the zone for this request.
+   * @param  string $operation Name of the Operations resource to return.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
-  public function get($project, $zone, $operation, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'operation' => $operation);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function get($project, $zone, $operation, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'operation' => $operation);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves a list of Operation resources contained within the specified zone.
    * (zoneOperations.listZoneOperations)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $zone      Name of the zone for request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -106,12 +106,12 @@ class Google_Service_Compute_Resource_ZoneOperations extends Google_Service_Reso
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_OperationList
+   * @return    Google_Service_Compute_OperationList
    */
-  public function listZoneOperations($project, $zone, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_OperationList");
-  }
+    public function listZoneOperations($project, $zone, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_OperationList");
+    }
 }

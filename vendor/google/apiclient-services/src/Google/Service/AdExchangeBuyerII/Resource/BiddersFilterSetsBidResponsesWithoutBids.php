@@ -25,7 +25,7 @@
  */
 class Google_Service_AdExchangeBuyerII_Resource_BiddersFilterSetsBidResponsesWithoutBids extends Google_Service_Resource
 {
-  /**
+    /**
    * List all reasons for which bid responses were considered to have no
    * applicable bids, with the number of bid responses affected for each reason.
    * (bidResponsesWithoutBids.listBiddersFilterSetsBidResponsesWithoutBids)
@@ -41,7 +41,7 @@ class Google_Service_AdExchangeBuyerII_Resource_BiddersFilterSetsBidResponsesWit
    *
    * - For an account-level filter set for the child seat buyer account 456
    * whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams     Optional parameters.
    *
    * @opt_param string pageToken A token identifying a page of results the server
    * should return. Typically, this is the value of
@@ -50,12 +50,12 @@ class Google_Service_AdExchangeBuyerII_Resource_BiddersFilterSetsBidResponsesWit
    * @opt_param int pageSize Requested page size. The server may return fewer
    * results than requested. If unspecified, the server will pick an appropriate
    * default.
-   * @return Google_Service_AdExchangeBuyerII_ListBidResponsesWithoutBidsResponse
+   * @return    Google_Service_AdExchangeBuyerII_ListBidResponsesWithoutBidsResponse
    */
-  public function listBiddersFilterSetsBidResponsesWithoutBids($filterSetName, $optParams = array())
-  {
-    $params = array('filterSetName' => $filterSetName);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeBuyerII_ListBidResponsesWithoutBidsResponse");
-  }
+    public function listBiddersFilterSetsBidResponsesWithoutBids($filterSetName, $optParams = array())
+    {
+        $params = array('filterSetName' => $filterSetName);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_AdExchangeBuyerII_ListBidResponsesWithoutBidsResponse");
+    }
 }

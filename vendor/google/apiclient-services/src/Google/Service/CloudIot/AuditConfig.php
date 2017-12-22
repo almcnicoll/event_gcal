@@ -17,40 +17,40 @@
 
 class Google_Service_CloudIot_AuditConfig extends Google_Collection
 {
-  protected $collection_key = 'exemptedMembers';
-  protected $auditLogConfigsType = 'Google_Service_CloudIot_AuditLogConfig';
-  protected $auditLogConfigsDataType = 'array';
-  public $exemptedMembers;
-  public $service;
+    protected $collection_key = 'exemptedMembers';
+    protected $auditLogConfigsType = 'Google_Service_CloudIot_AuditLogConfig';
+    protected $auditLogConfigsDataType = 'array';
+    public $exemptedMembers;
+    public $service;
 
-  /**
+    /**
    * @param Google_Service_CloudIot_AuditLogConfig
    */
-  public function setAuditLogConfigs($auditLogConfigs)
-  {
-    $this->auditLogConfigs = $auditLogConfigs;
-  }
-  /**
+    public function setAuditLogConfigs($auditLogConfigs)
+    {
+        $this->auditLogConfigs = $auditLogConfigs;
+    }
+    /**
    * @return Google_Service_CloudIot_AuditLogConfig
    */
-  public function getAuditLogConfigs()
-  {
-    return $this->auditLogConfigs;
-  }
-  public function setExemptedMembers($exemptedMembers)
-  {
-    $this->exemptedMembers = $exemptedMembers;
-  }
-  public function getExemptedMembers()
-  {
-    return $this->exemptedMembers;
-  }
-  public function setService($service)
-  {
-    $this->service = $service;
-  }
-  public function getService()
-  {
-    return $this->service;
-  }
+    public function getAuditLogConfigs()
+    {
+        return $this->auditLogConfigs;
+    }
+    public function setExemptedMembers($exemptedMembers)
+    {
+        $this->exemptedMembers = $exemptedMembers;
+    }
+    public function getExemptedMembers()
+    {
+        return $this->exemptedMembers;
+    }
+    public function setService($service)
+    {
+        $this->service = $service;
+    }
+    public function getService()
+    {
+        return $this->service;
+    }
 }

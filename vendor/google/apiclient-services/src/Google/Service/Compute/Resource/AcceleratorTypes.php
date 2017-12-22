@@ -25,12 +25,12 @@
  */
 class Google_Service_Compute_Resource_AcceleratorTypes extends Google_Service_Resource
 {
-  /**
+    /**
    * Retrieves an aggregated list of accelerator types.
    * (acceleratorTypes.aggregatedList)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -74,37 +74,37 @@ class Google_Service_Compute_Resource_AcceleratorTypes extends Google_Service_Re
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_AcceleratorTypeAggregatedList
+   * @return    Google_Service_Compute_AcceleratorTypeAggregatedList
    */
-  public function aggregatedList($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('aggregatedList', array($params), "Google_Service_Compute_AcceleratorTypeAggregatedList");
-  }
-  /**
+    public function aggregatedList($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('aggregatedList', array($params), "Google_Service_Compute_AcceleratorTypeAggregatedList");
+    }
+    /**
    * Returns the specified accelerator type. Get a list of available accelerator
    * types by making a list() request. (acceleratorTypes.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone for this request.
-   * @param string $acceleratorType Name of the accelerator type to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project         Project ID for this request.
+   * @param  string $zone            The name of the zone for this request.
+   * @param  string $acceleratorType Name of the accelerator type to return.
+   * @param  array  $optParams       Optional parameters.
    * @return Google_Service_Compute_AcceleratorType
    */
-  public function get($project, $zone, $acceleratorType, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'acceleratorType' => $acceleratorType);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_AcceleratorType");
-  }
-  /**
+    public function get($project, $zone, $acceleratorType, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'acceleratorType' => $acceleratorType);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_AcceleratorType");
+    }
+    /**
    * Retrieves a list of accelerator types available to the specified project.
    * (acceleratorTypes.listAcceleratorTypes)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $zone      The name of the zone for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -148,12 +148,12 @@ class Google_Service_Compute_Resource_AcceleratorTypes extends Google_Service_Re
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_AcceleratorTypeList
+   * @return    Google_Service_Compute_AcceleratorTypeList
    */
-  public function listAcceleratorTypes($project, $zone, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_AcceleratorTypeList");
-  }
+    public function listAcceleratorTypes($project, $zone, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_AcceleratorTypeList");
+    }
 }

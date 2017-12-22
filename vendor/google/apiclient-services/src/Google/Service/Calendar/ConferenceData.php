@@ -17,72 +17,72 @@
 
 class Google_Service_Calendar_ConferenceData extends Google_Collection
 {
-  protected $collection_key = 'entryPoints';
-  public $conferenceId;
-  protected $conferenceSolutionType = 'Google_Service_Calendar_ConferenceSolution';
-  protected $conferenceSolutionDataType = '';
-  protected $createRequestType = 'Google_Service_Calendar_CreateConferenceRequest';
-  protected $createRequestDataType = '';
-  protected $entryPointsType = 'Google_Service_Calendar_EntryPoint';
-  protected $entryPointsDataType = 'array';
-  public $signature;
+    protected $collection_key = 'entryPoints';
+    public $conferenceId;
+    protected $conferenceSolutionType = 'Google_Service_Calendar_ConferenceSolution';
+    protected $conferenceSolutionDataType = '';
+    protected $createRequestType = 'Google_Service_Calendar_CreateConferenceRequest';
+    protected $createRequestDataType = '';
+    protected $entryPointsType = 'Google_Service_Calendar_EntryPoint';
+    protected $entryPointsDataType = 'array';
+    public $signature;
 
-  public function setConferenceId($conferenceId)
-  {
-    $this->conferenceId = $conferenceId;
-  }
-  public function getConferenceId()
-  {
-    return $this->conferenceId;
-  }
-  /**
+    public function setConferenceId($conferenceId)
+    {
+        $this->conferenceId = $conferenceId;
+    }
+    public function getConferenceId()
+    {
+        return $this->conferenceId;
+    }
+    /**
    * @param Google_Service_Calendar_ConferenceSolution
    */
-  public function setConferenceSolution(Google_Service_Calendar_ConferenceSolution $conferenceSolution)
-  {
-    $this->conferenceSolution = $conferenceSolution;
-  }
-  /**
+    public function setConferenceSolution(Google_Service_Calendar_ConferenceSolution $conferenceSolution)
+    {
+        $this->conferenceSolution = $conferenceSolution;
+    }
+    /**
    * @return Google_Service_Calendar_ConferenceSolution
    */
-  public function getConferenceSolution()
-  {
-    return $this->conferenceSolution;
-  }
-  /**
+    public function getConferenceSolution()
+    {
+        return $this->conferenceSolution;
+    }
+    /**
    * @param Google_Service_Calendar_CreateConferenceRequest
    */
-  public function setCreateRequest(Google_Service_Calendar_CreateConferenceRequest $createRequest)
-  {
-    $this->createRequest = $createRequest;
-  }
-  /**
+    public function setCreateRequest(Google_Service_Calendar_CreateConferenceRequest $createRequest)
+    {
+        $this->createRequest = $createRequest;
+    }
+    /**
    * @return Google_Service_Calendar_CreateConferenceRequest
    */
-  public function getCreateRequest()
-  {
-    return $this->createRequest;
-  }
-  /**
+    public function getCreateRequest()
+    {
+        return $this->createRequest;
+    }
+    /**
    * @param Google_Service_Calendar_EntryPoint
    */
-  public function setEntryPoints($entryPoints)
-  {
-    $this->entryPoints = $entryPoints;
-  }
-  /**
+    public function setEntryPoints($entryPoints)
+    {
+        $this->entryPoints = $entryPoints;
+    }
+    /**
    * @return Google_Service_Calendar_EntryPoint
    */
-  public function getEntryPoints()
-  {
-    return $this->entryPoints;
-  }
-  public function setSignature($signature)
-  {
-    $this->signature = $signature;
-  }
-  public function getSignature()
-  {
-    return $this->signature;
-  }
+    public function getEntryPoints()
+    {
+        return $this->entryPoints;
+    }
+    public function setSignature($signature)
+    {
+        $this->signature = $signature;
+    }
+    public function getSignature()
+    {
+        return $this->signature;
+    }
 }

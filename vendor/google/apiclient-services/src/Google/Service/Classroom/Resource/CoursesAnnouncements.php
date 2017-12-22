@@ -25,7 +25,7 @@
  */
 class Google_Service_Classroom_Resource_CoursesAnnouncements extends Google_Service_Resource
 {
-  /**
+    /**
    * Creates an announcement.
    *
    * This method returns the following error codes:
@@ -37,19 +37,20 @@ class Google_Service_Classroom_Resource_CoursesAnnouncements extends Google_Serv
    * `FAILED_PRECONDITION` for the following request error:     *
    * AttachmentNotVisible (announcements.create)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param Google_Service_Classroom_Announcement $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                $courseId  Identifier of the course. This identifier can be
+   *                                                          either the Classroom-assigned identifier or an
+   *                                                          alias.
+   * @param  Google_Service_Classroom_Announcement $postBody
+   * @param  array                                 $optParams Optional parameters.
    * @return Google_Service_Classroom_Announcement
    */
-  public function create($courseId, Google_Service_Classroom_Announcement $postBody, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Classroom_Announcement");
-  }
-  /**
+    public function create($courseId, Google_Service_Classroom_Announcement $postBody, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_Classroom_Announcement");
+    }
+    /**
    * Deletes an announcement.
    *
    * This request must be made by the Developer Console project of the [OAuth
@@ -64,20 +65,21 @@ class Google_Service_Classroom_Resource_CoursesAnnouncements extends Google_Serv
    * requested announcement has already been deleted. * `NOT_FOUND` if no course
    * exists with the requested ID. (announcements.delete)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $id Identifier of the announcement to delete. This identifier
-   * is a Classroom-assigned identifier.
-   * @param array $optParams Optional parameters.
+   * @param  string $courseId  Identifier of the course. This identifier can be
+   *                          either the Classroom-assigned identifier or an
+   *                          alias.
+   * @param  string $id        Identifier of the announcement to delete. This identifier
+   *                          is a Classroom-assigned identifier.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
-  public function delete($courseId, $id, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'id' => $id);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
-  }
-  /**
+    public function delete($courseId, $id, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'id' => $id);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
+    }
+    /**
    * Returns an announcement.
    *
    * This method returns the following error codes:
@@ -87,19 +89,20 @@ class Google_Service_Classroom_Resource_CoursesAnnouncements extends Google_Serv
    * if the request is malformed. * `NOT_FOUND` if the requested course or
    * announcement does not exist. (announcements.get)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $id Identifier of the announcement.
-   * @param array $optParams Optional parameters.
+   * @param  string $courseId  Identifier of the course. This identifier can be
+   *                          either the Classroom-assigned identifier or an
+   *                          alias.
+   * @param  string $id        Identifier of the announcement.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Classroom_Announcement
    */
-  public function get($courseId, $id, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'id' => $id);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Classroom_Announcement");
-  }
-  /**
+    public function get($courseId, $id, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'id' => $id);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Classroom_Announcement");
+    }
+    /**
    * Returns a list of announcements that the requester is permitted to view.
    *
    * Course students may only view `PUBLISHED` announcements. Course teachers and
@@ -112,9 +115,10 @@ class Google_Service_Classroom_Resource_CoursesAnnouncements extends Google_Serv
    * malformed. * `NOT_FOUND` if the requested course does not exist.
    * (announcements.listCoursesAnnouncements)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param array $optParams Optional parameters.
+   * @param string $courseId  Identifier of the course. This identifier can be
+   *                          either the Classroom-assigned identifier or an
+   *                          alias.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string announcementStates Restriction on the `state` of
    * announcements returned. If this argument is left unspecified, the default
@@ -133,15 +137,15 @@ class Google_Service_Classroom_Resource_CoursesAnnouncements extends Google_Serv
    * unspecified indicates that the server may assign a maximum.
    *
    * The server may return fewer than the specified number of results.
-   * @return Google_Service_Classroom_ListAnnouncementsResponse
+   * @return    Google_Service_Classroom_ListAnnouncementsResponse
    */
-  public function listCoursesAnnouncements($courseId, $optParams = array())
-  {
-    $params = array('courseId' => $courseId);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Classroom_ListAnnouncementsResponse");
-  }
-  /**
+    public function listCoursesAnnouncements($courseId, $optParams = array())
+    {
+        $params = array('courseId' => $courseId);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Classroom_ListAnnouncementsResponse");
+    }
+    /**
    * Modifies assignee mode and options of an announcement.
    *
    * Only a teacher of the course that contains the announcement may call this
@@ -154,20 +158,21 @@ class Google_Service_Classroom_Resource_CoursesAnnouncements extends Google_Serv
    * the request is malformed. * `NOT_FOUND` if the requested course or course
    * work does not exist. (announcements.modifyAssignees)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $id Identifier of the announcement.
-   * @param Google_Service_Classroom_ModifyAnnouncementAssigneesRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                      $courseId  Identifier of the course. This identifier can be
+   *                                                                                either the Classroom-assigned identifier or an
+   *                                                                                alias.
+   * @param  string                                                      $id        Identifier of the announcement.
+   * @param  Google_Service_Classroom_ModifyAnnouncementAssigneesRequest $postBody
+   * @param  array                                                       $optParams Optional parameters.
    * @return Google_Service_Classroom_Announcement
    */
-  public function modifyAssignees($courseId, $id, Google_Service_Classroom_ModifyAnnouncementAssigneesRequest $postBody, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'id' => $id, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('modifyAssignees', array($params), "Google_Service_Classroom_Announcement");
-  }
-  /**
+    public function modifyAssignees($courseId, $id, Google_Service_Classroom_ModifyAnnouncementAssigneesRequest $postBody, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'id' => $id, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('modifyAssignees', array($params), "Google_Service_Classroom_Announcement");
+    }
+    /**
    * Updates one or more fields of an announcement.
    *
    * This method returns the following error codes:
@@ -178,11 +183,12 @@ class Google_Service_Classroom_Resource_CoursesAnnouncements extends Google_Serv
    * has already been deleted. * `NOT_FOUND` if the requested course or
    * announcement does not exist (announcements.patch)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $id Identifier of the announcement.
+   * @param string                                $courseId  Identifier of the course. This identifier can be
+   *                                                         either the Classroom-assigned identifier or an
+   *                                                         alias.
+   * @param string                                $id        Identifier of the announcement.
    * @param Google_Service_Classroom_Announcement $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                 $optParams Optional parameters.
    *
    * @opt_param string updateMask Mask that identifies which fields on the
    * announcement to update. This field is required to do an update. The update
@@ -195,12 +201,12 @@ class Google_Service_Classroom_Resource_CoursesAnnouncements extends Google_Serv
    * The following fields may be specified by teachers:
    *
    * * `text` * `state` * `scheduled_time`
-   * @return Google_Service_Classroom_Announcement
+   * @return    Google_Service_Classroom_Announcement
    */
-  public function patch($courseId, $id, Google_Service_Classroom_Announcement $postBody, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'id' => $id, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Classroom_Announcement");
-  }
+    public function patch($courseId, $id, Google_Service_Classroom_Announcement $postBody, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'id' => $id, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Classroom_Announcement");
+    }
 }

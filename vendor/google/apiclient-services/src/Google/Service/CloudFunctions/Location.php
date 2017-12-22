@@ -17,41 +17,41 @@
 
 class Google_Service_CloudFunctions_Location extends Google_Model
 {
-  public $labels;
-  public $locationId;
-  public $metadata;
-  public $name;
+    public $labels;
+    public $locationId;
+    public $metadata;
+    public $name;
 
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  public function getLabels()
-  {
-    return $this->labels;
-  }
-  public function setLocationId($locationId)
-  {
-    $this->locationId = $locationId;
-  }
-  public function getLocationId()
-  {
-    return $this->locationId;
-  }
-  public function setMetadata($metadata)
-  {
-    $this->metadata = $metadata;
-  }
-  public function getMetadata()
-  {
-    return $this->metadata;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
+    public function setLabels($labels)
+    {
+        $this->labels = $labels;
+    }
+    public function getLabels()
+    {
+        return $this->labels;
+    }
+    public function setLocationId($locationId)
+    {
+        $this->locationId = $locationId;
+    }
+    public function getLocationId()
+    {
+        return $this->locationId;
+    }
+    public function setMetadata($metadata)
+    {
+        $this->metadata = $metadata;
+    }
+    public function getMetadata()
+    {
+        return $this->metadata;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
 }

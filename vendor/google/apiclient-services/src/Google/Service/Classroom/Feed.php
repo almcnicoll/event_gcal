@@ -17,30 +17,30 @@
 
 class Google_Service_Classroom_Feed extends Google_Model
 {
-  protected $courseRosterChangesInfoType = 'Google_Service_Classroom_CourseRosterChangesInfo';
-  protected $courseRosterChangesInfoDataType = '';
-  public $feedType;
+    protected $courseRosterChangesInfoType = 'Google_Service_Classroom_CourseRosterChangesInfo';
+    protected $courseRosterChangesInfoDataType = '';
+    public $feedType;
 
-  /**
+    /**
    * @param Google_Service_Classroom_CourseRosterChangesInfo
    */
-  public function setCourseRosterChangesInfo(Google_Service_Classroom_CourseRosterChangesInfo $courseRosterChangesInfo)
-  {
-    $this->courseRosterChangesInfo = $courseRosterChangesInfo;
-  }
-  /**
+    public function setCourseRosterChangesInfo(Google_Service_Classroom_CourseRosterChangesInfo $courseRosterChangesInfo)
+    {
+        $this->courseRosterChangesInfo = $courseRosterChangesInfo;
+    }
+    /**
    * @return Google_Service_Classroom_CourseRosterChangesInfo
    */
-  public function getCourseRosterChangesInfo()
-  {
-    return $this->courseRosterChangesInfo;
-  }
-  public function setFeedType($feedType)
-  {
-    $this->feedType = $feedType;
-  }
-  public function getFeedType()
-  {
-    return $this->feedType;
-  }
+    public function getCourseRosterChangesInfo()
+    {
+        return $this->courseRosterChangesInfo;
+    }
+    public function setFeedType($feedType)
+    {
+        $this->feedType = $feedType;
+    }
+    public function getFeedType()
+    {
+        return $this->feedType;
+    }
 }

@@ -17,68 +17,68 @@
 
 class Google_Service_AndroidPublisher_ProductPurchase extends Google_Model
 {
-  public $consumptionState;
-  public $developerPayload;
-  public $kind;
-  public $orderId;
-  public $purchaseState;
-  public $purchaseTimeMillis;
-  public $purchaseType;
+    public $consumptionState;
+    public $developerPayload;
+    public $kind;
+    public $orderId;
+    public $purchaseState;
+    public $purchaseTimeMillis;
+    public $purchaseType;
 
-  public function setConsumptionState($consumptionState)
-  {
-    $this->consumptionState = $consumptionState;
-  }
-  public function getConsumptionState()
-  {
-    return $this->consumptionState;
-  }
-  public function setDeveloperPayload($developerPayload)
-  {
-    $this->developerPayload = $developerPayload;
-  }
-  public function getDeveloperPayload()
-  {
-    return $this->developerPayload;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setOrderId($orderId)
-  {
-    $this->orderId = $orderId;
-  }
-  public function getOrderId()
-  {
-    return $this->orderId;
-  }
-  public function setPurchaseState($purchaseState)
-  {
-    $this->purchaseState = $purchaseState;
-  }
-  public function getPurchaseState()
-  {
-    return $this->purchaseState;
-  }
-  public function setPurchaseTimeMillis($purchaseTimeMillis)
-  {
-    $this->purchaseTimeMillis = $purchaseTimeMillis;
-  }
-  public function getPurchaseTimeMillis()
-  {
-    return $this->purchaseTimeMillis;
-  }
-  public function setPurchaseType($purchaseType)
-  {
-    $this->purchaseType = $purchaseType;
-  }
-  public function getPurchaseType()
-  {
-    return $this->purchaseType;
-  }
+    public function setConsumptionState($consumptionState)
+    {
+        $this->consumptionState = $consumptionState;
+    }
+    public function getConsumptionState()
+    {
+        return $this->consumptionState;
+    }
+    public function setDeveloperPayload($developerPayload)
+    {
+        $this->developerPayload = $developerPayload;
+    }
+    public function getDeveloperPayload()
+    {
+        return $this->developerPayload;
+    }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setOrderId($orderId)
+    {
+        $this->orderId = $orderId;
+    }
+    public function getOrderId()
+    {
+        return $this->orderId;
+    }
+    public function setPurchaseState($purchaseState)
+    {
+        $this->purchaseState = $purchaseState;
+    }
+    public function getPurchaseState()
+    {
+        return $this->purchaseState;
+    }
+    public function setPurchaseTimeMillis($purchaseTimeMillis)
+    {
+        $this->purchaseTimeMillis = $purchaseTimeMillis;
+    }
+    public function getPurchaseTimeMillis()
+    {
+        return $this->purchaseTimeMillis;
+    }
+    public function setPurchaseType($purchaseType)
+    {
+        $this->purchaseType = $purchaseType;
+    }
+    public function getPurchaseType()
+    {
+        return $this->purchaseType;
+    }
 }

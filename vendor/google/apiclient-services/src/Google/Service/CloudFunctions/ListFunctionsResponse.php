@@ -17,31 +17,31 @@
 
 class Google_Service_CloudFunctions_ListFunctionsResponse extends Google_Collection
 {
-  protected $collection_key = 'functions';
-  protected $functionsType = 'Google_Service_CloudFunctions_CloudFunction';
-  protected $functionsDataType = 'array';
-  public $nextPageToken;
+    protected $collection_key = 'functions';
+    protected $functionsType = 'Google_Service_CloudFunctions_CloudFunction';
+    protected $functionsDataType = 'array';
+    public $nextPageToken;
 
-  /**
+    /**
    * @param Google_Service_CloudFunctions_CloudFunction
    */
-  public function setFunctions($functions)
-  {
-    $this->functions = $functions;
-  }
-  /**
+    public function setFunctions($functions)
+    {
+        $this->functions = $functions;
+    }
+    /**
    * @return Google_Service_CloudFunctions_CloudFunction
    */
-  public function getFunctions()
-  {
-    return $this->functions;
-  }
-  public function setNextPageToken($nextPageToken)
-  {
-    $this->nextPageToken = $nextPageToken;
-  }
-  public function getNextPageToken()
-  {
-    return $this->nextPageToken;
-  }
+    public function getFunctions()
+    {
+        return $this->functions;
+    }
+    public function setNextPageToken($nextPageToken)
+    {
+        $this->nextPageToken = $nextPageToken;
+    }
+    public function getNextPageToken()
+    {
+        return $this->nextPageToken;
+    }
 }

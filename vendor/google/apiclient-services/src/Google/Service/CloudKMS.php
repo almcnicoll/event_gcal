@@ -31,34 +31,36 @@
  */
 class Google_Service_CloudKMS extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $projects_locations;
-  public $projects_locations_keyRings;
-  public $projects_locations_keyRings_cryptoKeys;
-  public $projects_locations_keyRings_cryptoKeys_cryptoKeyVersions;
+    public $projects_locations;
+    public $projects_locations_keyRings;
+    public $projects_locations_keyRings_cryptoKeys;
+    public $projects_locations_keyRings_cryptoKeys_cryptoKeyVersions;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudKMS service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://cloudkms.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'cloudkms';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://cloudkms.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'cloudkms';
 
-    $this->projects_locations = new Google_Service_CloudKMS_Resource_ProjectsLocations(
-        $this,
-        $this->serviceName,
-        'locations',
-        array(
-          'methods' => array(
+        $this->projects_locations = new Google_Service_CloudKMS_Resource_ProjectsLocations(
+            $this,
+            $this->serviceName,
+            'locations',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -92,15 +94,15 @@ class Google_Service_CloudKMS extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_locations_keyRings = new Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRings(
-        $this,
-        $this->serviceName,
-        'keyRings',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_locations_keyRings = new Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRings(
+            $this,
+            $this->serviceName,
+            'keyRings',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/{+parent}/keyRings',
               'httpMethod' => 'POST',
@@ -174,15 +176,15 @@ class Google_Service_CloudKMS extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_locations_keyRings_cryptoKeys = new Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeys(
-        $this,
-        $this->serviceName,
-        'cryptoKeys',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_locations_keyRings_cryptoKeys = new Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeys(
+            $this,
+            $this->serviceName,
+            'cryptoKeys',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/{+parent}/cryptoKeys',
               'httpMethod' => 'POST',
@@ -300,15 +302,15 @@ class Google_Service_CloudKMS extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects_locations_keyRings_cryptoKeys_cryptoKeyVersions = new Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersions(
-        $this,
-        $this->serviceName,
-        'cryptoKeyVersions',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects_locations_keyRings_cryptoKeys_cryptoKeyVersions = new Google_Service_CloudKMS_Resource_ProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersions(
+            $this,
+            $this->serviceName,
+            'cryptoKeyVersions',
+            array(
+            'methods' => array(
             'create' => array(
               'path' => 'v1/{+parent}/cryptoKeyVersions',
               'httpMethod' => 'POST',
@@ -382,8 +384,8 @@ class Google_Service_CloudKMS extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

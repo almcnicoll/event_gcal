@@ -25,21 +25,24 @@
  */
 class Google_Service_Analytics_Resource_DataMcf extends Google_Service_Resource
 {
-  /**
+    /**
    * Returns Analytics Multi-Channel Funnels data for a view (profile). (mcf.get)
    *
-   * @param string $ids Unique table ID for retrieving Analytics data. Table ID is
-   * of the form ga:XXXX, where XXXX is the Analytics view (profile) ID.
+   * @param string $ids       Unique table ID for retrieving Analytics data. Table ID is
+   *                          of the form ga:XXXX, where XXXX is the Analytics view
+   *                          (profile) ID.
    * @param string $startDate Start date for fetching Analytics data. Requests can
    * specify a start date formatted as YYYY-MM-DD, or as a relative date (e.g.,
    * today, yesterday, or 7daysAgo). The default value is 7daysAgo.
-   * @param string $endDate End date for fetching Analytics data. Requests can
-   * specify a start date formatted as YYYY-MM-DD, or as a relative date (e.g.,
-   * today, yesterday, or 7daysAgo). The default value is 7daysAgo.
-   * @param string $metrics A comma-separated list of Multi-Channel Funnels
-   * metrics. E.g., 'mcf:totalConversions,mcf:totalConversionValue'. At least one
-   * metric must be specified.
-   * @param array $optParams Optional parameters.
+   * @param string $endDate   End date for fetching Analytics data. Requests can
+   *                          specify a start date formatted as YYYY-MM-DD, or
+   *                          as a relative date (e.g., today, yesterday, or
+   *                          7daysAgo). The default value is 7daysAgo.
+   * @param string $metrics   A comma-separated list of Multi-Channel Funnels
+   *                          metrics. E.g.,
+   *                          'mcf:totalConversions,mcf:totalConversionValue'.
+   *                          At least one metric must be specified.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string dimensions A comma-separated list of Multi-Channel Funnels
    * dimensions. E.g., 'mcf:source,mcf:medium'.
@@ -52,12 +55,12 @@ class Google_Service_Analytics_Resource_DataMcf extends Google_Service_Resource
    * determine the sort order for the Analytics data.
    * @opt_param int start-index An index of the first entity to retrieve. Use this
    * parameter as a pagination mechanism along with the max-results parameter.
-   * @return Google_Service_Analytics_McfData
+   * @return    Google_Service_Analytics_McfData
    */
-  public function get($ids, $startDate, $endDate, $metrics, $optParams = array())
-  {
-    $params = array('ids' => $ids, 'start-date' => $startDate, 'end-date' => $endDate, 'metrics' => $metrics);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Analytics_McfData");
-  }
+    public function get($ids, $startDate, $endDate, $metrics, $optParams = array())
+    {
+        $params = array('ids' => $ids, 'start-date' => $startDate, 'end-date' => $endDate, 'metrics' => $metrics);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Analytics_McfData");
+    }
 }

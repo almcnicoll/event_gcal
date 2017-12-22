@@ -17,41 +17,41 @@
 
 class Google_Service_AndroidPublisher_Entitlement extends Google_Model
 {
-  public $kind;
-  public $productId;
-  public $productType;
-  public $token;
+    public $kind;
+    public $productId;
+    public $productType;
+    public $token;
 
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setProductId($productId)
-  {
-    $this->productId = $productId;
-  }
-  public function getProductId()
-  {
-    return $this->productId;
-  }
-  public function setProductType($productType)
-  {
-    $this->productType = $productType;
-  }
-  public function getProductType()
-  {
-    return $this->productType;
-  }
-  public function setToken($token)
-  {
-    $this->token = $token;
-  }
-  public function getToken()
-  {
-    return $this->token;
-  }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setProductId($productId)
+    {
+        $this->productId = $productId;
+    }
+    public function getProductId()
+    {
+        return $this->productId;
+    }
+    public function setProductType($productType)
+    {
+        $this->productType = $productType;
+    }
+    public function getProductType()
+    {
+        return $this->productType;
+    }
+    public function setToken($token)
+    {
+        $this->token = $token;
+    }
+    public function getToken()
+    {
+        return $this->token;
+    }
 }

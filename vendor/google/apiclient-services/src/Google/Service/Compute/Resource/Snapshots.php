@@ -25,7 +25,7 @@
  */
 class Google_Service_Compute_Resource_Snapshots extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified Snapshot resource. Keep in mind that deleting a single
    * snapshot might not necessarily delete all the data on that snapshot. If any
    * data on the snapshot that is marked for deletion is needed for subsequent
@@ -33,9 +33,9 @@ class Google_Service_Compute_Resource_Snapshots extends Google_Service_Resource
    *
    * For more information, see Deleting snaphots. (snapshots.delete)
    *
-   * @param string $project Project ID for this request.
-   * @param string $snapshot Name of the Snapshot resource to delete.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $snapshot  Name of the Snapshot resource to delete.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -49,35 +49,35 @@ class Google_Service_Compute_Resource_Snapshots extends Google_Service_Resource
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $snapshot, $optParams = array())
-  {
-    $params = array('project' => $project, 'snapshot' => $snapshot);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $snapshot, $optParams = array())
+    {
+        $params = array('project' => $project, 'snapshot' => $snapshot);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified Snapshot resource. Get a list of available snapshots by
    * making a list() request. (snapshots.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $snapshot Name of the Snapshot resource to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $snapshot  Name of the Snapshot resource to return.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Compute_Snapshot
    */
-  public function get($project, $snapshot, $optParams = array())
-  {
-    $params = array('project' => $project, 'snapshot' => $snapshot);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_Snapshot");
-  }
-  /**
+    public function get($project, $snapshot, $optParams = array())
+    {
+        $params = array('project' => $project, 'snapshot' => $snapshot);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_Snapshot");
+    }
+    /**
    * Retrieves the list of Snapshot resources contained within the specified
    * project. (snapshots.listSnapshots)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -121,28 +121,28 @@ class Google_Service_Compute_Resource_Snapshots extends Google_Service_Resource
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_SnapshotList
+   * @return    Google_Service_Compute_SnapshotList
    */
-  public function listSnapshots($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_SnapshotList");
-  }
-  /**
+    public function listSnapshots($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_SnapshotList");
+    }
+    /**
    * Sets the labels on a snapshot. To learn more about labels, read the Labeling
    * Resources documentation. (snapshots.setLabels)
    *
-   * @param string $project Project ID for this request.
-   * @param string $resource Name of the resource for this request.
-   * @param Google_Service_Compute_GlobalSetLabelsRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                        $project   Project ID for this request.
+   * @param  string                                        $resource  Name of the resource for this request.
+   * @param  Google_Service_Compute_GlobalSetLabelsRequest $postBody
+   * @param  array                                         $optParams Optional parameters.
    * @return Google_Service_Compute_Operation
    */
-  public function setLabels($project, $resource, Google_Service_Compute_GlobalSetLabelsRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setLabels', array($params), "Google_Service_Compute_Operation");
-  }
+    public function setLabels($project, $resource, Google_Service_Compute_GlobalSetLabelsRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'resource' => $resource, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('setLabels', array($params), "Google_Service_Compute_Operation");
+    }
 }

@@ -17,32 +17,32 @@
 
 class Google_Service_CloudTasks_RateLimits extends Google_Model
 {
-  public $maxBurstSize;
-  public $maxConcurrentTasks;
-  public $maxTasksDispatchedPerSecond;
+    public $maxBurstSize;
+    public $maxConcurrentTasks;
+    public $maxTasksDispatchedPerSecond;
 
-  public function setMaxBurstSize($maxBurstSize)
-  {
-    $this->maxBurstSize = $maxBurstSize;
-  }
-  public function getMaxBurstSize()
-  {
-    return $this->maxBurstSize;
-  }
-  public function setMaxConcurrentTasks($maxConcurrentTasks)
-  {
-    $this->maxConcurrentTasks = $maxConcurrentTasks;
-  }
-  public function getMaxConcurrentTasks()
-  {
-    return $this->maxConcurrentTasks;
-  }
-  public function setMaxTasksDispatchedPerSecond($maxTasksDispatchedPerSecond)
-  {
-    $this->maxTasksDispatchedPerSecond = $maxTasksDispatchedPerSecond;
-  }
-  public function getMaxTasksDispatchedPerSecond()
-  {
-    return $this->maxTasksDispatchedPerSecond;
-  }
+    public function setMaxBurstSize($maxBurstSize)
+    {
+        $this->maxBurstSize = $maxBurstSize;
+    }
+    public function getMaxBurstSize()
+    {
+        return $this->maxBurstSize;
+    }
+    public function setMaxConcurrentTasks($maxConcurrentTasks)
+    {
+        $this->maxConcurrentTasks = $maxConcurrentTasks;
+    }
+    public function getMaxConcurrentTasks()
+    {
+        return $this->maxConcurrentTasks;
+    }
+    public function setMaxTasksDispatchedPerSecond($maxTasksDispatchedPerSecond)
+    {
+        $this->maxTasksDispatchedPerSecond = $maxTasksDispatchedPerSecond;
+    }
+    public function getMaxTasksDispatchedPerSecond()
+    {
+        return $this->maxTasksDispatchedPerSecond;
+    }
 }

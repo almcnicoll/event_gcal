@@ -4,226 +4,227 @@
 //function event_gcal_entity_delete($entity) {
 	
 }*/
-function event_gcal_entity_presave($entity) {
-	//drupal_set_message('Pre-save firing');
-	
-	$config = \Drupal::config('event_gcal.settings');
-	$monitor_type = $config->get('active_content_type');
-	
-	if ($entity->bundle() == $monitor_type) {
-		// Load Google's calendar library
-		require_once (__DIR__ . '/vendor/autoload.php');
-		// Load our shared library
-		require_once (__DIR__ . '/src/Form/event_gcalShared.php');
-		$monitor_cal = $config->get('active_calendar');
-		//drupal_set_message('Firing on content type: '.$entity->bundle());
-		
-		// Get field names from config
-		$field_name_list = array('title' => '','start' => '','end' => '','sync' => '');
-		$field_name_keys = array_keys($field_name_list);
-		foreach ($field_name_keys as $k) {
-			// Retrieve field name, strip off "[content-type]." from start of field name
-			$field_name_list[$k] = str_replace($monitor_type.'.','',$config->get('field_'.$k));
-		}
-		$field_values = array();
-		foreach ($field_name_list as $k=>$v) {
-			$field_values[$k] = $entity->get($field_name_list[$k])->getValue()[0]['value'];
-		}
-		
-		// Sync the event to Google Calendar
-		//dpm($field_values);
-		//dpm($config);
-		
-		// Retrieve access token if present
-		$access_token = $config->get('access_token');
-		if (empty($access_token)) {
-			$access_token = null;
-		} else {
-			if (!is_array($access_token)) {
-				if (is_object($access_token)) {
-					// Convert from object to array
-					$access_token = json_decode(json_encode($access_token), true);
-				} else {
-					// Convert from JSON to array
-					$access_token = json_decode($access_token, true);
-				}
-			}
-		}
-		// Set up client and service
-		$client = \Drupal\event_gcal\Form\getClient(false, $config, $config->get('client_id'), $config->get('client_secret'), $access_token);
-		//dpm($access_token);
-		/*
-		try {
-			$client->setAccessToken($access_token);
-			$authReturn = $client->authorize();
-		} catch (\Exception $e) {
-			$debugInfo['authenticateError'] = $e;
-			drupal_set_message('Auth error saving to Google Calendar.');
-			//dpm($e);
-		}
-		$access_token = $client->getAccessToken(); // In case it's been refreshed
-		//dpm($access_token);
-		*/
-		$service = new \Google_Service_Calendar($client);
-		$event = null;
-		
-		// Check if event exists
-		if (!empty($field_values['sync'])) {
-			try {
-				$event = $service->events->get($monitor_cal,$field_values['sync']);	
-			} catch (\Google_Service_Exception $gse) {
-				$exception_message = json_decode($gse->getMessage());
-				if (is_object($exception_message->error)) {
-					switch($exception_message->error->code) {
-						case '404':
-							drupal_set_message("The calendar event this entity was linked to has been removed: ".$gse->getMessage());
-							$field_values['sync'] = '';
-							$entity->set('field_sync','');
-							break;
-						default:
-							drupal_set_message('Error retrieving event from Google Calendar at line '.__LINE__.': '.$gse->getMessage());
-							break;
-					}
-				} else {
-					switch ($exception_message->error) {
-						case 'invalid_grant':
-							drupal_set_message("Access to this Google Account has been revoked. You will need to re-authorise this application by re-saving the credentials: ".$gse->getMessage());
-							//$config->clear('access_token')->clear('refresh_token')->save();
-							break;
-						case 'unauthorized_client':
-							drupal_set_message("It appears as though your token needs a refresh and this has failed. You may need to <a href='./settings?clear_tokens=true'>clear your tokens</a> and try again: ".$gse->getMessage());
-							$refreshResult = $client->fetchAccessTokenWithRefreshToken();
-							dpm($refreshResult);
-							break;
-						default:
-							drupal_set_message("Error inserting calendar event: ".$gse->getMessage());
-							break;
-					}
-				}
-			} catch (\Exception $e) {
-				$debugInfo['get_exception'] = $e;
-				drupal_set_message("Error retrieving calendar event: ".$e->getMessage());
-			}
-		}
-		
-		$e_arr = $entity->toArray();
-		if ($e_arr['status'][0]['value'] == 0) {
-			$event_status = 'cancelled';
-		} else {
-			$event_status = 'confirmed';
-		}
-		//drupal_set_message("Event is now ".print_r($entity->status,true).".");
-		//dpm($entity->toArray()['status']);
-		//dpm($event);
-		
-		if (empty($field_values['sync'])) {
-			// First-time sync - create
-			try {
-				$event = new \Google_Service_Calendar_Event(
-					array(
-						'summary'	=> $field_values['title'],
-						'start'		=> array('dateTime' => $field_values['start'], 'timeZone' => 'Europe/London'),
-						'end'		=> array('dateTime' => $field_values['end'], 'timeZone' => 'Europe/London'),
-						'status'	=> $event_status,
-					)
-				);
-				//dpm($event);
-				$event = $service->events->insert($monitor_cal, $event);
-				//dpm($event);
-				$entity->set('field_sync',$event->id);
-				//$calendar_list = $service->calendarList->listCalendarList();
-				drupal_set_message("Event successfully added ({$event_status}) to Google Calendar.");
-			} catch (\Google_Service_Exception $gse) {
-				$exception_message = json_decode($gse->getMessage());
-				if (is_object($exception_message->error)) {
-					switch($exception_message->error->code) {
-						case '401':
-							drupal_set_message("The credentials passed to the Google API were invalid.: ".$gse->getMessage());
-							//$config->clear('access_token')->clear('refresh_token')->save();
-							break;
-						default:
-							drupal_set_message('Insert error saving to Google Calendar at line '.__LINE__.': '.$gse->getMessage());
-							break;
-					}
-				} else {
-					switch ($exception_message->error) {
-						case 'invalid_grant':
-							drupal_set_message("Access to this Google Account has been revoked. You will need to re-authorise this application by re-saving the credentials: ".$gse->getMessage());
-							//$config->clear('access_token')->clear('refresh_token')->save();
-							break;
-						case 'unauthorized_client':
-							//$clear_tokens_link = './settings?clear_tokens=true';
-							$rendered_message = \Drupal\Core\Render\Markup::create("It appears as though your token needs a refresh and this has failed. You may need to <a href='./settings?clear_tokens=true'>clear your tokens</a> and try again: ".$gse->getMessage());
-							//drupal_set_message(t("It appears as though your token needs refreshing and this has failed. You may need to @link and try again: ",array('@link' => $clear_tokens_link)));
-							drupal_set_message($rendered_message);
-							$refreshResult = $client->fetchAccessTokenWithRefreshToken();
-							dpm($refreshResult);
-							break;
-						default:
-							drupal_set_message("Error inserting calendar event: ".$gse->getMessage());
-							break;
-					}
-				}
-			} catch (\Exception $e) {
-				$debugInfo['list_exception'] = $e;
-				drupal_set_message("Error inserting calendar event: ".$e->getMessage());
-			}
-		} else {
-			// Subsequent sync - update
-			//  $event is already set from above
-			try {
-				$event->summary	= $field_values['title'];
-				$event->start	= array('dateTime' => $field_values['start'], 'timeZone' => 'Europe/London');
-				$event->end		= array('dateTime' => $field_values['end'], 'timeZone' => 'Europe/London');
-				$event->status	= $event_status;
-				/*$event['summary']	= $field_values['title'];
-				$event['start']		= array('dateTime' => $field_values['start'], 'timeZone' => 'Europe/London');
-				$event['end']		= array('dateTime' => $field_values['end'], 'timeZone' => 'Europe/London');
-				$event['status']	= $event_status;*/
-				//dpm($event);
-				$event = $service->events->update($monitor_cal, $event->id, $event);
-				//dpm($event);
-				$entity->set('field_sync',$event->id);
-				//$calendar_list = $service->calendarList->listCalendarList();
-				drupal_set_message("Event successfully updated ({$event_status}) in Google Calendar.");
-			} catch (\Google_Service_Exception $gse) {
-				$exception_message = json_decode($gse->getMessage());
-				if (is_object($exception_message->error)) {
-					switch($exception_message->error->code) {
-						case '401':
-							drupal_set_message("The credentials passed to the Google API were invalid.: ".$gse->getMessage());
-							//$config->clear('access_token')->clear('refresh_token')->save();
-							break;
-						default:
-							drupal_set_message('Insert error saving to Google Calendar at line '.__LINE__.': '.$gse->getMessage());
-							break;
-					}
-				} else {
-					switch ($exception_message->error) {
-						case 'invalid_grant':
-							drupal_set_message("Access to this Google Account has been revoked. You will need to re-authorise this application by re-saving the credentials: ".$gse->getMessage());
-							//$config->clear('access_token')->clear('refresh_token')->save();
-							break;
-						case 'unauthorized_client':
-							drupal_set_message("It appears as though your token needs a refresh and this has failed. You may need to <a href='./settings?clear_tokens=true'>clear your tokens</a> and try again: ".$gse->getMessage());
-							$refreshResult = $client->fetchAccessTokenWithRefreshToken();
-							dpm($refreshResult);
-							break;
-						default:
-							drupal_set_message("Error inserting calendar event: ".$gse->getMessage());
-							break;
-					}
-				}
-			} catch (\Exception $e) {
-				$debugInfo['list_exception'] = $e;
-				drupal_set_message("Error inserting calendar event: ".$e->getMessage());
-			}
-		}
-	}
-	/*
-	else 
-	{
-		drupal_set_message('Ignoring content type: '.$entity->bundle().' because it does not match '.$monitor_type);
-	}
-	*/
+function event_gcal_entity_presave($entity) 
+{
+    //drupal_set_message('Pre-save firing');
+    
+    $config = \Drupal::config('event_gcal.settings');
+    $monitor_type = $config->get('active_content_type');
+    
+    if ($entity->bundle() == $monitor_type) {
+        // Load Google's calendar library
+        include_once __DIR__ . '/vendor/autoload.php';
+        // Load our shared library
+        include_once __DIR__ . '/src/Form/event_gcalShared.php';
+        $monitor_cal = $config->get('active_calendar');
+        //drupal_set_message('Firing on content type: '.$entity->bundle());
+        
+        // Get field names from config
+        $field_name_list = array('title' => '','start' => '','end' => '','sync' => '');
+        $field_name_keys = array_keys($field_name_list);
+        foreach ($field_name_keys as $k) {
+            // Retrieve field name, strip off "[content-type]." from start of field name
+            $field_name_list[$k] = str_replace($monitor_type.'.', '', $config->get('field_'.$k));
+        }
+        $field_values = array();
+        foreach ($field_name_list as $k=>$v) {
+            $field_values[$k] = $entity->get($field_name_list[$k])->getValue()[0]['value'];
+        }
+        
+        // Sync the event to Google Calendar
+        //dpm($field_values);
+        //dpm($config);
+        
+        // Retrieve access token if present
+        $access_token = $config->get('access_token');
+        if (empty($access_token)) {
+            $access_token = null;
+        } else {
+            if (!is_array($access_token)) {
+                if (is_object($access_token)) {
+                    // Convert from object to array
+                    $access_token = json_decode(json_encode($access_token), true);
+                } else {
+                    // Convert from JSON to array
+                    $access_token = json_decode($access_token, true);
+                }
+            }
+        }
+        // Set up client and service
+        $client = \Drupal\event_gcal\Form\getClient(false, $config, $config->get('client_id'), $config->get('client_secret'), $access_token);
+        //dpm($access_token);
+        /*
+        try {
+         $client->setAccessToken($access_token);
+         $authReturn = $client->authorize();
+        } catch (\Exception $e) {
+         $debugInfo['authenticateError'] = $e;
+         drupal_set_message('Auth error saving to Google Calendar.');
+         //dpm($e);
+        }
+        $access_token = $client->getAccessToken(); // In case it's been refreshed
+        //dpm($access_token);
+        */
+        $service = new \Google_Service_Calendar($client);
+        $event = null;
+        
+        // Check if event exists
+        if (!empty($field_values['sync'])) {
+            try {
+                $event = $service->events->get($monitor_cal, $field_values['sync']);    
+            } catch (\Google_Service_Exception $gse) {
+                $exception_message = json_decode($gse->getMessage());
+                if (is_object($exception_message->error)) {
+                    switch($exception_message->error->code) {
+                    case '404':
+                        drupal_set_message("The calendar event this entity was linked to has been removed: ".$gse->getMessage());
+                        $field_values['sync'] = '';
+                        $entity->set('field_sync', '');
+                        break;
+                    default:
+                        drupal_set_message('Error retrieving event from Google Calendar at line '.__LINE__.': '.$gse->getMessage());
+                        break;
+                    }
+                } else {
+                    switch ($exception_message->error) {
+                    case 'invalid_grant':
+                        drupal_set_message("Access to this Google Account has been revoked. You will need to re-authorise this application by re-saving the credentials: ".$gse->getMessage());
+                        //$config->clear('access_token')->clear('refresh_token')->save();
+                        break;
+                    case 'unauthorized_client':
+                        drupal_set_message("It appears as though your token needs a refresh and this has failed. You may need to <a href='./settings?clear_tokens=true'>clear your tokens</a> and try again: ".$gse->getMessage());
+                        $refreshResult = $client->fetchAccessTokenWithRefreshToken();
+                        dpm($refreshResult);
+                        break;
+                    default:
+                        drupal_set_message("Error inserting calendar event: ".$gse->getMessage());
+                        break;
+                    }
+                }
+            } catch (\Exception $e) {
+                $debugInfo['get_exception'] = $e;
+                drupal_set_message("Error retrieving calendar event: ".$e->getMessage());
+            }
+        }
+        
+        $e_arr = $entity->toArray();
+        if ($e_arr['status'][0]['value'] == 0) {
+            $event_status = 'cancelled';
+        } else {
+            $event_status = 'confirmed';
+        }
+        //drupal_set_message("Event is now ".print_r($entity->status,true).".");
+        //dpm($entity->toArray()['status']);
+        //dpm($event);
+        
+        if (empty($field_values['sync'])) {
+            // First-time sync - create
+            try {
+                $event = new \Google_Service_Calendar_Event(
+                    array(
+                    'summary'    => $field_values['title'],
+                    'start'        => array('dateTime' => $field_values['start'], 'timeZone' => 'Europe/London'),
+                    'end'        => array('dateTime' => $field_values['end'], 'timeZone' => 'Europe/London'),
+                    'status'    => $event_status,
+                    )
+                );
+                //dpm($event);
+                $event = $service->events->insert($monitor_cal, $event);
+                //dpm($event);
+                $entity->set('field_sync', $event->id);
+                //$calendar_list = $service->calendarList->listCalendarList();
+                drupal_set_message("Event successfully added ({$event_status}) to Google Calendar.");
+            } catch (\Google_Service_Exception $gse) {
+                $exception_message = json_decode($gse->getMessage());
+                if (is_object($exception_message->error)) {
+                    switch($exception_message->error->code) {
+                    case '401':
+                        drupal_set_message("The credentials passed to the Google API were invalid.: ".$gse->getMessage());
+                        //$config->clear('access_token')->clear('refresh_token')->save();
+                        break;
+                    default:
+                        drupal_set_message('Insert error saving to Google Calendar at line '.__LINE__.': '.$gse->getMessage());
+                        break;
+                    }
+                } else {
+                    switch ($exception_message->error) {
+                    case 'invalid_grant':
+                        drupal_set_message("Access to this Google Account has been revoked. You will need to re-authorise this application by re-saving the credentials: ".$gse->getMessage());
+                        //$config->clear('access_token')->clear('refresh_token')->save();
+                        break;
+                    case 'unauthorized_client':
+                        //$clear_tokens_link = './settings?clear_tokens=true';
+                        $rendered_message = \Drupal\Core\Render\Markup::create("It appears as though your token needs a refresh and this has failed. You may need to <a href='./settings?clear_tokens=true'>clear your tokens</a> and try again: ".$gse->getMessage());
+                        //drupal_set_message(t("It appears as though your token needs refreshing and this has failed. You may need to @link and try again: ",array('@link' => $clear_tokens_link)));
+                        drupal_set_message($rendered_message);
+                        $refreshResult = $client->fetchAccessTokenWithRefreshToken();
+                        dpm($refreshResult);
+                        break;
+                    default:
+                        drupal_set_message("Error inserting calendar event: ".$gse->getMessage());
+                        break;
+                    }
+                }
+            } catch (\Exception $e) {
+                $debugInfo['list_exception'] = $e;
+                drupal_set_message("Error inserting calendar event: ".$e->getMessage());
+            }
+        } else {
+            // Subsequent sync - update
+            //  $event is already set from above
+            try {
+                $event->summary    = $field_values['title'];
+                $event->start    = array('dateTime' => $field_values['start'], 'timeZone' => 'Europe/London');
+                $event->end        = array('dateTime' => $field_values['end'], 'timeZone' => 'Europe/London');
+                $event->status    = $event_status;
+                /*$event['summary']	= $field_values['title'];
+                $event['start']		= array('dateTime' => $field_values['start'], 'timeZone' => 'Europe/London');
+                $event['end']		= array('dateTime' => $field_values['end'], 'timeZone' => 'Europe/London');
+                $event['status']	= $event_status;*/
+                //dpm($event);
+                $event = $service->events->update($monitor_cal, $event->id, $event);
+                //dpm($event);
+                $entity->set('field_sync', $event->id);
+                //$calendar_list = $service->calendarList->listCalendarList();
+                drupal_set_message("Event successfully updated ({$event_status}) in Google Calendar.");
+            } catch (\Google_Service_Exception $gse) {
+                $exception_message = json_decode($gse->getMessage());
+                if (is_object($exception_message->error)) {
+                    switch($exception_message->error->code) {
+                    case '401':
+                        drupal_set_message("The credentials passed to the Google API were invalid.: ".$gse->getMessage());
+                        //$config->clear('access_token')->clear('refresh_token')->save();
+                        break;
+                    default:
+                        drupal_set_message('Insert error saving to Google Calendar at line '.__LINE__.': '.$gse->getMessage());
+                        break;
+                    }
+                } else {
+                    switch ($exception_message->error) {
+                    case 'invalid_grant':
+                        drupal_set_message("Access to this Google Account has been revoked. You will need to re-authorise this application by re-saving the credentials: ".$gse->getMessage());
+                        //$config->clear('access_token')->clear('refresh_token')->save();
+                        break;
+                    case 'unauthorized_client':
+                        drupal_set_message("It appears as though your token needs a refresh and this has failed. You may need to <a href='./settings?clear_tokens=true'>clear your tokens</a> and try again: ".$gse->getMessage());
+                        $refreshResult = $client->fetchAccessTokenWithRefreshToken();
+                        dpm($refreshResult);
+                        break;
+                    default:
+                        drupal_set_message("Error inserting calendar event: ".$gse->getMessage());
+                        break;
+                    }
+                }
+            } catch (\Exception $e) {
+                $debugInfo['list_exception'] = $e;
+                drupal_set_message("Error inserting calendar event: ".$e->getMessage());
+            }
+        }
+    }
+    /*
+    else 
+    {
+    drupal_set_message('Ignoring content type: '.$entity->bundle().' because it does not match '.$monitor_type);
+    }
+    */
 }

@@ -30,43 +30,53 @@
  */
 class Google_Service_Appsactivity extends Google_Service
 {
-  /** View the activity history of your Google apps. */
-  const ACTIVITY =
+    /**
+ * View the activity history of your Google apps. 
+*/
+    const ACTIVITY =
       "https://www.googleapis.com/auth/activity";
-  /** View and manage the files in your Google Drive. */
-  const DRIVE =
+    /**
+ * View and manage the files in your Google Drive. 
+*/
+    const DRIVE =
       "https://www.googleapis.com/auth/drive";
-  /** View and manage metadata of files in your Google Drive. */
-  const DRIVE_METADATA =
+    /**
+ * View and manage metadata of files in your Google Drive. 
+*/
+    const DRIVE_METADATA =
       "https://www.googleapis.com/auth/drive.metadata";
-  /** View metadata for files in your Google Drive. */
-  const DRIVE_METADATA_READONLY =
+    /**
+ * View metadata for files in your Google Drive. 
+*/
+    const DRIVE_METADATA_READONLY =
       "https://www.googleapis.com/auth/drive.metadata.readonly";
-  /** View the files in your Google Drive. */
-  const DRIVE_READONLY =
+    /**
+ * View the files in your Google Drive. 
+*/
+    const DRIVE_READONLY =
       "https://www.googleapis.com/auth/drive.readonly";
 
-  public $activities;
+    public $activities;
   
-  /**
+    /**
    * Constructs the internal representation of the Appsactivity service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
-    $this->servicePath = 'appsactivity/v1/';
-    $this->version = 'v1';
-    $this->serviceName = 'appsactivity';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://www.googleapis.com/';
+        $this->servicePath = 'appsactivity/v1/';
+        $this->version = 'v1';
+        $this->serviceName = 'appsactivity';
 
-    $this->activities = new Google_Service_Appsactivity_Resource_Activities(
-        $this,
-        $this->serviceName,
-        'activities',
-        array(
-          'methods' => array(
+        $this->activities = new Google_Service_Appsactivity_Resource_Activities(
+            $this,
+            $this->serviceName,
+            'activities',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'activities',
               'httpMethod' => 'GET',
@@ -101,8 +111,8 @@ class Google_Service_Appsactivity extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

@@ -25,21 +25,21 @@
  */
 class Google_Service_AdExchangeSeller_Resource_Accounts extends Google_Service_Resource
 {
-  /**
+    /**
    * Get information about the selected Ad Exchange account. (accounts.get)
    *
-   * @param string $accountId Account to get information about. Tip: 'myaccount'
+   * @param  string $accountId Account to get information about. Tip: 'myaccount'
    * is a valid ID.
-   * @param array $optParams Optional parameters.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_AdExchangeSeller_Account
    */
-  public function get($accountId, $optParams = array())
-  {
-    $params = array('accountId' => $accountId);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AdExchangeSeller_Account");
-  }
-  /**
+    public function get($accountId, $optParams = array())
+    {
+        $params = array('accountId' => $accountId);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_AdExchangeSeller_Account");
+    }
+    /**
    * List all accounts available to this Ad Exchange account.
    * (accounts.listAccounts)
    *
@@ -50,12 +50,12 @@ class Google_Service_AdExchangeSeller_Resource_Accounts extends Google_Service_R
    * @opt_param string pageToken A continuation token, used to page through
    * accounts. To retrieve the next page, set this parameter to the value of
    * "nextPageToken" from the previous response.
-   * @return Google_Service_AdExchangeSeller_Accounts
+   * @return    Google_Service_AdExchangeSeller_Accounts
    */
-  public function listAccounts($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeSeller_Accounts");
-  }
+    public function listAccounts($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_AdExchangeSeller_Accounts");
+    }
 }

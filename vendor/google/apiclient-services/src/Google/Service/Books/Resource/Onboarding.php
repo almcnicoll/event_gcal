@@ -25,22 +25,22 @@
  */
 class Google_Service_Books_Resource_Onboarding extends Google_Service_Resource
 {
-  /**
+    /**
    * List categories for onboarding experience. (onboarding.listCategories)
    *
    * @param array $optParams Optional parameters.
    *
    * @opt_param string locale ISO-639-1 language and ISO-3166-1 country code.
    * Default is en-US if unset.
-   * @return Google_Service_Books_Category
+   * @return    Google_Service_Books_Category
    */
-  public function listCategories($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('listCategories', array($params), "Google_Service_Books_Category");
-  }
-  /**
+    public function listCategories($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('listCategories', array($params), "Google_Service_Books_Category");
+    }
+    /**
    * List available volumes under categories for onboarding experience.
    * (onboarding.listCategoryVolumes)
    *
@@ -56,12 +56,12 @@ class Google_Service_Books_Resource_Onboarding extends Google_Service_Resource
    * in the response.
    * @opt_param string pageToken The value of the nextToken from the previous
    * page.
-   * @return Google_Service_Books_Volume2
+   * @return    Google_Service_Books_Volume2
    */
-  public function listCategoryVolumes($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('listCategoryVolumes', array($params), "Google_Service_Books_Volume2");
-  }
+    public function listCategoryVolumes($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('listCategoryVolumes', array($params), "Google_Service_Books_Volume2");
+    }
 }

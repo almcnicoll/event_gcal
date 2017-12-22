@@ -25,7 +25,7 @@
  */
 class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Service_Resource
 {
-  /**
+    /**
    * Schedules a group action to remove the specified instances from the managed
    * instance group. Abandoning an instance does not delete the instance, but it
    * does remove the instance from any target pools that are applied by the
@@ -42,12 +42,12 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * You can specify a maximum of 1000 instances with this method per request.
    * (instanceGroupManagers.abandonInstances)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone where the managed instance group is
-   * located.
-   * @param string $instanceGroupManager The name of the managed instance group.
+   * @param string                                                              $project              Project ID for this request.
+   * @param string                                                              $zone                 The name of the zone where the managed instance group is
+   *                                                                                                  located.
+   * @param string                                                              $instanceGroupManager The name of the managed instance group.
    * @param Google_Service_Compute_InstanceGroupManagersAbandonInstancesRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                                               $optParams            Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -61,20 +61,20 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function abandonInstances($project, $zone, $instanceGroupManager, Google_Service_Compute_InstanceGroupManagersAbandonInstancesRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('abandonInstances', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function abandonInstances($project, $zone, $instanceGroupManager, Google_Service_Compute_InstanceGroupManagersAbandonInstancesRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('abandonInstances', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves the list of managed instance groups and groups them by zone.
    * (instanceGroupManagers.aggregatedList)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -118,26 +118,26 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_InstanceGroupManagerAggregatedList
+   * @return    Google_Service_Compute_InstanceGroupManagerAggregatedList
    */
-  public function aggregatedList($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('aggregatedList', array($params), "Google_Service_Compute_InstanceGroupManagerAggregatedList");
-  }
-  /**
+    public function aggregatedList($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('aggregatedList', array($params), "Google_Service_Compute_InstanceGroupManagerAggregatedList");
+    }
+    /**
    * Deletes the specified managed instance group and all of the instances in that
    * group. Note that the instance group must not belong to a backend service.
    * Read  Deleting an instance group for more information.
    * (instanceGroupManagers.delete)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone where the managed instance group is
-   * located.
+   * @param string $project              Project ID for this request.
+   * @param string $zone                 The name of the zone where the managed instance group is
+   *                                     located.
    * @param string $instanceGroupManager The name of the managed instance group to
    * delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams            Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -151,15 +151,15 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $zone, $instanceGroupManager, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $zone, $instanceGroupManager, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Schedules a group action to delete the specified instances in the managed
    * instance group. The instances are also removed from any target pools of which
    * they were a member. This method reduces the targetSize of the managed
@@ -175,12 +175,12 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * You can specify a maximum of 1000 instances with this method per request.
    * (instanceGroupManagers.deleteInstances)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone where the managed instance group is
-   * located.
-   * @param string $instanceGroupManager The name of the managed instance group.
+   * @param string                                                             $project              Project ID for this request.
+   * @param string                                                             $zone                 The name of the zone where the managed instance group is
+   *                                                                                                 located.
+   * @param string                                                             $instanceGroupManager The name of the managed instance group.
    * @param Google_Service_Compute_InstanceGroupManagersDeleteInstancesRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                                              $optParams            Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -194,33 +194,33 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function deleteInstances($project, $zone, $instanceGroupManager, Google_Service_Compute_InstanceGroupManagersDeleteInstancesRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('deleteInstances', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function deleteInstances($project, $zone, $instanceGroupManager, Google_Service_Compute_InstanceGroupManagersDeleteInstancesRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('deleteInstances', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns all of the details about the specified managed instance group. Get a
    * list of available managed instance groups by making a list() request.
    * (instanceGroupManagers.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone where the managed instance group is
-   * located.
-   * @param string $instanceGroupManager The name of the managed instance group.
-   * @param array $optParams Optional parameters.
+   * @param  string $project              Project ID for this request.
+   * @param  string $zone                 The name of the zone where the managed instance group is
+   *                                     located.
+   * @param  string $instanceGroupManager The name of the managed instance group.
+   * @param  array  $optParams            Optional parameters.
    * @return Google_Service_Compute_InstanceGroupManager
    */
-  public function get($project, $zone, $instanceGroupManager, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_InstanceGroupManager");
-  }
-  /**
+    public function get($project, $zone, $instanceGroupManager, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_InstanceGroupManager");
+    }
+    /**
    * Creates a managed instance group using the information that you specify in
    * the request. After the group is created, it schedules an action to create
    * instances in the group using the specified instance template. This operation
@@ -232,11 +232,11 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * contact Cloud Support if you need an increase in this limit.
    * (instanceGroupManagers.insert)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone where you want to create the managed
-   * instance group.
+   * @param string                                      $project   Project ID for this request.
+   * @param string                                      $zone      The name of the zone where you want to create the managed
+   *                                                               instance group.
    * @param Google_Service_Compute_InstanceGroupManager $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                       $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -250,22 +250,22 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, $zone, Google_Service_Compute_InstanceGroupManager $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, $zone, Google_Service_Compute_InstanceGroupManager $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves a list of managed instance groups that are contained within the
    * specified project and zone. (instanceGroupManagers.listInstanceGroupManagers)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone where the managed instance group is
-   * located.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $zone      The name of the zone where the managed instance group is
+   *                          located.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -309,15 +309,15 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_InstanceGroupManagerList
+   * @return    Google_Service_Compute_InstanceGroupManagerList
    */
-  public function listInstanceGroupManagers($project, $zone, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_InstanceGroupManagerList");
-  }
-  /**
+    public function listInstanceGroupManagers($project, $zone, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_InstanceGroupManagerList");
+    }
+    /**
    * Lists all of the instances in the managed instance group. Each instance in
    * the list has a currentAction, which indicates the action that the managed
    * instance group is performing on the instance. For example, if the group is
@@ -325,25 +325,25 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * action failed, the list displays the errors for that failed action.
    * (instanceGroupManagers.listManagedInstances)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone where the managed instance group is
-   * located.
+   * @param string $project              Project ID for this request.
+   * @param string $zone                 The name of the zone where the managed instance group is
+   *                                     located.
    * @param string $instanceGroupManager The name of the managed instance group.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams            Optional parameters.
    *
    * @opt_param string filter
    * @opt_param string maxResults
    * @opt_param string order_by
    * @opt_param string pageToken
-   * @return Google_Service_Compute_InstanceGroupManagersListManagedInstancesResponse
+   * @return    Google_Service_Compute_InstanceGroupManagersListManagedInstancesResponse
    */
-  public function listManagedInstances($project, $zone, $instanceGroupManager, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager);
-    $params = array_merge($params, $optParams);
-    return $this->call('listManagedInstances', array($params), "Google_Service_Compute_InstanceGroupManagersListManagedInstancesResponse");
-  }
-  /**
+    public function listManagedInstances($project, $zone, $instanceGroupManager, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager);
+        $params = array_merge($params, $optParams);
+        return $this->call('listManagedInstances', array($params), "Google_Service_Compute_InstanceGroupManagersListManagedInstancesResponse");
+    }
+    /**
    * Schedules a group action to recreate the specified instances in the managed
    * instance group. The instances are deleted and recreated using the current
    * instance template for the managed instance group. This operation is marked as
@@ -358,12 +358,12 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * You can specify a maximum of 1000 instances with this method per request.
    * (instanceGroupManagers.recreateInstances)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone where the managed instance group is
-   * located.
-   * @param string $instanceGroupManager The name of the managed instance group.
+   * @param string                                                               $project              Project ID for this request.
+   * @param string                                                               $zone                 The name of the zone where the managed instance group is
+   *                                                                                                   located.
+   * @param string                                                               $instanceGroupManager The name of the managed instance group.
    * @param Google_Service_Compute_InstanceGroupManagersRecreateInstancesRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                                                $optParams            Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -377,15 +377,15 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function recreateInstances($project, $zone, $instanceGroupManager, Google_Service_Compute_InstanceGroupManagersRecreateInstancesRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('recreateInstances', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function recreateInstances($project, $zone, $instanceGroupManager, Google_Service_Compute_InstanceGroupManagersRecreateInstancesRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('recreateInstances', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Resizes the managed instance group. If you increase the size, the group
    * creates new instances using the current instance template. If you decrease
    * the size, the group deletes instances. The resize operation is marked DONE
@@ -398,15 +398,15 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * has elapsed before the VM instance is removed or deleted.
    * (instanceGroupManagers.resize)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone where the managed instance group is
-   * located.
+   * @param string $project              Project ID for this request.
+   * @param string $zone                 The name of the zone where the managed instance group is
+   *                                     located.
    * @param string $instanceGroupManager The name of the managed instance group.
-   * @param int $size The number of running instances that the managed instance
-   * group should maintain at any given time. The group automatically adds or
-   * removes instances to maintain the number of instances specified by this
-   * parameter.
-   * @param array $optParams Optional parameters.
+   * @param int    $size                 The number of running instances that the managed instance
+   *                                     group should maintain at any given time. The group
+   *                                     automatically adds or removes instances to maintain the
+   *                                     number of instances specified by this parameter.
+   * @param array  $optParams            Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -420,25 +420,25 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function resize($project, $zone, $instanceGroupManager, $size, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'size' => $size);
-    $params = array_merge($params, $optParams);
-    return $this->call('resize', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function resize($project, $zone, $instanceGroupManager, $size, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'size' => $size);
+        $params = array_merge($params, $optParams);
+        return $this->call('resize', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Specifies the instance template to use when creating new instances in this
    * group. The templates for existing instances in the group do not change unless
    * you recreate them. (instanceGroupManagers.setInstanceTemplate)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone where the managed instance group is
-   * located.
-   * @param string $instanceGroupManager The name of the managed instance group.
+   * @param string                                                                 $project              Project ID for this request.
+   * @param string                                                                 $zone                 The name of the zone where the managed instance group is
+   *                                                                                                     located.
+   * @param string                                                                 $instanceGroupManager The name of the managed instance group.
    * @param Google_Service_Compute_InstanceGroupManagersSetInstanceTemplateRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                                                  $optParams            Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -452,15 +452,15 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function setInstanceTemplate($project, $zone, $instanceGroupManager, Google_Service_Compute_InstanceGroupManagersSetInstanceTemplateRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setInstanceTemplate', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function setInstanceTemplate($project, $zone, $instanceGroupManager, Google_Service_Compute_InstanceGroupManagersSetInstanceTemplateRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('setInstanceTemplate', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Modifies the target pools to which all instances in this managed instance
    * group are assigned. The target pools automatically apply to all of the
    * instances in the managed instance group. This operation is marked DONE when
@@ -469,12 +469,12 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    * instances in the group depending on the size of the group.
    * (instanceGroupManagers.setTargetPools)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone The name of the zone where the managed instance group is
-   * located.
-   * @param string $instanceGroupManager The name of the managed instance group.
+   * @param string                                                            $project              Project ID for this request.
+   * @param string                                                            $zone                 The name of the zone where the managed instance group is
+   *                                                                                                located.
+   * @param string                                                            $instanceGroupManager The name of the managed instance group.
    * @param Google_Service_Compute_InstanceGroupManagersSetTargetPoolsRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                                             $optParams            Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -488,12 +488,12 @@ class Google_Service_Compute_Resource_InstanceGroupManagers extends Google_Servi
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function setTargetPools($project, $zone, $instanceGroupManager, Google_Service_Compute_InstanceGroupManagersSetTargetPoolsRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setTargetPools', array($params), "Google_Service_Compute_Operation");
-  }
+    public function setTargetPools($project, $zone, $instanceGroupManager, Google_Service_Compute_InstanceGroupManagersSetTargetPoolsRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone, 'instanceGroupManager' => $instanceGroupManager, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('setTargetPools', array($params), "Google_Service_Compute_Operation");
+    }
 }

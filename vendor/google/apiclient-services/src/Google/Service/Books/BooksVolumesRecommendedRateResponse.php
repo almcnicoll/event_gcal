@@ -17,17 +17,17 @@
 
 class Google_Service_Books_BooksVolumesRecommendedRateResponse extends Google_Model
 {
-  protected $internal_gapi_mappings = array(
+    protected $internal_gapi_mappings = array(
         "consistencyToken" => "consistency_token",
-  );
-  public $consistencyToken;
+    );
+    public $consistencyToken;
 
-  public function setConsistencyToken($consistencyToken)
-  {
-    $this->consistencyToken = $consistencyToken;
-  }
-  public function getConsistencyToken()
-  {
-    return $this->consistencyToken;
-  }
+    public function setConsistencyToken($consistencyToken)
+    {
+        $this->consistencyToken = $consistencyToken;
+    }
+    public function getConsistencyToken()
+    {
+        return $this->consistencyToken;
+    }
 }

@@ -17,59 +17,59 @@
 
 class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1SafeSearchAnnotation extends Google_Model
 {
-  public $adult;
-  public $medical;
-  public $racy;
-  public $spoof;
-  public $timeOffset;
-  public $violent;
+    public $adult;
+    public $medical;
+    public $racy;
+    public $spoof;
+    public $timeOffset;
+    public $violent;
 
-  public function setAdult($adult)
-  {
-    $this->adult = $adult;
-  }
-  public function getAdult()
-  {
-    return $this->adult;
-  }
-  public function setMedical($medical)
-  {
-    $this->medical = $medical;
-  }
-  public function getMedical()
-  {
-    return $this->medical;
-  }
-  public function setRacy($racy)
-  {
-    $this->racy = $racy;
-  }
-  public function getRacy()
-  {
-    return $this->racy;
-  }
-  public function setSpoof($spoof)
-  {
-    $this->spoof = $spoof;
-  }
-  public function getSpoof()
-  {
-    return $this->spoof;
-  }
-  public function setTimeOffset($timeOffset)
-  {
-    $this->timeOffset = $timeOffset;
-  }
-  public function getTimeOffset()
-  {
-    return $this->timeOffset;
-  }
-  public function setViolent($violent)
-  {
-    $this->violent = $violent;
-  }
-  public function getViolent()
-  {
-    return $this->violent;
-  }
+    public function setAdult($adult)
+    {
+        $this->adult = $adult;
+    }
+    public function getAdult()
+    {
+        return $this->adult;
+    }
+    public function setMedical($medical)
+    {
+        $this->medical = $medical;
+    }
+    public function getMedical()
+    {
+        return $this->medical;
+    }
+    public function setRacy($racy)
+    {
+        $this->racy = $racy;
+    }
+    public function getRacy()
+    {
+        return $this->racy;
+    }
+    public function setSpoof($spoof)
+    {
+        $this->spoof = $spoof;
+    }
+    public function getSpoof()
+    {
+        return $this->spoof;
+    }
+    public function setTimeOffset($timeOffset)
+    {
+        $this->timeOffset = $timeOffset;
+    }
+    public function getTimeOffset()
+    {
+        return $this->timeOffset;
+    }
+    public function setViolent($violent)
+    {
+        $this->violent = $violent;
+    }
+    public function getViolent()
+    {
+        return $this->violent;
+    }
 }

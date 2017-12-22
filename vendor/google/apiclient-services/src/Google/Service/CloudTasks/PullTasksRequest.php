@@ -17,41 +17,41 @@
 
 class Google_Service_CloudTasks_PullTasksRequest extends Google_Model
 {
-  public $filter;
-  public $leaseDuration;
-  public $maxTasks;
-  public $responseView;
+    public $filter;
+    public $leaseDuration;
+    public $maxTasks;
+    public $responseView;
 
-  public function setFilter($filter)
-  {
-    $this->filter = $filter;
-  }
-  public function getFilter()
-  {
-    return $this->filter;
-  }
-  public function setLeaseDuration($leaseDuration)
-  {
-    $this->leaseDuration = $leaseDuration;
-  }
-  public function getLeaseDuration()
-  {
-    return $this->leaseDuration;
-  }
-  public function setMaxTasks($maxTasks)
-  {
-    $this->maxTasks = $maxTasks;
-  }
-  public function getMaxTasks()
-  {
-    return $this->maxTasks;
-  }
-  public function setResponseView($responseView)
-  {
-    $this->responseView = $responseView;
-  }
-  public function getResponseView()
-  {
-    return $this->responseView;
-  }
+    public function setFilter($filter)
+    {
+        $this->filter = $filter;
+    }
+    public function getFilter()
+    {
+        return $this->filter;
+    }
+    public function setLeaseDuration($leaseDuration)
+    {
+        $this->leaseDuration = $leaseDuration;
+    }
+    public function getLeaseDuration()
+    {
+        return $this->leaseDuration;
+    }
+    public function setMaxTasks($maxTasks)
+    {
+        $this->maxTasks = $maxTasks;
+    }
+    public function getMaxTasks()
+    {
+        return $this->maxTasks;
+    }
+    public function setResponseView($responseView)
+    {
+        $this->responseView = $responseView;
+    }
+    public function getResponseView()
+    {
+        return $this->responseView;
+    }
 }

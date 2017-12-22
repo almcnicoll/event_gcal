@@ -25,7 +25,7 @@
  */
 class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions extends Google_Service_Resource
 {
-  /**
+    /**
    * Returns a student submission.
    *
    * * `PERMISSION_DENIED` if the requesting user is not permitted to access the
@@ -34,20 +34,21 @@ class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions exte
    * requested course, course work, or student submission does not exist.
    * (studentSubmissions.get)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $courseWorkId Identifier of the course work.
-   * @param string $id Identifier of the student submission.
-   * @param array $optParams Optional parameters.
+   * @param  string $courseId     Identifier of the course. This identifier can be
+   *                             either the Classroom-assigned identifier or an
+   *                             alias.
+   * @param  string $courseWorkId Identifier of the course work.
+   * @param  string $id           Identifier of the student submission.
+   * @param  array  $optParams    Optional parameters.
    * @return Google_Service_Classroom_StudentSubmission
    */
-  public function get($courseId, $courseWorkId, $id, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId, 'id' => $id);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Classroom_StudentSubmission");
-  }
-  /**
+    public function get($courseId, $courseWorkId, $id, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId, 'id' => $id);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Classroom_StudentSubmission");
+    }
+    /**
    * Returns a list of student submissions that the requester is permitted to
    * view, factoring in the OAuth scopes of the request. `-` may be specified as
    * the `course_work_id` to include student submissions for multiple course work
@@ -63,12 +64,13 @@ class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions exte
    * if the request is malformed. * `NOT_FOUND` if the requested course does not
    * exist. (studentSubmissions.listCoursesCourseWorkStudentSubmissions)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
+   * @param string $courseId     Identifier of the course. This identifier can be
+   *                             either the Classroom-assigned identifier or an
+   *                             alias.
    * @param string $courseWorkId Identifier of the student work to request. This
    * may be set to the string literal `"-"` to request student work for all course
    * work in the specified course.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams    Optional parameters.
    *
    * @opt_param int pageSize Maximum number of items to return. Zero or
    * unspecified indicates that the server may assign a maximum.
@@ -90,15 +92,15 @@ class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions exte
    *
    * The list request must be otherwise identical to the one that resulted in this
    * token.
-   * @return Google_Service_Classroom_ListStudentSubmissionsResponse
+   * @return    Google_Service_Classroom_ListStudentSubmissionsResponse
    */
-  public function listCoursesCourseWorkStudentSubmissions($courseId, $courseWorkId, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Classroom_ListStudentSubmissionsResponse");
-  }
-  /**
+    public function listCoursesCourseWorkStudentSubmissions($courseId, $courseWorkId, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Classroom_ListStudentSubmissionsResponse");
+    }
+    /**
    * Modifies attachments of student submission.
    *
    * Attachments may only be added to student submissions belonging to course work
@@ -117,21 +119,22 @@ class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions exte
    * requested course, course work, or student submission does not exist.
    * (studentSubmissions.modifyAttachments)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $courseWorkId Identifier of the course work.
-   * @param string $id Identifier of the student submission.
-   * @param Google_Service_Classroom_ModifyAttachmentsRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                            $courseId     Identifier of the course. This identifier can be
+   *                                                                         either the Classroom-assigned identifier or an
+   *                                                                         alias.
+   * @param  string                                            $courseWorkId Identifier of the course work.
+   * @param  string                                            $id           Identifier of the student submission.
+   * @param  Google_Service_Classroom_ModifyAttachmentsRequest $postBody
+   * @param  array                                             $optParams    Optional parameters.
    * @return Google_Service_Classroom_StudentSubmission
    */
-  public function modifyAttachments($courseId, $courseWorkId, $id, Google_Service_Classroom_ModifyAttachmentsRequest $postBody, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId, 'id' => $id, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('modifyAttachments', array($params), "Google_Service_Classroom_StudentSubmission");
-  }
-  /**
+    public function modifyAttachments($courseId, $courseWorkId, $id, Google_Service_Classroom_ModifyAttachmentsRequest $postBody, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId, 'id' => $id, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('modifyAttachments', array($params), "Google_Service_Classroom_StudentSubmission");
+    }
+    /**
    * Updates one or more fields of a student submission.
    *
    * See google.classroom.v1.StudentSubmission for details of which fields may be
@@ -150,12 +153,13 @@ class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions exte
    * requested course, course work, or student submission does not exist.
    * (studentSubmissions.patch)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $courseWorkId Identifier of the course work.
-   * @param string $id Identifier of the student submission.
+   * @param string                                     $courseId     Identifier of the course. This identifier can be
+   *                                                                 either the Classroom-assigned identifier or an
+   *                                                                 alias.
+   * @param string                                     $courseWorkId Identifier of the course work.
+   * @param string                                     $id           Identifier of the student submission.
    * @param Google_Service_Classroom_StudentSubmission $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                      $optParams    Optional parameters.
    *
    * @opt_param string updateMask Mask that identifies which fields on the student
    * submission to update. This field is required to do an update. The update
@@ -164,15 +168,15 @@ class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions exte
    * The following fields may be specified by teachers:
    *
    * * `draft_grade` * `assigned_grade`
-   * @return Google_Service_Classroom_StudentSubmission
+   * @return    Google_Service_Classroom_StudentSubmission
    */
-  public function patch($courseId, $courseWorkId, $id, Google_Service_Classroom_StudentSubmission $postBody, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId, 'id' => $id, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Classroom_StudentSubmission");
-  }
-  /**
+    public function patch($courseId, $courseWorkId, $id, Google_Service_Classroom_StudentSubmission $postBody, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId, 'id' => $id, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Classroom_StudentSubmission");
+    }
+    /**
    * Reclaims a student submission on behalf of the student that owns it.
    *
    * Reclaiming a student submission transfers ownership of attached Drive files
@@ -194,21 +198,22 @@ class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions exte
    * `NOT_FOUND` if the requested course, course work, or student submission does
    * not exist. (studentSubmissions.reclaim)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $courseWorkId Identifier of the course work.
-   * @param string $id Identifier of the student submission.
-   * @param Google_Service_Classroom_ReclaimStudentSubmissionRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                   $courseId     Identifier of the course. This identifier can be
+   *                                                                                either the Classroom-assigned identifier or an
+   *                                                                                alias.
+   * @param  string                                                   $courseWorkId Identifier of the course work.
+   * @param  string                                                   $id           Identifier of the student submission.
+   * @param  Google_Service_Classroom_ReclaimStudentSubmissionRequest $postBody
+   * @param  array                                                    $optParams    Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
-  public function reclaim($courseId, $courseWorkId, $id, Google_Service_Classroom_ReclaimStudentSubmissionRequest $postBody, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId, 'id' => $id, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('reclaim', array($params), "Google_Service_Classroom_ClassroomEmpty");
-  }
-  /**
+    public function reclaim($courseId, $courseWorkId, $id, Google_Service_Classroom_ReclaimStudentSubmissionRequest $postBody, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId, 'id' => $id, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('reclaim', array($params), "Google_Service_Classroom_ClassroomEmpty");
+    }
+    /**
    * Returns a student submission.
    *
    * Returning a student submission transfers ownership of attached Drive files to
@@ -231,21 +236,22 @@ class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions exte
    * `NOT_FOUND` if the requested course, course work, or student submission does
    * not exist. (studentSubmissions.returnCoursesCourseWorkStudentSubmissions)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $courseWorkId Identifier of the course work.
-   * @param string $id Identifier of the student submission.
-   * @param Google_Service_Classroom_ReturnStudentSubmissionRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                  $courseId     Identifier of the course. This identifier can be
+   *                                                                               either the Classroom-assigned identifier or an
+   *                                                                               alias.
+   * @param  string                                                  $courseWorkId Identifier of the course work.
+   * @param  string                                                  $id           Identifier of the student submission.
+   * @param  Google_Service_Classroom_ReturnStudentSubmissionRequest $postBody
+   * @param  array                                                   $optParams    Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
-  public function returnCoursesCourseWorkStudentSubmissions($courseId, $courseWorkId, $id, Google_Service_Classroom_ReturnStudentSubmissionRequest $postBody, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId, 'id' => $id, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('return', array($params), "Google_Service_Classroom_ClassroomEmpty");
-  }
-  /**
+    public function returnCoursesCourseWorkStudentSubmissions($courseId, $courseWorkId, $id, Google_Service_Classroom_ReturnStudentSubmissionRequest $postBody, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId, 'id' => $id, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('return', array($params), "Google_Service_Classroom_ClassroomEmpty");
+    }
+    /**
    * Turns in a student submission.
    *
    * Turning in a student submission transfers ownership of attached Drive files
@@ -266,18 +272,19 @@ class Google_Service_Classroom_Resource_CoursesCourseWorkStudentSubmissions exte
    * `NOT_FOUND` if the requested course, course work, or student submission does
    * not exist. (studentSubmissions.turnIn)
    *
-   * @param string $courseId Identifier of the course. This identifier can be
-   * either the Classroom-assigned identifier or an alias.
-   * @param string $courseWorkId Identifier of the course work.
-   * @param string $id Identifier of the student submission.
-   * @param Google_Service_Classroom_TurnInStudentSubmissionRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                  $courseId     Identifier of the course. This identifier can be
+   *                                                                               either the Classroom-assigned identifier or an
+   *                                                                               alias.
+   * @param  string                                                  $courseWorkId Identifier of the course work.
+   * @param  string                                                  $id           Identifier of the student submission.
+   * @param  Google_Service_Classroom_TurnInStudentSubmissionRequest $postBody
+   * @param  array                                                   $optParams    Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
-  public function turnIn($courseId, $courseWorkId, $id, Google_Service_Classroom_TurnInStudentSubmissionRequest $postBody, $optParams = array())
-  {
-    $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId, 'id' => $id, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('turnIn', array($params), "Google_Service_Classroom_ClassroomEmpty");
-  }
+    public function turnIn($courseId, $courseWorkId, $id, Google_Service_Classroom_TurnInStudentSubmissionRequest $postBody, $optParams = array())
+    {
+        $params = array('courseId' => $courseId, 'courseWorkId' => $courseWorkId, 'id' => $id, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('turnIn', array($params), "Google_Service_Classroom_ClassroomEmpty");
+    }
 }

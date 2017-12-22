@@ -25,7 +25,7 @@
  */
 class Google_Service_CloudDebugger_Resource_DebuggerDebuggees extends Google_Service_Resource
 {
-  /**
+    /**
    * Lists all the debuggees that the user has access to.
    * (debuggees.listDebuggerDebuggees)
    *
@@ -37,12 +37,12 @@ class Google_Service_CloudDebugger_Resource_DebuggerDebuggees extends Google_Ser
    * debuggees to list.
    * @opt_param string clientVersion The client version making the call. Schema:
    * `domain/type/version` (e.g., `google.com/intellij/v1`).
-   * @return Google_Service_CloudDebugger_ListDebuggeesResponse
+   * @return    Google_Service_CloudDebugger_ListDebuggeesResponse
    */
-  public function listDebuggerDebuggees($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudDebugger_ListDebuggeesResponse");
-  }
+    public function listDebuggerDebuggees($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_CloudDebugger_ListDebuggeesResponse");
+    }
 }

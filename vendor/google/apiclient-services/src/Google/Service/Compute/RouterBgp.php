@@ -17,14 +17,14 @@
 
 class Google_Service_Compute_RouterBgp extends Google_Model
 {
-  public $asn;
+    public $asn;
 
-  public function setAsn($asn)
-  {
-    $this->asn = $asn;
-  }
-  public function getAsn()
-  {
-    return $this->asn;
-  }
+    public function setAsn($asn)
+    {
+        $this->asn = $asn;
+    }
+    public function getAsn()
+    {
+        return $this->asn;
+    }
 }

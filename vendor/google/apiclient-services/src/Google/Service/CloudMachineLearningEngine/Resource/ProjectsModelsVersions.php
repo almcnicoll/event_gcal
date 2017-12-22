@@ -25,7 +25,7 @@
  */
 class Google_Service_CloudMachineLearningEngine_Resource_ProjectsModelsVersions extends Google_Service_Resource
 {
-  /**
+    /**
    * Creates a new version of a model from a trained TensorFlow model.
    *
    * If the version created in the cloud by this call is the first deployed
@@ -37,18 +37,18 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsModelsVersions 
    * engine/reference/rest/v1/projects.models.versions/setDefault).
    * (versions.create)
    *
-   * @param string $parent Required. The name of the model.
-   * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                           $parent    Required. The name of the model.
+   * @param  Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version $postBody
+   * @param  array                                                            $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearningEngine_GoogleLongrunningOperation
    */
-  public function create($parent, Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version $postBody, $optParams = array())
-  {
-    $params = array('parent' => $parent, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_CloudMachineLearningEngine_GoogleLongrunningOperation");
-  }
-  /**
+    public function create($parent, Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version $postBody, $optParams = array())
+    {
+        $params = array('parent' => $parent, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_CloudMachineLearningEngine_GoogleLongrunningOperation");
+    }
+    /**
    * Deletes a model version.
    *
    * Each model can have multiple versions deployed and in use at any given time.
@@ -57,19 +57,20 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsModelsVersions 
    * Note: You cannot delete the version that is set as the default version of the
    * model unless it is the only remaining version. (versions.delete)
    *
-   * @param string $name Required. The name of the version. You can get the names
-   * of all the versions of a model by calling [projects.models.versions.list
-   * ](/ml-engine/reference/rest/v1/projects.models.versions/list).
-   * @param array $optParams Optional parameters.
+   * @param  string $name      Required. The name of the version. You can get the names
+   *                          of all the versions of a model by calling
+   *                          [projects.models.versions.list
+   *                          ](/ml-engine/reference/rest/v1/projects.models.versions/list).
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearningEngine_GoogleLongrunningOperation
    */
-  public function delete($name, $optParams = array())
-  {
-    $params = array('name' => $name);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_CloudMachineLearningEngine_GoogleLongrunningOperation");
-  }
-  /**
+    public function delete($name, $optParams = array())
+    {
+        $params = array('name' => $name);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_CloudMachineLearningEngine_GoogleLongrunningOperation");
+    }
+    /**
    * Gets information about a model version.
    *
    * Models can have multiple versions. You can call
@@ -78,26 +79,26 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsModelsVersions 
    * information that this method returns for all of the versions of a model.
    * (versions.get)
    *
-   * @param string $name Required. The name of the version.
-   * @param array $optParams Optional parameters.
+   * @param  string $name      Required. The name of the version.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version
    */
-  public function get($name, $optParams = array())
-  {
-    $params = array('name' => $name);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version");
-  }
-  /**
+    public function get($name, $optParams = array())
+    {
+        $params = array('name' => $name);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version");
+    }
+    /**
    * Gets basic information about all the versions of a model.
    *
    * If you expect that a model has a lot of versions, or if you need to handle
    * only a limited number of results at a time, you can request that the list be
    * retrieved in batches (called pages): (versions.listProjectsModelsVersions)
    *
-   * @param string $parent Required. The name of the model for which to list the
-   * version.
-   * @param array $optParams Optional parameters.
+   * @param string $parent    Required. The name of the model for which to list the
+   *                          version.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string pageToken Optional. A page token to request the next page
    * of results.
@@ -111,23 +112,23 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsModelsVersions 
    * The default value is 20, and the maximum page size is 100.
    * @opt_param string filter Optional. Specifies the subset of versions to
    * retrieve.
-   * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ListVersionsResponse
+   * @return    Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ListVersionsResponse
    */
-  public function listProjectsModelsVersions($parent, $optParams = array())
-  {
-    $params = array('parent' => $parent);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ListVersionsResponse");
-  }
-  /**
+    public function listProjectsModelsVersions($parent, $optParams = array())
+    {
+        $params = array('parent' => $parent);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ListVersionsResponse");
+    }
+    /**
    * Updates the specified Version resource.
    *
    * Currently the only supported field to update is `description`.
    * (versions.patch)
    *
-   * @param string $name Required. The name of the model.
+   * @param string                                                           $name      Required. The name of the model.
    * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                                            $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. Specifies the path, relative to
    * `Version`, of the field to update. Must be present and non-empty.
@@ -143,15 +144,15 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsModelsVersions 
    *
    * Currently the only supported update masks are `description`, `labels`, and
    * `etag`.
-   * @return Google_Service_CloudMachineLearningEngine_GoogleLongrunningOperation
+   * @return    Google_Service_CloudMachineLearningEngine_GoogleLongrunningOperation
    */
-  public function patch($name, Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version $postBody, $optParams = array())
-  {
-    $params = array('name' => $name, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_CloudMachineLearningEngine_GoogleLongrunningOperation");
-  }
-  /**
+    public function patch($name, Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version $postBody, $optParams = array())
+    {
+        $params = array('name' => $name, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_CloudMachineLearningEngine_GoogleLongrunningOperation");
+    }
+    /**
    * Designates a version to be the default for the model.
    *
    * The default version is used for prediction requests made against the model
@@ -161,18 +162,18 @@ class Google_Service_CloudMachineLearningEngine_Resource_ProjectsModelsVersions 
    * default. You must make any subsequent changes to the default version setting
    * manually using this method. (versions.setDefault)
    *
-   * @param string $name Required. The name of the version to make the default for
-   * the model. You can get the names of all the versions of a model by calling
-   * [projects.models.versions.list](/ml-
-   * engine/reference/rest/v1/projects.models.versions/list).
-   * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1SetDefaultVersionRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                                            $name      Required. The name of the version to make the default for
+   *                                                                                                      the model. You can get the names of all the versions of a
+   *                                                                                                      model by calling [projects.models.versions.list](/ml-
+   *                                                                                                      engine/reference/rest/v1/projects.models.versions/list).
+   * @param  Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1SetDefaultVersionRequest $postBody
+   * @param  array                                                                             $optParams Optional parameters.
    * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version
    */
-  public function setDefault($name, Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1SetDefaultVersionRequest $postBody, $optParams = array())
-  {
-    $params = array('name' => $name, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setDefault', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version");
-  }
+    public function setDefault($name, Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1SetDefaultVersionRequest $postBody, $optParams = array())
+    {
+        $params = array('name' => $name, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('setDefault', array($params), "Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version");
+    }
 }

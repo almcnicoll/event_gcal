@@ -17,39 +17,39 @@
 
 class Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1LabelLocation extends Google_Model
 {
-  public $confidence;
-  public $level;
-  protected $segmentType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment';
-  protected $segmentDataType = '';
+    public $confidence;
+    public $level;
+    protected $segmentType = 'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment';
+    protected $segmentDataType = '';
 
-  public function setConfidence($confidence)
-  {
-    $this->confidence = $confidence;
-  }
-  public function getConfidence()
-  {
-    return $this->confidence;
-  }
-  public function setLevel($level)
-  {
-    $this->level = $level;
-  }
-  public function getLevel()
-  {
-    return $this->level;
-  }
-  /**
+    public function setConfidence($confidence)
+    {
+        $this->confidence = $confidence;
+    }
+    public function getConfidence()
+    {
+        return $this->confidence;
+    }
+    public function setLevel($level)
+    {
+        $this->level = $level;
+    }
+    public function getLevel()
+    {
+        return $this->level;
+    }
+    /**
    * @param Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment
    */
-  public function setSegment(Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment $segment)
-  {
-    $this->segment = $segment;
-  }
-  /**
+    public function setSegment(Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment $segment)
+    {
+        $this->segment = $segment;
+    }
+    /**
    * @return Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1beta1VideoSegment
    */
-  public function getSegment()
-  {
-    return $this->segment;
-  }
+    public function getSegment()
+    {
+        return $this->segment;
+    }
 }

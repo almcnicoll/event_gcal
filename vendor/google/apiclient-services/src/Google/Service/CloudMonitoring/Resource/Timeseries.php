@@ -25,21 +25,22 @@
  */
 class Google_Service_CloudMonitoring_Resource_Timeseries extends Google_Service_Resource
 {
-  /**
+    /**
    * List the data points of the time series that match the metric and labels
    * values and that have data points in the interval. Large responses are
    * paginated; use the nextPageToken returned in the response to request
    * subsequent pages of results by setting the pageToken query parameter to the
    * value of the nextPageToken. (timeseries.listTimeseries)
    *
-   * @param string $project The project ID to which this time series belongs. The
-   * value can be the numeric project ID or string-based project name.
-   * @param string $metric Metric names are protocol-free URLs as listed in the
-   * Supported Metrics page. For example,
-   * compute.googleapis.com/instance/disk/read_ops_count.
-   * @param string $youngest End of the time interval (inclusive), which is
-   * expressed as an RFC 3339 timestamp.
-   * @param array $optParams Optional parameters.
+   * @param string $project   The project ID to which this time series belongs. The
+   *                          value can be the numeric project ID or string-based
+   *                          project name.
+   * @param string $metric    Metric names are protocol-free URLs as listed in the
+   *                          Supported Metrics page. For example,
+   *                          compute.googleapis.com/instance/disk/read_ops_count.
+   * @param string $youngest  End of the time interval (inclusive), which is
+   *                          expressed as an RFC 3339 timestamp.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string aggregator The aggregation function that will reduce the
    * data points in each window to a single point. This parameter is only valid
@@ -72,15 +73,15 @@ class Google_Service_CloudMonitoring_Resource_Timeseries extends Google_Service_
    * only valid for non-cumulative metric types. Units: - m: minute  - h: hour  -
    * d: day  - w: week  Examples: 3m, 4w. Only one unit is allowed, for example:
    * 2w3d is not allowed; you should use 17d instead.
-   * @return Google_Service_CloudMonitoring_ListTimeseriesResponse
+   * @return    Google_Service_CloudMonitoring_ListTimeseriesResponse
    */
-  public function listTimeseries($project, $metric, $youngest, $optParams = array())
-  {
-    $params = array('project' => $project, 'metric' => $metric, 'youngest' => $youngest);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_CloudMonitoring_ListTimeseriesResponse");
-  }
-  /**
+    public function listTimeseries($project, $metric, $youngest, $optParams = array())
+    {
+        $params = array('project' => $project, 'metric' => $metric, 'youngest' => $youngest);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_CloudMonitoring_ListTimeseriesResponse");
+    }
+    /**
    * Put data points to one or more time series for one or more metrics. If a time
    * series does not exist, a new time series will be created. It is not allowed
    * to write a time series point that is older than the existing youngest point
@@ -89,16 +90,16 @@ class Google_Service_CloudMonitoring_Resource_Timeseries extends Google_Service_
    * sure that points of a time series are written sequentially in the order of
    * their end time. (timeseries.write)
    *
-   * @param string $project The project ID. The value can be the numeric project
-   * ID or string-based project name.
-   * @param Google_Service_CloudMonitoring_WriteTimeseriesRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param  string                                                $project   The project ID. The value can be the numeric project
+   *                                                                          ID or string-based project name.
+   * @param  Google_Service_CloudMonitoring_WriteTimeseriesRequest $postBody
+   * @param  array                                                 $optParams Optional parameters.
    * @return Google_Service_CloudMonitoring_WriteTimeseriesResponse
    */
-  public function write($project, Google_Service_CloudMonitoring_WriteTimeseriesRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('write', array($params), "Google_Service_CloudMonitoring_WriteTimeseriesResponse");
-  }
+    public function write($project, Google_Service_CloudMonitoring_WriteTimeseriesRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('write', array($params), "Google_Service_CloudMonitoring_WriteTimeseriesResponse");
+    }
 }

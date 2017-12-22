@@ -25,54 +25,54 @@
  */
 class Google_Service_Calendar_Resource_CalendarList extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes an entry on the user's calendar list. (calendarList.delete)
    *
    * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams  Optional parameters.
    */
-  public function delete($calendarId, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params));
-  }
-  /**
+    public function delete($calendarId, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params));
+    }
+    /**
    * Returns an entry on the user's calendar list. (calendarList.get)
    *
-   * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
+   * @param  string $calendarId Calendar identifier. To retrieve calendar IDs call
    * the calendarList.list method. If you want to access the primary calendar of
    * the currently logged in user, use the "primary" keyword.
-   * @param array $optParams Optional parameters.
+   * @param  array  $optParams  Optional parameters.
    * @return Google_Service_Calendar_CalendarListEntry
    */
-  public function get($calendarId, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Calendar_CalendarListEntry");
-  }
-  /**
+    public function get($calendarId, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Calendar_CalendarListEntry");
+    }
+    /**
    * Adds an entry to the user's calendar list. (calendarList.insert)
    *
    * @param Google_Service_Calendar_CalendarListEntry $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                     $optParams Optional parameters.
    *
    * @opt_param bool colorRgbFormat Whether to use the foregroundColor and
    * backgroundColor fields to write the calendar colors (RGB). If this feature is
    * used, the index-based colorId field will be set to the best matching option
    * automatically. Optional. The default is False.
-   * @return Google_Service_Calendar_CalendarListEntry
+   * @return    Google_Service_Calendar_CalendarListEntry
    */
-  public function insert(Google_Service_Calendar_CalendarListEntry $postBody, $optParams = array())
-  {
-    $params = array('postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Calendar_CalendarListEntry");
-  }
-  /**
+    public function insert(Google_Service_Calendar_CalendarListEntry $postBody, $optParams = array())
+    {
+        $params = array('postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Calendar_CalendarListEntry");
+    }
+    /**
    * Returns entries on the user's calendar list. (calendarList.listCalendarList)
    *
    * @param array $optParams Optional parameters.
@@ -100,62 +100,64 @@ class Google_Service_Calendar_Resource_CalendarList extends Google_Service_Resou
    * 410 GONE response code and the client should clear its storage and perform a
    * full synchronization without any syncToken. Learn more about incremental
    * synchronization. Optional. The default is to return all entries.
-   * @return Google_Service_Calendar_CalendarList
+   * @return    Google_Service_Calendar_CalendarList
    */
-  public function listCalendarList($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Calendar_CalendarList");
-  }
-  /**
+    public function listCalendarList($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Calendar_CalendarList");
+    }
+    /**
    * Updates an entry on the user's calendar list. This method supports patch
    * semantics. (calendarList.patch)
    *
-   * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
-   * the calendarList.list method. If you want to access the primary calendar of
-   * the currently logged in user, use the "primary" keyword.
+   * @param string                                    $calendarId Calendar identifier. To retrieve calendar IDs call
+   *                                                              the calendarList.list method. If you want to
+   *                                                              access the primary calendar of the currently
+   *                                                              logged in user, use the "primary" keyword.
    * @param Google_Service_Calendar_CalendarListEntry $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                     $optParams  Optional parameters.
    *
    * @opt_param bool colorRgbFormat Whether to use the foregroundColor and
    * backgroundColor fields to write the calendar colors (RGB). If this feature is
    * used, the index-based colorId field will be set to the best matching option
    * automatically. Optional. The default is False.
-   * @return Google_Service_Calendar_CalendarListEntry
+   * @return    Google_Service_Calendar_CalendarListEntry
    */
-  public function patch($calendarId, Google_Service_Calendar_CalendarListEntry $postBody, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_Calendar_CalendarListEntry");
-  }
-  /**
+    public function patch($calendarId, Google_Service_Calendar_CalendarListEntry $postBody, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_Calendar_CalendarListEntry");
+    }
+    /**
    * Updates an entry on the user's calendar list. (calendarList.update)
    *
-   * @param string $calendarId Calendar identifier. To retrieve calendar IDs call
-   * the calendarList.list method. If you want to access the primary calendar of
-   * the currently logged in user, use the "primary" keyword.
+   * @param string                                    $calendarId Calendar identifier. To retrieve calendar IDs call
+   *                                                              the calendarList.list method. If you want to
+   *                                                              access the primary calendar of the currently
+   *                                                              logged in user, use the "primary" keyword.
    * @param Google_Service_Calendar_CalendarListEntry $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                     $optParams  Optional parameters.
    *
    * @opt_param bool colorRgbFormat Whether to use the foregroundColor and
    * backgroundColor fields to write the calendar colors (RGB). If this feature is
    * used, the index-based colorId field will be set to the best matching option
    * automatically. Optional. The default is False.
-   * @return Google_Service_Calendar_CalendarListEntry
+   * @return    Google_Service_Calendar_CalendarListEntry
    */
-  public function update($calendarId, Google_Service_Calendar_CalendarListEntry $postBody, $optParams = array())
-  {
-    $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('update', array($params), "Google_Service_Calendar_CalendarListEntry");
-  }
-  /**
+    public function update($calendarId, Google_Service_Calendar_CalendarListEntry $postBody, $optParams = array())
+    {
+        $params = array('calendarId' => $calendarId, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('update', array($params), "Google_Service_Calendar_CalendarListEntry");
+    }
+    /**
    * Watch for changes to CalendarList resources. (calendarList.watch)
    *
    * @param Google_Service_Calendar_Channel $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                           $optParams Optional parameters.
    *
    * @opt_param int maxResults Maximum number of entries returned on one result
    * page. By default the value is 100 entries. The page size can never be larger
@@ -180,12 +182,12 @@ class Google_Service_Calendar_Resource_CalendarList extends Google_Service_Resou
    * 410 GONE response code and the client should clear its storage and perform a
    * full synchronization without any syncToken. Learn more about incremental
    * synchronization. Optional. The default is to return all entries.
-   * @return Google_Service_Calendar_Channel
+   * @return    Google_Service_Calendar_Channel
    */
-  public function watch(Google_Service_Calendar_Channel $postBody, $optParams = array())
-  {
-    $params = array('postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('watch', array($params), "Google_Service_Calendar_Channel");
-  }
+    public function watch(Google_Service_Calendar_Channel $postBody, $optParams = array())
+    {
+        $params = array('postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('watch', array($params), "Google_Service_Calendar_Channel");
+    }
 }

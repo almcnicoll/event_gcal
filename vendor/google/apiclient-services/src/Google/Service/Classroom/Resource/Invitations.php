@@ -25,7 +25,7 @@
  */
 class Google_Service_Classroom_Resource_Invitations extends Google_Service_Resource
 {
-  /**
+    /**
    * Accepts an invitation, removing it and adding the invited user to the
    * teachers or students (as appropriate) of the specified course. Only the
    * invited user may accept an invitation.
@@ -39,17 +39,17 @@ class Google_Service_Classroom_Resource_Invitations extends Google_Service_Resou
    * UserGroupsMembershipLimitReached * `NOT_FOUND` if no invitation exists with
    * the requested ID. (invitations.accept)
    *
-   * @param string $id Identifier of the invitation to accept.
-   * @param array $optParams Optional parameters.
+   * @param  string $id        Identifier of the invitation to accept.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
-  public function accept($id, $optParams = array())
-  {
-    $params = array('id' => $id);
-    $params = array_merge($params, $optParams);
-    return $this->call('accept', array($params), "Google_Service_Classroom_ClassroomEmpty");
-  }
-  /**
+    public function accept($id, $optParams = array())
+    {
+        $params = array('id' => $id);
+        $params = array_merge($params, $optParams);
+        return $this->call('accept', array($params), "Google_Service_Classroom_ClassroomEmpty");
+    }
+    /**
    * Creates an invitation. Only one invitation for a user and course may exist at
    * a time. Delete and re-create an invitation to make changes.
    *
@@ -62,17 +62,17 @@ class Google_Service_Classroom_Resource_Invitations extends Google_Service_Resou
    * greater permissions. * `ALREADY_EXISTS` if an invitation for the specified
    * user and course already exists. (invitations.create)
    *
-   * @param Google_Service_Classroom_Invitation $postBody
-   * @param array $optParams Optional parameters.
+   * @param  Google_Service_Classroom_Invitation $postBody
+   * @param  array                               $optParams Optional parameters.
    * @return Google_Service_Classroom_Invitation
    */
-  public function create(Google_Service_Classroom_Invitation $postBody, $optParams = array())
-  {
-    $params = array('postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_Classroom_Invitation");
-  }
-  /**
+    public function create(Google_Service_Classroom_Invitation $postBody, $optParams = array())
+    {
+        $params = array('postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_Classroom_Invitation");
+    }
+    /**
    * Deletes an invitation.
    *
    * This method returns the following error codes:
@@ -81,17 +81,17 @@ class Google_Service_Classroom_Resource_Invitations extends Google_Service_Resou
    * requested invitation or for access errors. * `NOT_FOUND` if no invitation
    * exists with the requested ID. (invitations.delete)
    *
-   * @param string $id Identifier of the invitation to delete.
-   * @param array $optParams Optional parameters.
+   * @param  string $id        Identifier of the invitation to delete.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Classroom_ClassroomEmpty
    */
-  public function delete($id, $optParams = array())
-  {
-    $params = array('id' => $id);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
-  }
-  /**
+    public function delete($id, $optParams = array())
+    {
+        $params = array('id' => $id);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Classroom_ClassroomEmpty");
+    }
+    /**
    * Returns an invitation.
    *
    * This method returns the following error codes:
@@ -100,17 +100,17 @@ class Google_Service_Classroom_Resource_Invitations extends Google_Service_Resou
    * requested invitation or for access errors. * `NOT_FOUND` if no invitation
    * exists with the requested ID. (invitations.get)
    *
-   * @param string $id Identifier of the invitation to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $id        Identifier of the invitation to return.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Classroom_Invitation
    */
-  public function get($id, $optParams = array())
-  {
-    $params = array('id' => $id);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Classroom_Invitation");
-  }
-  /**
+    public function get($id, $optParams = array())
+    {
+        $params = array('id' => $id);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Classroom_Invitation");
+    }
+    /**
    * Returns a list of invitations that the requesting user is permitted to view,
    * restricted to those that match the list request.
    *
@@ -139,12 +139,12 @@ class Google_Service_Classroom_Resource_Invitations extends Google_Service_Resou
    * The server may return fewer than the specified number of results.
    * @opt_param string courseId Restricts returned invitations to those for a
    * course with the specified identifier.
-   * @return Google_Service_Classroom_ListInvitationsResponse
+   * @return    Google_Service_Classroom_ListInvitationsResponse
    */
-  public function listInvitations($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Classroom_ListInvitationsResponse");
-  }
+    public function listInvitations($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Classroom_ListInvitationsResponse");
+    }
 }

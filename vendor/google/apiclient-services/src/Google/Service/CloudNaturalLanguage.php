@@ -32,34 +32,38 @@
  */
 class Google_Service_CloudNaturalLanguage extends Google_Service
 {
-  /** Apply machine learning models to reveal the structure and meaning of text. */
-  const CLOUD_LANGUAGE =
+    /**
+ * Apply machine learning models to reveal the structure and meaning of text. 
+*/
+    const CLOUD_LANGUAGE =
       "https://www.googleapis.com/auth/cloud-language";
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $documents;
+    public $documents;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudNaturalLanguage service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://language.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'language';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://language.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'language';
 
-    $this->documents = new Google_Service_CloudNaturalLanguage_Resource_Documents(
-        $this,
-        $this->serviceName,
-        'documents',
-        array(
-          'methods' => array(
+        $this->documents = new Google_Service_CloudNaturalLanguage_Resource_Documents(
+            $this,
+            $this->serviceName,
+            'documents',
+            array(
+            'methods' => array(
             'analyzeEntities' => array(
               'path' => 'v1/documents:analyzeEntities',
               'httpMethod' => 'POST',
@@ -85,8 +89,8 @@ class Google_Service_CloudNaturalLanguage extends Google_Service
               'httpMethod' => 'POST',
               'parameters' => array(),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

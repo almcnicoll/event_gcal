@@ -17,59 +17,59 @@
 
 class Google_Service_Compute_RouterBgpPeer extends Google_Model
 {
-  public $advertisedRoutePriority;
-  public $interfaceName;
-  public $ipAddress;
-  public $name;
-  public $peerAsn;
-  public $peerIpAddress;
+    public $advertisedRoutePriority;
+    public $interfaceName;
+    public $ipAddress;
+    public $name;
+    public $peerAsn;
+    public $peerIpAddress;
 
-  public function setAdvertisedRoutePriority($advertisedRoutePriority)
-  {
-    $this->advertisedRoutePriority = $advertisedRoutePriority;
-  }
-  public function getAdvertisedRoutePriority()
-  {
-    return $this->advertisedRoutePriority;
-  }
-  public function setInterfaceName($interfaceName)
-  {
-    $this->interfaceName = $interfaceName;
-  }
-  public function getInterfaceName()
-  {
-    return $this->interfaceName;
-  }
-  public function setIpAddress($ipAddress)
-  {
-    $this->ipAddress = $ipAddress;
-  }
-  public function getIpAddress()
-  {
-    return $this->ipAddress;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setPeerAsn($peerAsn)
-  {
-    $this->peerAsn = $peerAsn;
-  }
-  public function getPeerAsn()
-  {
-    return $this->peerAsn;
-  }
-  public function setPeerIpAddress($peerIpAddress)
-  {
-    $this->peerIpAddress = $peerIpAddress;
-  }
-  public function getPeerIpAddress()
-  {
-    return $this->peerIpAddress;
-  }
+    public function setAdvertisedRoutePriority($advertisedRoutePriority)
+    {
+        $this->advertisedRoutePriority = $advertisedRoutePriority;
+    }
+    public function getAdvertisedRoutePriority()
+    {
+        return $this->advertisedRoutePriority;
+    }
+    public function setInterfaceName($interfaceName)
+    {
+        $this->interfaceName = $interfaceName;
+    }
+    public function getInterfaceName()
+    {
+        return $this->interfaceName;
+    }
+    public function setIpAddress($ipAddress)
+    {
+        $this->ipAddress = $ipAddress;
+    }
+    public function getIpAddress()
+    {
+        return $this->ipAddress;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setPeerAsn($peerAsn)
+    {
+        $this->peerAsn = $peerAsn;
+    }
+    public function getPeerAsn()
+    {
+        return $this->peerAsn;
+    }
+    public function setPeerIpAddress($peerIpAddress)
+    {
+        $this->peerIpAddress = $peerIpAddress;
+    }
+    public function getPeerIpAddress()
+    {
+        return $this->peerIpAddress;
+    }
 }

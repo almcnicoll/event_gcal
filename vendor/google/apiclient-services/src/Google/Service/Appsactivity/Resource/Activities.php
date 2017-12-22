@@ -25,7 +25,7 @@
  */
 class Google_Service_Appsactivity_Resource_Activities extends Google_Service_Resource
 {
-  /**
+    /**
    * Returns a list of activities visible to the current logged in user. Visible
    * activities are determined by the visiblity settings of the object that was
    * acted on, e.g. Drive files a user can see. An activity is a record of past
@@ -48,12 +48,12 @@ class Google_Service_Appsactivity_Resource_Activities extends Google_Service_Res
    * Possible values of source are: - drive.google.com
    * @opt_param string userId Indicates the user to return activity for. Use the
    * special value me to indicate the currently authenticated user.
-   * @return Google_Service_Appsactivity_ListActivitiesResponse
+   * @return    Google_Service_Appsactivity_ListActivitiesResponse
    */
-  public function listActivities($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Appsactivity_ListActivitiesResponse");
-  }
+    public function listActivities($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Appsactivity_ListActivitiesResponse");
+    }
 }

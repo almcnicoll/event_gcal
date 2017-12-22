@@ -25,12 +25,12 @@
  */
 class Google_Service_Compute_Resource_InterconnectAttachments extends Google_Service_Resource
 {
-  /**
+    /**
    * Retrieves an aggregated list of interconnect attachments.
    * (interconnectAttachments.aggregatedList)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -74,23 +74,23 @@ class Google_Service_Compute_Resource_InterconnectAttachments extends Google_Ser
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_InterconnectAttachmentAggregatedList
+   * @return    Google_Service_Compute_InterconnectAttachmentAggregatedList
    */
-  public function aggregatedList($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('aggregatedList', array($params), "Google_Service_Compute_InterconnectAttachmentAggregatedList");
-  }
-  /**
+    public function aggregatedList($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('aggregatedList', array($params), "Google_Service_Compute_InterconnectAttachmentAggregatedList");
+    }
+    /**
    * Deletes the specified interconnect attachment.
    * (interconnectAttachments.delete)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
+   * @param string $project                Project ID for this request.
+   * @param string $region                 Name of the region for this request.
    * @param string $interconnectAttachment Name of the interconnect attachment to
    * delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams              Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -104,38 +104,38 @@ class Google_Service_Compute_Resource_InterconnectAttachments extends Google_Ser
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $region, $interconnectAttachment, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'interconnectAttachment' => $interconnectAttachment);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $region, $interconnectAttachment, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'interconnectAttachment' => $interconnectAttachment);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified interconnect attachment. (interconnectAttachments.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param string $interconnectAttachment Name of the interconnect attachment to
+   * @param  string $project                Project ID for this request.
+   * @param  string $region                 Name of the region for this request.
+   * @param  string $interconnectAttachment Name of the interconnect attachment to
    * return.
-   * @param array $optParams Optional parameters.
+   * @param  array  $optParams              Optional parameters.
    * @return Google_Service_Compute_InterconnectAttachment
    */
-  public function get($project, $region, $interconnectAttachment, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'interconnectAttachment' => $interconnectAttachment);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_InterconnectAttachment");
-  }
-  /**
+    public function get($project, $region, $interconnectAttachment, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'interconnectAttachment' => $interconnectAttachment);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_InterconnectAttachment");
+    }
+    /**
    * Creates an InterconnectAttachment in the specified project using the data
    * included in the request. (interconnectAttachments.insert)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
+   * @param string                                        $project   Project ID for this request.
+   * @param string                                        $region    Name of the region for this request.
    * @param Google_Service_Compute_InterconnectAttachment $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                         $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -149,21 +149,21 @@ class Google_Service_Compute_Resource_InterconnectAttachments extends Google_Ser
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, $region, Google_Service_Compute_InterconnectAttachment $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, $region, Google_Service_Compute_InterconnectAttachment $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves the list of interconnect attachments contained within the specified
    * region. (interconnectAttachments.listInterconnectAttachments)
    *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $region    Name of the region for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -207,12 +207,12 @@ class Google_Service_Compute_Resource_InterconnectAttachments extends Google_Ser
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_InterconnectAttachmentList
+   * @return    Google_Service_Compute_InterconnectAttachmentList
    */
-  public function listInterconnectAttachments($project, $region, $optParams = array())
-  {
-    $params = array('project' => $project, 'region' => $region);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_InterconnectAttachmentList");
-  }
+    public function listInterconnectAttachments($project, $region, $optParams = array())
+    {
+        $params = array('project' => $project, 'region' => $region);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_InterconnectAttachmentList");
+    }
 }

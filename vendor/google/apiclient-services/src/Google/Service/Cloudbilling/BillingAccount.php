@@ -17,32 +17,32 @@
 
 class Google_Service_Cloudbilling_BillingAccount extends Google_Model
 {
-  public $displayName;
-  public $name;
-  public $open;
+    public $displayName;
+    public $name;
+    public $open;
 
-  public function setDisplayName($displayName)
-  {
-    $this->displayName = $displayName;
-  }
-  public function getDisplayName()
-  {
-    return $this->displayName;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setOpen($open)
-  {
-    $this->open = $open;
-  }
-  public function getOpen()
-  {
-    return $this->open;
-  }
+    public function setDisplayName($displayName)
+    {
+        $this->displayName = $displayName;
+    }
+    public function getDisplayName()
+    {
+        return $this->displayName;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setOpen($open)
+    {
+        $this->open = $open;
+    }
+    public function getOpen()
+    {
+        return $this->open;
+    }
 }

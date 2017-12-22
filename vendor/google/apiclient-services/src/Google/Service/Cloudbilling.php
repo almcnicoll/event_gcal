@@ -31,35 +31,37 @@
  */
 class Google_Service_Cloudbilling extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $billingAccounts;
-  public $billingAccounts_projects;
-  public $projects;
-  public $services;
-  public $services_skus;
+    public $billingAccounts;
+    public $billingAccounts_projects;
+    public $projects;
+    public $services;
+    public $services_skus;
   
-  /**
+    /**
    * Constructs the internal representation of the Cloudbilling service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://cloudbilling.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'cloudbilling';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://cloudbilling.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'cloudbilling';
 
-    $this->billingAccounts = new Google_Service_Cloudbilling_Resource_BillingAccounts(
-        $this,
-        $this->serviceName,
-        'billingAccounts',
-        array(
-          'methods' => array(
+        $this->billingAccounts = new Google_Service_Cloudbilling_Resource_BillingAccounts(
+            $this,
+            $this->serviceName,
+            'billingAccounts',
+            array(
+            'methods' => array(
             'get' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -84,15 +86,15 @@ class Google_Service_Cloudbilling extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->billingAccounts_projects = new Google_Service_Cloudbilling_Resource_BillingAccountsProjects(
-        $this,
-        $this->serviceName,
-        'projects',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->billingAccounts_projects = new Google_Service_Cloudbilling_Resource_BillingAccountsProjects(
+            $this,
+            $this->serviceName,
+            'projects',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'v1/{+name}/projects',
               'httpMethod' => 'GET',
@@ -112,15 +114,15 @@ class Google_Service_Cloudbilling extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->projects = new Google_Service_Cloudbilling_Resource_Projects(
-        $this,
-        $this->serviceName,
-        'projects',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->projects = new Google_Service_Cloudbilling_Resource_Projects(
+            $this,
+            $this->serviceName,
+            'projects',
+            array(
+            'methods' => array(
             'getBillingInfo' => array(
               'path' => 'v1/{+name}/billingInfo',
               'httpMethod' => 'GET',
@@ -142,15 +144,15 @@ class Google_Service_Cloudbilling extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->services = new Google_Service_Cloudbilling_Resource_Services(
-        $this,
-        $this->serviceName,
-        'services',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->services = new Google_Service_Cloudbilling_Resource_Services(
+            $this,
+            $this->serviceName,
+            'services',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'v1/services',
               'httpMethod' => 'GET',
@@ -165,15 +167,15 @@ class Google_Service_Cloudbilling extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->services_skus = new Google_Service_Cloudbilling_Resource_ServicesSkus(
-        $this,
-        $this->serviceName,
-        'skus',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->services_skus = new Google_Service_Cloudbilling_Resource_ServicesSkus(
+            $this,
+            $this->serviceName,
+            'skus',
+            array(
+            'methods' => array(
             'list' => array(
               'path' => 'v1/{+parent}/skus',
               'httpMethod' => 'GET',
@@ -205,8 +207,8 @@ class Google_Service_Cloudbilling extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

@@ -17,136 +17,136 @@
 
 class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version extends Google_Model
 {
-  protected $autoScalingType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1AutoScaling';
-  protected $autoScalingDataType = '';
-  public $createTime;
-  public $deploymentUri;
-  public $description;
-  public $errorMessage;
-  public $etag;
-  public $isDefault;
-  public $labels;
-  public $lastUseTime;
-  protected $manualScalingType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ManualScaling';
-  protected $manualScalingDataType = '';
-  public $name;
-  public $runtimeVersion;
-  public $state;
+    protected $autoScalingType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1AutoScaling';
+    protected $autoScalingDataType = '';
+    public $createTime;
+    public $deploymentUri;
+    public $description;
+    public $errorMessage;
+    public $etag;
+    public $isDefault;
+    public $labels;
+    public $lastUseTime;
+    protected $manualScalingType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ManualScaling';
+    protected $manualScalingDataType = '';
+    public $name;
+    public $runtimeVersion;
+    public $state;
 
-  /**
+    /**
    * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1AutoScaling
    */
-  public function setAutoScaling(Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1AutoScaling $autoScaling)
-  {
-    $this->autoScaling = $autoScaling;
-  }
-  /**
+    public function setAutoScaling(Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1AutoScaling $autoScaling)
+    {
+        $this->autoScaling = $autoScaling;
+    }
+    /**
    * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1AutoScaling
    */
-  public function getAutoScaling()
-  {
-    return $this->autoScaling;
-  }
-  public function setCreateTime($createTime)
-  {
-    $this->createTime = $createTime;
-  }
-  public function getCreateTime()
-  {
-    return $this->createTime;
-  }
-  public function setDeploymentUri($deploymentUri)
-  {
-    $this->deploymentUri = $deploymentUri;
-  }
-  public function getDeploymentUri()
-  {
-    return $this->deploymentUri;
-  }
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  public function setErrorMessage($errorMessage)
-  {
-    $this->errorMessage = $errorMessage;
-  }
-  public function getErrorMessage()
-  {
-    return $this->errorMessage;
-  }
-  public function setEtag($etag)
-  {
-    $this->etag = $etag;
-  }
-  public function getEtag()
-  {
-    return $this->etag;
-  }
-  public function setIsDefault($isDefault)
-  {
-    $this->isDefault = $isDefault;
-  }
-  public function getIsDefault()
-  {
-    return $this->isDefault;
-  }
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  public function getLabels()
-  {
-    return $this->labels;
-  }
-  public function setLastUseTime($lastUseTime)
-  {
-    $this->lastUseTime = $lastUseTime;
-  }
-  public function getLastUseTime()
-  {
-    return $this->lastUseTime;
-  }
-  /**
+    public function getAutoScaling()
+    {
+        return $this->autoScaling;
+    }
+    public function setCreateTime($createTime)
+    {
+        $this->createTime = $createTime;
+    }
+    public function getCreateTime()
+    {
+        return $this->createTime;
+    }
+    public function setDeploymentUri($deploymentUri)
+    {
+        $this->deploymentUri = $deploymentUri;
+    }
+    public function getDeploymentUri()
+    {
+        return $this->deploymentUri;
+    }
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    public function setErrorMessage($errorMessage)
+    {
+        $this->errorMessage = $errorMessage;
+    }
+    public function getErrorMessage()
+    {
+        return $this->errorMessage;
+    }
+    public function setEtag($etag)
+    {
+        $this->etag = $etag;
+    }
+    public function getEtag()
+    {
+        return $this->etag;
+    }
+    public function setIsDefault($isDefault)
+    {
+        $this->isDefault = $isDefault;
+    }
+    public function getIsDefault()
+    {
+        return $this->isDefault;
+    }
+    public function setLabels($labels)
+    {
+        $this->labels = $labels;
+    }
+    public function getLabels()
+    {
+        return $this->labels;
+    }
+    public function setLastUseTime($lastUseTime)
+    {
+        $this->lastUseTime = $lastUseTime;
+    }
+    public function getLastUseTime()
+    {
+        return $this->lastUseTime;
+    }
+    /**
    * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ManualScaling
    */
-  public function setManualScaling(Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ManualScaling $manualScaling)
-  {
-    $this->manualScaling = $manualScaling;
-  }
-  /**
+    public function setManualScaling(Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ManualScaling $manualScaling)
+    {
+        $this->manualScaling = $manualScaling;
+    }
+    /**
    * @return Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ManualScaling
    */
-  public function getManualScaling()
-  {
-    return $this->manualScaling;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setRuntimeVersion($runtimeVersion)
-  {
-    $this->runtimeVersion = $runtimeVersion;
-  }
-  public function getRuntimeVersion()
-  {
-    return $this->runtimeVersion;
-  }
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  public function getState()
-  {
-    return $this->state;
-  }
+    public function getManualScaling()
+    {
+        return $this->manualScaling;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setRuntimeVersion($runtimeVersion)
+    {
+        $this->runtimeVersion = $runtimeVersion;
+    }
+    public function getRuntimeVersion()
+    {
+        return $this->runtimeVersion;
+    }
+    public function setState($state)
+    {
+        $this->state = $state;
+    }
+    public function getState()
+    {
+        return $this->state;
+    }
 }

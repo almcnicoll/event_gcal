@@ -30,36 +30,40 @@
  */
 class Google_Service_CloudOSLogin extends Google_Service
 {
-  /** View and manage your data across Google Cloud Platform services. */
-  const CLOUD_PLATFORM =
+    /**
+ * View and manage your data across Google Cloud Platform services. 
+*/
+    const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
-  /** View and manage your Google Compute Engine resources. */
-  const COMPUTE =
+    /**
+ * View and manage your Google Compute Engine resources. 
+*/
+    const COMPUTE =
       "https://www.googleapis.com/auth/compute";
 
-  public $users;
-  public $users_projects;
-  public $users_sshPublicKeys;
+    public $users;
+    public $users_projects;
+    public $users_sshPublicKeys;
   
-  /**
+    /**
    * Constructs the internal representation of the CloudOSLogin service.
    *
    * @param Google_Client $client
    */
-  public function __construct(Google_Client $client)
-  {
-    parent::__construct($client);
-    $this->rootUrl = 'https://oslogin.googleapis.com/';
-    $this->servicePath = '';
-    $this->version = 'v1';
-    $this->serviceName = 'oslogin';
+    public function __construct(Google_Client $client)
+    {
+        parent::__construct($client);
+        $this->rootUrl = 'https://oslogin.googleapis.com/';
+        $this->servicePath = '';
+        $this->version = 'v1';
+        $this->serviceName = 'oslogin';
 
-    $this->users = new Google_Service_CloudOSLogin_Resource_Users(
-        $this,
-        $this->serviceName,
-        'users',
-        array(
-          'methods' => array(
+        $this->users = new Google_Service_CloudOSLogin_Resource_Users(
+            $this,
+            $this->serviceName,
+            'users',
+            array(
+            'methods' => array(
             'getLoginProfile' => array(
               'path' => 'v1/{+name}/loginProfile',
               'httpMethod' => 'GET',
@@ -85,15 +89,15 @@ class Google_Service_CloudOSLogin extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->users_projects = new Google_Service_CloudOSLogin_Resource_UsersProjects(
-        $this,
-        $this->serviceName,
-        'projects',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->users_projects = new Google_Service_CloudOSLogin_Resource_UsersProjects(
+            $this,
+            $this->serviceName,
+            'projects',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
@@ -105,15 +109,15 @@ class Google_Service_CloudOSLogin extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-    $this->users_sshPublicKeys = new Google_Service_CloudOSLogin_Resource_UsersSshPublicKeys(
-        $this,
-        $this->serviceName,
-        'sshPublicKeys',
-        array(
-          'methods' => array(
+            )
+            )
+        );
+        $this->users_sshPublicKeys = new Google_Service_CloudOSLogin_Resource_UsersSshPublicKeys(
+            $this,
+            $this->serviceName,
+            'sshPublicKeys',
+            array(
+            'methods' => array(
             'delete' => array(
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
@@ -149,8 +153,8 @@ class Google_Service_CloudOSLogin extends Google_Service
                 ),
               ),
             ),
-          )
-        )
-    );
-  }
+            )
+            )
+        );
+    }
 }

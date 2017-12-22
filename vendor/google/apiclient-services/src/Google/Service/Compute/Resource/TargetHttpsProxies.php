@@ -25,13 +25,13 @@
  */
 class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified TargetHttpsProxy resource. (targetHttpsProxies.delete)
    *
-   * @param string $project Project ID for this request.
+   * @param string $project          Project ID for this request.
    * @param string $targetHttpsProxy Name of the TargetHttpsProxy resource to
    * delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams        Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -45,37 +45,37 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $targetHttpsProxy, $optParams = array())
-  {
-    $params = array('project' => $project, 'targetHttpsProxy' => $targetHttpsProxy);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $targetHttpsProxy, $optParams = array())
+    {
+        $params = array('project' => $project, 'targetHttpsProxy' => $targetHttpsProxy);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified TargetHttpsProxy resource. Get a list of available
    * target HTTPS proxies by making a list() request. (targetHttpsProxies.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $targetHttpsProxy Name of the TargetHttpsProxy resource to
+   * @param  string $project          Project ID for this request.
+   * @param  string $targetHttpsProxy Name of the TargetHttpsProxy resource to
    * return.
-   * @param array $optParams Optional parameters.
+   * @param  array  $optParams        Optional parameters.
    * @return Google_Service_Compute_TargetHttpsProxy
    */
-  public function get($project, $targetHttpsProxy, $optParams = array())
-  {
-    $params = array('project' => $project, 'targetHttpsProxy' => $targetHttpsProxy);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_TargetHttpsProxy");
-  }
-  /**
+    public function get($project, $targetHttpsProxy, $optParams = array())
+    {
+        $params = array('project' => $project, 'targetHttpsProxy' => $targetHttpsProxy);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_TargetHttpsProxy");
+    }
+    /**
    * Creates a TargetHttpsProxy resource in the specified project using the data
    * included in the request. (targetHttpsProxies.insert)
    *
-   * @param string $project Project ID for this request.
+   * @param string                                  $project   Project ID for this request.
    * @param Google_Service_Compute_TargetHttpsProxy $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                   $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -89,20 +89,20 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, Google_Service_Compute_TargetHttpsProxy $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, Google_Service_Compute_TargetHttpsProxy $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves the list of TargetHttpsProxy resources available to the specified
    * project. (targetHttpsProxies.listTargetHttpsProxies)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -146,23 +146,23 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_TargetHttpsProxyList
+   * @return    Google_Service_Compute_TargetHttpsProxyList
    */
-  public function listTargetHttpsProxies($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_TargetHttpsProxyList");
-  }
-  /**
+    public function listTargetHttpsProxies($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_TargetHttpsProxyList");
+    }
+    /**
    * Replaces SslCertificates for TargetHttpsProxy.
    * (targetHttpsProxies.setSslCertificates)
    *
-   * @param string $project Project ID for this request.
-   * @param string $targetHttpsProxy Name of the TargetHttpsProxy resource to set
-   * an SslCertificates resource for.
+   * @param string                                                             $project          Project ID for this request.
+   * @param string                                                             $targetHttpsProxy Name of the TargetHttpsProxy resource to set
+   *                                                                                             an SslCertificates resource for.
    * @param Google_Service_Compute_TargetHttpsProxiesSetSslCertificatesRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                                              $optParams        Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -176,22 +176,22 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function setSslCertificates($project, $targetHttpsProxy, Google_Service_Compute_TargetHttpsProxiesSetSslCertificatesRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'targetHttpsProxy' => $targetHttpsProxy, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setSslCertificates', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function setSslCertificates($project, $targetHttpsProxy, Google_Service_Compute_TargetHttpsProxiesSetSslCertificatesRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'targetHttpsProxy' => $targetHttpsProxy, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('setSslCertificates', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Changes the URL map for TargetHttpsProxy. (targetHttpsProxies.setUrlMap)
    *
-   * @param string $project Project ID for this request.
-   * @param string $targetHttpsProxy Name of the TargetHttpsProxy resource whose
-   * URL map is to be set.
+   * @param string                                 $project          Project ID for this request.
+   * @param string                                 $targetHttpsProxy Name of the TargetHttpsProxy resource whose
+   *                                                                 URL map is to be set.
    * @param Google_Service_Compute_UrlMapReference $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                  $optParams        Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -205,12 +205,12 @@ class Google_Service_Compute_Resource_TargetHttpsProxies extends Google_Service_
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function setUrlMap($project, $targetHttpsProxy, Google_Service_Compute_UrlMapReference $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'targetHttpsProxy' => $targetHttpsProxy, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setUrlMap', array($params), "Google_Service_Compute_Operation");
-  }
+    public function setUrlMap($project, $targetHttpsProxy, Google_Service_Compute_UrlMapReference $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'targetHttpsProxy' => $targetHttpsProxy, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('setUrlMap', array($params), "Google_Service_Compute_Operation");
+    }
 }

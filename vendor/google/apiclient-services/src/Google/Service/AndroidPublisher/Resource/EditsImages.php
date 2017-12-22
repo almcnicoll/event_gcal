@@ -25,84 +25,88 @@
  */
 class Google_Service_AndroidPublisher_Resource_EditsImages extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the image (specified by id) from the edit. (images.delete)
    *
    * @param string $packageName Unique identifier for the Android app that is
    * being updated; for example, "com.spiffygame".
-   * @param string $editId Unique identifier for this edit.
-   * @param string $language The language code (a BCP-47 language tag) of the
-   * localized listing whose images are to read or modified. For example, to
-   * select Austrian German, pass "de-AT".
+   * @param string $editId      Unique identifier for this edit.
+   * @param string $language    The language code (a BCP-47 language tag) of the
+   *                            localized listing whose images are to read or
+   *                            modified. For example, to select Austrian
+   *                            German, pass "de-AT".
    * @param string $imageType
-   * @param string $imageId Unique identifier an image within the set of images
-   * attached to this edit.
-   * @param array $optParams Optional parameters.
+   * @param string $imageId     Unique identifier an image within the set of images
+   *                            attached to this edit.
+   * @param array  $optParams   Optional parameters.
    */
-  public function delete($packageName, $editId, $language, $imageType, $imageId, $optParams = array())
-  {
-    $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language, 'imageType' => $imageType, 'imageId' => $imageId);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params));
-  }
-  /**
+    public function delete($packageName, $editId, $language, $imageType, $imageId, $optParams = array())
+    {
+        $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language, 'imageType' => $imageType, 'imageId' => $imageId);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params));
+    }
+    /**
    * Deletes all images for the specified language and image type.
    * (images.deleteall)
    *
-   * @param string $packageName Unique identifier for the Android app that is
+   * @param  string $packageName Unique identifier for the Android app that is
    * being updated; for example, "com.spiffygame".
-   * @param string $editId Unique identifier for this edit.
-   * @param string $language The language code (a BCP-47 language tag) of the
-   * localized listing whose images are to read or modified. For example, to
-   * select Austrian German, pass "de-AT".
-   * @param string $imageType
-   * @param array $optParams Optional parameters.
+   * @param  string $editId      Unique identifier for this edit.
+   * @param  string $language    The language code (a BCP-47 language tag) of the
+   *                            localized listing whose images are to read or
+   *                            modified. For example, to select Austrian
+   *                            German, pass "de-AT".
+   * @param  string $imageType
+   * @param  array  $optParams   Optional parameters.
    * @return Google_Service_AndroidPublisher_ImagesDeleteAllResponse
    */
-  public function deleteall($packageName, $editId, $language, $imageType, $optParams = array())
-  {
-    $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language, 'imageType' => $imageType);
-    $params = array_merge($params, $optParams);
-    return $this->call('deleteall', array($params), "Google_Service_AndroidPublisher_ImagesDeleteAllResponse");
-  }
-  /**
+    public function deleteall($packageName, $editId, $language, $imageType, $optParams = array())
+    {
+        $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language, 'imageType' => $imageType);
+        $params = array_merge($params, $optParams);
+        return $this->call('deleteall', array($params), "Google_Service_AndroidPublisher_ImagesDeleteAllResponse");
+    }
+    /**
    * Lists all images for the specified language and image type.
    * (images.listEditsImages)
    *
-   * @param string $packageName Unique identifier for the Android app that is
+   * @param  string $packageName Unique identifier for the Android app that is
    * being updated; for example, "com.spiffygame".
-   * @param string $editId Unique identifier for this edit.
-   * @param string $language The language code (a BCP-47 language tag) of the
-   * localized listing whose images are to read or modified. For example, to
-   * select Austrian German, pass "de-AT".
-   * @param string $imageType
-   * @param array $optParams Optional parameters.
+   * @param  string $editId      Unique identifier for this edit.
+   * @param  string $language    The language code (a BCP-47 language tag) of the
+   *                            localized listing whose images are to read or
+   *                            modified. For example, to select Austrian
+   *                            German, pass "de-AT".
+   * @param  string $imageType
+   * @param  array  $optParams   Optional parameters.
    * @return Google_Service_AndroidPublisher_ImagesListResponse
    */
-  public function listEditsImages($packageName, $editId, $language, $imageType, $optParams = array())
-  {
-    $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language, 'imageType' => $imageType);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AndroidPublisher_ImagesListResponse");
-  }
-  /**
+    public function listEditsImages($packageName, $editId, $language, $imageType, $optParams = array())
+    {
+        $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language, 'imageType' => $imageType);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_AndroidPublisher_ImagesListResponse");
+    }
+    /**
    * Uploads a new image and adds it to the list of images for the specified
    * language and image type. (images.upload)
    *
-   * @param string $packageName Unique identifier for the Android app that is
+   * @param  string $packageName Unique identifier for the Android app that is
    * being updated; for example, "com.spiffygame".
-   * @param string $editId Unique identifier for this edit.
-   * @param string $language The language code (a BCP-47 language tag) of the
-   * localized listing whose images are to read or modified. For example, to
-   * select Austrian German, pass "de-AT".
-   * @param string $imageType
-   * @param array $optParams Optional parameters.
+   * @param  string $editId      Unique identifier for this edit.
+   * @param  string $language    The language code (a BCP-47 language tag) of the
+   *                            localized listing whose images are to read or
+   *                            modified. For example, to select Austrian
+   *                            German, pass "de-AT".
+   * @param  string $imageType
+   * @param  array  $optParams   Optional parameters.
    * @return Google_Service_AndroidPublisher_ImagesUploadResponse
    */
-  public function upload($packageName, $editId, $language, $imageType, $optParams = array())
-  {
-    $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language, 'imageType' => $imageType);
-    $params = array_merge($params, $optParams);
-    return $this->call('upload', array($params), "Google_Service_AndroidPublisher_ImagesUploadResponse");
-  }
+    public function upload($packageName, $editId, $language, $imageType, $optParams = array())
+    {
+        $params = array('packageName' => $packageName, 'editId' => $editId, 'language' => $language, 'imageType' => $imageType);
+        $params = array_merge($params, $optParams);
+        return $this->call('upload', array($params), "Google_Service_AndroidPublisher_ImagesUploadResponse");
+    }
 }

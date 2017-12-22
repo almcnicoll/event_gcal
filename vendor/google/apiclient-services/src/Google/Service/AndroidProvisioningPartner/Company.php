@@ -17,51 +17,51 @@
 
 class Google_Service_AndroidProvisioningPartner_Company extends Google_Collection
 {
-  protected $collection_key = 'ownerEmails';
-  public $adminEmails;
-  public $companyId;
-  public $companyName;
-  public $name;
-  public $ownerEmails;
+    protected $collection_key = 'ownerEmails';
+    public $adminEmails;
+    public $companyId;
+    public $companyName;
+    public $name;
+    public $ownerEmails;
 
-  public function setAdminEmails($adminEmails)
-  {
-    $this->adminEmails = $adminEmails;
-  }
-  public function getAdminEmails()
-  {
-    return $this->adminEmails;
-  }
-  public function setCompanyId($companyId)
-  {
-    $this->companyId = $companyId;
-  }
-  public function getCompanyId()
-  {
-    return $this->companyId;
-  }
-  public function setCompanyName($companyName)
-  {
-    $this->companyName = $companyName;
-  }
-  public function getCompanyName()
-  {
-    return $this->companyName;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setOwnerEmails($ownerEmails)
-  {
-    $this->ownerEmails = $ownerEmails;
-  }
-  public function getOwnerEmails()
-  {
-    return $this->ownerEmails;
-  }
+    public function setAdminEmails($adminEmails)
+    {
+        $this->adminEmails = $adminEmails;
+    }
+    public function getAdminEmails()
+    {
+        return $this->adminEmails;
+    }
+    public function setCompanyId($companyId)
+    {
+        $this->companyId = $companyId;
+    }
+    public function getCompanyId()
+    {
+        return $this->companyId;
+    }
+    public function setCompanyName($companyName)
+    {
+        $this->companyName = $companyName;
+    }
+    public function getCompanyName()
+    {
+        return $this->companyName;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setOwnerEmails($ownerEmails)
+    {
+        $this->ownerEmails = $ownerEmails;
+    }
+    public function getOwnerEmails()
+    {
+        return $this->ownerEmails;
+    }
 }

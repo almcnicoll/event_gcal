@@ -17,37 +17,37 @@
 
 class Google_Service_CivicInfo_VoterInfoRequest extends Google_Model
 {
-  protected $contextParamsType = 'Google_Service_CivicInfo_ContextParams';
-  protected $contextParamsDataType = '';
-  protected $voterInfoSegmentResultType = 'Google_Service_CivicInfo_VoterInfoSegmentResult';
-  protected $voterInfoSegmentResultDataType = '';
+    protected $contextParamsType = 'Google_Service_CivicInfo_ContextParams';
+    protected $contextParamsDataType = '';
+    protected $voterInfoSegmentResultType = 'Google_Service_CivicInfo_VoterInfoSegmentResult';
+    protected $voterInfoSegmentResultDataType = '';
 
-  /**
+    /**
    * @param Google_Service_CivicInfo_ContextParams
    */
-  public function setContextParams(Google_Service_CivicInfo_ContextParams $contextParams)
-  {
-    $this->contextParams = $contextParams;
-  }
-  /**
+    public function setContextParams(Google_Service_CivicInfo_ContextParams $contextParams)
+    {
+        $this->contextParams = $contextParams;
+    }
+    /**
    * @return Google_Service_CivicInfo_ContextParams
    */
-  public function getContextParams()
-  {
-    return $this->contextParams;
-  }
-  /**
+    public function getContextParams()
+    {
+        return $this->contextParams;
+    }
+    /**
    * @param Google_Service_CivicInfo_VoterInfoSegmentResult
    */
-  public function setVoterInfoSegmentResult(Google_Service_CivicInfo_VoterInfoSegmentResult $voterInfoSegmentResult)
-  {
-    $this->voterInfoSegmentResult = $voterInfoSegmentResult;
-  }
-  /**
+    public function setVoterInfoSegmentResult(Google_Service_CivicInfo_VoterInfoSegmentResult $voterInfoSegmentResult)
+    {
+        $this->voterInfoSegmentResult = $voterInfoSegmentResult;
+    }
+    /**
    * @return Google_Service_CivicInfo_VoterInfoSegmentResult
    */
-  public function getVoterInfoSegmentResult()
-  {
-    return $this->voterInfoSegmentResult;
-  }
+    public function getVoterInfoSegmentResult()
+    {
+        return $this->voterInfoSegmentResult;
+    }
 }

@@ -17,57 +17,57 @@
 
 class Google_Service_Compute_ManagedInstance extends Google_Model
 {
-  public $currentAction;
-  public $id;
-  public $instance;
-  public $instanceStatus;
-  protected $lastAttemptType = 'Google_Service_Compute_ManagedInstanceLastAttempt';
-  protected $lastAttemptDataType = '';
+    public $currentAction;
+    public $id;
+    public $instance;
+    public $instanceStatus;
+    protected $lastAttemptType = 'Google_Service_Compute_ManagedInstanceLastAttempt';
+    protected $lastAttemptDataType = '';
 
-  public function setCurrentAction($currentAction)
-  {
-    $this->currentAction = $currentAction;
-  }
-  public function getCurrentAction()
-  {
-    return $this->currentAction;
-  }
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  public function getId()
-  {
-    return $this->id;
-  }
-  public function setInstance($instance)
-  {
-    $this->instance = $instance;
-  }
-  public function getInstance()
-  {
-    return $this->instance;
-  }
-  public function setInstanceStatus($instanceStatus)
-  {
-    $this->instanceStatus = $instanceStatus;
-  }
-  public function getInstanceStatus()
-  {
-    return $this->instanceStatus;
-  }
-  /**
+    public function setCurrentAction($currentAction)
+    {
+        $this->currentAction = $currentAction;
+    }
+    public function getCurrentAction()
+    {
+        return $this->currentAction;
+    }
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function setInstance($instance)
+    {
+        $this->instance = $instance;
+    }
+    public function getInstance()
+    {
+        return $this->instance;
+    }
+    public function setInstanceStatus($instanceStatus)
+    {
+        $this->instanceStatus = $instanceStatus;
+    }
+    public function getInstanceStatus()
+    {
+        return $this->instanceStatus;
+    }
+    /**
    * @param Google_Service_Compute_ManagedInstanceLastAttempt
    */
-  public function setLastAttempt(Google_Service_Compute_ManagedInstanceLastAttempt $lastAttempt)
-  {
-    $this->lastAttempt = $lastAttempt;
-  }
-  /**
+    public function setLastAttempt(Google_Service_Compute_ManagedInstanceLastAttempt $lastAttempt)
+    {
+        $this->lastAttempt = $lastAttempt;
+    }
+    /**
    * @return Google_Service_Compute_ManagedInstanceLastAttempt
    */
-  public function getLastAttempt()
-  {
-    return $this->lastAttempt;
-  }
+    public function getLastAttempt()
+    {
+        return $this->lastAttempt;
+    }
 }

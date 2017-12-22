@@ -25,12 +25,12 @@
  */
 class Google_Service_Compute_Resource_GlobalAddresses extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified address resource. (globalAddresses.delete)
    *
-   * @param string $project Project ID for this request.
-   * @param string $address Name of the address resource to delete.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param string $address   Name of the address resource to delete.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -44,36 +44,36 @@ class Google_Service_Compute_Resource_GlobalAddresses extends Google_Service_Res
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $address, $optParams = array())
-  {
-    $params = array('project' => $project, 'address' => $address);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $address, $optParams = array())
+    {
+        $params = array('project' => $project, 'address' => $address);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified address resource. Get a list of available addresses by
    * making a list() request. (globalAddresses.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $address Name of the address resource to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $address   Name of the address resource to return.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Compute_Address
    */
-  public function get($project, $address, $optParams = array())
-  {
-    $params = array('project' => $project, 'address' => $address);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_Address");
-  }
-  /**
+    public function get($project, $address, $optParams = array())
+    {
+        $params = array('project' => $project, 'address' => $address);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_Address");
+    }
+    /**
    * Creates an address resource in the specified project using the data included
    * in the request. (globalAddresses.insert)
    *
-   * @param string $project Project ID for this request.
+   * @param string                         $project   Project ID for this request.
    * @param Google_Service_Compute_Address $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                          $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -87,19 +87,19 @@ class Google_Service_Compute_Resource_GlobalAddresses extends Google_Service_Res
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, Google_Service_Compute_Address $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, Google_Service_Compute_Address $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves a list of global addresses. (globalAddresses.listGlobalAddresses)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -143,12 +143,12 @@ class Google_Service_Compute_Resource_GlobalAddresses extends Google_Service_Res
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_AddressList
+   * @return    Google_Service_Compute_AddressList
    */
-  public function listGlobalAddresses($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_AddressList");
-  }
+    public function listGlobalAddresses($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_AddressList");
+    }
 }

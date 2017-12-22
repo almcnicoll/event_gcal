@@ -17,50 +17,50 @@
 
 class Google_Service_Books_SeriesSeries extends Google_Model
 {
-  public $bannerImageUrl;
-  public $imageUrl;
-  public $seriesId;
-  public $seriesType;
-  public $title;
+    public $bannerImageUrl;
+    public $imageUrl;
+    public $seriesId;
+    public $seriesType;
+    public $title;
 
-  public function setBannerImageUrl($bannerImageUrl)
-  {
-    $this->bannerImageUrl = $bannerImageUrl;
-  }
-  public function getBannerImageUrl()
-  {
-    return $this->bannerImageUrl;
-  }
-  public function setImageUrl($imageUrl)
-  {
-    $this->imageUrl = $imageUrl;
-  }
-  public function getImageUrl()
-  {
-    return $this->imageUrl;
-  }
-  public function setSeriesId($seriesId)
-  {
-    $this->seriesId = $seriesId;
-  }
-  public function getSeriesId()
-  {
-    return $this->seriesId;
-  }
-  public function setSeriesType($seriesType)
-  {
-    $this->seriesType = $seriesType;
-  }
-  public function getSeriesType()
-  {
-    return $this->seriesType;
-  }
-  public function setTitle($title)
-  {
-    $this->title = $title;
-  }
-  public function getTitle()
-  {
-    return $this->title;
-  }
+    public function setBannerImageUrl($bannerImageUrl)
+    {
+        $this->bannerImageUrl = $bannerImageUrl;
+    }
+    public function getBannerImageUrl()
+    {
+        return $this->bannerImageUrl;
+    }
+    public function setImageUrl($imageUrl)
+    {
+        $this->imageUrl = $imageUrl;
+    }
+    public function getImageUrl()
+    {
+        return $this->imageUrl;
+    }
+    public function setSeriesId($seriesId)
+    {
+        $this->seriesId = $seriesId;
+    }
+    public function getSeriesId()
+    {
+        return $this->seriesId;
+    }
+    public function setSeriesType($seriesType)
+    {
+        $this->seriesType = $seriesType;
+    }
+    public function getSeriesType()
+    {
+        return $this->seriesType;
+    }
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+    public function getTitle()
+    {
+        return $this->title;
+    }
 }

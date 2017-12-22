@@ -25,7 +25,7 @@
  */
 class Google_Service_AdExchangeBuyerII_Resource_BiddersFilterSetsBidResponseErrors extends Google_Service_Resource
 {
-  /**
+    /**
    * List all errors that occurred in bid responses, with the number of bid
    * responses affected for each reason.
    * (bidResponseErrors.listBiddersFilterSetsBidResponseErrors)
@@ -41,7 +41,7 @@ class Google_Service_AdExchangeBuyerII_Resource_BiddersFilterSetsBidResponseErro
    *
    * - For an account-level filter set for the child seat buyer account 456
    * whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams     Optional parameters.
    *
    * @opt_param int pageSize Requested page size. The server may return fewer
    * results than requested. If unspecified, the server will pick an appropriate
@@ -50,12 +50,12 @@ class Google_Service_AdExchangeBuyerII_Resource_BiddersFilterSetsBidResponseErro
    * should return. Typically, this is the value of
    * ListBidResponseErrorsResponse.nextPageToken returned from the previous call
    * to the bidResponseErrors.list method.
-   * @return Google_Service_AdExchangeBuyerII_ListBidResponseErrorsResponse
+   * @return    Google_Service_AdExchangeBuyerII_ListBidResponseErrorsResponse
    */
-  public function listBiddersFilterSetsBidResponseErrors($filterSetName, $optParams = array())
-  {
-    $params = array('filterSetName' => $filterSetName);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_AdExchangeBuyerII_ListBidResponseErrorsResponse");
-  }
+    public function listBiddersFilterSetsBidResponseErrors($filterSetName, $optParams = array())
+    {
+        $params = array('filterSetName' => $filterSetName);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_AdExchangeBuyerII_ListBidResponseErrorsResponse");
+    }
 }

@@ -17,22 +17,22 @@
 
 class Google_Service_CloudTasks_PullTasksResponse extends Google_Collection
 {
-  protected $collection_key = 'tasks';
-  protected $tasksType = 'Google_Service_CloudTasks_Task';
-  protected $tasksDataType = 'array';
+    protected $collection_key = 'tasks';
+    protected $tasksType = 'Google_Service_CloudTasks_Task';
+    protected $tasksDataType = 'array';
 
-  /**
+    /**
    * @param Google_Service_CloudTasks_Task
    */
-  public function setTasks($tasks)
-  {
-    $this->tasks = $tasks;
-  }
-  /**
+    public function setTasks($tasks)
+    {
+        $this->tasks = $tasks;
+    }
+    /**
    * @return Google_Service_CloudTasks_Task
    */
-  public function getTasks()
-  {
-    return $this->tasks;
-  }
+    public function getTasks()
+    {
+        return $this->tasks;
+    }
 }

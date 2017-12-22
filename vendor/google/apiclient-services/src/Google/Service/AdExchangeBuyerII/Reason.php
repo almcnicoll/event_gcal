@@ -17,23 +17,23 @@
 
 class Google_Service_AdExchangeBuyerII_Reason extends Google_Model
 {
-  public $count;
-  public $status;
+    public $count;
+    public $status;
 
-  public function setCount($count)
-  {
-    $this->count = $count;
-  }
-  public function getCount()
-  {
-    return $this->count;
-  }
-  public function setStatus($status)
-  {
-    $this->status = $status;
-  }
-  public function getStatus()
-  {
-    return $this->status;
-  }
+    public function setCount($count)
+    {
+        $this->count = $count;
+    }
+    public function getCount()
+    {
+        return $this->count;
+    }
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+    public function getStatus()
+    {
+        return $this->status;
+    }
 }

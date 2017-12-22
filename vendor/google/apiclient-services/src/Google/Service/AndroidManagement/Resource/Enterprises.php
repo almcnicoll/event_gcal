@@ -25,12 +25,12 @@
  */
 class Google_Service_AndroidManagement_Resource_Enterprises extends Google_Service_Resource
 {
-  /**
+    /**
    * Creates an enterprise by completing the enterprise signup flow.
    * (enterprises.create)
    *
    * @param Google_Service_AndroidManagement_Enterprise $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                       $optParams Optional parameters.
    *
    * @opt_param string signupUrlName The name of the SignupUrl used to sign up for
    * the enterprise.
@@ -38,44 +38,44 @@ class Google_Service_AndroidManagement_Resource_Enterprises extends Google_Servi
    * callback URL.
    * @opt_param string projectId The id of the Google Cloud Platform project which
    * will own the enterprise.
-   * @return Google_Service_AndroidManagement_Enterprise
+   * @return    Google_Service_AndroidManagement_Enterprise
    */
-  public function create(Google_Service_AndroidManagement_Enterprise $postBody, $optParams = array())
-  {
-    $params = array('postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('create', array($params), "Google_Service_AndroidManagement_Enterprise");
-  }
-  /**
+    public function create(Google_Service_AndroidManagement_Enterprise $postBody, $optParams = array())
+    {
+        $params = array('postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('create', array($params), "Google_Service_AndroidManagement_Enterprise");
+    }
+    /**
    * Gets an enterprise. (enterprises.get)
    *
-   * @param string $name The name of the enterprise in the form
-   * enterprises/{enterpriseId}
-   * @param array $optParams Optional parameters.
+   * @param  string $name      The name of the enterprise in the form
+   *                          enterprises/{enterpriseId}
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_AndroidManagement_Enterprise
    */
-  public function get($name, $optParams = array())
-  {
-    $params = array('name' => $name);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_AndroidManagement_Enterprise");
-  }
-  /**
+    public function get($name, $optParams = array())
+    {
+        $params = array('name' => $name);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_AndroidManagement_Enterprise");
+    }
+    /**
    * Updates an enterprise. (enterprises.patch)
    *
-   * @param string $name The name of the enterprise in the form
-   * enterprises/{enterpriseId}
+   * @param string                                      $name      The name of the enterprise in the form
+   *                                                               enterprises/{enterpriseId}
    * @param Google_Service_AndroidManagement_Enterprise $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                       $optParams Optional parameters.
    *
    * @opt_param string updateMask The field mask indicating the fields to update.
    * If not set, all modifiable fields will be modified.
-   * @return Google_Service_AndroidManagement_Enterprise
+   * @return    Google_Service_AndroidManagement_Enterprise
    */
-  public function patch($name, Google_Service_AndroidManagement_Enterprise $postBody, $optParams = array())
-  {
-    $params = array('name' => $name, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', array($params), "Google_Service_AndroidManagement_Enterprise");
-  }
+    public function patch($name, Google_Service_AndroidManagement_Enterprise $postBody, $optParams = array())
+    {
+        $params = array('name' => $name, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('patch', array($params), "Google_Service_AndroidManagement_Enterprise");
+    }
 }

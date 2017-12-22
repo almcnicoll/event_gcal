@@ -25,7 +25,7 @@
  */
 class Google_Service_Analytics_Resource_ManagementAccountSummaries extends Google_Service_Resource
 {
-  /**
+    /**
    * Lists account summaries (lightweight tree comprised of
    * accounts/properties/profiles) to which the user has access.
    * (accountSummaries.listManagementAccountSummaries)
@@ -36,12 +36,12 @@ class Google_Service_Analytics_Resource_ManagementAccountSummaries extends Googl
    * in this response, where the largest acceptable value is 1000.
    * @opt_param int start-index An index of the first entity to retrieve. Use this
    * parameter as a pagination mechanism along with the max-results parameter.
-   * @return Google_Service_Analytics_AccountSummaries
+   * @return    Google_Service_Analytics_AccountSummaries
    */
-  public function listManagementAccountSummaries($optParams = array())
-  {
-    $params = array();
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Analytics_AccountSummaries");
-  }
+    public function listManagementAccountSummaries($optParams = array())
+    {
+        $params = array();
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Analytics_AccountSummaries");
+    }
 }

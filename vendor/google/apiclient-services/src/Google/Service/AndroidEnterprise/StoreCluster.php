@@ -17,58 +17,58 @@
 
 class Google_Service_AndroidEnterprise_StoreCluster extends Google_Collection
 {
-  protected $collection_key = 'productId';
-  public $id;
-  public $kind;
-  protected $nameType = 'Google_Service_AndroidEnterprise_LocalizedText';
-  protected $nameDataType = 'array';
-  public $orderInPage;
-  public $productId;
+    protected $collection_key = 'productId';
+    public $id;
+    public $kind;
+    protected $nameType = 'Google_Service_AndroidEnterprise_LocalizedText';
+    protected $nameDataType = 'array';
+    public $orderInPage;
+    public $productId;
 
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  public function getId()
-  {
-    return $this->id;
-  }
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  /**
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    /**
    * @param Google_Service_AndroidEnterprise_LocalizedText
    */
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  /**
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    /**
    * @return Google_Service_AndroidEnterprise_LocalizedText
    */
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setOrderInPage($orderInPage)
-  {
-    $this->orderInPage = $orderInPage;
-  }
-  public function getOrderInPage()
-  {
-    return $this->orderInPage;
-  }
-  public function setProductId($productId)
-  {
-    $this->productId = $productId;
-  }
-  public function getProductId()
-  {
-    return $this->productId;
-  }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setOrderInPage($orderInPage)
+    {
+        $this->orderInPage = $orderInPage;
+    }
+    public function getOrderInPage()
+    {
+        return $this->orderInPage;
+    }
+    public function setProductId($productId)
+    {
+        $this->productId = $productId;
+    }
+    public function getProductId()
+    {
+        return $this->productId;
+    }
 }

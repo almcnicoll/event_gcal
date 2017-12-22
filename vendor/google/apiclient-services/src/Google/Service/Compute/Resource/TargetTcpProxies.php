@@ -25,12 +25,12 @@
  */
 class Google_Service_Compute_Resource_TargetTcpProxies extends Google_Service_Resource
 {
-  /**
+    /**
    * Deletes the specified TargetTcpProxy resource. (targetTcpProxies.delete)
    *
-   * @param string $project Project ID for this request.
+   * @param string $project        Project ID for this request.
    * @param string $targetTcpProxy Name of the TargetTcpProxy resource to delete.
-   * @param array $optParams Optional parameters.
+   * @param array  $optParams      Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -44,36 +44,36 @@ class Google_Service_Compute_Resource_TargetTcpProxies extends Google_Service_Re
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function delete($project, $targetTcpProxy, $optParams = array())
-  {
-    $params = array('project' => $project, 'targetTcpProxy' => $targetTcpProxy);
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function delete($project, $targetTcpProxy, $optParams = array())
+    {
+        $params = array('project' => $project, 'targetTcpProxy' => $targetTcpProxy);
+        $params = array_merge($params, $optParams);
+        return $this->call('delete', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Returns the specified TargetTcpProxy resource. Get a list of available target
    * TCP proxies by making a list() request. (targetTcpProxies.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $targetTcpProxy Name of the TargetTcpProxy resource to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project        Project ID for this request.
+   * @param  string $targetTcpProxy Name of the TargetTcpProxy resource to return.
+   * @param  array  $optParams      Optional parameters.
    * @return Google_Service_Compute_TargetTcpProxy
    */
-  public function get($project, $targetTcpProxy, $optParams = array())
-  {
-    $params = array('project' => $project, 'targetTcpProxy' => $targetTcpProxy);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_TargetTcpProxy");
-  }
-  /**
+    public function get($project, $targetTcpProxy, $optParams = array())
+    {
+        $params = array('project' => $project, 'targetTcpProxy' => $targetTcpProxy);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_TargetTcpProxy");
+    }
+    /**
    * Creates a TargetTcpProxy resource in the specified project using the data
    * included in the request. (targetTcpProxies.insert)
    *
-   * @param string $project Project ID for this request.
+   * @param string                                $project   Project ID for this request.
    * @param Google_Service_Compute_TargetTcpProxy $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                 $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -87,20 +87,20 @@ class Google_Service_Compute_Resource_TargetTcpProxies extends Google_Service_Re
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function insert($project, Google_Service_Compute_TargetTcpProxy $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function insert($project, Google_Service_Compute_TargetTcpProxy $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('insert', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Retrieves the list of TargetTcpProxy resources available to the specified
    * project. (targetTcpProxies.listTargetTcpProxies)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -144,23 +144,23 @@ class Google_Service_Compute_Resource_TargetTcpProxies extends Google_Service_Re
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_TargetTcpProxyList
+   * @return    Google_Service_Compute_TargetTcpProxyList
    */
-  public function listTargetTcpProxies($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_TargetTcpProxyList");
-  }
-  /**
+    public function listTargetTcpProxies($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_TargetTcpProxyList");
+    }
+    /**
    * Changes the BackendService for TargetTcpProxy.
    * (targetTcpProxies.setBackendService)
    *
-   * @param string $project Project ID for this request.
-   * @param string $targetTcpProxy Name of the TargetTcpProxy resource whose
-   * BackendService resource is to be set.
+   * @param string                                                          $project        Project ID for this request.
+   * @param string                                                          $targetTcpProxy Name of the TargetTcpProxy resource whose
+   *                                                                                        BackendService resource is to be set.
    * @param Google_Service_Compute_TargetTcpProxiesSetBackendServiceRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                                           $optParams      Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -174,23 +174,23 @@ class Google_Service_Compute_Resource_TargetTcpProxies extends Google_Service_Re
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function setBackendService($project, $targetTcpProxy, Google_Service_Compute_TargetTcpProxiesSetBackendServiceRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'targetTcpProxy' => $targetTcpProxy, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setBackendService', array($params), "Google_Service_Compute_Operation");
-  }
-  /**
+    public function setBackendService($project, $targetTcpProxy, Google_Service_Compute_TargetTcpProxiesSetBackendServiceRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'targetTcpProxy' => $targetTcpProxy, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('setBackendService', array($params), "Google_Service_Compute_Operation");
+    }
+    /**
    * Changes the ProxyHeaderType for TargetTcpProxy.
    * (targetTcpProxies.setProxyHeader)
    *
-   * @param string $project Project ID for this request.
-   * @param string $targetTcpProxy Name of the TargetTcpProxy resource whose
-   * ProxyHeader is to be set.
+   * @param string                                                       $project        Project ID for this request.
+   * @param string                                                       $targetTcpProxy Name of the TargetTcpProxy resource whose
+   *                                                                                     ProxyHeader is to be set.
    * @param Google_Service_Compute_TargetTcpProxiesSetProxyHeaderRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @param array                                                        $optParams      Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
@@ -204,12 +204,12 @@ class Google_Service_Compute_Resource_TargetTcpProxies extends Google_Service_Re
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
-   * @return Google_Service_Compute_Operation
+   * @return    Google_Service_Compute_Operation
    */
-  public function setProxyHeader($project, $targetTcpProxy, Google_Service_Compute_TargetTcpProxiesSetProxyHeaderRequest $postBody, $optParams = array())
-  {
-    $params = array('project' => $project, 'targetTcpProxy' => $targetTcpProxy, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setProxyHeader', array($params), "Google_Service_Compute_Operation");
-  }
+    public function setProxyHeader($project, $targetTcpProxy, Google_Service_Compute_TargetTcpProxiesSetProxyHeaderRequest $postBody, $optParams = array())
+    {
+        $params = array('project' => $project, 'targetTcpProxy' => $targetTcpProxy, 'postBody' => $postBody);
+        $params = array_merge($params, $optParams);
+        return $this->call('setProxyHeader', array($params), "Google_Service_Compute_Operation");
+    }
 }

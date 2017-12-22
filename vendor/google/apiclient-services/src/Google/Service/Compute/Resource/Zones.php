@@ -25,27 +25,27 @@
  */
 class Google_Service_Compute_Resource_Zones extends Google_Service_Resource
 {
-  /**
+    /**
    * Returns the specified Zone resource. Get a list of available zones by making
    * a list() request. (zones.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone resource to return.
-   * @param array $optParams Optional parameters.
+   * @param  string $project   Project ID for this request.
+   * @param  string $zone      Name of the zone resource to return.
+   * @param  array  $optParams Optional parameters.
    * @return Google_Service_Compute_Zone
    */
-  public function get($project, $zone, $optParams = array())
-  {
-    $params = array('project' => $project, 'zone' => $zone);
-    $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Compute_Zone");
-  }
-  /**
+    public function get($project, $zone, $optParams = array())
+    {
+        $params = array('project' => $project, 'zone' => $zone);
+        $params = array_merge($params, $optParams);
+        return $this->call('get', array($params), "Google_Service_Compute_Zone");
+    }
+    /**
    * Retrieves the list of Zone resources available to the specified project.
    * (zones.listZones)
    *
-   * @param string $project Project ID for this request.
-   * @param array $optParams Optional parameters.
+   * @param string $project   Project ID for this request.
+   * @param array  $optParams Optional parameters.
    *
    * @opt_param string filter Sets a filter {expression} for filtering listed
    * resources. Your {expression} must be in the format: field_name
@@ -89,12 +89,12 @@ class Google_Service_Compute_Resource_Zones extends Google_Service_Resource
    * @opt_param string pageToken Specifies a page token to use. Set pageToken to
    * the nextPageToken returned by a previous list request to get the next page of
    * results.
-   * @return Google_Service_Compute_ZoneList
+   * @return    Google_Service_Compute_ZoneList
    */
-  public function listZones($project, $optParams = array())
-  {
-    $params = array('project' => $project);
-    $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Compute_ZoneList");
-  }
+    public function listZones($project, $optParams = array())
+    {
+        $params = array('project' => $project);
+        $params = array_merge($params, $optParams);
+        return $this->call('list', array($params), "Google_Service_Compute_ZoneList");
+    }
 }

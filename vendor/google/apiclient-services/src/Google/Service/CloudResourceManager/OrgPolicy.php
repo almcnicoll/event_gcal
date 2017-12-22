@@ -17,89 +17,89 @@
 
 class Google_Service_CloudResourceManager_OrgPolicy extends Google_Model
 {
-  protected $booleanPolicyType = 'Google_Service_CloudResourceManager_BooleanPolicy';
-  protected $booleanPolicyDataType = '';
-  public $constraint;
-  public $etag;
-  protected $listPolicyType = 'Google_Service_CloudResourceManager_ListPolicy';
-  protected $listPolicyDataType = '';
-  protected $restoreDefaultType = 'Google_Service_CloudResourceManager_RestoreDefault';
-  protected $restoreDefaultDataType = '';
-  public $updateTime;
-  public $version;
+    protected $booleanPolicyType = 'Google_Service_CloudResourceManager_BooleanPolicy';
+    protected $booleanPolicyDataType = '';
+    public $constraint;
+    public $etag;
+    protected $listPolicyType = 'Google_Service_CloudResourceManager_ListPolicy';
+    protected $listPolicyDataType = '';
+    protected $restoreDefaultType = 'Google_Service_CloudResourceManager_RestoreDefault';
+    protected $restoreDefaultDataType = '';
+    public $updateTime;
+    public $version;
 
-  /**
+    /**
    * @param Google_Service_CloudResourceManager_BooleanPolicy
    */
-  public function setBooleanPolicy(Google_Service_CloudResourceManager_BooleanPolicy $booleanPolicy)
-  {
-    $this->booleanPolicy = $booleanPolicy;
-  }
-  /**
+    public function setBooleanPolicy(Google_Service_CloudResourceManager_BooleanPolicy $booleanPolicy)
+    {
+        $this->booleanPolicy = $booleanPolicy;
+    }
+    /**
    * @return Google_Service_CloudResourceManager_BooleanPolicy
    */
-  public function getBooleanPolicy()
-  {
-    return $this->booleanPolicy;
-  }
-  public function setConstraint($constraint)
-  {
-    $this->constraint = $constraint;
-  }
-  public function getConstraint()
-  {
-    return $this->constraint;
-  }
-  public function setEtag($etag)
-  {
-    $this->etag = $etag;
-  }
-  public function getEtag()
-  {
-    return $this->etag;
-  }
-  /**
+    public function getBooleanPolicy()
+    {
+        return $this->booleanPolicy;
+    }
+    public function setConstraint($constraint)
+    {
+        $this->constraint = $constraint;
+    }
+    public function getConstraint()
+    {
+        return $this->constraint;
+    }
+    public function setEtag($etag)
+    {
+        $this->etag = $etag;
+    }
+    public function getEtag()
+    {
+        return $this->etag;
+    }
+    /**
    * @param Google_Service_CloudResourceManager_ListPolicy
    */
-  public function setListPolicy(Google_Service_CloudResourceManager_ListPolicy $listPolicy)
-  {
-    $this->listPolicy = $listPolicy;
-  }
-  /**
+    public function setListPolicy(Google_Service_CloudResourceManager_ListPolicy $listPolicy)
+    {
+        $this->listPolicy = $listPolicy;
+    }
+    /**
    * @return Google_Service_CloudResourceManager_ListPolicy
    */
-  public function getListPolicy()
-  {
-    return $this->listPolicy;
-  }
-  /**
+    public function getListPolicy()
+    {
+        return $this->listPolicy;
+    }
+    /**
    * @param Google_Service_CloudResourceManager_RestoreDefault
    */
-  public function setRestoreDefault(Google_Service_CloudResourceManager_RestoreDefault $restoreDefault)
-  {
-    $this->restoreDefault = $restoreDefault;
-  }
-  /**
+    public function setRestoreDefault(Google_Service_CloudResourceManager_RestoreDefault $restoreDefault)
+    {
+        $this->restoreDefault = $restoreDefault;
+    }
+    /**
    * @return Google_Service_CloudResourceManager_RestoreDefault
    */
-  public function getRestoreDefault()
-  {
-    return $this->restoreDefault;
-  }
-  public function setUpdateTime($updateTime)
-  {
-    $this->updateTime = $updateTime;
-  }
-  public function getUpdateTime()
-  {
-    return $this->updateTime;
-  }
-  public function setVersion($version)
-  {
-    $this->version = $version;
-  }
-  public function getVersion()
-  {
-    return $this->version;
-  }
+    public function getRestoreDefault()
+    {
+        return $this->restoreDefault;
+    }
+    public function setUpdateTime($updateTime)
+    {
+        $this->updateTime = $updateTime;
+    }
+    public function getUpdateTime()
+    {
+        return $this->updateTime;
+    }
+    public function setVersion($version)
+    {
+        $this->version = $version;
+    }
+    public function getVersion()
+    {
+        return $this->version;
+    }
 }

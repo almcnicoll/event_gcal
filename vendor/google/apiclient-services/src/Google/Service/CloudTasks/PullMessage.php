@@ -17,23 +17,23 @@
 
 class Google_Service_CloudTasks_PullMessage extends Google_Model
 {
-  public $payload;
-  public $tag;
+    public $payload;
+    public $tag;
 
-  public function setPayload($payload)
-  {
-    $this->payload = $payload;
-  }
-  public function getPayload()
-  {
-    return $this->payload;
-  }
-  public function setTag($tag)
-  {
-    $this->tag = $tag;
-  }
-  public function getTag()
-  {
-    return $this->tag;
-  }
+    public function setPayload($payload)
+    {
+        $this->payload = $payload;
+    }
+    public function getPayload()
+    {
+        return $this->payload;
+    }
+    public function setTag($tag)
+    {
+        $this->tag = $tag;
+    }
+    public function getTag()
+    {
+        return $this->tag;
+    }
 }

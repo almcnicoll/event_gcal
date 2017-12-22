@@ -17,68 +17,68 @@
 
 class Google_Service_AndroidManagement_EnrollmentToken extends Google_Model
 {
-  public $additionalData;
-  public $duration;
-  public $expirationTimestamp;
-  public $name;
-  public $policyName;
-  public $qrCode;
-  public $value;
+    public $additionalData;
+    public $duration;
+    public $expirationTimestamp;
+    public $name;
+    public $policyName;
+    public $qrCode;
+    public $value;
 
-  public function setAdditionalData($additionalData)
-  {
-    $this->additionalData = $additionalData;
-  }
-  public function getAdditionalData()
-  {
-    return $this->additionalData;
-  }
-  public function setDuration($duration)
-  {
-    $this->duration = $duration;
-  }
-  public function getDuration()
-  {
-    return $this->duration;
-  }
-  public function setExpirationTimestamp($expirationTimestamp)
-  {
-    $this->expirationTimestamp = $expirationTimestamp;
-  }
-  public function getExpirationTimestamp()
-  {
-    return $this->expirationTimestamp;
-  }
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  public function getName()
-  {
-    return $this->name;
-  }
-  public function setPolicyName($policyName)
-  {
-    $this->policyName = $policyName;
-  }
-  public function getPolicyName()
-  {
-    return $this->policyName;
-  }
-  public function setQrCode($qrCode)
-  {
-    $this->qrCode = $qrCode;
-  }
-  public function getQrCode()
-  {
-    return $this->qrCode;
-  }
-  public function setValue($value)
-  {
-    $this->value = $value;
-  }
-  public function getValue()
-  {
-    return $this->value;
-  }
+    public function setAdditionalData($additionalData)
+    {
+        $this->additionalData = $additionalData;
+    }
+    public function getAdditionalData()
+    {
+        return $this->additionalData;
+    }
+    public function setDuration($duration)
+    {
+        $this->duration = $duration;
+    }
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+    public function setExpirationTimestamp($expirationTimestamp)
+    {
+        $this->expirationTimestamp = $expirationTimestamp;
+    }
+    public function getExpirationTimestamp()
+    {
+        return $this->expirationTimestamp;
+    }
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function getName()
+    {
+        return $this->name;
+    }
+    public function setPolicyName($policyName)
+    {
+        $this->policyName = $policyName;
+    }
+    public function getPolicyName()
+    {
+        return $this->policyName;
+    }
+    public function setQrCode($qrCode)
+    {
+        $this->qrCode = $qrCode;
+    }
+    public function getQrCode()
+    {
+        return $this->qrCode;
+    }
+    public function setValue($value)
+    {
+        $this->value = $value;
+    }
+    public function getValue()
+    {
+        return $this->value;
+    }
 }

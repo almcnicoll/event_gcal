@@ -17,22 +17,22 @@
 
 class Google_Service_Compute_RegionInstanceGroupManagersListInstancesResponse extends Google_Collection
 {
-  protected $collection_key = 'managedInstances';
-  protected $managedInstancesType = 'Google_Service_Compute_ManagedInstance';
-  protected $managedInstancesDataType = 'array';
+    protected $collection_key = 'managedInstances';
+    protected $managedInstancesType = 'Google_Service_Compute_ManagedInstance';
+    protected $managedInstancesDataType = 'array';
 
-  /**
+    /**
    * @param Google_Service_Compute_ManagedInstance
    */
-  public function setManagedInstances($managedInstances)
-  {
-    $this->managedInstances = $managedInstances;
-  }
-  /**
+    public function setManagedInstances($managedInstances)
+    {
+        $this->managedInstances = $managedInstances;
+    }
+    /**
    * @return Google_Service_Compute_ManagedInstance
    */
-  public function getManagedInstances()
-  {
-    return $this->managedInstances;
-  }
+    public function getManagedInstances()
+    {
+        return $this->managedInstances;
+    }
 }

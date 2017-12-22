@@ -17,32 +17,32 @@
 
 class Google_Service_AndroidEnterprise_VariableSet extends Google_Model
 {
-  public $kind;
-  public $placeholder;
-  public $userValue;
+    public $kind;
+    public $placeholder;
+    public $userValue;
 
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  public function getKind()
-  {
-    return $this->kind;
-  }
-  public function setPlaceholder($placeholder)
-  {
-    $this->placeholder = $placeholder;
-  }
-  public function getPlaceholder()
-  {
-    return $this->placeholder;
-  }
-  public function setUserValue($userValue)
-  {
-    $this->userValue = $userValue;
-  }
-  public function getUserValue()
-  {
-    return $this->userValue;
-  }
+    public function setKind($kind)
+    {
+        $this->kind = $kind;
+    }
+    public function getKind()
+    {
+        return $this->kind;
+    }
+    public function setPlaceholder($placeholder)
+    {
+        $this->placeholder = $placeholder;
+    }
+    public function getPlaceholder()
+    {
+        return $this->placeholder;
+    }
+    public function setUserValue($userValue)
+    {
+        $this->userValue = $userValue;
+    }
+    public function getUserValue()
+    {
+        return $this->userValue;
+    }
 }
