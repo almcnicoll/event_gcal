@@ -3,4 +3,22 @@
 web.config
 
 # Ignore submodules
-vendor/*
+vendor
+
+# Patch/diff artifacts.
+*.patch
+*.diff
+*.orig
+*.rej
+interdiff*.txt
+
+# Hidden files.
+.DS*
+.project
+
+# Windows links.
+*.lnk
+
+# Temporary files.
+tmp*
+
