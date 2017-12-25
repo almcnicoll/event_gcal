@@ -17,6 +17,7 @@ use Drupal\Core\Render\Markup;
  */
 function event_gcal_entity_presave($entity) {
   // NB test with "phpcs <file>" and fix with "phpcbf <file> --no-patch"
+  // add --standard=Drupal, --standard=DrupalPractice
   // drupal_set_message('Pre-save firing');
   // $config = \Drupal::config('event_gcal.settings');.
   $config = \Drupal::service('config.factory')->getEditable('event_gcal.settings');
